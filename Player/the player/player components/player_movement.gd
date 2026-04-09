@@ -2,7 +2,7 @@ extends Node3D
 class_name PlayerMovement
 
 const ACCELERATION: float = 12.0
-const FRICTION: float = 12.0
+const FRICTION: float = 24.0
 
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 

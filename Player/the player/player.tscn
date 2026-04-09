@@ -6,11 +6,44 @@
 [ext_resource type="Script" uid="uid://7g7hgmc8vlgi" path="res://Player/the player/player components/camera_3d.gd" id="4_3wug4"]
 [ext_resource type="Script" uid="uid://1msx8h0q5gft" path="res://Player/the player/player components/player_inventory.gd" id="4_7q2ms"]
 [ext_resource type="Shader" uid="uid://b5vbwbt35oy46" path="res://Player/the player/pixelate.gdshader" id="5_esvoh"]
+[ext_resource type="Texture2D" uid="uid://3d7fcgk64hk1" path="res://assets/textures/player/hand/grabbing/grabbing_1.png" id="6_11607"]
 [ext_resource type="Script" uid="uid://dp2vyu0x48yiq" path="res://Player/the player/player components/player_interaction.gd" id="7_63538"]
+[ext_resource type="Texture2D" uid="uid://bvfw3qila66gp" path="res://assets/textures/player/hand/grabbing/grabbing_2.png" id="7_a05s0"]
 [ext_resource type="Script" uid="uid://76ajln6ewo8t" path="res://Player/the player/inventory/slot_1.gd" id="7_rr6jo"]
+[ext_resource type="Texture2D" uid="uid://bs523626oki5u" path="res://assets/textures/player/hand/grabbing/grabbing_3.png" id="8_2qv5j"]
 [ext_resource type="Texture2D" uid="uid://5ba0yauoo5ji" path="res://Player/interaction_circle.png" id="9_f8k7o"]
+[ext_resource type="Texture2D" uid="uid://jil3b4784fhx" path="res://assets/textures/player/hand/grabbing/grabbing_4.png" id="9_ierpi"]
+[ext_resource type="Texture2D" uid="uid://dsw2jtww5o2br" path="res://assets/textures/player/hand/idle/idle_hand.png" id="10_ek1er"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_du564"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f8k7o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_11607")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_a05s0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_2qv5j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ierpi")
+}],
+"loop": false,
+"name": &"hand_grab",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_ek1er")
+}],
+"loop": false,
+"name": &"hand_idle",
+"speed": 5.0
+}]
 
 [sub_resource type="QuadMesh" id="QuadMesh_esvoh"]
 
@@ -42,6 +75,12 @@ shape = SubResource("CapsuleShape3D_du564")
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1988130916]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.55917895, 0)
 script = ExtResource("4_3wug4")
+
+[node name="Hand" type="AnimatedSprite2D" parent="Camera3D" unique_id=227232955]
+position = Vector2(768, 264)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_f8k7o")
+animation = &"hand_idle"
 
 [node name="PixelShader" type="MeshInstance3D" parent="Camera3D" unique_id=922512297]
 transform = Transform3D(2.024222, 0, 0, 0, 1.8845327, 0, 0, 0, 1, 0, 0, -0.64668995)
