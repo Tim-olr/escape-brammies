@@ -25,6 +25,8 @@ script = ExtResource("2_3wug4")
 [node name="PlayerMovement" type="Node3D" parent="." unique_id=1225605625]
 script = ExtResource("3_esvoh")
 
+[node name="PlayerInventory" type="Node3D" parent="." unique_id=920902537]
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=763132796]
 shape = SubResource("CapsuleShape3D_du564")
 
@@ -38,3 +40,20 @@ surface_material_override/0 = SubResource("ShaderMaterial_7q2ms")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=419720385]
 mesh = SubResource("CapsuleMesh_3wug4")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1640052681]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1978679016]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control" unique_id=1167870409]
+layout_mode = 0
+offset_left = 153.0
+offset_top = 121.0
+offset_right = 349.0
+offset_bottom = 204.0
+theme_override_font_sizes/font_size = 60
+text = "NICK R"
