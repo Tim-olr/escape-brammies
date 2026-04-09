@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://2jc51d6iw35v"]
+
+[ext_resource type="PackedScene" uid="uid://hfpoldbrm7p8" path="res://Player/the player/player.tscn" id="1_27sxs"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_27sxs"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_486io"]
+
+[sub_resource type="Environment" id="Environment_27sxs"]
+background_energy_multiplier = 5.74
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_27sxs"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_486io"]
+
+[node name="ScaldaLobby" type="Node3D" unique_id=2005214468]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=525608166]
+transform = Transform3D(50.631184, 0, 0, 0, 1, 0, 0, 0, 51.019817, 0, 0, 0)
+mesh = SubResource("BoxMesh_27sxs")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D" unique_id=1830273202]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=916393990]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
+shape = SubResource("BoxShape3D_486io")
+
+[node name="Player" parent="." unique_id=1655037376 instance=ExtResource("1_27sxs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3175406, 2.4508765, -3.6983552)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=835564989]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.757853, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1563822807]
+environment = SubResource("Environment_27sxs")
+
+[node name="object" type="StaticBody3D" parent="." unique_id=28058086]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3545959, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="object" unique_id=1623494195]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3127191, 0)
+mesh = SubResource("CapsuleMesh_27sxs")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="object" unique_id=1340634981]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3127191, 0)
+shape = SubResource("CapsuleShape3D_486io")

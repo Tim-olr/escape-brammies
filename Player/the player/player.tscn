@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://hfpoldbrm7p8"]
+
+[ext_resource type="Script" uid="uid://d3c7hihwp4l4h" path="res://Player/the player/player.gd" id="1_px32d"]
+[ext_resource type="Script" uid="uid://c7yulbfo8prcr" path="res://Player/the player/player components/player_stats.gd" id="2_3wug4"]
+[ext_resource type="Script" uid="uid://dndvwgjshay3e" path="res://Player/the player/player components/player_movement.gd" id="3_esvoh"]
+[ext_resource type="Script" uid="uid://7g7hgmc8vlgi" path="res://Player/the player/player components/camera_3d.gd" id="4_3wug4"]
+[ext_resource type="Shader" uid="uid://b5vbwbt35oy46" path="res://Player/the player/pixelate.gdshader" id="5_esvoh"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_du564"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_esvoh"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7q2ms"]
+render_priority = 0
+shader = ExtResource("5_esvoh")
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_3wug4"]
+
+[node name="Player" type="CharacterBody3D" unique_id=1655037376]
+script = ExtResource("1_px32d")
+
+[node name="PlayerStats" type="Node3D" parent="." unique_id=532821307]
+script = ExtResource("2_3wug4")
+
+[node name="PlayerMovement" type="Node3D" parent="." unique_id=1225605625]
+script = ExtResource("3_esvoh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=763132796]
+shape = SubResource("CapsuleShape3D_du564")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1988130916]
+script = ExtResource("4_3wug4")
+
+[node name="PixelShader" type="MeshInstance3D" parent="Camera3D" unique_id=922512297]
+transform = Transform3D(2.024222, 0, 0, 0, 1.8845327, 0, 0, 0, 1, 0, 0, -0.64668995)
+mesh = SubResource("QuadMesh_esvoh")
+surface_material_override/0 = SubResource("ShaderMaterial_7q2ms")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=419720385]
+mesh = SubResource("CapsuleMesh_3wug4")
