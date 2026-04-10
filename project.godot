@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Escape brammy"
-run/main_scene="uid://2jc51d6iw35v"
+run/main_scene="uid://6nw2l587dj8j"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

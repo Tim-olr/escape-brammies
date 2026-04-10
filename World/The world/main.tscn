@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://hfpoldbrm7p8" path="res://Player/the player/player.tscn" id="1_ejmfg"]
 [ext_resource type="PackedScene" uid="uid://b5hrdo86dnvob" path="res://World/Scalda/scalda_level.tscn" id="2_abumu"]
 [ext_resource type="PackedScene" uid="uid://knu1taomhlhs" path="res://Items/interactables/test_item_interactable.tscn" id="2_j5njh"]
+[ext_resource type="PackedScene" uid="uid://rhpwx4anaa7d" path="res://assets/UI/PauseMenu.tscn" id="2_mktvv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ghcsx"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -22,6 +23,8 @@ glow_enabled = true
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_486io"]
 
 [node name="Main" type="Node3D" unique_id=2005214468]
+
+[node name="PauseMenu" parent="." unique_id=2052854178 instance=ExtResource("2_mktvv")]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1700724351]
 environment = SubResource("Environment_pc2j6")
