@@ -54,3 +54,6 @@ shape = SubResource("CapsuleShape3D_486io")
 
 [node name="TestItemInteractable" parent="." unique_id=1183875761 instance=ExtResource("3_ghcsx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2717576, 1, -0.10178375)
+
+[node name="TestItemInteractable2" parent="." unique_id=2125709542 instance=ExtResource("3_ghcsx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.685948, 1.1187809, -1.3899584)

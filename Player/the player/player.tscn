@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://5ba0yauoo5ji" path="res://Player/interaction_circle.png" id="9_f8k7o"]
 [ext_resource type="Texture2D" uid="uid://jil3b4784fhx" path="res://assets/textures/player/hand/grabbing/grabbing_4.png" id="9_ierpi"]
 [ext_resource type="Texture2D" uid="uid://dsw2jtww5o2br" path="res://assets/textures/player/hand/idle/idle_hand.png" id="10_ek1er"]
+[ext_resource type="Shader" uid="uid://ltdvcyyto6kr" path="res://Player/the player/inventory/slot_selection.gdshader" id="13_a05s0"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_du564"]
 
@@ -52,6 +53,24 @@ render_priority = 0
 shader = ExtResource("5_esvoh")
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_3wug4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ierpi"]
+shader = ExtResource("13_a05s0")
+shader_parameter/allow_out_of_bounds = true
+shader_parameter/outline_thickness = 0.0
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ek1er"]
+shader = ExtResource("13_a05s0")
+shader_parameter/allow_out_of_bounds = true
+shader_parameter/outline_thickness = 0.0
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7tefi"]
+shader = ExtResource("13_a05s0")
+shader_parameter/allow_out_of_bounds = true
+shader_parameter/outline_thickness = 0.0
+shader_parameter/outline_color = Color(1, 1, 1, 1)
 
 [node name="Player" type="CharacterBody3D" unique_id=1655037376]
 script = ExtResource("1_px32d")
@@ -113,23 +132,50 @@ offset_right = 670.0
 offset_bottom = 617.0
 theme_override_constants/separation = 10
 
-[node name="Slot 1" type="Button" parent="CanvasLayer/Control/Hotbar" unique_id=779275139]
+[node name="Slot 1" type="Button" parent="CanvasLayer/Control/Hotbar" unique_id=779275139 node_paths=PackedStringArray("slot_item", "slot_sprite")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 expand_icon = true
 script = ExtResource("7_rr6jo")
+slot_item = NodePath("slot_item")
+slot_sprite = NodePath("slot_sprite")
 
-[node name="Slot 2" type="Button" parent="CanvasLayer/Control/Hotbar" unique_id=1839576134]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-expand_icon = true
-script = ExtResource("7_rr6jo")
+[node name="slot_sprite" type="Sprite2D" parent="CanvasLayer/Control/Hotbar/Slot 1" unique_id=952546338]
+material = SubResource("ShaderMaterial_ierpi")
+position = Vector2(24.999985, 24.999977)
+scale = Vector2(0.35937524, 0.35937485)
 
-[node name="Slot 3" type="Button" parent="CanvasLayer/Control/Hotbar" unique_id=219816399]
+[node name="slot_item" type="Node3D" parent="CanvasLayer/Control/Hotbar/Slot 1" unique_id=977270337]
+
+[node name="Slot 2" type="Button" parent="CanvasLayer/Control/Hotbar" unique_id=1839576134 node_paths=PackedStringArray("slot_item", "slot_sprite")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 expand_icon = true
 script = ExtResource("7_rr6jo")
+slot_item = NodePath("slot_item")
+slot_sprite = NodePath("slot_sprite")
+
+[node name="slot_sprite" type="Sprite2D" parent="CanvasLayer/Control/Hotbar/Slot 2" unique_id=1607367902]
+material = SubResource("ShaderMaterial_ek1er")
+position = Vector2(25.000004, 25.000004)
+scale = Vector2(0.359, 0.359)
+
+[node name="slot_item" type="Node3D" parent="CanvasLayer/Control/Hotbar/Slot 2" unique_id=170195895]
+
+[node name="Slot 3" type="Button" parent="CanvasLayer/Control/Hotbar" unique_id=219816399 node_paths=PackedStringArray("slot_item", "slot_sprite")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+expand_icon = true
+script = ExtResource("7_rr6jo")
+slot_item = NodePath("slot_item")
+slot_sprite = NodePath("slot_sprite")
+
+[node name="slot_sprite" type="Sprite2D" parent="CanvasLayer/Control/Hotbar/Slot 3" unique_id=1786566167]
+material = SubResource("ShaderMaterial_7tefi")
+position = Vector2(25, 25)
+scale = Vector2(0.359, 0.359)
+
+[node name="slot_item" type="Node3D" parent="CanvasLayer/Control/Hotbar/Slot 3" unique_id=1923015803]
 
 [node name="Label" type="Label" parent="CanvasLayer/Control" unique_id=237425245]
 layout_mode = 0

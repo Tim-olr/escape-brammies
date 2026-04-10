@@ -11,6 +11,13 @@ var _is_holding: bool = false
 var _completed: bool = false
 
 var can_use: bool
+var is_selected: bool
+
+func _process(_delta: float) -> void:
+	if is_selected:
+		if can_use:
+			GlobalPlayer.interaction.show_interactable_visual()
+		else: GlobalPlayer.interaction.hide_interaction_visual()
 
 # use() gaat worden gecalled wanneer de player mouse button ingedrukt houdt. 
 # dit is eig om recursion te voorkomen
@@ -35,3 +42,9 @@ func cancel_use():
 	_is_holding = false
 	_completed = false
 	_hold_timer = 0.0
+
+func on_select():
+	is_selected = true
+
+func on_deselect():
+	is_selected = false

@@ -30,9 +30,15 @@ func _process(delta: float) -> void:
 func select_slot(slot: InventorySlot) -> void:
 	if current_slot:
 		current_slot.deselect()
+		set_slot_outline(current_slot, 0.0)
 	current_slot = slot
 	current_slot.select()
+	set_slot_outline(current_slot, 4.0)
 	current_item = current_slot.held_item
+
+func set_slot_outline(slot: InventorySlot, thickness: float) -> void:
+	var sprite = slot.slot_sprite
+	sprite.material.set_shader_parameter("outline_thickness", thickness)
 
 func add_item(item):
 	var index = 1
@@ -42,7 +48,8 @@ func add_item(item):
 				var slot = get_slot(index)
 				slot.held_item = item
 				slot.has_item = true
-				slot.icon = item.custom_texture
+				slot.slot_sprite.texture = item.custom_texture
+				slot.slot_item.add_child(item)
 				return
 		index += 1
 
