@@ -1,583 +1,536 @@
-[gd_scene format=3 uid="uid://2jc51d6iw35v"]
+[gd_scene format=3 uid="uid://b5hrdo86dnvob"]
 
-[ext_resource type="PackedScene" uid="uid://hfpoldbrm7p8" path="res://Player/the player/player.tscn" id="1_27sxs"]
-[ext_resource type="PackedScene" uid="uid://knu1taomhlhs" path="res://Items/interactables/test_item_interactable.tscn" id="3_ghcsx"]
+[node name="ScaldaLevel" type="Node3D" unique_id=1905537615]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ghcsx"]
-sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-
-[sub_resource type="Sky" id="Sky_os8xc"]
-sky_material = SubResource("ProceduralSkyMaterial_ghcsx")
-
-[sub_resource type="Environment" id="Environment_pc2j6"]
-background_mode = 2
-sky = SubResource("Sky_os8xc")
-tonemap_mode = 2
-glow_enabled = true
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_27sxs"]
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_486io"]
-
-[node name="ScaldaLobby" type="Node3D" unique_id=2005214468]
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1700724351]
-environment = SubResource("Environment_pc2j6")
-
-[node name="ScaldaLevel" type="CSGCombiner3D" parent="." unique_id=1141226868]
+[node name="ScaldaLevel" type="CSGCombiner3D" parent="." unique_id=2123380938]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
 use_collision = true
 
-[node name="2ndFloor" type="CSGBox3D" parent="ScaldaLevel" unique_id=2037338862]
+[node name="2ndFloor" type="CSGBox3D" parent="ScaldaLevel" unique_id=1379142879]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.192505, -0.875, 1.5)
 use_collision = true
 size = Vector3(37.86499, 0.25, 23.75)
 
-[node name="trapgat" type="CSGBox3D" parent="ScaldaLevel/2ndFloor" unique_id=1631089435]
+[node name="trapgat" type="CSGBox3D" parent="ScaldaLevel/2ndFloor" unique_id=1812962186]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.4, 0, 8.65)
 operation = 2
 size = Vector3(4.6, 0.5, 6.1)
 
-[node name="3rdFloor" type="CSGBox3D" parent="ScaldaLevel" unique_id=1829312625]
+[node name="3rdFloor" type="CSGBox3D" parent="ScaldaLevel" unique_id=1894582334]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.174999, 2.25, 1.5)
 use_collision = true
 size = Vector3(37.825, 0.25, 23.75)
 
-[node name="trapgat" type="CSGBox3D" parent="ScaldaLevel/3rdFloor" unique_id=1453822448]
+[node name="trapgat" type="CSGBox3D" parent="ScaldaLevel/3rdFloor" unique_id=162999336]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.449999, 0, 8.65)
 operation = 2
 size = Vector3(4.6, 0.5, 6.1)
 
-[node name="4thFloor" type="CSGBox3D" parent="ScaldaLevel" unique_id=1187401285]
+[node name="4thFloor" type="CSGBox3D" parent="ScaldaLevel" unique_id=1890663670]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.25, 5.25, 8.75)
 use_collision = true
 size = Vector3(5, 0.25, 9.25)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel" unique_id=1428684670]
+[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel" unique_id=671956770]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.65, 0.75, -2.25)
 size = Vector3(28.75, 3, 0.25)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D" unique_id=92134223]
+[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D" unique_id=362315144]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, -0.25, 0)
 operation = 2
 size = Vector3(1.75, 2.5, 0.3)
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D" unique_id=1633848647]
+[node name="CSGBox3D2" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D" unique_id=870654303]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.25, 0.5, 0)
 operation = 2
 size = Vector3(2.3, 1, 0.3)
 
-[node name="CSGBox3D3" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D" unique_id=1550736605]
+[node name="CSGBox3D3" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D" unique_id=499584059]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.25, -0.70000005, 0)
 operation = 2
 size = Vector3(2.3, 1, 0.3)
 
-[node name="CSGBox3D4" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D" unique_id=1466893081]
+[node name="CSGBox3D4" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D" unique_id=515330481]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2, 0.5, 0)
 operation = 2
 size = Vector3(8.400001, 1, 0.3)
 
-[node name="CSGBox3D5" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D" unique_id=17228611]
+[node name="CSGBox3D5" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D" unique_id=1638606803]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2, -0.70000005, 0)
 operation = 2
 size = Vector3(8.400001, 1, 0.3)
 
-[node name="CSGBox3D6" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D" unique_id=591555957]
+[node name="CSGBox3D6" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D" unique_id=955319037]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6, -0.70000005, 0)
 operation = 2
 size = Vector3(4, 1, 0.3)
 
-[node name="CSGBox3D7" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D" unique_id=2073621427]
+[node name="CSGBox3D7" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D" unique_id=1935209095]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6, 0.5, 0)
 operation = 2
 size = Vector3(4, 1, 0.3)
 
-[node name="CSGBox3D8" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D" unique_id=1174738018]
+[node name="CSGBox3D8" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D" unique_id=1279709169]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6000004, -0.25, 0)
 operation = 2
 size = Vector3(1.4, 2.5, 0.3)
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="ScaldaLevel" unique_id=1196315963]
+[node name="CSGBox3D2" type="CSGBox3D" parent="ScaldaLevel" unique_id=843117732]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.25, 0.75, 2.25)
 size = Vector3(18.5, 3, 0.25)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D2" unique_id=1476619319]
+[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D2" unique_id=1607007527]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.25, -0.25, 0)
 operation = 2
 size = Vector3(1.75, 2.5, 0.3)
 
-[node name="CSGBox3D4" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D2" unique_id=1327156181]
+[node name="CSGBox3D4" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D2" unique_id=158606964]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.25, 0.50000024, -4.7683716e-07)
 operation = 2
 size = Vector3(0.3, 1, 5.3)
 
-[node name="CSGBox3D5" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D2" unique_id=1322648577]
+[node name="CSGBox3D5" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D2" unique_id=1633784938]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.25, -0.6999998, -4.7683716e-07)
 operation = 2
 size = Vector3(0.3, 1, 5.3)
 
-[node name="CSGBox3D6" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D2" unique_id=1127642365]
+[node name="CSGBox3D6" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D2" unique_id=1410278350]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.95, 0.50000024, -4.7683716e-07)
 operation = 2
 size = Vector3(0.3, 1, 5.7000003)
 
-[node name="CSGBox3D7" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D2" unique_id=881268012]
+[node name="CSGBox3D7" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D2" unique_id=2002653417]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.95, -0.6999998, -4.7683716e-07)
 operation = 2
 size = Vector3(0.3, 1, 5.7000003)
 
-[node name="CSGBox3D8" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D2" unique_id=1729903022]
+[node name="CSGBox3D8" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D2" unique_id=1144643685]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.3500004, 0.50000024, -4.7683716e-07)
 operation = 2
 size = Vector3(0.3, 1, 1.5)
 
-[node name="CSGBox3D9" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D2" unique_id=1695686852]
+[node name="CSGBox3D9" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D2" unique_id=1466098399]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.3500004, -0.6999998, -4.7683716e-07)
 operation = 2
 size = Vector3(0.3, 1, 1.5)
 
-[node name="CSGBox3D10" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D2" unique_id=1422597903]
+[node name="CSGBox3D10" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D2" unique_id=928347571]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.05, 0.50000024, -4.7683716e-07)
 operation = 2
 size = Vector3(0.3, 1, 1.5)
 
-[node name="CSGBox3D11" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D2" unique_id=592634155]
+[node name="CSGBox3D11" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D2" unique_id=1935927334]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.05, -0.6999998, -4.7683716e-07)
 operation = 2
 size = Vector3(0.3, 1, 1.5)
 
-[node name="CSGBox3D3" type="CSGBox3D" parent="ScaldaLevel" unique_id=937586382]
+[node name="CSGBox3D3" type="CSGBox3D" parent="ScaldaLevel" unique_id=1859433448]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.375, 0.75, 0)
 size = Vector3(0.25, 3, 4.5)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D3" unique_id=828781659]
+[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D3" unique_id=1900936659]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 operation = 2
 size = Vector3(0.3, 2.5, 3.5)
 
-[node name="CSGBox3D4" type="CSGBox3D" parent="ScaldaLevel" unique_id=363384552]
+[node name="CSGBox3D4" type="CSGBox3D" parent="ScaldaLevel" unique_id=1320976033]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.125, 0.75, -6.125)
 size = Vector3(0.25, 3, 8)
 
-[node name="CSGBox3D5" type="CSGBox3D" parent="ScaldaLevel" unique_id=1175325468]
+[node name="CSGBox3D5" type="CSGBox3D" parent="ScaldaLevel" unique_id=1396127004]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0.75, 7.7509155)
 size = Vector3(0.25, 3, 10.751831)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D5" unique_id=1947909684]
+[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D5" unique_id=370711405]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, -0.25, -4)
 operation = 2
 size = Vector3(1.75, 2.5, 0.3)
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D5" unique_id=139182378]
+[node name="CSGBox3D2" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D5" unique_id=1443889005]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.50000024, 1.1999998)
 operation = 2
 size = Vector3(0.3, 1, 8)
 
-[node name="CSGBox3D3" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D5" unique_id=1924160827]
+[node name="CSGBox3D3" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D5" unique_id=706502281]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.6999999, 1.1999998)
 operation = 2
 size = Vector3(0.3, 1, 8)
 
-[node name="CSGBox3D6" type="CSGBox3D" parent="ScaldaLevel" unique_id=267667750]
+[node name="CSGBox3D6" type="CSGBox3D" parent="ScaldaLevel" unique_id=860947645]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0.75, 7.7528687)
 size = Vector3(0.25, 3, 10.75)
 
-[node name="CSGBox3D3" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D6" unique_id=1655617199]
+[node name="CSGBox3D3" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D6" unique_id=649653098]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.6999999, -4.7683716e-07)
 operation = 2
 size = Vector3(0.3, 1, 10.400001)
 
-[node name="CSGBox3D4" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D6" unique_id=1769545677]
+[node name="CSGBox3D4" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D6" unique_id=644872002]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.50000024, -4.7683716e-07)
 operation = 2
 size = Vector3(0.3, 1, 10.400001)
 
-[node name="CSGBox3D7" type="CSGBox3D" parent="ScaldaLevel" unique_id=305198584]
+[node name="CSGBox3D7" type="CSGBox3D" parent="ScaldaLevel" unique_id=1497311460]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.650002, 0.75, 13.25)
 size = Vector3(32.9, 3, 0.25)
 
-[node name="CSGBox3D8" type="CSGBox3D" parent="ScaldaLevel" unique_id=1326207454]
+[node name="CSGBox3D8" type="CSGBox3D" parent="ScaldaLevel" unique_id=2072039180]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.050001, 0.75, -10.25)
 size = Vector3(23.7, 3, 0.25)
 
-[node name="CSGBox3D9" type="CSGBox3D" parent="ScaldaLevel" unique_id=199687732]
+[node name="CSGBox3D9" type="CSGBox3D" parent="ScaldaLevel" unique_id=324954297]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 33, 0.6413574, 2.452734)
 size = Vector3(25.655468, 3.2172852, 0.25)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D9" unique_id=986990489]
+[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D9" unique_id=985328931]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.5, -0.25, 0)
 operation = 2
 size = Vector3(0.3, 2.5, 3.5)
 
-[node name="CSGBox3D10" type="CSGBox3D" parent="ScaldaLevel" unique_id=614140990]
+[node name="CSGBox3D10" type="CSGBox3D" parent="ScaldaLevel" unique_id=1248309802]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, -1.4250001, 8.822596)
 size = Vector3(0.25, 7.3, 12.895191)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D10" unique_id=1873110630]
+[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D10" unique_id=1119555306]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0816412, 5.5)
 operation = 2
 size = Vector3(0.3, 3.2367187, 2)
 
-[node name="CSGCylinder3D" type="CSGCylinder3D" parent="ScaldaLevel" unique_id=1436211191]
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="ScaldaLevel" unique_id=40274140]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.75, 0.75, 2.125)
 radius = 0.25
 height = 3.0
 
-[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="ScaldaLevel" unique_id=1450854677]
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="ScaldaLevel" unique_id=14067500]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.75, 0.75, 2.125)
 radius = 0.25
 height = 3.0
 
-[node name="CSGBox3D11" type="CSGBox3D" parent="ScaldaLevel" unique_id=127481565]
+[node name="CSGBox3D11" type="CSGBox3D" parent="ScaldaLevel" unique_id=54606978]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, 0.75, 0)
 size = Vector3(0.25, 3, 4.5)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D11" unique_id=612949507]
+[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D11" unique_id=2059116614]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 operation = 2
 size = Vector3(0.3, 2.5, 3.5)
 
-[node name="CSGBox3D12" type="CSGBox3D" parent="ScaldaLevel" unique_id=192354254]
+[node name="CSGBox3D12" type="CSGBox3D" parent="ScaldaLevel" unique_id=538377764]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.325, 0.75, -6.25)
 size = Vector3(0.25, 3, 7.75)
 
-[node name="CSGBox3D13" type="CSGBox3D" parent="ScaldaLevel" unique_id=2138247774]
+[node name="CSGBox3D13" type="CSGBox3D" parent="ScaldaLevel" unique_id=1436916843]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.25, 0.75, 2.25)
 size = Vector3(0.25, 3, 4.5)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D13" unique_id=1910912595]
+[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D13" unique_id=609068653]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 operation = 2
 size = Vector3(0.3, 2.5, 3.5)
 
-[node name="CSGBox3D14" type="CSGBox3D" parent="ScaldaLevel" unique_id=880887133]
+[node name="CSGBox3D14" type="CSGBox3D" parent="ScaldaLevel" unique_id=657478739]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.625, -0.8767822, 7.75)
 size = Vector3(0.25, 6.25, 11.25)
 
-[node name="CSGBox3D15" type="CSGBox3D" parent="ScaldaLevel" unique_id=965237938]
+[node name="CSGBox3D15" type="CSGBox3D" parent="ScaldaLevel" unique_id=1431732532]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.25, 0.75, 12.200001)
 size = Vector3(4.5, 0.25, 1.8000001)
 
-[node name="CSGBox3D16" type="CSGBox3D" parent="ScaldaLevel" unique_id=2115609119]
+[node name="CSGBox3D16" type="CSGBox3D" parent="ScaldaLevel" unique_id=256461781]
 transform = Transform3D(-4.371139e-08, 0, 1, -0.34202012, 0.9396926, -1.4950174e-08, -0.9396926, -0.34202012, -4.1075268e-08, -3.5, -0.06130302, 9.087046)
 size = Vector3(4.8, 0.25, 2)
 
-[node name="CSGBox3D17" type="CSGBox3D" parent="ScaldaLevel" unique_id=1955000326]
+[node name="CSGBox3D17" type="CSGBox3D" parent="ScaldaLevel" unique_id=811140730]
 transform = Transform3D(-4.1329926e-08, -1.4231036e-08, -1, -0.32556814, 0.9455185, 0, 0.9455185, 0.32556814, -4.371139e-08, -1, 1.5085487, 9.240738)
 size = Vector3(4.623755, 0.25, 2)
 
-[node name="CSGBox3D18" type="CSGBox3D" parent="ScaldaLevel" unique_id=2101175960]
+[node name="CSGBox3D18" type="CSGBox3D" parent="ScaldaLevel" unique_id=1502723931]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, 3.775, 8.625)
 size = Vector3(0.25, 3.2, 9)
 
-[node name="CSGBox3D19" type="CSGBox3D" parent="ScaldaLevel" unique_id=1853949120]
+[node name="CSGBox3D19" type="CSGBox3D" parent="ScaldaLevel" unique_id=610850699]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.625, 3.725, 8.625)
 size = Vector3(0.25, 3.3, 9)
 
-[node name="CSGBox3D20" type="CSGBox3D" parent="ScaldaLevel" unique_id=1319047553]
+[node name="CSGBox3D20" type="CSGBox3D" parent="ScaldaLevel" unique_id=1505205854]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.25, 0.12500012, 13.25)
 size = Vector3(0.25, 10.5, 5)
 
-[node name="CSGBox3D21" type="CSGBox3D" parent="ScaldaLevel" unique_id=1239439376]
+[node name="CSGBox3D21" type="CSGBox3D" parent="ScaldaLevel" unique_id=1804681904]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.25, 3.75, 4.25)
 size = Vector3(0.25, 3, 4.5)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D21" unique_id=867757147]
+[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D21" unique_id=468924563]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 operation = 2
 size = Vector3(0.3, 2.5, 3.5)
 
-[node name="CSGBox3D22" type="CSGBox3D" parent="ScaldaLevel" unique_id=329645818]
+[node name="CSGBox3D22" type="CSGBox3D" parent="ScaldaLevel" unique_id=1532066843]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.625, 0.75, 0)
 size = Vector3(0.25, 3, 4.5)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D22" unique_id=1749539430]
+[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D22" unique_id=451358490]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 operation = 2
 size = Vector3(0.3, 2.5, 3.5)
 
-[node name="CSGBox3D23" type="CSGBox3D" parent="ScaldaLevel" unique_id=1924692530]
+[node name="CSGBox3D23" type="CSGBox3D" parent="ScaldaLevel" unique_id=741108700]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.25, -2.3789155, 12.200001)
 size = Vector3(4.5, 0.25, 1.8000001)
 
-[node name="CSGBox3D24" type="CSGBox3D" parent="ScaldaLevel" unique_id=465828139]
+[node name="CSGBox3D24" type="CSGBox3D" parent="ScaldaLevel" unique_id=2108408098]
 transform = Transform3D(-4.371139e-08, 0, 1, -0.34202012, 0.9396926, -1.4950174e-08, -0.9396926, -0.34202012, -4.1075268e-08, -3.5, -3.25241, 8.916176)
 size = Vector3(5.163672, 0.25, 2)
 
-[node name="CSGBox3D25" type="CSGBox3D" parent="ScaldaLevel" unique_id=741577866]
+[node name="CSGBox3D25" type="CSGBox3D" parent="ScaldaLevel" unique_id=1870098260]
 transform = Transform3D(-4.1329926e-08, -1.4231036e-08, -1, -0.32556814, 0.9455185, 0, 0.9455185, 0.32556814, -4.371139e-08, -1, -1.6203668, 9.240738)
 size = Vector3(4.623755, 0.25, 2)
 
-[node name="1stFloor" type="CSGBox3D" parent="ScaldaLevel" unique_id=1903951]
+[node name="1stFloor" type="CSGBox3D" parent="ScaldaLevel" unique_id=641251720]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.125, -4.125, 6.321289)
 use_collision = true
 size = Vector3(38, 0.25, 17.892578)
 
-[node name="CSGBox3D4" type="CSGBox3D" parent="ScaldaLevel/1stFloor" unique_id=1120124067]
+[node name="CSGBox3D4" type="CSGBox3D" parent="ScaldaLevel/1stFloor" unique_id=1636479320]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4499998, -0.63165474, 4.4623394)
 size = Vector3(24.9, 1, 1)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/1stFloor" unique_id=693547487]
+[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/1stFloor" unique_id=1769528198]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6500015, 0, 6.9623394)
 operation = 2
 size = Vector3(24.5, 0.3, 4)
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="ScaldaLevel/1stFloor" unique_id=1464729944]
+[node name="CSGBox3D2" type="CSGBox3D" parent="ScaldaLevel/1stFloor" unique_id=1710154500]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.700002, -0.8499999, 4.2623396)
 operation = 2
 size = Vector3(1.6, 2, 1.4)
 
-[node name="CSGBox3D3" type="CSGBox3D" parent="ScaldaLevel/1stFloor" unique_id=2022543648]
+[node name="CSGBox3D3" type="CSGBox3D" parent="ScaldaLevel/1stFloor" unique_id=1896974422]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.849998, -0.8499999, 4.2623396)
 operation = 2
 size = Vector3(3.5, 2, 1.4)
 
-[node name="Aula_floor_lower" type="CSGBox3D" parent="ScaldaLevel/1stFloor" unique_id=35901097]
+[node name="Aula_floor_lower" type="CSGBox3D" parent="ScaldaLevel/1stFloor" unique_id=10294086]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6500006, -1, 6.9623394)
 size = Vector3(24.5, 0.25, 4)
 
-[node name="CSGBox3D5" type="CSGBox3D" parent="ScaldaLevel/1stFloor" unique_id=1029042909]
+[node name="CSGBox3D5" type="CSGBox3D" parent="ScaldaLevel/1stFloor" unique_id=49973927]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.6, 0.8956528, 6.9600773)
 size = Vector3(6, 4.054615, 3.9954772)
 
-[node name="CSGBox3D28" type="CSGBox3D" parent="ScaldaLevel" unique_id=2052386426]
+[node name="CSGBox3D28" type="CSGBox3D" parent="ScaldaLevel" unique_id=330127511]
 transform = Transform3D(1, 0, 0, 0, 0.86602545, -0.50000006, 0, 0.50000006, 0.86602545, 22.979847, -4.6167226, 10.69384)
 size = Vector3(3.5, 0.25, 2.0354004)
 
-[node name="CSGBox3D26" type="CSGBox3D" parent="ScaldaLevel" unique_id=1479250791]
+[node name="CSGBox3D26" type="CSGBox3D" parent="ScaldaLevel" unique_id=327242446]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.2475674, -2.5, 2.25)
 size = Vector3(0.25, 3, 4.98786)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D26" unique_id=913262469]
+[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D26" unique_id=1688870706]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 operation = 2
 size = Vector3(0.3, 2.5, 3.5)
 
-[node name="CSGBox3D27" type="CSGBox3D" parent="ScaldaLevel" unique_id=619770092]
+[node name="CSGBox3D27" type="CSGBox3D" parent="ScaldaLevel" unique_id=1097676333]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.625, -2.5, 0)
 size = Vector3(0.25, 3, 4.5)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D27" unique_id=492774020]
+[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D27" unique_id=345875826]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 operation = 2
 size = Vector3(0.3, 2.5, 3.5)
 
-[node name="CSGBox3D29" type="CSGBox3D" parent="ScaldaLevel" unique_id=854405792]
+[node name="CSGBox3D29" type="CSGBox3D" parent="ScaldaLevel" unique_id=856559693]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, -2.5, 0)
 size = Vector3(0.25, 3, 4.5)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D29" unique_id=1975409540]
+[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D29" unique_id=1393809694]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 operation = 2
 size = Vector3(0.3, 2.5, 3.5)
 
-[node name="CSGBox3D30" type="CSGBox3D" parent="ScaldaLevel" unique_id=257339037]
+[node name="CSGBox3D30" type="CSGBox3D" parent="ScaldaLevel" unique_id=1690052173]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.220232, -2.5, 2.25)
 size = Vector3(28.465466, 3, 0.25)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D30" unique_id=1837191089]
+[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D30" unique_id=828724224]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.491455, -0.25, 0)
 operation = 2
 size = Vector3(3.46709, 2.5, 0.3)
 
-[node name="CSGBox3D31" type="CSGBox3D" parent="ScaldaLevel" unique_id=2117621083]
+[node name="CSGBox3D31" type="CSGBox3D" parent="ScaldaLevel" unique_id=1970723241]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.473827, -2.5, -2.25)
 size = Vector3(50.4, 3, 0.25)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D31" unique_id=757502717]
+[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D31" unique_id=596843136]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, -0.22500002, 0)
 operation = 2
 size = Vector3(3.5, 2.5, 0.4)
 
-[node name="Draaideur" type="CSGCylinder3D" parent="ScaldaLevel/CSGBox3D31" unique_id=384058242]
+[node name="Draaideur" type="CSGCylinder3D" parent="ScaldaLevel/CSGBox3D31" unique_id=74837643]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, -0.19999993, 0)
 radius = 1.5
 height = 2.75
 
-[node name="CSGCylinder3D" type="CSGCylinder3D" parent="ScaldaLevel/CSGBox3D31/Draaideur" unique_id=1751737958]
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="ScaldaLevel/CSGBox3D31/Draaideur" unique_id=136047194]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.100000024, 0)
 operation = 2
 radius = 1.75
 height = 2.5
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D31" unique_id=1819215206]
+[node name="CSGBox3D2" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D31" unique_id=1240621453]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, -0.2775879, 0)
 operation = 2
 size = Vector3(2.75, 2.435, 0.3)
 
-[node name="CSGBox3D8" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D31" unique_id=188055566]
+[node name="CSGBox3D8" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D31" unique_id=271908287]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.200001, -0.25, 0)
 operation = 2
 size = Vector3(1.4, 2.5, 0.3)
 
-[node name="CSGBox3D7" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D31" unique_id=1212262860]
+[node name="CSGBox3D7" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D31" unique_id=254510165]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.050001, 0.5, 0)
 operation = 2
 size = Vector3(3.7, 1, 0.3)
 
-[node name="CSGBox3D9" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D31" unique_id=27284962]
+[node name="CSGBox3D9" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D31" unique_id=1278151671]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.050001, -0.8000002, 0)
 operation = 2
 size = Vector3(3.7, 1, 0.3)
 
-[node name="CSGBox3D10" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D31" unique_id=1823430643]
+[node name="CSGBox3D10" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D31" unique_id=587639227]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.099999, -0.25, 0)
 operation = 2
 size = Vector3(1.4, 2.5, 0.3)
 
-[node name="CSGBox3D11" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D31" unique_id=1703332846]
+[node name="CSGBox3D11" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D31" unique_id=148656866]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.3500004, 0.5, 0)
 operation = 2
 size = Vector3(3.7, 1, 0.3)
 
-[node name="CSGBox3D12" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D31" unique_id=245874967]
+[node name="CSGBox3D12" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D31" unique_id=232074101]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.3500004, -0.8000002, 0)
 operation = 2
 size = Vector3(3.7, 1, 0.3)
 
-[node name="CSGBox3D13" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D31" unique_id=1561149261]
+[node name="CSGBox3D13" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D31" unique_id=1589167608]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7999992, -0.25, 0)
 operation = 2
 size = Vector3(1.4, 2.5, 0.3)
 
-[node name="CSGBox3D14" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D31" unique_id=1572503843]
+[node name="CSGBox3D14" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D31" unique_id=2073423291]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.800003, -0.25, 0)
 operation = 2
 size = Vector3(1.4, 2.5, 0.3)
 
-[node name="CSGBox3D15" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D31" unique_id=112199726]
+[node name="CSGBox3D15" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D31" unique_id=496599785]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.5, 0)
 operation = 2
 size = Vector3(8.8, 1, 0.3)
 
-[node name="CSGBox3D16" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D31" unique_id=1309597582]
+[node name="CSGBox3D16" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D31" unique_id=707303388]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, -0.8000002, 0)
 operation = 2
 size = Vector3(8.8, 1, 0.3)
 
-[node name="CSGBox3D32" type="CSGBox3D" parent="ScaldaLevel" unique_id=856312684]
+[node name="CSGBox3D32" type="CSGBox3D" parent="ScaldaLevel" unique_id=439405863]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.325, -2.5, 0)
 size = Vector3(0.25, 3, 4.5)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D32" unique_id=1126264385]
+[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D32" unique_id=1447894769]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 operation = 2
 size = Vector3(0.3, 2.5, 3.5)
 
-[node name="CSGBox3D33" type="CSGBox3D" parent="ScaldaLevel" unique_id=2103556501]
+[node name="CSGBox3D33" type="CSGBox3D" parent="ScaldaLevel" unique_id=1272514449]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.325, -2.5, 0)
 size = Vector3(0.25, 3, 4.5)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D33" unique_id=41703935]
+[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D33" unique_id=1380171283]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 operation = 2
 size = Vector3(0.3, 2.5, 3.5)
 
-[node name="CSGBox3D34" type="CSGBox3D" parent="ScaldaLevel" unique_id=1518079905]
+[node name="CSGBox3D34" type="CSGBox3D" parent="ScaldaLevel" unique_id=1763620296]
 transform = Transform3D(1, 0, 0, 0, 0.86602545, -0.50000006, 0, 0.50000006, 0.86602545, 2.436683, -4.6167226, 10.69384)
 size = Vector3(1.6, 0.25, 2.0354004)
 
-[node name="Aula_floor_lower" type="CSGBox3D" parent="ScaldaLevel" unique_id=2138865007]
+[node name="Aula_floor_lower" type="CSGBox3D" parent="ScaldaLevel" unique_id=484255071]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.685497, -1.0864687, 13.27)
 size = Vector3(32.870995, 0.25, 4)
 
-[node name="CSGBox3D35" type="CSGBox3D" parent="ScaldaLevel" unique_id=361266453]
+[node name="CSGBox3D35" type="CSGBox3D" parent="ScaldaLevel" unique_id=267505072]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.398543, -3.144397, 15.25)
 size = Vector3(24.822088, 4.111206, 0.25)
 
-[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="ScaldaLevel" unique_id=323861349]
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="ScaldaLevel" unique_id=1795500900]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9, -2.4499998, 10.6)
 height = 3.1000001
 
-[node name="CSGCylinder3D4" type="CSGCylinder3D" parent="ScaldaLevel" unique_id=80334630]
+[node name="CSGCylinder3D4" type="CSGCylinder3D" parent="ScaldaLevel" unique_id=2071391664]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.6, -2.4499998, 10.6)
 height = 3.1000001
 
-[node name="CSGCylinder3D5" type="CSGCylinder3D" parent="ScaldaLevel" unique_id=1641969418]
+[node name="CSGCylinder3D5" type="CSGCylinder3D" parent="ScaldaLevel" unique_id=2072599247]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.7, -2.4499998, 10.6)
 height = 3.1000001
 
-[node name="CSGCylinder3D6" type="CSGCylinder3D" parent="ScaldaLevel" unique_id=800505723]
+[node name="CSGCylinder3D6" type="CSGCylinder3D" parent="ScaldaLevel" unique_id=925871864]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.2, -2.4499998, 10.6)
 height = 3.1000001
 
-[node name="2ndFloor2" type="CSGBox3D" parent="ScaldaLevel" unique_id=1166583151]
+[node name="2ndFloor2" type="CSGBox3D" parent="ScaldaLevel" unique_id=224242003]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.425, -0.875, 6.5249996)
 use_collision = true
 size = Vector3(12.6, 0.25, 17.5)
 
-[node name="2ndFloor3" type="CSGBox3D" parent="ScaldaLevel" unique_id=1631291015]
+[node name="2ndFloor3" type="CSGBox3D" parent="ScaldaLevel" unique_id=874165507]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.375, -4.125, 6.325)
 use_collision = true
 size = Vector3(12.5, 0.25, 17.9)
 
-[node name="CSGBox3D36" type="CSGBox3D" parent="ScaldaLevel" unique_id=120381807]
+[node name="CSGBox3D36" type="CSGBox3D" parent="ScaldaLevel" unique_id=820286111]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.125, -2.5, 0)
 size = Vector3(0.25, 3, 4.5)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D36" unique_id=1680364272]
+[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D36" unique_id=56106573]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 operation = 2
 size = Vector3(0.3, 2.5, 3.5)
 
-[node name="CSGBox3D37" type="CSGBox3D" parent="ScaldaLevel" unique_id=105379007]
+[node name="CSGBox3D37" type="CSGBox3D" parent="ScaldaLevel" unique_id=1252848742]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.125, -2.5, 13)
 size = Vector3(0.25, 3, 4.5)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D37" unique_id=1198718203]
+[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D37" unique_id=734816152]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 operation = 2
 size = Vector3(0.3, 2.5, 3.5)
 
-[node name="CSGBox3D38" type="CSGBox3D" parent="ScaldaLevel" unique_id=973503123]
+[node name="CSGBox3D38" type="CSGBox3D" parent="ScaldaLevel" unique_id=799776548]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.20581, -2.531372, 15.4)
 size = Vector3(15, 3.1281738, 0.25)
 
-[node name="CSGBox3D39" type="CSGBox3D" parent="ScaldaLevel" unique_id=1216774192]
+[node name="CSGBox3D39" type="CSGBox3D" parent="ScaldaLevel" unique_id=1922015913]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.125, -2.5, 6.5)
 size = Vector3(0.25, 3, 8.5)
 
-[node name="CSGBox3D40" type="CSGBox3D" parent="ScaldaLevel" unique_id=1491595486]
+[node name="CSGBox3D40" type="CSGBox3D" parent="ScaldaLevel" unique_id=2056289985]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 45.805813, -2.531372, 6.4999995)
 size = Vector3(17.6, 3.1281738, 0.25)
 
-[node name="CSGBox3D41" type="CSGBox3D" parent="ScaldaLevel" unique_id=29122983]
+[node name="CSGBox3D41" type="CSGBox3D" parent="ScaldaLevel" unique_id=1972809199]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.95, -3.5, 6.45)
 size = Vector3(0.6, 1, 6.2000003)
 
-[node name="CSGBox3D42" type="CSGBox3D" parent="ScaldaLevel" unique_id=1850923135]
+[node name="CSGBox3D42" type="CSGBox3D" parent="ScaldaLevel" unique_id=345141686]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.25, -3.5, 3.0499997)
 size = Vector3(2, 1, 0.6)
 
-[node name="CSGBox3D43" type="CSGBox3D" parent="ScaldaLevel" unique_id=456160112]
+[node name="CSGBox3D43" type="CSGBox3D" parent="ScaldaLevel" unique_id=1368695950]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.25, -3.5, 9.849999)
 size = Vector3(2, 1, 0.6)
 
-[node name="CSGBox3D44" type="CSGBox3D" parent="ScaldaLevel" unique_id=82484966]
+[node name="CSGBox3D44" type="CSGBox3D" parent="ScaldaLevel" unique_id=1239580007]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.25, -1.7, 6.5)
 size = Vector3(2, 0.2, 7.5)
-
-[node name="Player" parent="." unique_id=1655037376 instance=ExtResource("1_27sxs")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 26.78246, 0.95087653, -0.098355055)
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=835564989]
-transform = Transform3D(1, 0, 0, 0, 0.37285823, 0.92788833, 0, -0.92788833, 0.37285823, -0.56179345, 27.757853, 0)
-shadow_enabled = true
-
-[node name="object" type="StaticBody3D" parent="." unique_id=28058086]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 0.9545959, 5)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="object" unique_id=1623494195]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3127191, 0)
-mesh = SubResource("CapsuleMesh_27sxs")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="object" unique_id=1340634981]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3127191, 0)
-shape = SubResource("CapsuleShape3D_486io")
-
-[node name="TestItemInteractable" parent="." unique_id=1183875761 instance=ExtResource("3_ghcsx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.728243, 0.70000005, 5.8982162)
-
-[node name="TestItemInteractable2" parent="." unique_id=2125709542 instance=ExtResource("3_ghcsx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.485947, 0.7187809, 5.810042)
