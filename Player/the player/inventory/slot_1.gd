@@ -3,6 +3,7 @@ class_name InventorySlot
 
 var held_item
 var selected: bool
+var has_item := false
 
 func _process(delta: float) -> void:
 	if selected:

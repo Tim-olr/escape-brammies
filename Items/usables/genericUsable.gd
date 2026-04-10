@@ -4,6 +4,7 @@ class_name UsableItem
 @export_category("info")
 @export var item_name: String
 @export var min_use_time: float = 0.0 # laat deze op 0.0 als het een insta use is
+@export var custom_texture: Texture2D # Kan niet null zijn pls
 
 var _hold_timer: float = 0.0
 var _is_holding: bool = false

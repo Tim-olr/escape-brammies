@@ -116,16 +116,19 @@ theme_override_constants/separation = 10
 [node name="Slot 1" type="Button" parent="CanvasLayer/Control/Hotbar" unique_id=779275139]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+expand_icon = true
 script = ExtResource("7_rr6jo")
 
 [node name="Slot 2" type="Button" parent="CanvasLayer/Control/Hotbar" unique_id=1839576134]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+expand_icon = true
 script = ExtResource("7_rr6jo")
 
 [node name="Slot 3" type="Button" parent="CanvasLayer/Control/Hotbar" unique_id=219816399]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+expand_icon = true
 script = ExtResource("7_rr6jo")
 
 [node name="Label" type="Label" parent="CanvasLayer/Control" unique_id=237425245]

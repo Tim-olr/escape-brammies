@@ -9,6 +9,9 @@ class_name PlayerInventory
 var current_item
 var current_slot: InventorySlot
 
+func _ready():
+	GlobalPlayer.inventory = self
+
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("use_item"):
 		if current_item:
@@ -30,3 +33,28 @@ func select_slot(slot: InventorySlot) -> void:
 	current_slot = slot
 	current_slot.select()
 	current_item = current_slot.held_item
+
+func add_item(item):
+	var index = 1
+	for i in hotbar.get_children():
+		if !check_occupied_slot(index):
+			if item != null:
+				var slot = get_slot(index)
+				slot.held_item = item
+				slot.has_item = true
+				slot.icon = item.custom_texture
+				return
+		index += 1
+
+func get_slot(slot_number):
+	match slot_number:
+		1: return slot_1
+		2: return slot_2
+		3: return slot_3
+
+func check_occupied_slot(slot: int) -> bool:
+	match slot:
+		1: return slot_1.has_item
+		2: return slot_2.has_item
+		3: return slot_3.has_item
+	return false
