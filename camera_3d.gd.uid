@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dj0ij144jaak8"]
+
+[ext_resource type="Script" uid="uid://bnjex4esacmvb" path="res://Items/usables/test_usable.gd" id="1_gj77x"]
+[ext_resource type="Texture2D" uid="uid://1j0xo782toyr" path="res://icon.svg" id="2_gj77x"]
+
+[node name="TestUsable" type="Node3D" unique_id=1365059711]
+script = ExtResource("1_gj77x")
+item_name = "Test"
+custom_texture = ExtResource("2_gj77x")

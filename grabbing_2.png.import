@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://rhpwx4anaa7d"]
+
+[ext_resource type="Script" uid="uid://4po8pan7ggdr" path="res://assets/Scripts/UI/PauzeMenuButtons.gd" id="1_7xjqa"]
+[ext_resource type="FontFile" uid="uid://ulbymda0vas8" path="res://assets/UI/Fonts/MedodicaRegular.otf" id="2_d4ml5"]
+
+[node name="PauseMenu" type="Control" unique_id=2052854178]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=768806969]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -184.5
+offset_top = -149.5
+offset_right = 184.5
+offset_bottom = 149.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 40
+alignment = 1
+script = ExtResource("1_7xjqa")
+
+[node name="Play" type="Button" parent="VBoxContainer" unique_id=168966124]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_d4ml5")
+theme_override_font_sizes/font_size = 60
+text = "Continue"
+
+[node name="Exit" type="Button" parent="VBoxContainer" unique_id=769186704]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_d4ml5")
+theme_override_font_sizes/font_size = 60
+text = "Exit"
