@@ -54,3 +54,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.728243, 0.70000005, 5.8982
 
 [node name="TestItemInteractable2" parent="." unique_id=2125709542 instance=ExtResource("2_j5njh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.485947, 0.7187809, 5.810042)
+
+[node name="TestItemInteractable3" parent="." unique_id=872784209 instance=ExtResource("2_j5njh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.032309, 0.6325064, 6.3131447)
+
+[node name="TestItemInteractable4" parent="." unique_id=1908994398 instance=ExtResource("2_j5njh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.032309, 0.6325064, 7.9723206)

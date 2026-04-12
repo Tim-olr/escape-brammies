@@ -11,8 +11,8 @@ func _process(_delta: float) -> void:
 			if get_collider().has_method("can_interact"):
 				show_interactable_visual()
 				if Input.is_action_just_pressed("interact"):
-					get_collider().interact()
-					grab_animation()
+					if get_collider().interact():
+						grab_animation()
 		else: hide_interaction_visual()
 
 func hide_interaction_visual():

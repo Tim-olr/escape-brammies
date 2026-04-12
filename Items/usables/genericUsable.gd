@@ -5,6 +5,8 @@ class_name UsableItem
 @export var item_name: String
 @export var min_use_time: float = 0.0 # laat deze op 0.0 als het een insta use is
 @export var custom_texture: Texture2D # Kan niet null zijn pls
+@export var model: PackedScene
+@export var collision: PackedScene
 
 var _hold_timer: float = 0.0
 var _is_holding: bool = false
@@ -48,3 +50,15 @@ func on_select():
 
 func on_deselect():
 	is_selected = false
+
+func drop():
+	if model != null and collision != null:
+		var actual_model = model.instantiate()
+		var drop_pos = GlobalPlayer.manager.calculate_drop_height()
+		var interactable = TestInteractable.new()
+		var col = collision.instantiate()
+		interactable.add_child(col)
+		interactable.add_child(actual_model)
+		GlobalPlayer.player.get_parent().add_child(interactable)
+		interactable.global_position = drop_pos
+		

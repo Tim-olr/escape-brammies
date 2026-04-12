@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://dndvwgjshay3e" path="res://Player/the player/player components/player_movement.gd" id="3_esvoh"]
 [ext_resource type="Script" uid="uid://7g7hgmc8vlgi" path="res://Player/the player/player components/camera_3d.gd" id="4_3wug4"]
 [ext_resource type="Script" uid="uid://1msx8h0q5gft" path="res://Player/the player/player components/player_inventory.gd" id="4_7q2ms"]
+[ext_resource type="Script" uid="uid://c5nw0j1x2s8b8" path="res://Player/the player/player_manager.gd" id="5_2qv5j"]
 [ext_resource type="Shader" uid="uid://b5vbwbt35oy46" path="res://Player/the player/pixelate.gdshader" id="5_esvoh"]
 [ext_resource type="Texture2D" uid="uid://3d7fcgk64hk1" path="res://assets/textures/player/hand/grabbing/grabbing_1.png" id="6_11607"]
 [ext_resource type="Script" uid="uid://dp2vyu0x48yiq" path="res://Player/the player/player components/player_interaction.gd" id="7_63538"]
@@ -88,6 +89,9 @@ hotbar = NodePath("../CanvasLayer/Control/Hotbar")
 slot_1 = NodePath("../CanvasLayer/Control/Hotbar/Slot 1")
 slot_2 = NodePath("../CanvasLayer/Control/Hotbar/Slot 2")
 slot_3 = NodePath("../CanvasLayer/Control/Hotbar/Slot 3")
+
+[node name="PlayerManager" type="Node3D" parent="." unique_id=1398871743]
+script = ExtResource("5_2qv5j")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=763132796]
 shape = SubResource("CapsuleShape3D_du564")

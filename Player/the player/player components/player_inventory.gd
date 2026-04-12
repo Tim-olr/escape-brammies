@@ -19,7 +19,10 @@ func _process(delta: float) -> void:
 	elif Input.is_action_just_released("use_item"):
 		if current_item:
 			current_item.cancel_use()
-
+	
+	if Input.is_action_just_pressed("drop"):
+		drop_item()
+	
 	if Input.is_action_just_pressed("hotbar_1"):
 		select_slot(slot_1)
 	elif Input.is_action_just_pressed("hotbar_2"):
@@ -50,8 +53,10 @@ func add_item(item):
 				slot.has_item = true
 				slot.slot_sprite.texture = item.custom_texture
 				slot.slot_item.add_child(item)
-				return
+				return true
 		index += 1
+		if check_inv_full():
+			return false
 
 func get_slot(slot_number):
 	match slot_number:
@@ -64,4 +69,19 @@ func check_occupied_slot(slot: int) -> bool:
 		1: return slot_1.has_item
 		2: return slot_2.has_item
 		3: return slot_3.has_item
-	return false
+	return true
+
+func check_inv_full() -> bool:
+	if slot_1.has_item and slot_2.has_item and slot_3.has_item:
+		return true
+	else: return false
+
+func drop_item():
+	if current_slot and current_slot.selected:
+		if current_item:
+			current_item.drop()
+			current_slot.deselect()
+			set_slot_outline(current_slot, 0.0)
+			current_slot.held_item = null
+			current_slot.slot_sprite.texture = null
+			current_slot.has_item = false

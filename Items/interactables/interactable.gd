@@ -6,8 +6,8 @@ class_name Interactable
 func can_interact():
 	pass
 
-func interact():
-	pass
+func interact() -> bool:
+	return false
 
 func check_go_away():
 	if goes_away_on_interact:

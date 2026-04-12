@@ -8,16 +8,15 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2nee1"]
 albedo_texture = ExtResource("2_vud55")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gnxum"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c72hq"]
 metallic = 1.0
 metallic_specular = 1.0
 
 [sub_resource type="BoxMesh" id="BoxMesh_pxbjx"]
-material = SubResource("StandardMaterial3D_gnxum")
+material = SubResource("StandardMaterial3D_c72hq")
 
 [node name="TestItemInteractable" type="Area3D" unique_id=1183875761]
 script = ExtResource("1_2rqnv")
-goes_away_on_interact = null
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1227581695]
 shape = SubResource("BoxShape3D_k21q8")

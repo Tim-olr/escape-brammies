@@ -6,3 +6,4 @@ extends Node
 @onready var camera: PlayerCamera
 @onready var inventory: PlayerInventory
 @onready var interaction: RayCast3D
+@onready var manager: PlayerManager

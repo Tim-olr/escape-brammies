@@ -2,8 +2,12 @@
 
 [ext_resource type="Script" uid="uid://bnjex4esacmvb" path="res://Items/usables/test_usable.gd" id="1_gj77x"]
 [ext_resource type="Texture2D" uid="uid://1j0xo782toyr" path="res://icon.svg" id="2_gj77x"]
+[ext_resource type="PackedScene" uid="uid://c7jixydl6llp3" path="res://assets/models/test_model.tscn" id="3_a3o70"]
+[ext_resource type="PackedScene" uid="uid://bnl2cxd065uc4" path="res://assets/models/test_collison.tscn" id="4_o5bim"]
 
 [node name="TestUsable" type="Node3D" unique_id=1365059711]
 script = ExtResource("1_gj77x")
 item_name = "Test"
 custom_texture = ExtResource("2_gj77x")
+model = ExtResource("3_a3o70")
+collision = ExtResource("4_o5bim")
