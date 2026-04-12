@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bieh6omnby6or"]
+
+[ext_resource type="PackedScene" uid="uid://dnt6abkgf4lc2" path="res://assets/models/scalda/blinds.glb" id="1_07cj1"]
+
+[node name="Blinds" type="Node3D" unique_id=1457352535]
+
+[node name="blockbench_export" parent="." unique_id=1492728720 instance=ExtResource("1_07cj1")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0)
+
+[editable path="blockbench_export"]

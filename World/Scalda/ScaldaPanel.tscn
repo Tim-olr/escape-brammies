@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dwkdwwwk2h6le"]
+
+[ext_resource type="PackedScene" uid="uid://daawnbt1ai13a" path="res://assets/models/scalda/scalda_wallpanel.glb" id="1_x41ih"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l3ark"]
+size = Vector3(1, 1, 0.2)
+
+[node name="ScaldaPanel" type="Node3D" unique_id=846165288]
+
+[node name="blockbench_export" parent="." unique_id=1483520424 instance=ExtResource("1_x41ih")]
+
+[node name="mesh" parent="blockbench_export" index="0" unique_id=1466068943]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.125, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=2060332006]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=664562665]
+shape = SubResource("BoxShape3D_l3ark")
+
+[editable path="blockbench_export"]

@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://ykctmkx2lgy"]
+
+[ext_resource type="PackedScene" uid="uid://sfvo8gmciu3n" path="res://assets/models/scalda/window.glb" id="1_gpwko"]
+[ext_resource type="Texture2D" uid="uid://dav6kxpn1ekcl" path="res://assets/models/scalda/window_0.png" id="2_k1pqr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k1pqr"]
+size = Vector3(1, 1, 0.001)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gpwko"]
+render_priority = 100
+transparency = 1
+albedo_color = Color(1.5720325, 1.5720325, 1.5720325, 1)
+albedo_texture = ExtResource("2_k1pqr")
+texture_filter = 0
+
+[node name="Window" type="Node3D" unique_id=565403383]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1022200777]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=506354077]
+shape = SubResource("BoxShape3D_k1pqr")
+debug_fill = false
+
+[node name="blockbench_export" parent="StaticBody3D" unique_id=1011681639 instance=ExtResource("1_gpwko")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+
+[node name="mesh" parent="StaticBody3D/blockbench_export" index="0" unique_id=789693676]
+surface_material_override/0 = SubResource("StandardMaterial3D_gpwko")
+
+[editable path="StaticBody3D/blockbench_export"]

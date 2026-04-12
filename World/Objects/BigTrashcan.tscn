@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c24jguudievws"]
+
+[ext_resource type="PackedScene" uid="uid://bml61owaclrsy" path="res://assets/models/scalda/trashcan_big.glb" id="1_tnhns"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tnhns"]
+size = Vector3(1.8000001, 1.2, 1)
+
+[node name="BigTrashcan" type="Node3D" unique_id=238253868]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=2147435971]
+
+[node name="blockbench_export" parent="StaticBody3D" unique_id=1949714251 instance=ExtResource("1_tnhns")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1302016424]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.940697e-08, 0.59999996, 0)
+shape = SubResource("BoxShape3D_tnhns")
+
+[editable path="StaticBody3D/blockbench_export"]

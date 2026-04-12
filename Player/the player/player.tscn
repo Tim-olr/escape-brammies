@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://dndvwgjshay3e" path="res://Player/the player/player components/player_movement.gd" id="3_esvoh"]
 [ext_resource type="Script" uid="uid://7g7hgmc8vlgi" path="res://Player/the player/player components/camera_3d.gd" id="4_3wug4"]
 [ext_resource type="Script" uid="uid://1msx8h0q5gft" path="res://Player/the player/player components/player_inventory.gd" id="4_7q2ms"]
-[ext_resource type="Script" uid="uid://c5nw0j1x2s8b8" path="res://Player/the player/player_manager.gd" id="5_2qv5j"]
+[ext_resource type="Script" path="res://Player/the player/player_manager.gd" id="5_2qv5j"]
 [ext_resource type="Shader" uid="uid://b5vbwbt35oy46" path="res://Player/the player/pixelate.gdshader" id="5_esvoh"]
 [ext_resource type="Texture2D" uid="uid://3d7fcgk64hk1" path="res://assets/textures/player/hand/grabbing/grabbing_1.png" id="6_11607"]
 [ext_resource type="Script" uid="uid://dp2vyu0x48yiq" path="res://Player/the player/player components/player_interaction.gd" id="7_63538"]
@@ -16,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://jil3b4784fhx" path="res://assets/textures/player/hand/grabbing/grabbing_4.png" id="9_ierpi"]
 [ext_resource type="Texture2D" uid="uid://dsw2jtww5o2br" path="res://assets/textures/player/hand/idle/idle_hand.png" id="10_ek1er"]
 [ext_resource type="Shader" uid="uid://ltdvcyyto6kr" path="res://Player/the player/inventory/slot_selection.gdshader" id="13_a05s0"]
+[ext_resource type="Script" uid="uid://d0niuj5q1mwqm" path="res://Player/the player/UI.gd" id="14_ierpi"]
+[ext_resource type="FontFile" uid="uid://ulbymda0vas8" path="res://assets/UI/Fonts/MedodicaRegular.otf" id="18_ek1er"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_du564"]
 
@@ -122,6 +124,7 @@ script = ExtResource("7_63538")
 mesh = SubResource("CapsuleMesh_3wug4")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1640052681]
+script = ExtResource("14_ierpi")
 
 [node name="Control" type="Control" parent="CanvasLayer" unique_id=1978679016]
 layout_mode = 3
@@ -203,3 +206,16 @@ offset_top = 504.0
 offset_right = 680.0
 offset_bottom = 531.0
 show_percentage = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer" unique_id=266860366]
+offset_top = 348.0
+offset_right = 1152.0
+offset_bottom = 388.0
+theme_override_fonts/normal_font = ExtResource("18_ek1er")
+theme_override_fonts/bold_font = ExtResource("18_ek1er")
+theme_override_fonts/bold_italics_font = ExtResource("18_ek1er")
+theme_override_fonts/italics_font = ExtResource("18_ek1er")
+theme_override_fonts/mono_font = ExtResource("18_ek1er")
+bbcode_enabled = true
+autowrap_mode = 0
+horizontal_alignment = 3
