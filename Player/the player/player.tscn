@@ -24,16 +24,33 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_f8k7o"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": ExtResource("6_11607")
+"duration": 0.5,
+"texture": ExtResource("9_ierpi")
 }, {
-"duration": 1.0,
-"texture": ExtResource("7_a05s0")
-}, {
-"duration": 1.0,
+"duration": 0.5,
 "texture": ExtResource("8_2qv5j")
 }, {
-"duration": 1.0,
+"duration": 0.5,
+"texture": ExtResource("7_a05s0")
+}, {
+"duration": 0.5,
+"texture": ExtResource("6_11607")
+}],
+"loop": false,
+"name": &"hand_drop",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.5,
+"texture": ExtResource("6_11607")
+}, {
+"duration": 0.5,
+"texture": ExtResource("7_a05s0")
+}, {
+"duration": 0.5,
+"texture": ExtResource("8_2qv5j")
+}, {
+"duration": 0.5,
 "texture": ExtResource("9_ierpi")
 }],
 "loop": false,
@@ -85,12 +102,13 @@ script = ExtResource("2_3wug4")
 script = ExtResource("3_esvoh")
 stamina_bar = NodePath("../CanvasLayer/Control/ProgressBar")
 
-[node name="PlayerInventory" type="Node3D" parent="." unique_id=920902537 node_paths=PackedStringArray("hotbar", "slot_1", "slot_2", "slot_3")]
+[node name="PlayerInventory" type="Node3D" parent="." unique_id=920902537 node_paths=PackedStringArray("hotbar", "slot_1", "slot_2", "slot_3", "hand")]
 script = ExtResource("4_7q2ms")
 hotbar = NodePath("../CanvasLayer/Control/Hotbar")
 slot_1 = NodePath("../CanvasLayer/Control/Hotbar/Slot 1")
 slot_2 = NodePath("../CanvasLayer/Control/Hotbar/Slot 2")
 slot_3 = NodePath("../CanvasLayer/Control/Hotbar/Slot 3")
+hand = NodePath("../Camera3D/Hand")
 
 [node name="PlayerManager" type="Node3D" parent="." unique_id=1398871743]
 script = ExtResource("5_2qv5j")
@@ -107,7 +125,8 @@ bob_amount = 25.0
 position = Vector2(791, 287)
 scale = Vector2(6, 6)
 sprite_frames = SubResource("SpriteFrames_f8k7o")
-animation = &"hand_idle"
+animation = &"hand_grab"
+autoplay = "hand_idle"
 
 [node name="PixelShader" type="MeshInstance3D" parent="Camera3D" unique_id=922512297]
 transform = Transform3D(2.024222, 0, 0, 0, 1.8845327, 0, 0, 0, 1, 0, 0, -0.64668995)

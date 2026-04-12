@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dg3ym8w8bfcxt"]
+
+[ext_resource type="PackedScene" uid="uid://cp8mav4c4o3x4" path="res://assets/models/scalda/Screen.glb" id="1_0xltc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_do6uj"]
+size = Vector3(0.90000004, 0.7, 0.3)
+
+[node name="Monitor" type="Node3D" unique_id=524227551]
+
+[node name="blockbench_export" parent="." unique_id=2098508312 instance=ExtResource("1_0xltc")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=126905506]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=409102690]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35453945, 0)
+shape = SubResource("BoxShape3D_do6uj")
+
+[editable path="blockbench_export"]

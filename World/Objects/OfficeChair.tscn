@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bssfpe401vsyu"]
+
+[ext_resource type="PackedScene" uid="uid://c0i2rgjuf4hx1" path="res://assets/models/scalda/officechair.glb" id="1_y7ngw"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_15013"]
+radius = 0.38330078
+height = 1.4
+
+[node name="OfficeCHair" type="Node3D" unique_id=780229814]
+
+[node name="blockbench_export" parent="." unique_id=135905290 instance=ExtResource("1_y7ngw")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1202663110]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1780486481]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.70000005, 0)
+shape = SubResource("CapsuleShape3D_15013")
+
+[editable path="blockbench_export"]
