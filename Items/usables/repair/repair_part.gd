@@ -40,27 +40,6 @@ func do_item_thing() -> void:
 		queue_free()
 
 
-func drop() -> void:
-	var path := "res://Items/interactables/repair_pickups/%s_pickup.tscn" % part_id
-	var scene: PackedScene = load(path)
-	if scene == null:
-		push_error("RepairPart: failed to load pickup scene: " + path)
-		return
-	var spawn := scene.instantiate()
-	GlobalPlayer.player.get_parent().add_child(spawn)
-	# Place 1.2m in front of the player, then raycast down to snap to ground
-	var player: CharacterBody3D = GlobalPlayer.player
-	var forward := -player.transform.basis.z.normalized()
-	var drop_pos: Vector3 = player.global_position + forward * 1.2
-
-	var space := player.get_world_3d().direct_space_state
-	var query := PhysicsRayQueryParameters3D.create(drop_pos, drop_pos + Vector3.DOWN * 10.0)
-	query.exclude = [player.get_rid()]
-	var hit := space.intersect_ray(query)
-	if hit:
-		drop_pos = hit.position + Vector3.UP * 0.2
-	spawn.global_position = drop_pos
-
 
 func _door_needs_this_part(collider: Node) -> bool:
 	var door = collider.get_parent()
