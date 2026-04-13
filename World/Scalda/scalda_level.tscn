@@ -1,18 +1,17 @@
 [gd_scene format=3 uid="uid://b5hrdo86dnvob"]
 
 [ext_resource type="PackedScene" uid="uid://c24jguudievws" path="res://World/Objects/BigTrashcan.tscn" id="1_75qgl"]
-[ext_resource type="PackedScene" uid="uid://b666jh55r2pfs" path="res://World/Scalda/WindowRod.tscn" id="2_14lxf"]
-[ext_resource type="PackedScene" uid="uid://druw3htkwbsof" path="res://World/Scalda/BlurryWindow.tscn" id="3_ofq4a"]
-[ext_resource type="PackedScene" uid="uid://ykctmkx2lgy" path="res://World/Scalda/Window.tscn" id="4_vt2oj"]
+[ext_resource type="PackedScene" path="res://World/Scalda/WindowRod.tscn" id="2_14lxf"]
+[ext_resource type="PackedScene" path="res://World/Scalda/BlurryWindow.tscn" id="3_ofq4a"]
+[ext_resource type="PackedScene" path="res://World/Scalda/Window.tscn" id="4_vt2oj"]
 [ext_resource type="PackedScene" uid="uid://dytap8501pb48" path="res://World/Objects/BlackdoorOtherway.tscn" id="5_1wci3"]
-[ext_resource type="PackedScene" uid="uid://bieh6omnby6or" path="res://World/Scalda/Blinds.tscn" id="6_cs5jf"]
+[ext_resource type="PackedScene" path="res://World/Scalda/Blinds.tscn" id="6_cs5jf"]
 [ext_resource type="PackedScene" uid="uid://dqauytxsb5peu" path="res://World/Objects/BlackdoorLocked.tscn" id="7_7o132"]
 [ext_resource type="PackedScene" uid="uid://du3mdsaixyqti" path="res://World/Objects/Blackdoor.tscn" id="7_she40"]
-[ext_resource type="PackedScene" uid="uid://dwkdwwwk2h6le" path="res://World/Scalda/ScaldaPanel.tscn" id="9_afksl"]
+[ext_resource type="PackedScene" path="res://World/Scalda/ScaldaPanel.tscn" id="9_afksl"]
 [ext_resource type="PackedScene" uid="uid://bssfpe401vsyu" path="res://World/Objects/OfficeChair.tscn" id="10_jpd7b"]
 [ext_resource type="PackedScene" uid="uid://btvyh0tyi4b78" path="res://World/Objects/GroupTable.tscn" id="11_tfv3i"]
 [ext_resource type="PackedScene" uid="uid://dg3ym8w8bfcxt" path="res://World/Objects/Monitor.tscn" id="12_khsvm"]
-[ext_resource type="PackedScene" uid="uid://br5ed45ry5eno" path="res://assets/models/sqlinjection.glb" id="13_tfv3i"]
 [ext_resource type="PackedScene" uid="uid://o61h16invbaw" path="res://World/Objects/DoubleDoor.tscn" id="14_khsvm"]
 
 [node name="ScaldaLevel" type="Node3D" unique_id=1905537615]
@@ -617,9 +616,6 @@ transform = Transform3D(0.9659258, 0, -0.2588191, 0, 1, 0, 0.2588191, 0, 0.96592
 
 [node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair" unique_id=341689254 instance=ExtResource("10_jpd7b")]
 transform = Transform3D(-0.81915206, 0, 0.57357645, 0, 1, 0, -0.57357645, 0, -0.81915206, -1.4000006, 0, 0.4999962)
-
-[node name="blockbench_export2" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair" unique_id=1774916208 instance=ExtResource("13_tfv3i")]
-transform = Transform3D(-2.9802322e-08, 0, 1, 0, 1, 0, -1, 0, -2.9802322e-08, -3.5000005, 0, 1.4999962)
 
 [node name="Monitor" parent="Environment" unique_id=1738520357 instance=ExtResource("12_khsvm")]
 transform = Transform3D(6.7055225e-08, 0, -1, 0, 1, 0, 1, 0, 6.7055225e-08, 26.15065, 1.0551251, 11.925508)
