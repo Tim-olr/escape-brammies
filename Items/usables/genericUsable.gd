@@ -11,6 +11,7 @@ class_name UsableItem
 @export var sprite: PackedScene
 @export var delete_on_use: bool = false
 @export var custom_sound_file: AudioStream
+@export var drop_scene_path: String = ""
 
 var _hold_timer: float = 0.0
 var _is_holding: bool = false
@@ -62,21 +63,20 @@ func on_deselect():
 	is_selected = false
 
 func drop():
-	if model != null and collision != null:
-		var actual_model = model.instantiate()
-		var drop_pos = GlobalPlayer.manager.calculate_drop_height()
-		var interactable = TestInteractable.new()
-		var col = collision.instantiate()
-		interactable.add_child(col)
-		interactable.add_child(actual_model)
-		GlobalPlayer.player.get_parent().add_child(interactable)
-		interactable.global_position = drop_pos
-	if has_sprite_no_model and sprite != null and collision != null:
-		var actual_sprite = sprite.instantiate()
-		var drop_pos = GlobalPlayer.manager.calculate_drop_height()
-		var interactable = TestInteractable.new()
-		var col = collision.instantiate()
-		interactable.add_child(col)
-		interactable.add_child(actual_sprite)
-		GlobalPlayer.player.get_parent().add_child(interactable)
-		interactable.global_position = drop_pos
+	if drop_scene_path == "":
+		return
+	var packed := load(drop_scene_path) as PackedScene
+	if packed == null:
+		return
+	var spawn := packed.instantiate()
+	var player: CharacterBody3D = GlobalPlayer.player
+	var forward := -player.transform.basis.z.normalized()
+	var drop_pos: Vector3 = player.global_position + forward * 1.2
+	var space := player.get_world_3d().direct_space_state
+	var query := PhysicsRayQueryParameters3D.create(drop_pos, drop_pos + Vector3.DOWN * 10.0)
+	query.exclude = [player.get_rid()]
+	var hit := space.intersect_ray(query)
+	if hit:
+		drop_pos = hit.position + Vector3.UP * 0.2
+	GlobalPlayer.player.get_parent().add_child(spawn)
+	spawn.global_position = drop_pos
