@@ -147,7 +147,7 @@ animation = &"hand_grab"
 autoplay = "hand_idle"
 
 [node name="PlayerInteraction" type="RayCast3D" parent="Camera3D" unique_id=1949961184]
-transform = Transform3D(1, 0, 0, 0, -7.922096e-08, -0.99999994, 0, 1.8123645, -4.3711385e-08, 0, 0, -0.4913714)
+transform = Transform3D(1, 0, 0, 0, -7.803274e-08, -0.99999994, 0, 1.7851812, -4.3711385e-08, 0, 0, -0.4913714)
 collide_with_areas = true
 collide_with_bodies = false
 script = ExtResource("7_63538")

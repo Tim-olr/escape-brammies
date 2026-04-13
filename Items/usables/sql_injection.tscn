@@ -13,6 +13,5 @@ custom_texture = ExtResource("2_nbv62")
 collision = ExtResource("4_nbv62")
 has_sprite_no_model = true
 sprite = ExtResource("4_o2rjy")
-delete_on_use = true
 custom_sound_file = ExtResource("5_o2rjy")
 drop_scene_path = "res://Items/interactables/test_item_interactable.tscn"

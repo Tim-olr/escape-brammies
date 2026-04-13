@@ -23,7 +23,7 @@ tonemap_mode = 2
 glow_enabled = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rvclf"]
-size = Vector3(1103.5992, 1.6346436, 1246.0518)
+size = Vector3(1103.5992, 2041.0796, 1246.0518)
 
 [node name="Main" type="Node3D" unique_id=2005214468]
 
@@ -52,11 +52,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.032309, 0.6325064, 6.31314
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.032309, 0.6325064, 7.9723206)
 
 [node name="death_area" type="Area3D" parent="." unique_id=575380936]
+process_mode = 3
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8.978199, 0)
 script = ExtResource("4_abumu")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="death_area" unique_id=287892489]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.850769, 0.31732178, 41.816483)
+transform = Transform3D(1, 0, 0, 0, 2.0387816, 0, 0, 0, 1, 25.850769, -2078.674, 41.816483)
 shape = SubResource("BoxShape3D_rvclf")
 
 [node name="Draaideur" parent="." unique_id=1944341719 instance=ExtResource("5_rvclf")]
