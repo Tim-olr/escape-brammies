@@ -38,6 +38,7 @@ func select_slot(slot: InventorySlot) -> void:
 	current_slot.select()
 	set_slot_outline(current_slot, 4.0)
 	current_item = current_slot.held_item
+	GlobalPlayer.interaction.player_has_item_selected = current_item != null
 
 func set_slot_outline(slot: InventorySlot, thickness: float) -> void:
 	var sprite = slot.slot_sprite
@@ -88,3 +89,5 @@ func delete_item_from_current_slot():
 	current_slot.held_item = null
 	current_slot.slot_sprite.texture = null
 	current_slot.has_item = false
+	current_item = null
+	GlobalPlayer.interaction.player_has_item_selected = false
