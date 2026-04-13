@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://cuy1rhbjgn0wx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_k21q8"]
-size = Vector3(1, 0.91101074, 0.030761719)
 
 [node name="sql_injection_shape" type="CollisionShape3D" unique_id=804056314]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.46165687, -0.01586914)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.46165687, 0.032180786)
 shape = SubResource("BoxShape3D_k21q8")

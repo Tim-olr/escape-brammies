@@ -1,16 +1,13 @@
 [gd_scene format=3 uid="uid://knu1taomhlhs"]
 
 [ext_resource type="Script" uid="uid://c1oyryc3i4e21" path="res://Items/interactables/test_item_interactable.gd" id="1_2rqnv"]
-[ext_resource type="PackedScene" uid="uid://c7jixydl6llp3" path="res://assets/models/test_model.tscn" id="2_2rqnv"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_k21q8"]
-size = Vector3(1, 0.91101074, 0.030761719)
+[ext_resource type="PackedScene" uid="uid://dvk58nlb02gff" path="res://assets/sprite_scenes/sql_injection.tscn" id="2_2rqnv"]
+[ext_resource type="PackedScene" uid="uid://cuy1rhbjgn0wx" path="res://assets/models/sql_injection/sql_injection_shape.tscn" id="2_vud55"]
 
 [node name="TestItemInteractable" type="Area3D" unique_id=1183875761]
 script = ExtResource("1_2rqnv")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1227581695]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.46165687, -0.01586914)
-shape = SubResource("BoxShape3D_k21q8")
+[node name="sql_injection_shape" parent="." unique_id=804056314 instance=ExtResource("2_vud55")]
 
-[node name="test_model" parent="." unique_id=1289848154 instance=ExtResource("2_2rqnv")]
+[node name="Sprite3D" parent="." unique_id=1214368778 instance=ExtResource("2_2rqnv")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0.40316784, 0)

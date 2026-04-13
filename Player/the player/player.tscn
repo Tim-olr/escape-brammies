@@ -6,7 +6,6 @@
 [ext_resource type="Script" uid="uid://7g7hgmc8vlgi" path="res://Player/the player/player components/camera_3d.gd" id="4_3wug4"]
 [ext_resource type="Script" uid="uid://1msx8h0q5gft" path="res://Player/the player/player components/player_inventory.gd" id="4_7q2ms"]
 [ext_resource type="Script" uid="uid://c5nw0j1x2s8b8" path="res://Player/the player/player_manager.gd" id="5_2qv5j"]
-[ext_resource type="Shader" uid="uid://b5vbwbt35oy46" path="res://Player/the player/pixelate.gdshader" id="5_esvoh"]
 [ext_resource type="Texture2D" uid="uid://3d7fcgk64hk1" path="res://assets/textures/player/hand/grabbing/grabbing_1.png" id="6_11607"]
 [ext_resource type="Script" uid="uid://dp2vyu0x48yiq" path="res://Player/the player/player components/player_interaction.gd" id="7_63538"]
 [ext_resource type="Texture2D" uid="uid://bvfw3qila66gp" path="res://assets/textures/player/hand/grabbing/grabbing_2.png" id="7_a05s0"]
@@ -18,6 +17,7 @@
 [ext_resource type="Shader" uid="uid://ltdvcyyto6kr" path="res://Player/the player/inventory/slot_selection.gdshader" id="13_a05s0"]
 [ext_resource type="PackedScene" uid="uid://rhpwx4anaa7d" path="res://assets/UI/PauseMenu.tscn" id="14_ek1er"]
 [ext_resource type="Shader" uid="uid://dcmsuo1e6pgey" path="res://Player/the player/grayscale.gdshader" id="17_ierpi"]
+[ext_resource type="Script" uid="uid://xviraojwfcqt" path="res://Player/the player/audio_stream_player_3d.gd" id="19_7tefi"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_du564"]
 
@@ -49,16 +49,21 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="QuadMesh" id="QuadMesh_esvoh"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_7q2ms"]
-render_priority = 0
-shader = ExtResource("5_esvoh")
-
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_3wug4"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8sggc"]
 shader = ExtResource("17_ierpi")
+shader_parameter/shake = 0.015
+shader_parameter/noiseQuality = 250.0
+shader_parameter/noiseIntensity = 0.001
+shader_parameter/offsetIntensity = 0.0
+shader_parameter/colorOffsetIntensity = 0.17600000510012
+shader_parameter/pixelSize = 200.0
+shader_parameter/grainIntensity = 0.0
+shader_parameter/use_overlay = true
+shader_parameter/use_lens_distortion = false
+shader_parameter/overlay_color = Color(1, 1, 1, 10)
+shader_parameter/lens_distortion_strength = 0.0
 shader_parameter/saturation = 1.0
 
 [sub_resource type="Gradient" id="Gradient_ierpi"]
@@ -119,11 +124,6 @@ position = Vector2(791, 287)
 scale = Vector2(6, 6)
 sprite_frames = SubResource("SpriteFrames_f8k7o")
 animation = &"hand_idle"
-
-[node name="PixelShader" type="MeshInstance3D" parent="Camera3D" unique_id=922512297]
-transform = Transform3D(2.024222, 0, 0, 0, 1.8845327, 0, 0, 0, 1, 0, 0, -0.64668995)
-mesh = SubResource("QuadMesh_esvoh")
-surface_material_override/0 = SubResource("ShaderMaterial_7q2ms")
 
 [node name="PlayerInteraction" type="RayCast3D" parent="Camera3D" unique_id=1949961184]
 transform = Transform3D(1, 0, 0, 0, -1.4409584e-07, -0.99999994, 0, 3.2965286, -4.3711385e-08, 0, 0, -0.4913714)
@@ -228,5 +228,9 @@ show_percentage = false
 [node name="PauseMenu" parent="CanvasLayer" unique_id=2052854178 instance=ExtResource("14_ek1er")]
 
 [node name="PausedTimer" type="Timer" parent="." unique_id=1790369002]
+
+[node name="PlayerAudio" type="AudioStreamPlayer3D" parent="." unique_id=86868872]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4343946, 0)
+script = ExtResource("19_7tefi")
 
 [connection signal="timeout" from="PausedTimer" to="PlayerManager" method="_on_paused_timer_timeout"]

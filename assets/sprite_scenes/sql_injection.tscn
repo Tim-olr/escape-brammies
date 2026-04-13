@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dvk58nlb02gff"]
+
+[ext_resource type="Texture2D" uid="uid://dp1m26jb6af41" path="res://assets/models/sql_injection/sqlinjection_0.png" id="1_rlitb"]
+
+[node name="Sprite3D" type="Sprite3D" unique_id=1214368778]
+billboard = 1
+texture_filter = 0
+texture = ExtResource("1_rlitb")
