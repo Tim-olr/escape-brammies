@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://drp1x9kmda1a" path="res://Items/usables/repair/repair_part.gd" id="1_wires"]
 [ext_resource type="Texture2D" uid="uid://1j0xo782toyr" path="res://icon.svg" id="2_wires"]
-
 [node name="Wires" type="Node3D"]
 script = ExtResource("1_wires")
 item_name = "Wires"
@@ -10,3 +9,4 @@ min_use_time = 1.0
 custom_texture = ExtResource("2_wires")
 delete_on_use = false
 part_id = "wires"
+drop_scene_path = "res://Items/interactables/repair_pickups/wires_pickup.tscn"
