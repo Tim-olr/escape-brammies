@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b5hrdo86dnvob"]
 
 [ext_resource type="PackedScene" uid="uid://c24jguudievws" path="res://World/Objects/BigTrashcan.tscn" id="1_75qgl"]
+[ext_resource type="Texture2D" uid="uid://33eb5xi1di7m" path="res://assets/models/scalda/ScaldaTile_0.png" id="1_hik0p"]
 [ext_resource type="PackedScene" path="res://World/Scalda/WindowRod.tscn" id="2_14lxf"]
 [ext_resource type="PackedScene" path="res://World/Scalda/BlurryWindow.tscn" id="3_ofq4a"]
 [ext_resource type="PackedScene" path="res://World/Scalda/Window.tscn" id="4_vt2oj"]
@@ -13,6 +14,11 @@
 [ext_resource type="PackedScene" uid="uid://btvyh0tyi4b78" path="res://World/Objects/GroupTable.tscn" id="11_tfv3i"]
 [ext_resource type="PackedScene" uid="uid://dg3ym8w8bfcxt" path="res://World/Objects/Monitor.tscn" id="12_khsvm"]
 [ext_resource type="PackedScene" uid="uid://o61h16invbaw" path="res://World/Objects/DoubleDoor.tscn" id="14_khsvm"]
+[ext_resource type="PackedScene" uid="uid://bcxvphne10ctd" path="res://World/Scalda/ScaldaFloorTile.tscn" id="15_xmlpx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rfg41"]
+albedo_texture = ExtResource("1_hik0p")
+uv1_triplanar = true
 
 [node name="ScaldaLevel" type="Node3D" unique_id=1905537615]
 
@@ -24,6 +30,7 @@ use_collision = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.192505, -0.875, 1.5)
 use_collision = true
 size = Vector3(37.86499, 0.25, 23.75)
+material = SubResource("StandardMaterial3D_rfg41")
 
 [node name="trapgat" type="CSGBox3D" parent="ScaldaLevel/2ndFloor" unique_id=1812962186]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.4, 0, 8.65)
@@ -32,7 +39,6 @@ size = Vector3(4.6, 0.5, 6.1)
 
 [node name="3rdFloor" type="CSGBox3D" parent="ScaldaLevel" unique_id=1894582334]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.174999, 2.25, 1.5)
-visible = false
 use_collision = true
 size = Vector3(37.825, 0.25, 23.75)
 
@@ -365,8 +371,8 @@ transform = Transform3D(1, 0, 0, 0, 0.86602545, -0.50000006, 0, 0.50000006, 0.86
 size = Vector3(1.6, 0.25, 2.0354004)
 
 [node name="Aula_floor_lower" type="CSGBox3D" parent="ScaldaLevel" unique_id=484255071]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.685497, -1.0864687, 13.27)
-size = Vector3(32.870995, 0.25, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.620995, -1.0864687, 2.42)
+size = Vector3(45, 0.25, 25.7)
 
 [node name="CSGBox3D35" type="CSGBox3D" parent="ScaldaLevel" unique_id=267505072]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.398543, -3.144397, 15.25)
@@ -616,6 +622,102 @@ transform = Transform3D(0.9659258, 0, -0.2588191, 0, 1, 0, 0.2588191, 0, 0.96592
 
 [node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair" unique_id=341689254 instance=ExtResource("10_jpd7b")]
 transform = Transform3D(-0.81915206, 0, 0.57357645, 0, 1, 0, -0.57357645, 0, -0.81915206, -1.4000006, 0, 0.4999962)
+
+[node name="GroupTable" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair" unique_id=1883389407 instance=ExtResource("11_tfv3i")]
+transform = Transform3D(0.57357645, 0, -0.81915206, 0, 1, 0, 0.81915206, 0, 0.57357645, 15.08183, 0, -1.6487579)
+
+[node name="GroupTable" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable" unique_id=323339829 instance=ExtResource("11_tfv3i")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.9073486e-06, 0, -4.9000006)
+
+[node name="Monitor" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable" unique_id=524227551 instance=ExtResource("12_khsvm")]
+transform = Transform3D(-0.2588191, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, -0.2588191, 4.9000006, 1.0498223, -6.062723)
+
+[node name="Monitor" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor" unique_id=42513569 instance=ExtResource("12_khsvm")]
+transform = Transform3D(-0.14853442, 0, 0.9889073, 0, 1, 0, -0.9889073, 0, -0.14853442, 3.3339977, 0.004099846, 5.7324295)
+
+[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor" unique_id=780229814 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(-0.9306859, 0, -0.36581904, 0, 1, 0, 0.36581904, 0, -0.9306859, 0.07793236, -1.0539222, -1.0896893)
+
+[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair" unique_id=1051115572 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(0.98480785, 0, -0.17364809, 0, 1, 0, 0.17364809, 0, 0.98480785, -1.7835026, 0, -0.68494034)
+
+[node name="Monitor" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair" unique_id=900957733 instance=ExtResource("12_khsvm")]
+transform = Transform3D(-0.9848078, 0, -0.17364816, 0, 1, 0, 0.17364816, 0, -0.9848078, 0.17806435, 1.0532516, -0.8878708)
+
+[node name="Monitor" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor" unique_id=973917066 instance=ExtResource("12_khsvm")]
+transform = Transform3D(-0.9659264, 0, 0.25881916, 0, 1, 0, -0.25881916, 0, -0.9659264, -0.9669223, 0.007838964, -0.2550907)
+
+[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor" unique_id=1478432118 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(-0.9999994, 0, 7.351365e-08, 0, 1, 0, -7.351365e-08, 0, -0.9999994, 0.10000229, -1.0610906, -0.8961258)
+
+[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair" unique_id=619976637 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(-0.7071067, 0, -0.7071068, 0, 1, 0, 0.7071068, 0, -0.7071067, -0.79999924, 0, 0.7000084)
+
+[node name="OfficeCHair2" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair" unique_id=1393210595 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(1, 0, -7.1054274e-15, 0, 1, 0, 7.1054274e-15, 0, 1, 1.5999999, 0, 0.20000839)
+
+[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2" unique_id=1353271243 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -2.1999989, 0, 2.1999989)
+
+[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair" unique_id=1195594022 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(0.9659258, 0, -0.2588191, 0, 1, 0, 0.2588191, 0, 0.9659258, -0.79999924, 0, 0.19999886)
+
+[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair" unique_id=2044944713 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(0.8660253, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660253, -1.4747715, 0, 0.29163933)
+
+[node name="Monitor" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair" unique_id=341625206 instance=ExtResource("12_khsvm")]
+transform = Transform3D(-0.81915253, 0, 0.5735768, 0, 1, 0, -0.5735768, 0, -0.81915253, 2.6995192, 1.0515268, -0.41547203)
+
+[node name="Monitor" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor" unique_id=838608546 instance=ExtResource("12_khsvm")]
+transform = Transform3D(0.9396922, 0, 0.34201998, 0, 1, 0, -0.34201998, 0, 0.9396922, 0.9603176, 0.003907323, -0.28535652)
+
+[node name="Monitor" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor" unique_id=660074242 instance=ExtResource("12_khsvm")]
+transform = Transform3D(0.86602545, 0, 0.5, 0, 1, 0, -0.5, 0, 0.86602545, 1.8999991, -0.009491444, -0.06309891)
+
+[node name="Monitor" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor" unique_id=139713045 instance=ExtResource("12_khsvm")]
+transform = Transform3D(-0.86602545, 0, 0.49999994, 0, 1, 0, -0.49999994, 0, -0.86602545, -0.7993598, 0.007970691, -0.49759293)
+
+[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor" unique_id=2044441907 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(-0.9659258, 0, 0.25881907, 0, 1, 0, -0.25881907, 0, -0.9659258, 1.8589382, -1.0539134, -1.2340469)
+
+[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/OfficeCHair" unique_id=1910787620 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(0.96592605, 0, 0.25881907, 0, 1, 0, -0.25881907, 0, 0.96592605, 1.8093777, 0, -0.5883484)
+
+[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair" unique_id=1376694240 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(0.86602527, 0, 0.49999988, 0, 1, 0, -0.49999988, 0, 0.86602527, 0.84150696, 0, 0)
+
+[node name="Monitor" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair" unique_id=1796216047 instance=ExtResource("12_khsvm")]
+transform = Transform3D(-0.9999999, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, -0.9999999, -1.000001, 0.8, -0.7179928)
+
+[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor" unique_id=1731820479 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(-0.25881913, 0, 0.9659257, 0, 1, 0, -0.9659257, 0, -0.25881913, -4.2000003, -0.8, -1.0179939)
+
+[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/OfficeCHair" unique_id=293979757 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(0.9659258, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, 0.9659258, -0.7468605, 0, -0.30364752)
+
+[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/OfficeCHair/OfficeCHair" unique_id=135189672 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(0.9659258, 0, -0.25881922, 0, 1, 0, 0.25881922, 0, 0.9659258, -1.3999996, 0, 0.39999962)
+
+[node name="Monitor" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/OfficeCHair/OfficeCHair/OfficeCHair" unique_id=1687969534 instance=ExtResource("12_khsvm")]
+transform = Transform3D(-0.9033428, 0, -0.42891946, 0, 1, 0, 0.42891946, 0, -0.9033428, -1.1213608, 1.0419583, -1.094017)
+
+[node name="Monitor" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/Monitor" unique_id=1660985027 instance=ExtResource("12_khsvm")]
+transform = Transform3D(-0.999976, 0, 0.006963715, 0, 1, 0, -0.006963715, 0, -0.999976, -2.9602985, 0.0001142025, -0.48934627)
+
+[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor" unique_id=765465162 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(-0.98480743, 0, 0.17364821, 0, 1, 0, -0.17364821, 0, -0.98480743, 0.075164795, -1.0420725, -1.0021727)
+
+[node name="OfficeCHair2" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair" unique_id=145176396 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(0.9396924, 0, 0.34202003, 0, 1, 0, -0.34202003, 0, 0.9396924, 2.4200573, 0, 0.25940955)
+
+[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair" unique_id=1823932961 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(0.99619454, 0, 0.08715572, 0, 1, 0, -0.08715572, 0, 0.99619454, 0.80000114, 0, 0.10000014)
+
+[node name="GroupTable2" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable" unique_id=1356306861 instance=ExtResource("11_tfv3i")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.300001, 0, -4.8999996)
+
+[node name="GroupTable" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable2" unique_id=751617877 instance=ExtResource("11_tfv3i")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4.9000015, 0, 2.2000027)
 
 [node name="Monitor" parent="Environment" unique_id=1738520357 instance=ExtResource("12_khsvm")]
 transform = Transform3D(6.7055225e-08, 0, -1, 0, 1, 0, 1, 0, 6.7055225e-08, 26.15065, 1.0551251, 11.925508)
@@ -1727,13 +1829,13 @@ transform = Transform3D(-4.5942852e-07, 0, 1.0000002, 0, 1, 0, -10.5105, 0, -4.3
 [node name="Window12" parent="Environment" unique_id=910251523 instance=ExtResource("4_vt2oj")]
 transform = Transform3D(-3.6570734e-07, 0, 1.0000002, 0, 1, 0, -8.36641, 0, -4.37114e-08, 12, 2, 8.982033)
 
-[node name="OfficeCHair" parent="Environment" unique_id=780229814 instance=ExtResource("10_jpd7b")]
+[node name="OfficeCHair" parent="Environment" unique_id=1726506496 instance=ExtResource("10_jpd7b")]
 transform = Transform3D(-0.42261833, 0, 0.90630776, 0, 1, 0, -0.90630776, 0, -0.42261833, 17.7, 0, 3.3000002)
 
 [node name="GroupTable" parent="Environment" unique_id=338991116 instance=ExtResource("11_tfv3i")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 16, 0, 4.4)
 
-[node name="Monitor" parent="Environment/GroupTable" unique_id=524227551 instance=ExtResource("12_khsvm")]
+[node name="Monitor" parent="Environment/GroupTable" unique_id=604774305 instance=ExtResource("12_khsvm")]
 transform = Transform3D(0.9659258, 0, 0.2588191, 0, 1, 0, -0.2588191, 0, 0.9659258, 1.5808177, 1.0567058, -0.06462479)
 
 [node name="Monitor2" parent="Environment/GroupTable" unique_id=1270288933 instance=ExtResource("12_khsvm")]
@@ -1756,3 +1858,65 @@ transform = Transform3D(-0.9961947, 0, -0.08715565, 0, 1, 0, 0.08715565, 0, -0.9
 
 [node name="DoubleDoors" parent="Environment" unique_id=1600821424 instance=ExtResource("14_khsvm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.371494, 0, 0)
+
+[node name="OfficeCHair4" parent="Environment" unique_id=1011821894 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.3, 0, -2.2)
+
+[node name="OfficeCHair5" parent="Environment" unique_id=435529173 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(0.9848077, 0, -0.17364818, 0, 1, 0, 0.17364818, 0, 0.9848077, 31.300001, 0, -2.1000001)
+
+[node name="OfficeCHair6" parent="Environment" unique_id=71799221 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(-0.9659258, 0, 0.25881913, 0, 1, 0, -0.25881913, 0, -0.9659258, 32.300003, 0, -4.2000003)
+
+[node name="Floor" type="Node3D" parent="Environment" unique_id=1893509071]
+
+[node name="ScaldaFloorTile" parent="Environment/Floor" unique_id=1771740729 instance=ExtResource("15_xmlpx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, -0.05, -1.6)
+
+[node name="ScaldaFloorTile2" parent="Environment/Floor" unique_id=946873663 instance=ExtResource("15_xmlpx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, -0.05, -0.6)
+
+[node name="ScaldaFloorTile3" parent="Environment/Floor" unique_id=1891669102 instance=ExtResource("15_xmlpx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, -0.05, 0.39999998)
+
+[node name="ScaldaFloorTile4" parent="Environment/Floor" unique_id=1799538195 instance=ExtResource("15_xmlpx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, -0.05, 1.4)
+
+[node name="ScaldaFloorTile5" parent="Environment/Floor" unique_id=1660152412 instance=ExtResource("15_xmlpx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, -0.05, -1.6)
+
+[node name="ScaldaFloorTile6" parent="Environment/Floor" unique_id=1955506682 instance=ExtResource("15_xmlpx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, -0.05, -0.6)
+
+[node name="ScaldaFloorTile7" parent="Environment/Floor" unique_id=569508540 instance=ExtResource("15_xmlpx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, -0.05, 0.39999998)
+
+[node name="ScaldaFloorTile8" parent="Environment/Floor" unique_id=313894023 instance=ExtResource("15_xmlpx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, -0.05, 1.4)
+
+[node name="ScaldaFloorTile9" parent="Environment/Floor" unique_id=71514768 instance=ExtResource("15_xmlpx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, -0.05, -1.6)
+
+[node name="ScaldaFloorTile10" parent="Environment/Floor" unique_id=1331387081 instance=ExtResource("15_xmlpx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, -0.05, -0.6)
+
+[node name="ScaldaFloorTile11" parent="Environment/Floor" unique_id=708678182 instance=ExtResource("15_xmlpx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, -0.05, 0.39999998)
+
+[node name="ScaldaFloorTile12" parent="Environment/Floor" unique_id=1400830075 instance=ExtResource("15_xmlpx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, -0.05, 1.4)
+
+[node name="ScaldaFloorTile13" parent="Environment/Floor" unique_id=774652797 instance=ExtResource("15_xmlpx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, -0.05, -1.6)
+
+[node name="ScaldaFloorTile14" parent="Environment/Floor" unique_id=2139412017 instance=ExtResource("15_xmlpx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, -0.05, -0.6)
+
+[node name="ScaldaFloorTile15" parent="Environment/Floor" unique_id=1258035478 instance=ExtResource("15_xmlpx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, -0.05, 0.39999998)
+
+[node name="ScaldaFloorTile16" parent="Environment/Floor" unique_id=773355938 instance=ExtResource("15_xmlpx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, -0.05, 1.4)
+
+[node name="Monitor" parent="." unique_id=155022853 instance=ExtResource("12_khsvm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.7, 1.0478864, -3.1282897)
