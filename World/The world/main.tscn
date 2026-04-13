@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://bpk1yakmd006" path="res://Items/interactables/repair_pickups/button_pickup.tscn" id="6_slyvb"]
 [ext_resource type="PackedScene" uid="uid://mpk1yakmd004" path="res://Items/interactables/repair_pickups/motor_pickup.tscn" id="7_eq6tm"]
 [ext_resource type="PackedScene" uid="uid://wpk1yakmd005" path="res://Items/interactables/repair_pickups/wires_pickup.tscn" id="8_78nbq"]
+[ext_resource type="PackedScene" path="res://World/Objects/BreakerBox.tscn" id="9_eq6tm"]
+[ext_resource type="PackedScene" path="res://World/Objects/FluorescentLight.tscn" id="10_78nbq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ghcsx"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -70,5 +72,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.848824, -3.0499995, 6.1752
 
 [node name="WiresPickup" parent="." unique_id=1512566681 instance=ExtResource("8_78nbq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.969776, -3.1999996, 5.7294235)
+
+[node name="BreakerBox" parent="." unique_id=2029991493 instance=ExtResource("9_eq6tm")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 36, -2, 6.5)
+
+[node name="FluorescentLight" parent="." unique_id=1970621401 instance=ExtResource("10_78nbq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.388474, -0.2683606, 8.516734)
 
 [connection signal="body_entered" from="death_area" to="death_area" method="_on_body_entered"]

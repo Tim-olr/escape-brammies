@@ -1,0 +1,157 @@
+[gd_scene format=3 uid="uid://brkbox00001"]
+
+[ext_resource type="Script" path="res://World/Objects/BreakerBox.gd" id="1_brk"]
+
+[sub_resource type="BoxShape3D" id="CollisionShape"]
+size = Vector3(0.85, 1.3, 0.28)
+
+[sub_resource type="StandardMaterial3D" id="PanelMat"]
+albedo_color = Color(0.18, 0.18, 0.22, 1)
+metallic = 0.8
+roughness = 0.35
+
+[sub_resource type="BoxMesh" id="PanelMesh"]
+size = Vector3(0.85, 1.3, 0.18)
+material = SubResource("PanelMat")
+
+[sub_resource type="StandardMaterial3D" id="StripeMat"]
+albedo_color = Color(0.88, 0.72, 0.0, 1)
+
+[sub_resource type="BoxMesh" id="StripeMesh"]
+size = Vector3(0.87, 0.12, 0.04)
+material = SubResource("StripeMat")
+
+[sub_resource type="StandardMaterial3D" id="RedButtonMat"]
+albedo_color = Color(0.85, 0.08, 0.08, 1)
+emission_enabled = true
+emission = Color(0.85, 0.08, 0.08, 1)
+emission_energy_multiplier = 0.5
+
+[sub_resource type="CylinderMesh" id="RedBtnMesh"]
+top_radius = 0.055
+bottom_radius = 0.055
+height = 0.06
+material = SubResource("RedButtonMat")
+
+[sub_resource type="StandardMaterial3D" id="GreenButtonMat"]
+albedo_color = Color(0.08, 0.8, 0.08, 1)
+emission_enabled = true
+emission = Color(0.08, 0.8, 0.08, 1)
+emission_energy_multiplier = 0.5
+
+[sub_resource type="CylinderMesh" id="GreenBtnMesh"]
+top_radius = 0.055
+bottom_radius = 0.055
+height = 0.06
+material = SubResource("GreenButtonMat")
+
+[sub_resource type="StandardMaterial3D" id="SwitchMat"]
+albedo_color = Color(0.08, 0.08, 0.1, 1)
+metallic = 0.5
+roughness = 0.5
+
+[sub_resource type="BoxMesh" id="SwitchMesh"]
+size = Vector3(0.05, 0.14, 0.03)
+material = SubResource("SwitchMat")
+
+[sub_resource type="StandardMaterial3D" id="LeverMat"]
+albedo_color = Color(0.72, 0.24, 0.04, 1)
+metallic = 0.3
+roughness = 0.55
+
+[sub_resource type="BoxMesh" id="LeverMesh"]
+size = Vector3(0.058, 0.28, 0.042)
+material = SubResource("LeverMat")
+
+[sub_resource type="SphereMesh" id="LeverKnobMesh"]
+radius = 0.044
+height = 0.088
+material = SubResource("LeverMat")
+
+[sub_resource type="StandardMaterial3D" id="IndGreenMat"]
+albedo_color = Color(0.1, 1.0, 0.1, 1)
+emission_enabled = true
+emission = Color(0.0, 1.0, 0.0, 1)
+emission_energy_multiplier = 2.5
+
+[sub_resource type="SphereMesh" id="IndGreenMesh"]
+radius = 0.028
+height = 0.056
+material = SubResource("IndGreenMat")
+
+[sub_resource type="StandardMaterial3D" id="IndRedMat"]
+albedo_color = Color(1.0, 0.1, 0.1, 1)
+emission_enabled = true
+emission = Color(1.0, 0.0, 0.0, 1)
+emission_energy_multiplier = 2.5
+
+[sub_resource type="SphereMesh" id="IndRedMesh"]
+radius = 0.028
+height = 0.056
+material = SubResource("IndRedMat")
+
+[sub_resource type="StandardMaterial3D" id="LabelMat"]
+albedo_color = Color(0.78, 0.78, 0.82, 1)
+
+[sub_resource type="BoxMesh" id="LabelMesh"]
+size = Vector3(0.32, 0.065, 0.008)
+material = SubResource("LabelMat")
+
+[node name="BreakerBox" type="Area3D"]
+collision_layer = 1
+collision_mask = 0
+script = ExtResource("1_brk")
+goes_away_on_interact = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CollisionShape")
+
+[node name="Panel" type="MeshInstance3D" parent="."]
+mesh = SubResource("PanelMesh")
+
+[node name="WarningStripe" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.58, 0.11)
+mesh = SubResource("StripeMesh")
+
+[node name="LabelPlate" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.44, 0.1)
+mesh = SubResource("LabelMesh")
+
+[node name="RedButton" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.25, 0.35, 0.12)
+mesh = SubResource("RedBtnMesh")
+
+[node name="GreenButton" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.25, 0.35, 0.12)
+mesh = SubResource("GreenBtnMesh")
+
+[node name="Handle" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0.09)
+
+[node name="Lever" type="MeshInstance3D" parent="Handle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.14, 0.02)
+mesh = SubResource("LeverMesh")
+
+[node name="LeverKnob" type="MeshInstance3D" parent="Handle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.285, 0.02)
+mesh = SubResource("LeverKnobMesh")
+
+[node name="Switch1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.22, -0.38, 0.1)
+mesh = SubResource("SwitchMesh")
+
+[node name="Switch2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.38, 0.1)
+mesh = SubResource("SwitchMesh")
+
+[node name="Switch3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22, -0.38, 0.1)
+mesh = SubResource("SwitchMesh")
+
+[node name="PowerLightOn" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0.12, 0.13)
+mesh = SubResource("IndGreenMesh")
+
+[node name="PowerLightOff" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0.12, 0.13)
+mesh = SubResource("IndRedMesh")
