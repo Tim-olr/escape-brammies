@@ -23,8 +23,6 @@ glow_enabled = true
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_486io"]
 
-[sub_resource type="NavigationMesh" id="NavigationMesh_rvclf"]
-
 [node name="Main" type="Node3D" unique_id=2005214468]
 
 [node name="PauseMenu" parent="." unique_id=2052854178 instance=ExtResource("2_mktvv")]
@@ -51,10 +49,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3127191, 0)
 shape = SubResource("CapsuleShape3D_486io")
 
 [node name="ScaldaLevel" parent="." unique_id=1905537615 instance=ExtResource("2_abumu")]
-
-[node name="NavigationRegion3D" type="NavigationRegion3D" parent="ScaldaLevel" unique_id=573894273]
-transform = Transform3D(68.9677, 0, 0, 0, 1, 0, 0, 0, 2.1388679, 1.8231735, 0.91907454, 0.47362137)
-navigation_mesh = SubResource("NavigationMesh_rvclf")
 
 [node name="TestItemInteractable" parent="." unique_id=1183875761 instance=ExtResource("2_j5njh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.728243, 0.70000005, 5.8982162)

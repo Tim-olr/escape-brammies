@@ -1,536 +1,544 @@
 [gd_scene format=3 uid="uid://b5hrdo86dnvob"]
 
+[sub_resource type="NavigationMesh" id="NavigationMesh_gl1j4"]
+vertices = PackedVector3Array(6.625, 0.49334526, -2.875, 6.875, 0.49334526, -2.125, 7.125, 0.49334526, -2.125, 7.375, 0.49334526, -2.875, 8.625, 0.49334526, -9.875, -4.375, 0.49334526, -9.875, -4.375, 0.49334526, -2.875, 8.625, 0.49334526, -2.875, -2.875, 1.9933453, 11.375, -2.875, 0.99334526, 8.375, -3.875, 0.99334526, 8.125, -3.875, 1.9933453, 12.625, -1.125, 3.4933453, 3.875, 0.625, 3.4933453, 3.625, -4.375, 3.4933453, -9.875, -4.375, 3.4933453, 3.625, -3.375, 3.4933453, 3.875, -1.875, 1.9933453, 11.625, -0.625, 1.9933453, 12.625, 0.875, 3.4933453, 13.125, 32.875, 3.4933453, 13.125, -3.875, 3.4933453, 6.625, -1.625, 3.4933453, 6.875, -1.125, 3.4933453, 4.875, -0.625, 3.4933453, 5.125, 32.625, 3.4933453, -9.875, 21.625, 0.49334526, -2.875, 21.875, 0.49334526, -2.125, 22.375, 0.49334526, -2.125, 22.625, 0.49334526, -2.875, 23.375, 0.49334526, -9.375, 10.125, 0.49334526, -9.375, 10.125, 0.49334526, -2.875, 23.375, 0.49334526, -2.875, 33.125, 0.49334526, 2.125, 33.125, 0.49334526, -0.125, 32.375, 0.49334526, -0.375, 29.375, 0.49334526, 1.375, 29.625, 0.49334526, 2.375, 32.375, 0.49334526, 2.625, 28.375, 0.49334526, 1.375, 32.375, 0.49334526, -9.375, 24.875, 0.49334526, -9.375, 24.875, 0.49334526, -1.875, 42.375, -3.0066547, -2.875, 41.375, -3.0066547, -3.375, 40.625, -3.0066547, -3.125, 40.375, -2.7566547, -1.375, 42.375, -2.7566547, -1.375, 36.875, -2.7566547, 1.375, 36.875, -2.7566547, 2.125, 38.875, -2.7566547, 2.375, 38.875, -2.7566547, 10.625, 36.875, -2.7566547, 10.875, 36.875, -2.7566547, 11.625, 36.125, -2.7566547, -1.125, 45.125, -2.7566547, -1.375, 45.125, -2.7566547, 14.625, 36.125, -2.7566547, 1.125, 36.125, -2.7566547, 11.875, 36.125, -2.7566547, 14.125, 36.875, -2.7566547, 14.625, 40.625, -0.25665474, -3.125, 42.125, -0.25665474, -2.875, 41.625, -0.25665474, -3.375, 7.375, 0.49334526, -1.375, 6.625, 0.49334526, -1.375, 17.625, 0.49334526, 1.625, 18.375, 0.49334526, 1.125, 18.375, 0.49334526, -1.125, 3.625, 0.49334526, 1.625, 2.625, 0.49334526, 1.625, 2.875, 0.49334526, 2.375, 3.375, 0.49334526, 2.375, 0.125, 0.49334526, 1.125, 0.125, 0.49334526, -1.125, 0.875, 0.49334526, 1.625, 8.375, -2.7566547, -1.625, 8.375, -2.7566547, -2.125, 7.875, -2.7566547, -1.375, 9.375, -2.7566547, -1.125, 6.125, -2.7566547, 1.625, 8.625, -2.7566547, 1.625, 9.375, -2.7566547, 1.125, 3.375, -2.7566547, 1.625, 3.625, -2.7566547, 2.375, 5.875, -2.7566547, 2.375, 1.125, -2.7566547, -1.375, 1.125, -2.7566547, 1.625, 22.625, 0.49334526, -1.375, 21.625, 0.49334526, -1.375, 23.375, 0.49334526, 1.375, 23.625, 0.49334526, 2.125, 27.875, 0.49334526, 2.125, 24.625, 0.49334526, -1.375, 19.125, 0.49334526, 1.375, 19.125, 0.49334526, 2.125, 21.875, 0.49334526, 2.125, 22.125, 0.49334526, 1.375, 28.375, -2.7566547, -1.125, 27.125, -2.7566547, -2.125, 26.875, -2.7566547, -1.375, 10.125, -2.7566547, 1.625, 27.625, -2.7566547, 1.625, 28.375, -2.7566547, 1.125, 10.125, -2.7566547, -1.625, 35.125, -2.7566547, -1.625, 35.125, -2.7566547, -2.125, 32.875, -2.7566547, -2.125, 32.625, -2.7566547, -1.375, 35.375, -2.7566547, 1.375, 29.125, -2.7566547, 1.375, 35.375, -2.7566547, 11.625, 31.125, -2.7566547, 10.625, 31.375, -2.7566547, 14.625, 35.375, -2.7566547, 14.625, 29.125, -2.7566547, 2.875, 26.875, -2.7566547, 3.125, 26.875, -2.7566547, 10.625, 33.875, 0.49334526, 2.375, 45.375, 0.49334526, -1.875, 33.875, 0.49334526, -0.375, 33.875, 0.49334526, 15.125, 45.375, 0.49334526, 15.125, 33.875, 0.49334526, -1.875, -3.875, -2.0066547, 8.625, -2.875, -2.0066547, 8.875, -2.875, -2.5066547, 7.375, -3.875, -2.7566547, 3.125, -3.875, -2.7566547, 5.875, -0.375, -2.7566547, 1.125, -1.875, -2.7566547, 7.375, -1.875, -2.7566547, 10.125, -0.625, -2.7566547, 10.125, -0.625, -2.7566547, 3.125, -4.375, -2.7566547, -1.125, -4.375, -2.7566547, 1.125, -3.375, -2.7566547, 1.875, -1.125, -2.7566547, 1.875, -1.125, -2.7566547, 2.875, -3.375, -2.7566547, 2.875, -2.875, 0.49334526, 6.875, -3.875, 0.49334526, 3.125, -3.875, 0.49334526, 6.875, -2.875, -1.0066547, 11.375, -3.875, -1.0066547, 12.625, -3.875, -1.0066547, 11.291666, -1.875, 0.49334526, 6.625, -1.875, -1.0066547, 11.625, -0.625, -1.0066547, 12.625, -0.625, 0.49334526, 3.125, -0.625, -1.0066547, 11.267857, -0.625, 0.49334526, 5.839287, -3.375, 0.49334526, 2.875, -1.125, 0.49334526, 2.875, -4.375, 0.49334526, -1.125, -4.375, 0.49334526, 1.125, -3.375, 0.49334526, 1.875, -1.125, 0.49334526, 1.875, 12.125, 0.49334526, 3.625, 12.125, 0.49334526, 4.125, 12.875, 0.49334526, 4.375, 18.875, 0.49334526, 3.125, 12.875, 0.49334526, 3.125, 23.375, 0.49334526, 2.875, 22.125, 0.49334526, 2.875, 12.875, 0.49334526, 12.625, 23.875, 0.49334526, 12.625, 23.625, 0.49334526, 2.375, 29.375, 0.49334526, 2.875, 32.375, 0.49334526, 12.625, 28.125, 0.49334526, 2.875, 3.625, 0.49334526, 3.125, 2.375, 0.49334526, 3.125, 0.875, 0.49334526, 12.625, 5.375, 0.49334526, 12.625, 5.375, 0.49334526, 3.125, 0.875, 0.49334526, 3.125, 2.125, -3.2566547, 10.875, 2.625, -3.2566547, 10.875, 2.625, -2.7566547, 10.125, 2.125, -2.7566547, 10.125, 4.375, -2.7566547, 9.375, 5.125, -2.7566547, 10.125, 8.625, -2.7566547, 9.875, 9.625, -2.7566547, 9.375, 9.625, -2.7566547, 3.125, 6.125, -2.7566547, 3.125, 3.375, -2.7566547, 9.375, 1.125, -2.7566547, 10.125, 3.375, -2.7566547, 3.125, 0.875, -2.7566547, 3.125, 0.875, -2.7566547, 10.875, 5.125, -2.7566547, 10.875, 8.625, -2.7566547, 10.875, 11.375, 0.49334526, 4.375, 11.375, 0.49334526, 3.125, 6.875, 0.49334526, 3.125, 6.875, 0.49334526, 12.625, 11.375, 0.49334526, 12.625, 10.875, -2.7566547, 10.125, 10.875, -2.7566547, 10.875, 14.125, -2.7566547, 10.875, 14.125, -2.7566547, 9.875, 15.375, -2.7566547, 9.375, 15.375, -2.7566547, 3.125, 16.375, -2.7566547, 10.125, 16.375, -2.7566547, 10.875, 19.375, -2.7566547, 10.875, 19.375, -2.7566547, 10.125, 20.625, -2.7566547, 9.375, 20.625, -2.7566547, 3.125, 21.875, -3.2566547, 10.875, 24.125, -3.5066547, 11.125, 24.125, -2.7566547, 10.125, 21.875, -2.7566547, 10.125, -4.375, 6.4933453, 4.625, -4.375, 6.4933453, 13.125, -0.125, 6.4933453, 13.125, -0.125, 6.4933453, 4.625, 2.875, -3.7566547, 11.875, 1.875, -3.7566547, 11.875, 21.625, -3.7566547, 11.875, 0.875, -3.7566547, 14.625, 24.125, -3.7566547, 14.625, 0.875, -3.7566547, 11.875, -4.375, -2.7566547, 14.125, -4.375, -2.7566547, 14.875, -0.625, -2.7566547, 14.875, -0.625, -2.7566547, 14.125, 0.375, 0.24334526, 14.875, 32.375, 0.24334526, 15.125, 32.375, 0.24334526, 14.125, 0.375, 0.24334526, 14.125)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(3, 0, 4), PackedInt32Array(6, 5, 0), PackedInt32Array(0, 5, 4), PackedInt32Array(4, 7, 3), PackedInt32Array(9, 8, 10), PackedInt32Array(10, 8, 11), PackedInt32Array(16, 15, 12), PackedInt32Array(12, 15, 13), PackedInt32Array(13, 15, 14), PackedInt32Array(8, 17, 11), PackedInt32Array(11, 17, 18), PackedInt32Array(20, 19, 13), PackedInt32Array(12, 23, 16), PackedInt32Array(16, 23, 22), PackedInt32Array(16, 22, 21), PackedInt32Array(23, 24, 22), PackedInt32Array(22, 24, 17), PackedInt32Array(17, 24, 18), PackedInt32Array(14, 25, 13), PackedInt32Array(13, 25, 20), PackedInt32Array(27, 26, 28), PackedInt32Array(28, 26, 29), PackedInt32Array(29, 26, 30), PackedInt32Array(32, 31, 26), PackedInt32Array(26, 31, 30), PackedInt32Array(30, 33, 29), PackedInt32Array(35, 34, 36), PackedInt32Array(36, 34, 39), PackedInt32Array(36, 39, 38), PackedInt32Array(36, 38, 37), PackedInt32Array(37, 40, 36), PackedInt32Array(36, 40, 43), PackedInt32Array(36, 43, 42), PackedInt32Array(36, 42, 41), PackedInt32Array(45, 44, 46), PackedInt32Array(46, 44, 48), PackedInt32Array(46, 48, 47), PackedInt32Array(51, 50, 49), PackedInt32Array(54, 53, 52), PackedInt32Array(49, 55, 51), PackedInt32Array(51, 55, 47), PackedInt32Array(51, 47, 48), PackedInt32Array(48, 56, 51), PackedInt32Array(51, 56, 52), PackedInt32Array(52, 56, 57), PackedInt32Array(49, 58, 55), PackedInt32Array(60, 59, 54), PackedInt32Array(60, 54, 61), PackedInt32Array(61, 54, 52), PackedInt32Array(61, 52, 57), PackedInt32Array(64, 63, 62), PackedInt32Array(2, 65, 1), PackedInt32Array(1, 65, 66), PackedInt32Array(68, 67, 69), PackedInt32Array(69, 67, 65), PackedInt32Array(65, 67, 66), PackedInt32Array(66, 67, 70), PackedInt32Array(72, 71, 73), PackedInt32Array(73, 71, 70), PackedInt32Array(71, 74, 70), PackedInt32Array(70, 74, 75), PackedInt32Array(70, 75, 66), PackedInt32Array(76, 74, 71), PackedInt32Array(77, 79, 78), PackedInt32Array(77, 80, 79), PackedInt32Array(79, 80, 83), PackedInt32Array(79, 83, 82), PackedInt32Array(79, 82, 81), PackedInt32Array(85, 84, 86), PackedInt32Array(86, 84, 81), PackedInt32Array(81, 84, 79), PackedInt32Array(79, 84, 87), PackedInt32Array(84, 88, 87), PackedInt32Array(28, 89, 27), PackedInt32Array(27, 89, 90), PackedInt32Array(94, 43, 91), PackedInt32Array(91, 43, 92), PackedInt32Array(92, 43, 93), PackedInt32Array(93, 43, 40), PackedInt32Array(95, 68, 69), PackedInt32Array(97, 96, 95), PackedInt32Array(89, 98, 90), PackedInt32Array(90, 98, 97), PackedInt32Array(90, 97, 95), PackedInt32Array(90, 95, 69), PackedInt32Array(98, 89, 91), PackedInt32Array(91, 89, 94), PackedInt32Array(101, 100, 99), PackedInt32Array(102, 83, 80), PackedInt32Array(99, 104, 103), PackedInt32Array(80, 105, 102), PackedInt32Array(102, 105, 101), PackedInt32Array(102, 101, 99), PackedInt32Array(102, 99, 103), PackedInt32Array(108, 107, 106), PackedInt32Array(108, 106, 109), PackedInt32Array(109, 106, 55), PackedInt32Array(109, 55, 110), PackedInt32Array(110, 55, 58), PackedInt32Array(104, 99, 111), PackedInt32Array(111, 99, 109), PackedInt32Array(59, 60, 112), PackedInt32Array(112, 60, 115), PackedInt32Array(112, 115, 114), PackedInt32Array(112, 114, 113), PackedInt32Array(111, 109, 116), PackedInt32Array(116, 109, 110), PackedInt32Array(116, 110, 113), PackedInt32Array(113, 110, 112), PackedInt32Array(117, 116, 118), PackedInt32Array(118, 116, 113), PackedInt32Array(35, 121, 34), PackedInt32Array(34, 121, 119), PackedInt32Array(119, 121, 120), PackedInt32Array(122, 119, 123), PackedInt32Array(123, 119, 120), PackedInt32Array(121, 124, 120), PackedInt32Array(126, 125, 127), PackedInt32Array(127, 125, 129), PackedInt32Array(127, 129, 128), PackedInt32Array(87, 88, 130), PackedInt32Array(132, 131, 133), PackedInt32Array(133, 131, 134), PackedInt32Array(138, 137, 130), PackedInt32Array(130, 137, 136), PackedInt32Array(130, 136, 135), PackedInt32Array(130, 135, 87), PackedInt32Array(139, 134, 140), PackedInt32Array(140, 134, 128), PackedInt32Array(128, 134, 131), PackedInt32Array(128, 131, 127), PackedInt32Array(138, 139, 137), PackedInt32Array(137, 139, 140), PackedInt32Array(10, 143, 9), PackedInt32Array(9, 143, 141), PackedInt32Array(141, 143, 142), PackedInt32Array(145, 146, 144), PackedInt32Array(144, 146, 126), PackedInt32Array(126, 146, 125), PackedInt32Array(149, 148, 151), PackedInt32Array(151, 148, 147), PackedInt32Array(151, 147, 152), PackedInt32Array(152, 147, 150), PackedInt32Array(144, 148, 145), PackedInt32Array(145, 148, 149), PackedInt32Array(154, 150, 153), PackedInt32Array(153, 150, 142), PackedInt32Array(142, 150, 147), PackedInt32Array(142, 147, 141), PackedInt32Array(156, 155, 157), PackedInt32Array(157, 155, 158), PackedInt32Array(158, 155, 74), PackedInt32Array(74, 155, 75), PackedInt32Array(153, 157, 154), PackedInt32Array(154, 157, 158), PackedInt32Array(160, 159, 161), PackedInt32Array(161, 159, 163), PackedInt32Array(161, 163, 162), PackedInt32Array(165, 164, 162), PackedInt32Array(162, 164, 161), PackedInt32Array(161, 164, 166), PackedInt32Array(166, 164, 167), PackedInt32Array(97, 165, 96), PackedInt32Array(96, 165, 162), PackedInt32Array(164, 168, 167), PackedInt32Array(38, 39, 169), PackedInt32Array(169, 39, 170), PackedInt32Array(92, 93, 168), PackedInt32Array(168, 93, 171), PackedInt32Array(168, 171, 167), PackedInt32Array(169, 170, 171), PackedInt32Array(171, 170, 167), PackedInt32Array(73, 172, 72), PackedInt32Array(72, 172, 173), PackedInt32Array(173, 172, 174), PackedInt32Array(174, 172, 175), PackedInt32Array(172, 176, 175), PackedInt32Array(174, 177, 173), PackedInt32Array(181, 180, 178), PackedInt32Array(178, 180, 179), PackedInt32Array(183, 182, 184), PackedInt32Array(184, 182, 185), PackedInt32Array(185, 182, 187), PackedInt32Array(185, 187, 186), PackedInt32Array(188, 180, 181), PackedInt32Array(181, 189, 188), PackedInt32Array(188, 189, 190), PackedInt32Array(190, 189, 191), PackedInt32Array(86, 187, 85), PackedInt32Array(85, 187, 190), PackedInt32Array(190, 187, 182), PackedInt32Array(190, 182, 188), PackedInt32Array(189, 192, 191), PackedInt32Array(193, 183, 194), PackedInt32Array(194, 183, 184), PackedInt32Array(160, 195, 159), PackedInt32Array(159, 195, 196), PackedInt32Array(196, 195, 197), PackedInt32Array(199, 198, 195), PackedInt32Array(195, 198, 197), PackedInt32Array(201, 200, 202), PackedInt32Array(202, 200, 203), PackedInt32Array(203, 200, 204), PackedInt32Array(204, 200, 185), PackedInt32Array(204, 185, 186), PackedInt32Array(204, 186, 205), PackedInt32Array(209, 208, 206), PackedInt32Array(206, 208, 207), PackedInt32Array(206, 204, 209), PackedInt32Array(209, 204, 210), PackedInt32Array(210, 204, 205), PackedInt32Array(210, 205, 211), PackedInt32Array(215, 214, 212), PackedInt32Array(212, 214, 213), PackedInt32Array(214, 210, 118), PackedInt32Array(118, 210, 211), PackedInt32Array(118, 211, 117), PackedInt32Array(214, 215, 210), PackedInt32Array(219, 218, 216), PackedInt32Array(216, 218, 217), PackedInt32Array(179, 220, 178), PackedInt32Array(178, 220, 221), PackedInt32Array(220, 222, 223), PackedInt32Array(223, 222, 224), PackedInt32Array(212, 213, 222), PackedInt32Array(222, 213, 224), PackedInt32Array(223, 225, 221), PackedInt32Array(223, 221, 220), PackedInt32Array(229, 228, 226), PackedInt32Array(226, 228, 227), PackedInt32Array(233, 232, 230), PackedInt32Array(230, 232, 231)]
+
 [node name="ScaldaLevel" type="Node3D" unique_id=1905537615]
 
-[node name="ScaldaLevel" type="CSGCombiner3D" parent="." unique_id=2123380938]
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1315948275]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4104549, -0.47605753, 1.0929188)
+navigation_mesh = SubResource("NavigationMesh_gl1j4")
+
+[node name="ScaldaLevel" type="CSGCombiner3D" parent="NavigationRegion3D" unique_id=2123380938]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
 use_collision = true
 
-[node name="2ndFloor" type="CSGBox3D" parent="ScaldaLevel" unique_id=1379142879]
+[node name="2ndFloor" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=1379142879]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.192505, -0.875, 1.5)
 use_collision = true
 size = Vector3(37.86499, 0.25, 23.75)
 
-[node name="trapgat" type="CSGBox3D" parent="ScaldaLevel/2ndFloor" unique_id=1812962186]
+[node name="trapgat" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/2ndFloor" unique_id=1812962186]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.4, 0, 8.65)
 operation = 2
 size = Vector3(4.6, 0.5, 6.1)
 
-[node name="3rdFloor" type="CSGBox3D" parent="ScaldaLevel" unique_id=1894582334]
+[node name="3rdFloor" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=1894582334]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.174999, 2.25, 1.5)
 use_collision = true
 size = Vector3(37.825, 0.25, 23.75)
 
-[node name="trapgat" type="CSGBox3D" parent="ScaldaLevel/3rdFloor" unique_id=162999336]
+[node name="trapgat" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/3rdFloor" unique_id=162999336]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.449999, 0, 8.65)
 operation = 2
 size = Vector3(4.6, 0.5, 6.1)
 
-[node name="4thFloor" type="CSGBox3D" parent="ScaldaLevel" unique_id=1890663670]
+[node name="4thFloor" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=1890663670]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.25, 5.25, 8.75)
 use_collision = true
 size = Vector3(5, 0.25, 9.25)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel" unique_id=671956770]
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=671956770]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.65, 0.75, -2.25)
 size = Vector3(28.75, 3, 0.25)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D" unique_id=362315144]
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D" unique_id=362315144]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, -0.25, 0)
 operation = 2
 size = Vector3(1.75, 2.5, 0.3)
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D" unique_id=870654303]
+[node name="CSGBox3D2" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D" unique_id=870654303]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.25, 0.5, 0)
 operation = 2
 size = Vector3(2.3, 1, 0.3)
 
-[node name="CSGBox3D3" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D" unique_id=499584059]
+[node name="CSGBox3D3" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D" unique_id=499584059]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.25, -0.70000005, 0)
 operation = 2
 size = Vector3(2.3, 1, 0.3)
 
-[node name="CSGBox3D4" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D" unique_id=515330481]
+[node name="CSGBox3D4" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D" unique_id=515330481]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2, 0.5, 0)
 operation = 2
 size = Vector3(8.400001, 1, 0.3)
 
-[node name="CSGBox3D5" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D" unique_id=1638606803]
+[node name="CSGBox3D5" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D" unique_id=1638606803]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2, -0.70000005, 0)
 operation = 2
 size = Vector3(8.400001, 1, 0.3)
 
-[node name="CSGBox3D6" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D" unique_id=955319037]
+[node name="CSGBox3D6" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D" unique_id=955319037]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6, -0.70000005, 0)
 operation = 2
 size = Vector3(4, 1, 0.3)
 
-[node name="CSGBox3D7" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D" unique_id=1935209095]
+[node name="CSGBox3D7" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D" unique_id=1935209095]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6, 0.5, 0)
 operation = 2
 size = Vector3(4, 1, 0.3)
 
-[node name="CSGBox3D8" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D" unique_id=1279709169]
+[node name="CSGBox3D8" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D" unique_id=1279709169]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6000004, -0.25, 0)
 operation = 2
 size = Vector3(1.4, 2.5, 0.3)
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="ScaldaLevel" unique_id=843117732]
+[node name="CSGBox3D2" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=843117732]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.25, 0.75, 2.25)
 size = Vector3(18.5, 3, 0.25)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D2" unique_id=1607007527]
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D2" unique_id=1607007527]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.25, -0.25, 0)
 operation = 2
 size = Vector3(1.75, 2.5, 0.3)
 
-[node name="CSGBox3D4" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D2" unique_id=158606964]
+[node name="CSGBox3D4" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D2" unique_id=158606964]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.25, 0.50000024, -4.7683716e-07)
 operation = 2
 size = Vector3(0.3, 1, 5.3)
 
-[node name="CSGBox3D5" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D2" unique_id=1633784938]
+[node name="CSGBox3D5" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D2" unique_id=1633784938]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.25, -0.6999998, -4.7683716e-07)
 operation = 2
 size = Vector3(0.3, 1, 5.3)
 
-[node name="CSGBox3D6" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D2" unique_id=1410278350]
+[node name="CSGBox3D6" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D2" unique_id=1410278350]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.95, 0.50000024, -4.7683716e-07)
 operation = 2
 size = Vector3(0.3, 1, 5.7000003)
 
-[node name="CSGBox3D7" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D2" unique_id=2002653417]
+[node name="CSGBox3D7" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D2" unique_id=2002653417]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.95, -0.6999998, -4.7683716e-07)
 operation = 2
 size = Vector3(0.3, 1, 5.7000003)
 
-[node name="CSGBox3D8" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D2" unique_id=1144643685]
+[node name="CSGBox3D8" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D2" unique_id=1144643685]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.3500004, 0.50000024, -4.7683716e-07)
 operation = 2
 size = Vector3(0.3, 1, 1.5)
 
-[node name="CSGBox3D9" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D2" unique_id=1466098399]
+[node name="CSGBox3D9" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D2" unique_id=1466098399]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.3500004, -0.6999998, -4.7683716e-07)
 operation = 2
 size = Vector3(0.3, 1, 1.5)
 
-[node name="CSGBox3D10" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D2" unique_id=928347571]
+[node name="CSGBox3D10" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D2" unique_id=928347571]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.05, 0.50000024, -4.7683716e-07)
 operation = 2
 size = Vector3(0.3, 1, 1.5)
 
-[node name="CSGBox3D11" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D2" unique_id=1935927334]
+[node name="CSGBox3D11" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D2" unique_id=1935927334]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.05, -0.6999998, -4.7683716e-07)
 operation = 2
 size = Vector3(0.3, 1, 1.5)
 
-[node name="CSGBox3D3" type="CSGBox3D" parent="ScaldaLevel" unique_id=1859433448]
+[node name="CSGBox3D3" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=1859433448]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.375, 0.75, 0)
 size = Vector3(0.25, 3, 4.5)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D3" unique_id=1900936659]
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D3" unique_id=1900936659]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 operation = 2
 size = Vector3(0.3, 2.5, 3.5)
 
-[node name="CSGBox3D4" type="CSGBox3D" parent="ScaldaLevel" unique_id=1320976033]
+[node name="CSGBox3D4" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=1320976033]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.125, 0.75, -6.125)
 size = Vector3(0.25, 3, 8)
 
-[node name="CSGBox3D5" type="CSGBox3D" parent="ScaldaLevel" unique_id=1396127004]
+[node name="CSGBox3D5" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=1396127004]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0.75, 7.7509155)
 size = Vector3(0.25, 3, 10.751831)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D5" unique_id=370711405]
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D5" unique_id=370711405]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, -0.25, -4)
 operation = 2
 size = Vector3(1.75, 2.5, 0.3)
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D5" unique_id=1443889005]
+[node name="CSGBox3D2" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D5" unique_id=1443889005]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.50000024, 1.1999998)
 operation = 2
 size = Vector3(0.3, 1, 8)
 
-[node name="CSGBox3D3" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D5" unique_id=706502281]
+[node name="CSGBox3D3" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D5" unique_id=706502281]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.6999999, 1.1999998)
 operation = 2
 size = Vector3(0.3, 1, 8)
 
-[node name="CSGBox3D6" type="CSGBox3D" parent="ScaldaLevel" unique_id=860947645]
+[node name="CSGBox3D6" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=860947645]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0.75, 7.7528687)
 size = Vector3(0.25, 3, 10.75)
 
-[node name="CSGBox3D3" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D6" unique_id=649653098]
+[node name="CSGBox3D3" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D6" unique_id=649653098]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.6999999, -4.7683716e-07)
 operation = 2
 size = Vector3(0.3, 1, 10.400001)
 
-[node name="CSGBox3D4" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D6" unique_id=644872002]
+[node name="CSGBox3D4" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D6" unique_id=644872002]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.50000024, -4.7683716e-07)
 operation = 2
 size = Vector3(0.3, 1, 10.400001)
 
-[node name="CSGBox3D7" type="CSGBox3D" parent="ScaldaLevel" unique_id=1497311460]
+[node name="CSGBox3D7" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=1497311460]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.650002, 0.75, 13.25)
 size = Vector3(32.9, 3, 0.25)
 
-[node name="CSGBox3D8" type="CSGBox3D" parent="ScaldaLevel" unique_id=2072039180]
+[node name="CSGBox3D8" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=2072039180]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.050001, 0.75, -10.25)
 size = Vector3(23.7, 3, 0.25)
 
-[node name="CSGBox3D9" type="CSGBox3D" parent="ScaldaLevel" unique_id=324954297]
+[node name="CSGBox3D9" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=324954297]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 33, 0.6413574, 2.452734)
 size = Vector3(25.655468, 3.2172852, 0.25)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D9" unique_id=985328931]
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D9" unique_id=985328931]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.5, -0.25, 0)
 operation = 2
 size = Vector3(0.3, 2.5, 3.5)
 
-[node name="CSGBox3D10" type="CSGBox3D" parent="ScaldaLevel" unique_id=1248309802]
+[node name="CSGBox3D10" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=1248309802]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, -1.4250001, 8.822596)
 size = Vector3(0.25, 7.3, 12.895191)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D10" unique_id=1119555306]
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D10" unique_id=1119555306]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0816412, 5.5)
 operation = 2
 size = Vector3(0.3, 3.2367187, 2)
 
-[node name="CSGCylinder3D" type="CSGCylinder3D" parent="ScaldaLevel" unique_id=40274140]
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=40274140]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.75, 0.75, 2.125)
 radius = 0.25
 height = 3.0
 
-[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="ScaldaLevel" unique_id=14067500]
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=14067500]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.75, 0.75, 2.125)
 radius = 0.25
 height = 3.0
 
-[node name="CSGBox3D11" type="CSGBox3D" parent="ScaldaLevel" unique_id=54606978]
+[node name="CSGBox3D11" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=54606978]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, 0.75, 0)
 size = Vector3(0.25, 3, 4.5)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D11" unique_id=2059116614]
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D11" unique_id=2059116614]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 operation = 2
 size = Vector3(0.3, 2.5, 3.5)
 
-[node name="CSGBox3D12" type="CSGBox3D" parent="ScaldaLevel" unique_id=538377764]
+[node name="CSGBox3D12" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=538377764]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.325, 0.75, -6.25)
 size = Vector3(0.25, 3, 7.75)
 
-[node name="CSGBox3D13" type="CSGBox3D" parent="ScaldaLevel" unique_id=1436916843]
+[node name="CSGBox3D13" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=1436916843]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.25, 0.75, 2.25)
 size = Vector3(0.25, 3, 4.5)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D13" unique_id=609068653]
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D13" unique_id=609068653]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 operation = 2
 size = Vector3(0.3, 2.5, 3.5)
 
-[node name="CSGBox3D14" type="CSGBox3D" parent="ScaldaLevel" unique_id=657478739]
+[node name="CSGBox3D14" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=657478739]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.625, -0.8767822, 7.75)
 size = Vector3(0.25, 6.25, 11.25)
 
-[node name="CSGBox3D15" type="CSGBox3D" parent="ScaldaLevel" unique_id=1431732532]
+[node name="CSGBox3D15" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=1431732532]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.25, 0.75, 12.200001)
 size = Vector3(4.5, 0.25, 1.8000001)
 
-[node name="CSGBox3D16" type="CSGBox3D" parent="ScaldaLevel" unique_id=256461781]
+[node name="CSGBox3D16" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=256461781]
 transform = Transform3D(-4.371139e-08, 0, 1, -0.34202012, 0.9396926, -1.4950174e-08, -0.9396926, -0.34202012, -4.1075268e-08, -3.5, -0.06130302, 9.087046)
 size = Vector3(4.8, 0.25, 2)
 
-[node name="CSGBox3D17" type="CSGBox3D" parent="ScaldaLevel" unique_id=811140730]
+[node name="CSGBox3D17" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=811140730]
 transform = Transform3D(-4.1329926e-08, -1.4231036e-08, -1, -0.32556814, 0.9455185, 0, 0.9455185, 0.32556814, -4.371139e-08, -1, 1.5085487, 9.240738)
 size = Vector3(4.623755, 0.25, 2)
 
-[node name="CSGBox3D18" type="CSGBox3D" parent="ScaldaLevel" unique_id=1502723931]
+[node name="CSGBox3D18" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=1502723931]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, 3.775, 8.625)
 size = Vector3(0.25, 3.2, 9)
 
-[node name="CSGBox3D19" type="CSGBox3D" parent="ScaldaLevel" unique_id=610850699]
+[node name="CSGBox3D19" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=610850699]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.625, 3.725, 8.625)
 size = Vector3(0.25, 3.3, 9)
 
-[node name="CSGBox3D20" type="CSGBox3D" parent="ScaldaLevel" unique_id=1505205854]
+[node name="CSGBox3D20" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=1505205854]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.25, 0.12500012, 13.25)
 size = Vector3(0.25, 10.5, 5)
 
-[node name="CSGBox3D21" type="CSGBox3D" parent="ScaldaLevel" unique_id=1804681904]
+[node name="CSGBox3D21" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=1804681904]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.25, 3.75, 4.25)
 size = Vector3(0.25, 3, 4.5)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D21" unique_id=468924563]
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D21" unique_id=468924563]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 operation = 2
 size = Vector3(0.3, 2.5, 3.5)
 
-[node name="CSGBox3D22" type="CSGBox3D" parent="ScaldaLevel" unique_id=1532066843]
+[node name="CSGBox3D22" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=1532066843]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.625, 0.75, 0)
 size = Vector3(0.25, 3, 4.5)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D22" unique_id=451358490]
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D22" unique_id=451358490]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 operation = 2
 size = Vector3(0.3, 2.5, 3.5)
 
-[node name="CSGBox3D23" type="CSGBox3D" parent="ScaldaLevel" unique_id=741108700]
+[node name="CSGBox3D23" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=741108700]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.25, -2.3789155, 12.200001)
 size = Vector3(4.5, 0.25, 1.8000001)
 
-[node name="CSGBox3D24" type="CSGBox3D" parent="ScaldaLevel" unique_id=2108408098]
+[node name="CSGBox3D24" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=2108408098]
 transform = Transform3D(-4.371139e-08, 0, 1, -0.34202012, 0.9396926, -1.4950174e-08, -0.9396926, -0.34202012, -4.1075268e-08, -3.5, -3.25241, 8.916176)
 size = Vector3(5.163672, 0.25, 2)
 
-[node name="CSGBox3D25" type="CSGBox3D" parent="ScaldaLevel" unique_id=1870098260]
+[node name="CSGBox3D25" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=1870098260]
 transform = Transform3D(-4.1329926e-08, -1.4231036e-08, -1, -0.32556814, 0.9455185, 0, 0.9455185, 0.32556814, -4.371139e-08, -1, -1.6203668, 9.240738)
 size = Vector3(4.623755, 0.25, 2)
 
-[node name="1stFloor" type="CSGBox3D" parent="ScaldaLevel" unique_id=641251720]
+[node name="1stFloor" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=641251720]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.125, -4.125, 6.321289)
 use_collision = true
 size = Vector3(38, 0.25, 17.892578)
 
-[node name="CSGBox3D4" type="CSGBox3D" parent="ScaldaLevel/1stFloor" unique_id=1636479320]
+[node name="CSGBox3D4" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/1stFloor" unique_id=1636479320]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4499998, -0.63165474, 4.4623394)
 size = Vector3(24.9, 1, 1)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/1stFloor" unique_id=1769528198]
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/1stFloor" unique_id=1769528198]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6500015, 0, 6.9623394)
 operation = 2
 size = Vector3(24.5, 0.3, 4)
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="ScaldaLevel/1stFloor" unique_id=1710154500]
+[node name="CSGBox3D2" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/1stFloor" unique_id=1710154500]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.700002, -0.8499999, 4.2623396)
 operation = 2
 size = Vector3(1.6, 2, 1.4)
 
-[node name="CSGBox3D3" type="CSGBox3D" parent="ScaldaLevel/1stFloor" unique_id=1896974422]
+[node name="CSGBox3D3" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/1stFloor" unique_id=1896974422]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.849998, -0.8499999, 4.2623396)
 operation = 2
 size = Vector3(3.5, 2, 1.4)
 
-[node name="Aula_floor_lower" type="CSGBox3D" parent="ScaldaLevel/1stFloor" unique_id=10294086]
+[node name="Aula_floor_lower" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/1stFloor" unique_id=10294086]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6500006, -1, 6.9623394)
 size = Vector3(24.5, 0.25, 4)
 
-[node name="CSGBox3D5" type="CSGBox3D" parent="ScaldaLevel/1stFloor" unique_id=49973927]
+[node name="CSGBox3D5" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/1stFloor" unique_id=49973927]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.6, 0.8956528, 6.9600773)
 size = Vector3(6, 4.054615, 3.9954772)
 
-[node name="CSGBox3D28" type="CSGBox3D" parent="ScaldaLevel" unique_id=330127511]
+[node name="CSGBox3D28" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=330127511]
 transform = Transform3D(1, 0, 0, 0, 0.86602545, -0.50000006, 0, 0.50000006, 0.86602545, 22.979847, -4.6167226, 10.69384)
 size = Vector3(3.5, 0.25, 2.0354004)
 
-[node name="CSGBox3D26" type="CSGBox3D" parent="ScaldaLevel" unique_id=327242446]
+[node name="CSGBox3D26" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=327242446]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.2475674, -2.5, 2.25)
 size = Vector3(0.25, 3, 4.98786)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D26" unique_id=1688870706]
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D26" unique_id=1688870706]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 operation = 2
 size = Vector3(0.3, 2.5, 3.5)
 
-[node name="CSGBox3D27" type="CSGBox3D" parent="ScaldaLevel" unique_id=1097676333]
+[node name="CSGBox3D27" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=1097676333]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.625, -2.5, 0)
 size = Vector3(0.25, 3, 4.5)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D27" unique_id=345875826]
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D27" unique_id=345875826]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 operation = 2
 size = Vector3(0.3, 2.5, 3.5)
 
-[node name="CSGBox3D29" type="CSGBox3D" parent="ScaldaLevel" unique_id=856559693]
+[node name="CSGBox3D29" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=856559693]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, -2.5, 0)
 size = Vector3(0.25, 3, 4.5)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D29" unique_id=1393809694]
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D29" unique_id=1393809694]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 operation = 2
 size = Vector3(0.3, 2.5, 3.5)
 
-[node name="CSGBox3D30" type="CSGBox3D" parent="ScaldaLevel" unique_id=1690052173]
+[node name="CSGBox3D30" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=1690052173]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.220232, -2.5, 2.25)
 size = Vector3(28.465466, 3, 0.25)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D30" unique_id=828724224]
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D30" unique_id=828724224]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.491455, -0.25, 0)
 operation = 2
 size = Vector3(3.46709, 2.5, 0.3)
 
-[node name="CSGBox3D31" type="CSGBox3D" parent="ScaldaLevel" unique_id=1970723241]
+[node name="CSGBox3D31" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=1970723241]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.473827, -2.5, -2.25)
 size = Vector3(50.4, 3, 0.25)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D31" unique_id=596843136]
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D31" unique_id=596843136]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, -0.22500002, 0)
 operation = 2
 size = Vector3(3.5, 2.5, 0.4)
 
-[node name="Draaideur" type="CSGCylinder3D" parent="ScaldaLevel/CSGBox3D31" unique_id=74837643]
+[node name="Draaideur" type="CSGCylinder3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D31" unique_id=74837643]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, -0.19999993, 0)
 radius = 1.5
 height = 2.75
 
-[node name="CSGCylinder3D" type="CSGCylinder3D" parent="ScaldaLevel/CSGBox3D31/Draaideur" unique_id=136047194]
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D31/Draaideur" unique_id=136047194]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.100000024, 0)
 operation = 2
 radius = 1.75
 height = 2.5
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D31" unique_id=1240621453]
+[node name="CSGBox3D2" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D31" unique_id=1240621453]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, -0.2775879, 0)
 operation = 2
 size = Vector3(2.75, 2.435, 0.3)
 
-[node name="CSGBox3D8" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D31" unique_id=271908287]
+[node name="CSGBox3D8" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D31" unique_id=271908287]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.200001, -0.25, 0)
 operation = 2
 size = Vector3(1.4, 2.5, 0.3)
 
-[node name="CSGBox3D7" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D31" unique_id=254510165]
+[node name="CSGBox3D7" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D31" unique_id=254510165]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.050001, 0.5, 0)
 operation = 2
 size = Vector3(3.7, 1, 0.3)
 
-[node name="CSGBox3D9" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D31" unique_id=1278151671]
+[node name="CSGBox3D9" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D31" unique_id=1278151671]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.050001, -0.8000002, 0)
 operation = 2
 size = Vector3(3.7, 1, 0.3)
 
-[node name="CSGBox3D10" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D31" unique_id=587639227]
+[node name="CSGBox3D10" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D31" unique_id=587639227]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.099999, -0.25, 0)
 operation = 2
 size = Vector3(1.4, 2.5, 0.3)
 
-[node name="CSGBox3D11" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D31" unique_id=148656866]
+[node name="CSGBox3D11" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D31" unique_id=148656866]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.3500004, 0.5, 0)
 operation = 2
 size = Vector3(3.7, 1, 0.3)
 
-[node name="CSGBox3D12" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D31" unique_id=232074101]
+[node name="CSGBox3D12" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D31" unique_id=232074101]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.3500004, -0.8000002, 0)
 operation = 2
 size = Vector3(3.7, 1, 0.3)
 
-[node name="CSGBox3D13" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D31" unique_id=1589167608]
+[node name="CSGBox3D13" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D31" unique_id=1589167608]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7999992, -0.25, 0)
 operation = 2
 size = Vector3(1.4, 2.5, 0.3)
 
-[node name="CSGBox3D14" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D31" unique_id=2073423291]
+[node name="CSGBox3D14" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D31" unique_id=2073423291]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.800003, -0.25, 0)
 operation = 2
 size = Vector3(1.4, 2.5, 0.3)
 
-[node name="CSGBox3D15" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D31" unique_id=496599785]
+[node name="CSGBox3D15" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D31" unique_id=496599785]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.5, 0)
 operation = 2
 size = Vector3(8.8, 1, 0.3)
 
-[node name="CSGBox3D16" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D31" unique_id=707303388]
+[node name="CSGBox3D16" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D31" unique_id=707303388]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, -0.8000002, 0)
 operation = 2
 size = Vector3(8.8, 1, 0.3)
 
-[node name="CSGBox3D32" type="CSGBox3D" parent="ScaldaLevel" unique_id=439405863]
+[node name="CSGBox3D32" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=439405863]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.325, -2.5, 0)
 size = Vector3(0.25, 3, 4.5)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D32" unique_id=1447894769]
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D32" unique_id=1447894769]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 operation = 2
 size = Vector3(0.3, 2.5, 3.5)
 
-[node name="CSGBox3D33" type="CSGBox3D" parent="ScaldaLevel" unique_id=1272514449]
+[node name="CSGBox3D33" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=1272514449]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.325, -2.5, 0)
 size = Vector3(0.25, 3, 4.5)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D33" unique_id=1380171283]
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D33" unique_id=1380171283]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 operation = 2
 size = Vector3(0.3, 2.5, 3.5)
 
-[node name="CSGBox3D34" type="CSGBox3D" parent="ScaldaLevel" unique_id=1763620296]
+[node name="CSGBox3D34" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=1763620296]
 transform = Transform3D(1, 0, 0, 0, 0.86602545, -0.50000006, 0, 0.50000006, 0.86602545, 2.436683, -4.6167226, 10.69384)
 size = Vector3(1.6, 0.25, 2.0354004)
 
-[node name="Aula_floor_lower" type="CSGBox3D" parent="ScaldaLevel" unique_id=484255071]
+[node name="Aula_floor_lower" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=484255071]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.685497, -1.0864687, 13.27)
 size = Vector3(32.870995, 0.25, 4)
 
-[node name="CSGBox3D35" type="CSGBox3D" parent="ScaldaLevel" unique_id=267505072]
+[node name="CSGBox3D35" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=267505072]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.398543, -3.144397, 15.25)
 size = Vector3(24.822088, 4.111206, 0.25)
 
-[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="ScaldaLevel" unique_id=1795500900]
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=1795500900]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9, -2.4499998, 10.6)
 height = 3.1000001
 
-[node name="CSGCylinder3D4" type="CSGCylinder3D" parent="ScaldaLevel" unique_id=2071391664]
+[node name="CSGCylinder3D4" type="CSGCylinder3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=2071391664]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.6, -2.4499998, 10.6)
 height = 3.1000001
 
-[node name="CSGCylinder3D5" type="CSGCylinder3D" parent="ScaldaLevel" unique_id=2072599247]
+[node name="CSGCylinder3D5" type="CSGCylinder3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=2072599247]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.7, -2.4499998, 10.6)
 height = 3.1000001
 
-[node name="CSGCylinder3D6" type="CSGCylinder3D" parent="ScaldaLevel" unique_id=925871864]
+[node name="CSGCylinder3D6" type="CSGCylinder3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=925871864]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.2, -2.4499998, 10.6)
 height = 3.1000001
 
-[node name="2ndFloor2" type="CSGBox3D" parent="ScaldaLevel" unique_id=224242003]
+[node name="2ndFloor2" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=224242003]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.425, -0.875, 6.5249996)
 use_collision = true
 size = Vector3(12.6, 0.25, 17.5)
 
-[node name="2ndFloor3" type="CSGBox3D" parent="ScaldaLevel" unique_id=874165507]
+[node name="2ndFloor3" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=874165507]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.375, -4.125, 6.325)
 use_collision = true
 size = Vector3(12.5, 0.25, 17.9)
 
-[node name="CSGBox3D36" type="CSGBox3D" parent="ScaldaLevel" unique_id=820286111]
+[node name="CSGBox3D36" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=820286111]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.125, -2.5, 0)
 size = Vector3(0.25, 3, 4.5)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D36" unique_id=56106573]
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D36" unique_id=56106573]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 operation = 2
 size = Vector3(0.3, 2.5, 3.5)
 
-[node name="CSGBox3D37" type="CSGBox3D" parent="ScaldaLevel" unique_id=1252848742]
+[node name="CSGBox3D37" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=1252848742]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.125, -2.5, 13)
 size = Vector3(0.25, 3, 4.5)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D37" unique_id=734816152]
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel/CSGBox3D37" unique_id=734816152]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 operation = 2
 size = Vector3(0.3, 2.5, 3.5)
 
-[node name="CSGBox3D38" type="CSGBox3D" parent="ScaldaLevel" unique_id=799776548]
+[node name="CSGBox3D38" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=799776548]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.20581, -2.531372, 15.4)
 size = Vector3(15, 3.1281738, 0.25)
 
-[node name="CSGBox3D39" type="CSGBox3D" parent="ScaldaLevel" unique_id=1922015913]
+[node name="CSGBox3D39" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=1922015913]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.125, -2.5, 6.5)
 size = Vector3(0.25, 3, 8.5)
 
-[node name="CSGBox3D40" type="CSGBox3D" parent="ScaldaLevel" unique_id=2056289985]
+[node name="CSGBox3D40" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=2056289985]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 45.805813, -2.531372, 6.4999995)
 size = Vector3(17.6, 3.1281738, 0.25)
 
-[node name="CSGBox3D41" type="CSGBox3D" parent="ScaldaLevel" unique_id=1972809199]
+[node name="CSGBox3D41" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=1972809199]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.95, -3.5, 6.45)
 size = Vector3(0.6, 1, 6.2000003)
 
-[node name="CSGBox3D42" type="CSGBox3D" parent="ScaldaLevel" unique_id=345141686]
+[node name="CSGBox3D42" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=345141686]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.25, -3.5, 3.0499997)
 size = Vector3(2, 1, 0.6)
 
-[node name="CSGBox3D43" type="CSGBox3D" parent="ScaldaLevel" unique_id=1368695950]
+[node name="CSGBox3D43" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=1368695950]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.25, -3.5, 9.849999)
 size = Vector3(2, 1, 0.6)
 
-[node name="CSGBox3D44" type="CSGBox3D" parent="ScaldaLevel" unique_id=1239580007]
+[node name="CSGBox3D44" type="CSGBox3D" parent="NavigationRegion3D/ScaldaLevel" unique_id=1239580007]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.25, -1.7, 6.5)
 size = Vector3(2, 0.2, 7.5)
