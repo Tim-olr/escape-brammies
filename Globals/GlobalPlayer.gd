@@ -7,4 +7,5 @@ extends Node
 @onready var inventory: PlayerInventory
 @onready var interaction: RayCast3D
 @onready var manager: PlayerManager
-var promptinstance: CanvasLayer
+@onready var promptinstance: CanvasLayer
+@onready var audio: PlayerAudio

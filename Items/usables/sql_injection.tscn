@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dwwe753atfxn0"]
+
+[ext_resource type="Script" uid="uid://cixnfoddtsmut" path="res://Items/usables/sql_injection.gd" id="1_wgj8i"]
+[ext_resource type="Texture2D" uid="uid://dp1m26jb6af41" path="res://assets/models/sql_injection/sqlinjection_0.png" id="2_nbv62"]
+[ext_resource type="PackedScene" uid="uid://cuy1rhbjgn0wx" path="res://assets/models/sql_injection/sql_injection_shape.tscn" id="4_nbv62"]
+[ext_resource type="PackedScene" uid="uid://dvk58nlb02gff" path="res://assets/sprite_scenes/sql_injection.tscn" id="4_o2rjy"]
+[ext_resource type="AudioStream" uid="uid://bqjbldej0i1qi" path="res://assets/models/sql_injection/zaowlrd.mp3" id="5_o2rjy"]
+
+[node name="SQLInjection" type="Node3D" unique_id=109699813]
+script = ExtResource("1_wgj8i")
+item_name = "SQL Injection"
+custom_texture = ExtResource("2_nbv62")
+collision = ExtResource("4_nbv62")
+has_sprite_no_model = true
+sprite = ExtResource("4_o2rjy")
+delete_on_use = true
+custom_sound_file = ExtResource("5_o2rjy")

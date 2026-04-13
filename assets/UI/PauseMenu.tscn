@@ -13,6 +13,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=768806969]
+process_mode = 3
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -31,6 +32,7 @@ alignment = 1
 script = ExtResource("1_7xjqa")
 
 [node name="Play" type="Button" parent="VBoxContainer" unique_id=168966124]
+process_mode = 3
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("2_d4ml5")
@@ -38,6 +40,7 @@ theme_override_font_sizes/font_size = 60
 text = "Continue"
 
 [node name="Exit" type="Button" parent="VBoxContainer" unique_id=769186704]
+process_mode = 3
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("2_d4ml5")

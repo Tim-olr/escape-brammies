@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://hfpoldbrm7p8" path="res://Player/the player/player.tscn" id="1_ejmfg"]
 [ext_resource type="PackedScene" uid="uid://b5hrdo86dnvob" path="res://World/Scalda/scalda_level.tscn" id="2_abumu"]
 [ext_resource type="PackedScene" uid="uid://knu1taomhlhs" path="res://Items/interactables/test_item_interactable.tscn" id="2_j5njh"]
-[ext_resource type="PackedScene" uid="uid://rhpwx4anaa7d" path="res://assets/UI/PauseMenu.tscn" id="2_mktvv"]
+[ext_resource type="Script" uid="uid://b6vygy2ti5qc4" path="res://World/The world/death_area.gd" id="4_abumu"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ghcsx"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -22,9 +22,10 @@ glow_enabled = true
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_486io"]
 
-[node name="Main" type="Node3D" unique_id=2005214468]
+[sub_resource type="BoxShape3D" id="BoxShape3D_rvclf"]
+size = Vector3(1103.5992, 1.6346436, 1246.0518)
 
-[node name="PauseMenu" parent="." unique_id=2052854178 instance=ExtResource("2_mktvv")]
+[node name="Main" type="Node3D" unique_id=2005214468]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1700724351]
 environment = SubResource("Environment_pc2j6")
@@ -60,3 +61,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.032309, 0.6325064, 6.31314
 
 [node name="TestItemInteractable4" parent="." unique_id=1908994398 instance=ExtResource("2_j5njh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.032309, 0.6325064, 7.9723206)
+
+[node name="death_area" type="Area3D" parent="." unique_id=575380936]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8.978199, 0)
+script = ExtResource("4_abumu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="death_area" unique_id=287892489]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.850769, 0.31732178, 41.816483)
+shape = SubResource("BoxShape3D_rvclf")
+
+[connection signal="body_entered" from="death_area" to="death_area" method="_on_body_entered"]

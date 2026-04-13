@@ -38,7 +38,7 @@ func select_slot(slot: InventorySlot) -> void:
 		set_slot_outline(current_slot, 0.0)
 	current_slot = slot
 	current_slot.select()
-	set_slot_outline(current_slot, 4.0)
+	set_slot_outline(current_slot, 1.5)
 	current_item = current_slot.held_item
 
 func set_slot_outline(slot: InventorySlot, thickness: float) -> void:
@@ -87,8 +87,15 @@ func drop_item():
 			current_slot.held_item = null
 			current_slot.slot_sprite.texture = null
 			current_slot.has_item = false
+			delete_item_from_current_slot()
 			drop_item_animation();
 
+func delete_item_from_current_slot():
+	current_slot.deselect()
+	set_slot_outline(current_slot, 0.0)
+	current_slot.held_item = null
+	current_slot.slot_sprite.texture = null
+	current_slot.has_item = false
 
 func drop_item_animation():
 	hand.play("hand_drop")
