@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cjwki4eu11wa3"]
+
+[ext_resource type="Script" uid="uid://b7n7ibl376j1j" path="res://Player/brammy/brammy.gd" id="1_jeuj0"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_45g0j"]
+
+[node name="Brammie" type="CharacterBody3D" unique_id=921226551]
+script = ExtResource("1_jeuj0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1859025215]
+shape = SubResource("CapsuleShape3D_45g0j")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=305832668]
