@@ -7,7 +7,7 @@ const COUNTER_STRAFE_MULTIPLIER: float = 4.0
 const STAMINA_DRAIN_RATE: float = 20.0
 const STAMINA_REGEN_RATE: float = 10.0
 const FOV_DEFAULT: float = 75.0
-const FOV_SPRINT: float = 90.0
+const FOV_SPRINT_DELTA: float = 15.0
 const FOV_TWEEN_SPEED: float = 0.2
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 
@@ -63,7 +63,7 @@ func _process(delta: float) -> void:
 	if target_color != _current_bar_color:
 		_animate_to_color(target_color)
 	if sprinting != _was_sprinting:
-		_animate_fov(FOV_SPRINT if sprinting else FOV_DEFAULT)
+		_animate_fov(FOV_SPRINT_DELTA if sprinting else -FOV_SPRINT_DELTA)
 		_was_sprinting = sprinting
 
 func _animate_to_color(target: Color) -> void:
@@ -76,11 +76,12 @@ func _animate_to_color(target: Color) -> void:
 func _set_bar_color(color: Color) -> void:
 	style_box.bg_color = color
 
-func _animate_fov(target: float) -> void:
+func _animate_fov(fov_delta: float) -> void:
 	if not GlobalPlayer.camera:
 		return
 	if _fov_tween:
 		_fov_tween.kill()
+	var target = GlobalPlayer.camera.fov + fov_delta
 	_fov_tween = create_tween()
 	_fov_tween.tween_property(GlobalPlayer.camera, "fov", target, FOV_TWEEN_SPEED).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
 
