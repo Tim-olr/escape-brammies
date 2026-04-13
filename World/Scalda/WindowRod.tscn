@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://b666jh55r2pfs"]
+
+[ext_resource type="PackedScene" uid="uid://bpytyffvpdoc4" path="res://assets/models/scalda/hallway_window_rod.glb" id="1_hdpjw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k02q6"]
+size = Vector3(0.2, 1, 0.2)
+
+[node name="WindowRod" type="Node3D" unique_id=163434570]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1033921172]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1519463472]
+shape = SubResource("BoxShape3D_k02q6")
+
+[node name="blockbench_export" parent="." unique_id=1289348580 instance=ExtResource("1_hdpjw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+
+[editable path="blockbench_export"]

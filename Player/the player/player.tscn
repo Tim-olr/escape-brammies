@@ -16,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://dsw2jtww5o2br" path="res://assets/textures/player/hand/idle/idle_hand.png" id="10_ek1er"]
 [ext_resource type="Shader" uid="uid://ltdvcyyto6kr" path="res://Player/the player/inventory/slot_selection.gdshader" id="13_a05s0"]
 [ext_resource type="PackedScene" uid="uid://rhpwx4anaa7d" path="res://assets/UI/PauseMenu.tscn" id="14_ek1er"]
+[ext_resource type="Script" path="res://Player/the player/UI.gd" id="14_ierpi"]
+[ext_resource type="FontFile" uid="uid://ulbymda0vas8" path="res://assets/UI/Fonts/MedodicaRegular.otf" id="18_ek1er"]
 [ext_resource type="Shader" uid="uid://dcmsuo1e6pgey" path="res://Player/the player/grayscale.gdshader" id="17_ierpi"]
 [ext_resource type="Script" uid="uid://xviraojwfcqt" path="res://Player/the player/audio_stream_player_3d.gd" id="19_7tefi"]
 
@@ -24,16 +26,33 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_f8k7o"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": ExtResource("6_11607")
+"duration": 0.5,
+"texture": ExtResource("9_ierpi")
 }, {
-"duration": 1.0,
-"texture": ExtResource("7_a05s0")
-}, {
-"duration": 1.0,
+"duration": 0.5,
 "texture": ExtResource("8_2qv5j")
 }, {
-"duration": 1.0,
+"duration": 0.5,
+"texture": ExtResource("7_a05s0")
+}, {
+"duration": 0.5,
+"texture": ExtResource("6_11607")
+}],
+"loop": false,
+"name": &"hand_drop",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.5,
+"texture": ExtResource("6_11607")
+}, {
+"duration": 0.5,
+"texture": ExtResource("7_a05s0")
+}, {
+"duration": 0.5,
+"texture": ExtResource("8_2qv5j")
+}, {
+"duration": 0.5,
 "texture": ExtResource("9_ierpi")
 }],
 "loop": false,
@@ -101,12 +120,13 @@ script = ExtResource("2_3wug4")
 script = ExtResource("3_esvoh")
 stamina_bar = NodePath("../CanvasLayer/Control/ProgressBar")
 
-[node name="PlayerInventory" type="Node3D" parent="." unique_id=920902537 node_paths=PackedStringArray("hotbar", "slot_1", "slot_2", "slot_3")]
+[node name="PlayerInventory" type="Node3D" parent="." unique_id=920902537 node_paths=PackedStringArray("hotbar", "slot_1", "slot_2", "slot_3", "hand")]
 script = ExtResource("4_7q2ms")
 hotbar = NodePath("../CanvasLayer/Control/Hotbar")
 slot_1 = NodePath("../CanvasLayer/Control/Hotbar/Slot 1")
 slot_2 = NodePath("../CanvasLayer/Control/Hotbar/Slot 2")
 slot_3 = NodePath("../CanvasLayer/Control/Hotbar/Slot 3")
+hand = NodePath("../Camera3D/Hand")
 
 [node name="PlayerManager" type="Node3D" parent="." unique_id=1398871743]
 script = ExtResource("5_2qv5j")
@@ -123,7 +143,9 @@ bob_amount = 25.0
 position = Vector2(791, 287)
 scale = Vector2(6, 6)
 sprite_frames = SubResource("SpriteFrames_f8k7o")
-animation = &"hand_idle"
+animation = &"hand_grab"
+autoplay = "hand_idle"
+
 
 [node name="PlayerInteraction" type="RayCast3D" parent="Camera3D" unique_id=1949961184]
 transform = Transform3D(1, 0, 0, 0, -1.4409584e-07, -0.99999994, 0, 3.2965286, -4.3711385e-08, 0, 0, -0.4913714)
@@ -135,6 +157,47 @@ script = ExtResource("7_63538")
 mesh = SubResource("CapsuleMesh_3wug4")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1640052681]
+script = ExtResource("14_ierpi")
+
+[node name="grayscale" type="TextureRect" parent="CanvasLayer" unique_id=670922904]
+material = SubResource("ShaderMaterial_8sggc")
+offset_left = -60.0
+offset_top = -35.0
+offset_right = 1190.0
+offset_bottom = 703.0
+texture = SubResource("GradientTexture2D_ek1er")
+
+[node name="grayscale" type="TextureRect" parent="CanvasLayer" unique_id=670922904]
+material = SubResource("ShaderMaterial_8sggc")
+offset_left = -60.0
+offset_top = -35.0
+offset_right = 1190.0
+offset_bottom = 703.0
+texture = SubResource("GradientTexture2D_ek1er")
+
+[node name="grayscale" type="TextureRect" parent="CanvasLayer" unique_id=670922904]
+material = SubResource("ShaderMaterial_8sggc")
+offset_left = -60.0
+offset_top = -35.0
+offset_right = 1190.0
+offset_bottom = 703.0
+texture = SubResource("GradientTexture2D_ek1er")
+
+[node name="grayscale" type="TextureRect" parent="CanvasLayer" unique_id=670922904]
+material = SubResource("ShaderMaterial_8sggc")
+offset_left = -60.0
+offset_top = -35.0
+offset_right = 1190.0
+offset_bottom = 703.0
+texture = SubResource("GradientTexture2D_ek1er")
+
+[node name="grayscale" type="TextureRect" parent="CanvasLayer" unique_id=670922904]
+material = SubResource("ShaderMaterial_8sggc")
+offset_left = -60.0
+offset_top = -35.0
+offset_right = 1190.0
+offset_bottom = 703.0
+texture = SubResource("GradientTexture2D_ek1er")
 
 [node name="grayscale" type="TextureRect" parent="CanvasLayer" unique_id=670922904]
 material = SubResource("ShaderMaterial_8sggc")
@@ -223,6 +286,19 @@ offset_top = 504.0
 offset_right = 680.0
 offset_bottom = 531.0
 show_percentage = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer" unique_id=266860366]
+offset_top = 348.0
+offset_right = 1152.0
+offset_bottom = 388.0
+theme_override_fonts/normal_font = ExtResource("18_ek1er")
+theme_override_fonts/bold_font = ExtResource("18_ek1er")
+theme_override_fonts/bold_italics_font = ExtResource("18_ek1er")
+theme_override_fonts/italics_font = ExtResource("18_ek1er")
+theme_override_fonts/mono_font = ExtResource("18_ek1er")
+bbcode_enabled = true
+autowrap_mode = 0
+horizontal_alignment = 3
 
 [node name="PauseMenu" parent="CanvasLayer" unique_id=2052854178 instance=ExtResource("14_ek1er")]
 

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://drp1x9kmda1a" path="res://Items/usables/repair/repair_part.gd" id="1_motor"]
 [ext_resource type="Texture2D" uid="uid://1j0xo782toyr" path="res://icon.svg" id="2_motor"]
+
 [node name="Motor" type="Node3D"]
 script = ExtResource("1_motor")
 item_name = "Motor"

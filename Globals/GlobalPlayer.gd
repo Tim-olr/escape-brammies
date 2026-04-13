@@ -8,3 +8,4 @@ extends Node
 @onready var interaction: RayCast3D
 @onready var manager: PlayerManager
 @onready var audio: PlayerAudio
+@onready var promptinstance: CanvasLayer

@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://du3mdsaixyqti"]
+
+[ext_resource type="PackedScene" uid="uid://dkgeab32rnjnn" path="res://assets/models/scalda/Blackdoor.glb" id="1_cp5nl"]
+[ext_resource type="Script" uid="uid://qxmd5ad3wci" path="res://assets/Scripts/door.gd" id="1_dnk24"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dnk24"]
+size = Vector3(1, 2, 0.1)
+
+[node name="Blackdoor" type="Node3D" unique_id=1855600005]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=167484285]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 4.371139e-08)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=426102344]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("BoxShape3D_dnk24")
+debug_fill = false
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1331743600]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 4.371139e-08)
+script = ExtResource("1_dnk24")
+goes_away_on_interact = false
+
+[node name="blockbench_export" parent="Area3D" unique_id=97866307 instance=ExtResource("1_cp5nl")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1275442636]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("BoxShape3D_dnk24")
+debug_fill = false
+
+[editable path="Area3D/blockbench_export"]
