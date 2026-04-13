@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://b5hrdo86dnvob" path="res://World/Scalda/scalda_level.tscn" id="2_abumu"]
 [ext_resource type="PackedScene" uid="uid://knu1taomhlhs" path="res://Items/interactables/test_item_interactable.tscn" id="2_j5njh"]
 [ext_resource type="PackedScene" uid="uid://rhpwx4anaa7d" path="res://assets/UI/PauseMenu.tscn" id="2_mktvv"]
+[ext_resource type="PackedScene" uid="uid://cjwki4eu11wa3" path="res://Player/brammy/brammy.tscn" id="5_rvclf"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ghcsx"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -21,6 +22,8 @@ glow_enabled = true
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_27sxs"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_486io"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_rvclf"]
 
 [node name="Main" type="Node3D" unique_id=2005214468]
 
@@ -49,6 +52,10 @@ shape = SubResource("CapsuleShape3D_486io")
 
 [node name="ScaldaLevel" parent="." unique_id=1905537615 instance=ExtResource("2_abumu")]
 
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="ScaldaLevel" unique_id=573894273]
+transform = Transform3D(68.9677, 0, 0, 0, 1, 0, 0, 0, 2.1388679, 1.8231735, 0.91907454, 0.47362137)
+navigation_mesh = SubResource("NavigationMesh_rvclf")
+
 [node name="TestItemInteractable" parent="." unique_id=1183875761 instance=ExtResource("2_j5njh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.728243, 0.70000005, 5.8982162)
 
@@ -60,3 +67,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.032309, 0.6325064, 6.31314
 
 [node name="TestItemInteractable4" parent="." unique_id=1908994398 instance=ExtResource("2_j5njh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.032309, 0.6325064, 7.9723206)
+
+[node name="Brammie" parent="." unique_id=921226551 instance=ExtResource("5_rvclf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8231745, 0.87127876, 0.47362116)
