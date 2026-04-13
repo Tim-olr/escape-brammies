@@ -12,5 +12,3 @@ func interact() -> bool:
 func check_go_away():
 	if goes_away_on_interact:
 		queue_free()
-	else:
-		pass

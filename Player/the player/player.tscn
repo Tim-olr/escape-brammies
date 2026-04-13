@@ -17,8 +17,8 @@
 [ext_resource type="Shader" uid="uid://ltdvcyyto6kr" path="res://Player/the player/inventory/slot_selection.gdshader" id="13_a05s0"]
 [ext_resource type="PackedScene" uid="uid://rhpwx4anaa7d" path="res://assets/UI/PauseMenu.tscn" id="14_ek1er"]
 [ext_resource type="Script" path="res://Player/the player/UI.gd" id="14_ierpi"]
-[ext_resource type="FontFile" uid="uid://ulbymda0vas8" path="res://assets/UI/Fonts/MedodicaRegular.otf" id="18_ek1er"]
 [ext_resource type="Shader" uid="uid://dcmsuo1e6pgey" path="res://Player/the player/grayscale.gdshader" id="17_ierpi"]
+[ext_resource type="FontFile" uid="uid://ulbymda0vas8" path="res://assets/UI/Fonts/MedodicaRegular.otf" id="18_ek1er"]
 [ext_resource type="Script" uid="uid://xviraojwfcqt" path="res://Player/the player/audio_stream_player_3d.gd" id="19_7tefi"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_du564"]
@@ -76,8 +76,8 @@ shader_parameter/shake = 0.015
 shader_parameter/noiseQuality = 250.0
 shader_parameter/noiseIntensity = 0.001
 shader_parameter/offsetIntensity = 0.0
-shader_parameter/colorOffsetIntensity = 0.17600000510012
-shader_parameter/pixelSize = 200.0
+shader_parameter/colorOffsetIntensity = 0.10000000149012
+shader_parameter/pixelSize = 250.0000118275
 shader_parameter/grainIntensity = 0.0
 shader_parameter/use_overlay = true
 shader_parameter/use_lens_distortion = false
@@ -146,9 +146,8 @@ sprite_frames = SubResource("SpriteFrames_f8k7o")
 animation = &"hand_grab"
 autoplay = "hand_idle"
 
-
 [node name="PlayerInteraction" type="RayCast3D" parent="Camera3D" unique_id=1949961184]
-transform = Transform3D(1, 0, 0, 0, -1.4409584e-07, -0.99999994, 0, 3.2965286, -4.3711385e-08, 0, 0, -0.4913714)
+transform = Transform3D(1, 0, 0, 0, -7.922096e-08, -0.99999994, 0, 1.8123645, -4.3711385e-08, 0, 0, -0.4913714)
 collide_with_areas = true
 collide_with_bodies = false
 script = ExtResource("7_63538")
@@ -158,46 +157,6 @@ mesh = SubResource("CapsuleMesh_3wug4")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1640052681]
 script = ExtResource("14_ierpi")
-
-[node name="grayscale" type="TextureRect" parent="CanvasLayer" unique_id=670922904]
-material = SubResource("ShaderMaterial_8sggc")
-offset_left = -60.0
-offset_top = -35.0
-offset_right = 1190.0
-offset_bottom = 703.0
-texture = SubResource("GradientTexture2D_ek1er")
-
-[node name="grayscale" type="TextureRect" parent="CanvasLayer" unique_id=670922904]
-material = SubResource("ShaderMaterial_8sggc")
-offset_left = -60.0
-offset_top = -35.0
-offset_right = 1190.0
-offset_bottom = 703.0
-texture = SubResource("GradientTexture2D_ek1er")
-
-[node name="grayscale" type="TextureRect" parent="CanvasLayer" unique_id=670922904]
-material = SubResource("ShaderMaterial_8sggc")
-offset_left = -60.0
-offset_top = -35.0
-offset_right = 1190.0
-offset_bottom = 703.0
-texture = SubResource("GradientTexture2D_ek1er")
-
-[node name="grayscale" type="TextureRect" parent="CanvasLayer" unique_id=670922904]
-material = SubResource("ShaderMaterial_8sggc")
-offset_left = -60.0
-offset_top = -35.0
-offset_right = 1190.0
-offset_bottom = 703.0
-texture = SubResource("GradientTexture2D_ek1er")
-
-[node name="grayscale" type="TextureRect" parent="CanvasLayer" unique_id=670922904]
-material = SubResource("ShaderMaterial_8sggc")
-offset_left = -60.0
-offset_top = -35.0
-offset_right = 1190.0
-offset_bottom = 703.0
-texture = SubResource("GradientTexture2D_ek1er")
 
 [node name="grayscale" type="TextureRect" parent="CanvasLayer" unique_id=670922904]
 material = SubResource("ShaderMaterial_8sggc")

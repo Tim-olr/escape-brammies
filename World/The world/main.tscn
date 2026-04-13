@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://b5hrdo86dnvob" path="res://World/Scalda/scalda_level.tscn" id="2_abumu"]
 [ext_resource type="PackedScene" uid="uid://knu1taomhlhs" path="res://Items/interactables/test_item_interactable.tscn" id="2_j5njh"]
 [ext_resource type="Script" uid="uid://b6vygy2ti5qc4" path="res://World/The world/death_area.gd" id="4_abumu"]
-[ext_resource type="PackedScene" path="res://World/draaideur/draaideur.tscn" id="5_rvclf"]
+[ext_resource type="PackedScene" uid="uid://cp5jn7lrte8f" path="res://World/draaideur/draaideur.tscn" id="5_rvclf"]
 [ext_resource type="PackedScene" uid="uid://bpk1yakmd006" path="res://Items/interactables/repair_pickups/button_pickup.tscn" id="6_slyvb"]
 [ext_resource type="PackedScene" uid="uid://mpk1yakmd004" path="res://Items/interactables/repair_pickups/motor_pickup.tscn" id="7_eq6tm"]
 [ext_resource type="PackedScene" uid="uid://wpk1yakmd005" path="res://Items/interactables/repair_pickups/wires_pickup.tscn" id="8_78nbq"]
@@ -22,10 +22,6 @@ sky = SubResource("Sky_os8xc")
 tonemap_mode = 2
 glow_enabled = true
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_27sxs"]
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_486io"]
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_rvclf"]
 size = Vector3(1103.5992, 1.6346436, 1246.0518)
 
@@ -40,17 +36,6 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 26.7
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=835564989]
 transform = Transform3D(1, 0, 0, 0, 0.37285823, 0.92788833, 0, -0.92788833, 0.37285823, -0.56179345, 27.757853, 0)
 shadow_enabled = true
-
-[node name="object" type="StaticBody3D" parent="." unique_id=28058086]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 0.9545959, 5)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="object" unique_id=1623494195]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3127191, 0)
-mesh = SubResource("CapsuleMesh_27sxs")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="object" unique_id=1340634981]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3127191, 0)
-shape = SubResource("CapsuleShape3D_486io")
 
 [node name="ScaldaLevel" parent="." unique_id=1905537615 instance=ExtResource("2_abumu")]
 
