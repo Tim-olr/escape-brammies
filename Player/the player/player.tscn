@@ -146,6 +146,7 @@ sprite_frames = SubResource("SpriteFrames_f8k7o")
 animation = &"hand_grab"
 autoplay = "hand_idle"
 
+
 [node name="PlayerInteraction" type="RayCast3D" parent="Camera3D" unique_id=1949961184]
 transform = Transform3D(1, 0, 0, 0, -1.4409584e-07, -0.99999994, 0, 3.2965286, -4.3711385e-08, 0, 0, -0.4913714)
 collide_with_areas = true
@@ -157,6 +158,14 @@ mesh = SubResource("CapsuleMesh_3wug4")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1640052681]
 script = ExtResource("14_ierpi")
+
+[node name="grayscale" type="TextureRect" parent="CanvasLayer" unique_id=670922904]
+material = SubResource("ShaderMaterial_8sggc")
+offset_left = -60.0
+offset_top = -35.0
+offset_right = 1190.0
+offset_bottom = 703.0
+texture = SubResource("GradientTexture2D_ek1er")
 
 [node name="grayscale" type="TextureRect" parent="CanvasLayer" unique_id=670922904]
 material = SubResource("ShaderMaterial_8sggc")

@@ -82,7 +82,7 @@ func _animate_fov(fov_delta: float) -> void:
 		return
 	if _fov_tween:
 		_fov_tween.kill()
-	var target = GlobalPlayer.camera.fov + fov_delta
+
 	_fov_target += fov_delta  # update intended target, not current camera FOV
 	_fov_tween = create_tween()
 	_fov_tween.tween_property(GlobalPlayer.camera, "fov", _fov_target, FOV_TWEEN_SPEED).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)

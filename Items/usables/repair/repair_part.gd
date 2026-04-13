@@ -61,7 +61,6 @@ func drop() -> void:
 		drop_pos = hit.position + Vector3.UP * 0.2
 	spawn.global_position = drop_pos
 
-
 func _door_needs_this_part(collider: Node) -> bool:
 	var door = collider.get_parent()
 	return door.has_method("needs_part") and door.needs_part(part_id)
