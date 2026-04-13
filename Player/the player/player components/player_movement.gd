@@ -23,6 +23,7 @@ const COLOR_EMPTY  := Color("c0392bff")
 var _current_bar_color := Color("f4f8ffff")
 var _tween: Tween
 var _fov_tween: Tween
+var _fov_target: float = FOV_DEFAULT  # tracks intended FOV, not mid-tween value
 
 var has_had_sprint_penalty := false
 
@@ -81,9 +82,9 @@ func _animate_fov(fov_delta: float) -> void:
 		return
 	if _fov_tween:
 		_fov_tween.kill()
-	var target = GlobalPlayer.camera.fov + fov_delta
+	_fov_target += fov_delta  # update intended target, not current camera FOV
 	_fov_tween = create_tween()
-	_fov_tween.tween_property(GlobalPlayer.camera, "fov", target, FOV_TWEEN_SPEED).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
+	_fov_tween.tween_property(GlobalPlayer.camera, "fov", _fov_target, FOV_TWEEN_SPEED).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
 
 func _physics_process(delta: float) -> void:
 	var body: CharacterBody3D = GlobalPlayer.player
