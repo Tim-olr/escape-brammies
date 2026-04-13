@@ -24,6 +24,8 @@ var _current_bar_color := Color("f4f8ffff")
 var _tween: Tween
 var _fov_tween: Tween
 
+var has_had_sprint_penalty := false
+
 func _ready() -> void:
 	GlobalPlayer.movement = self
 	style_box.set_corner_radius_all(5)
@@ -37,9 +39,14 @@ func _process(delta: float) -> void:
 	stamina_bar.max_value = max_stamina
 	stamina_bar.value = GlobalPlayer.stats.current_stamina
 	if sprinting:
+		if !has_had_sprint_penalty:
+			GlobalPlayer.stats.current_stamina -= 5
+			has_had_sprint_penalty = true
 		GlobalPlayer.stats.current_stamina -= STAMINA_DRAIN_RATE * delta
 		GlobalPlayer.stats.current_stamina = maxf(GlobalPlayer.stats.current_stamina, 0.0)
 	else:
+		if has_had_sprint_penalty:
+			has_had_sprint_penalty = false
 		GlobalPlayer.stats.current_stamina += STAMINA_REGEN_RATE * delta
 		GlobalPlayer.stats.current_stamina = minf(GlobalPlayer.stats.current_stamina, max_stamina)
 	if not can_sprint and GlobalPlayer.stats.current_stamina >= max_stamina * 0.25:
