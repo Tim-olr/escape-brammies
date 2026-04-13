@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://b5hrdo86dnvob" path="res://World/Scalda/scalda_level.tscn" id="2_abumu"]
 [ext_resource type="PackedScene" uid="uid://knu1taomhlhs" path="res://Items/interactables/test_item_interactable.tscn" id="2_j5njh"]
 [ext_resource type="Script" uid="uid://b6vygy2ti5qc4" path="res://World/The world/death_area.gd" id="4_abumu"]
-
 [ext_resource type="PackedScene" path="res://World/draaideur/draaideur.tscn" id="5_rvclf"]
 [ext_resource type="PackedScene" uid="uid://bpk1yakmd006" path="res://Items/interactables/repair_pickups/button_pickup.tscn" id="6_slyvb"]
 [ext_resource type="PackedScene" uid="uid://mpk1yakmd004" path="res://Items/interactables/repair_pickups/motor_pickup.tscn" id="7_eq6tm"]
