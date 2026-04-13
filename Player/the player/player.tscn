@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bvfw3qila66gp" path="res://assets/textures/player/hand/grabbing/grabbing_2.png" id="7_a05s0"]
 [ext_resource type="Script" uid="uid://76ajln6ewo8t" path="res://Player/the player/inventory/slot_1.gd" id="7_rr6jo"]
 [ext_resource type="Texture2D" uid="uid://bs523626oki5u" path="res://assets/textures/player/hand/grabbing/grabbing_3.png" id="8_2qv5j"]
-[ext_resource type="Texture2D" uid="uid://5ba0yauoo5ji" path="res://Player/interaction_circle.png" id="9_f8k7o"]
+[ext_resource type="Script" uid="uid://rprrng123abc" path="res://Player/the player/repair_ring.gd" id="9_f8k7o"]
 [ext_resource type="Texture2D" uid="uid://jil3b4784fhx" path="res://assets/textures/player/hand/grabbing/grabbing_4.png" id="9_ierpi"]
 [ext_resource type="Texture2D" uid="uid://dsw2jtww5o2br" path="res://assets/textures/player/hand/idle/idle_hand.png" id="10_ek1er"]
 [ext_resource type="Shader" uid="uid://ltdvcyyto6kr" path="res://Player/the player/inventory/slot_selection.gdshader" id="13_a05s0"]
@@ -166,6 +166,14 @@ offset_right = 1190.0
 offset_bottom = 703.0
 texture = SubResource("GradientTexture2D_ek1er")
 
+[node name="grayscale" type="TextureRect" parent="CanvasLayer" unique_id=670922904]
+material = SubResource("ShaderMaterial_8sggc")
+offset_left = -60.0
+offset_top = -35.0
+offset_right = 1190.0
+offset_bottom = 703.0
+texture = SubResource("GradientTexture2D_ek1er")
+
 [node name="Control" type="Control" parent="CanvasLayer" unique_id=1978679016]
 layout_mode = 3
 anchors_preset = 0
@@ -234,10 +242,9 @@ offset_bottom = 345.0
 theme_override_font_sizes/font_size = 60
 text = "."
 
-[node name="InteractionRedicle" type="Sprite2D" parent="CanvasLayer/Control" unique_id=459050981]
+[node name="RepairRing" type="Node2D" parent="CanvasLayer/Control" unique_id=459050981]
 position = Vector2(576, 323)
-scale = Vector2(0.07, 0.07)
-texture = ExtResource("9_f8k7o")
+script = ExtResource("9_f8k7o")
 
 [node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/Control" unique_id=503505123]
 layout_mode = 0

@@ -40,6 +40,7 @@ func select_slot(slot: InventorySlot) -> void:
 	current_slot.select()
 	set_slot_outline(current_slot, 1.5)
 	current_item = current_slot.held_item
+	GlobalPlayer.interaction.player_has_item_selected = current_item != null
 
 func set_slot_outline(slot: InventorySlot, thickness: float) -> void:
 	var sprite = slot.slot_sprite
