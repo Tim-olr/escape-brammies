@@ -2,14 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://c24jguudievws" path="res://World/Objects/BigTrashcan.tscn" id="1_75qgl"]
 [ext_resource type="Texture2D" uid="uid://33eb5xi1di7m" path="res://assets/models/scalda/ScaldaTile_0.png" id="1_hik0p"]
-[ext_resource type="PackedScene" path="res://World/Scalda/WindowRod.tscn" id="2_14lxf"]
-[ext_resource type="PackedScene" path="res://World/Scalda/BlurryWindow.tscn" id="3_ofq4a"]
-[ext_resource type="PackedScene" path="res://World/Scalda/Window.tscn" id="4_vt2oj"]
+[ext_resource type="PackedScene" uid="uid://b666jh55r2pfs" path="res://World/Scalda/WindowRod.tscn" id="2_14lxf"]
+[ext_resource type="PackedScene" uid="uid://druw3htkwbsof" path="res://World/Scalda/BlurryWindow.tscn" id="3_ofq4a"]
+[ext_resource type="PackedScene" uid="uid://ykctmkx2lgy" path="res://World/Scalda/Window.tscn" id="4_vt2oj"]
 [ext_resource type="PackedScene" uid="uid://dytap8501pb48" path="res://World/Objects/BlackdoorOtherway.tscn" id="5_1wci3"]
-[ext_resource type="PackedScene" path="res://World/Scalda/Blinds.tscn" id="6_cs5jf"]
+[ext_resource type="PackedScene" uid="uid://bieh6omnby6or" path="res://World/Scalda/Blinds.tscn" id="6_cs5jf"]
 [ext_resource type="PackedScene" uid="uid://dqauytxsb5peu" path="res://World/Objects/BlackdoorLocked.tscn" id="7_7o132"]
 [ext_resource type="PackedScene" uid="uid://du3mdsaixyqti" path="res://World/Objects/Blackdoor.tscn" id="7_she40"]
-[ext_resource type="PackedScene" path="res://World/Scalda/ScaldaPanel.tscn" id="9_afksl"]
+[ext_resource type="PackedScene" uid="uid://dwkdwwwk2h6le" path="res://World/Scalda/ScaldaPanel.tscn" id="9_afksl"]
 [ext_resource type="PackedScene" uid="uid://bssfpe401vsyu" path="res://World/Objects/OfficeChair.tscn" id="10_jpd7b"]
 [ext_resource type="PackedScene" uid="uid://btvyh0tyi4b78" path="res://World/Objects/GroupTable.tscn" id="11_tfv3i"]
 [ext_resource type="PackedScene" uid="uid://dg3ym8w8bfcxt" path="res://World/Objects/Monitor.tscn" id="12_khsvm"]
@@ -1918,5 +1918,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, -0.05, 0.39999998)
 [node name="ScaldaFloorTile16" parent="Environment/Floor" unique_id=773355938 instance=ExtResource("15_xmlpx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, -0.05, 1.4)
 
-[node name="Monitor" parent="." unique_id=155022853 instance=ExtResource("12_khsvm")]
+[node name="Monitor2" parent="Environment" unique_id=155022853 instance=ExtResource("12_khsvm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.7, 1.0478864, -3.1282897)
