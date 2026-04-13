@@ -4,6 +4,8 @@ var is_paused: bool = false
 @onready var paused_timer: Timer = $"../PausedTimer"
 @onready var gray: TextureRect = $"../CanvasLayer/grayscale"
 
+var can_sql: bool = true
+
 func _ready() -> void:
 	GlobalPlayer.manager = self
 
@@ -27,6 +29,7 @@ func unpause_everything():
 		hide_gray()
 		is_paused = false
 		get_tree().paused = false
+		can_sql = true
 		GlobalPlayer.player.process_mode = Node.PROCESS_MODE_INHERIT
 
 func _on_paused_timer_timeout() -> void:
@@ -41,3 +44,6 @@ func hide_gray(duration: float = 0.5) -> void:
 	var tw = create_tween()
 	tw.tween_property(gray.material, "shader_parameter/saturation", 1.0, duration) \
 	  .set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+
+func die():
+	get_tree().change_scene_to_file("res://assets/UI/MainMenu.tscn")

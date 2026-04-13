@@ -9,6 +9,7 @@ func _ready() -> void:
 	exit.pressed.connect(_on_Exit_pressed)
 	_continue.pressed.connect(_on_Continue_pressed)
 	$".".hide()
+
 func _unhandled_input(event):
 	if event is InputEventKey:
 		if event.pressed and event.keycode == KEY_ESCAPE:

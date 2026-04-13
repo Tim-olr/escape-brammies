@@ -5,20 +5,26 @@
 [ext_resource type="PackedScene" uid="uid://b666jh55r2pfs" path="res://World/Scalda/WindowRod.tscn" id="2_14lxf"]
 [ext_resource type="PackedScene" uid="uid://druw3htkwbsof" path="res://World/Scalda/BlurryWindow.tscn" id="3_ofq4a"]
 [ext_resource type="PackedScene" uid="uid://ykctmkx2lgy" path="res://World/Scalda/Window.tscn" id="4_vt2oj"]
-[ext_resource type="PackedScene" uid="uid://dytap8501pb48" path="res://World/Objects/BlackdoorOtherway.tscn" id="5_1wci3"]
 [ext_resource type="PackedScene" uid="uid://bieh6omnby6or" path="res://World/Scalda/Blinds.tscn" id="6_cs5jf"]
-[ext_resource type="PackedScene" uid="uid://dqauytxsb5peu" path="res://World/Objects/BlackdoorLocked.tscn" id="7_7o132"]
 [ext_resource type="PackedScene" uid="uid://du3mdsaixyqti" path="res://World/Objects/Blackdoor.tscn" id="7_she40"]
 [ext_resource type="PackedScene" uid="uid://dwkdwwwk2h6le" path="res://World/Scalda/ScaldaPanel.tscn" id="9_afksl"]
 [ext_resource type="PackedScene" uid="uid://bssfpe401vsyu" path="res://World/Objects/OfficeChair.tscn" id="10_jpd7b"]
 [ext_resource type="PackedScene" uid="uid://btvyh0tyi4b78" path="res://World/Objects/GroupTable.tscn" id="11_tfv3i"]
 [ext_resource type="PackedScene" uid="uid://dg3ym8w8bfcxt" path="res://World/Objects/Monitor.tscn" id="12_khsvm"]
 [ext_resource type="PackedScene" uid="uid://o61h16invbaw" path="res://World/Objects/DoubleDoor.tscn" id="14_khsvm"]
-[ext_resource type="PackedScene" uid="uid://bcxvphne10ctd" path="res://World/Scalda/ScaldaFloorTile.tscn" id="15_xmlpx"]
+[ext_resource type="PackedScene" uid="uid://cfkd6n236lwg5" path="res://World/Scalda/Blocked.tscn" id="16_xmlpx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rfg41"]
 albedo_texture = ExtResource("1_hik0p")
 uv1_triplanar = true
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xmlpx"]
+load_path = "res://.godot/imported/roofpanel.png-c1a949b8f2b5bad23a50df42b239add7.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nhktn"]
+albedo_texture = SubResource("CompressedTexture2D_xmlpx")
+uv1_triplanar = true
+texture_filter = 0
 
 [node name="ScaldaLevel" type="Node3D" unique_id=1905537615]
 
@@ -39,8 +45,10 @@ size = Vector3(4.6, 0.5, 6.1)
 
 [node name="3rdFloor" type="CSGBox3D" parent="ScaldaLevel" unique_id=1894582334]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.174999, 2.25, 1.5)
+visible = false
 use_collision = true
 size = Vector3(37.825, 0.25, 23.75)
+material = SubResource("StandardMaterial3D_nhktn")
 
 [node name="trapgat" type="CSGBox3D" parent="ScaldaLevel/3rdFloor" unique_id=162999336]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.449999, 0, 8.65)
@@ -52,65 +60,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.25, 5.25, 8.75)
 use_collision = true
 size = Vector3(5, 0.25, 9.25)
 
-[node name="CSGBox3D3" type="CSGBox3D" parent="ScaldaLevel" unique_id=1859433448]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.375, 0.75, 0)
-size = Vector3(0.25, 3, 4.5)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D3" unique_id=1900936659]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
-operation = 2
-size = Vector3(0.3, 2.5, 3.5)
-
-[node name="CSGBox3D5" type="CSGBox3D" parent="ScaldaLevel" unique_id=1396127004]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0.75, 7.7509155)
-size = Vector3(0.25, 3, 10.751831)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D5" unique_id=370711405]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, -0.25, -4)
-operation = 2
-size = Vector3(1.75, 2.5, 0.3)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D5" unique_id=1443889005]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.50000024, 1.1999998)
-operation = 2
-size = Vector3(0.3, 1, 8)
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D5" unique_id=706502281]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.6999999, 1.1999998)
-operation = 2
-size = Vector3(0.3, 1, 8)
-
-[node name="CSGBox3D6" type="CSGBox3D" parent="ScaldaLevel" unique_id=860947645]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0.75, 7.7528687)
-size = Vector3(0.25, 3, 10.75)
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D6" unique_id=649653098]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.6999999, -4.7683716e-07)
-operation = 2
-size = Vector3(0.3, 1, 10.400001)
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D6" unique_id=644872002]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.50000024, -4.7683716e-07)
-operation = 2
-size = Vector3(0.3, 1, 10.400001)
-
-[node name="CSGBox3D7" type="CSGBox3D" parent="ScaldaLevel" unique_id=1497311460]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.650002, 0.75, 13.25)
-size = Vector3(32.9, 3, 0.25)
-
-[node name="CSGBox3D8" type="CSGBox3D" parent="ScaldaLevel" unique_id=2072039180]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.050001, 0.75, -10.25)
-size = Vector3(23.7, 3, 0.25)
-
-[node name="CSGBox3D10" type="CSGBox3D" parent="ScaldaLevel" unique_id=1248309802]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, -1.4250001, 8.822596)
-size = Vector3(0.25, 7.3, 12.895191)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D10" unique_id=1119555306]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0816412, 5.5)
-operation = 2
-size = Vector3(0.3, 3.2367187, 2)
-
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="ScaldaLevel" unique_id=40274140]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.75, 0.75, 2.125)
 radius = 0.25
@@ -120,32 +69,6 @@ height = 3.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.75, 0.75, 2.125)
 radius = 0.25
 height = 3.0
-
-[node name="CSGBox3D11" type="CSGBox3D" parent="ScaldaLevel" unique_id=54606978]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, 0.75, 0)
-size = Vector3(0.25, 3, 4.5)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D11" unique_id=2059116614]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
-operation = 2
-size = Vector3(0.3, 2.5, 3.5)
-
-[node name="CSGBox3D12" type="CSGBox3D" parent="ScaldaLevel" unique_id=538377764]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.325, 0.75, -6.25)
-size = Vector3(0.25, 3, 7.75)
-
-[node name="CSGBox3D13" type="CSGBox3D" parent="ScaldaLevel" unique_id=1436916843]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.25, 0.75, 2.25)
-size = Vector3(0.25, 3, 4.5)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D13" unique_id=609068653]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
-operation = 2
-size = Vector3(0.3, 2.5, 3.5)
-
-[node name="CSGBox3D14" type="CSGBox3D" parent="ScaldaLevel" unique_id=657478739]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.625, -0.8767822, 7.75)
-size = Vector3(0.25, 6.25, 11.25)
 
 [node name="CSGBox3D15" type="CSGBox3D" parent="ScaldaLevel" unique_id=1431732532]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.25, 0.75, 12.200001)
@@ -162,32 +85,6 @@ size = Vector3(4.623755, 0.25, 2)
 [node name="CSGBox3D18" type="CSGBox3D" parent="ScaldaLevel" unique_id=1502723931]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, 3.775, 8.625)
 size = Vector3(0.25, 3.2, 9)
-
-[node name="CSGBox3D19" type="CSGBox3D" parent="ScaldaLevel" unique_id=610850699]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.625, 3.725, 8.625)
-size = Vector3(0.25, 3.3, 9)
-
-[node name="CSGBox3D20" type="CSGBox3D" parent="ScaldaLevel" unique_id=1505205854]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.25, 0.12500012, 13.25)
-size = Vector3(0.25, 10.5, 5)
-
-[node name="CSGBox3D21" type="CSGBox3D" parent="ScaldaLevel" unique_id=1804681904]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.25, 3.75, 4.25)
-size = Vector3(0.25, 3, 4.5)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D21" unique_id=468924563]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
-operation = 2
-size = Vector3(0.3, 2.5, 3.5)
-
-[node name="CSGBox3D22" type="CSGBox3D" parent="ScaldaLevel" unique_id=1532066843]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.625, 0.75, 0)
-size = Vector3(0.25, 3, 4.5)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D22" unique_id=451358490]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
-operation = 2
-size = Vector3(0.3, 2.5, 3.5)
 
 [node name="CSGBox3D23" type="CSGBox3D" parent="ScaldaLevel" unique_id=741108700]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.25, -2.3789155, 12.200001)
@@ -242,15 +139,6 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.2
 size = Vector3(0.25, 3, 4.98786)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D26" unique_id=1688870706]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
-operation = 2
-size = Vector3(0.3, 2.5, 3.5)
-
-[node name="CSGBox3D27" type="CSGBox3D" parent="ScaldaLevel" unique_id=1097676333]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.625, -2.5, 0)
-size = Vector3(0.25, 3, 4.5)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D27" unique_id=345875826]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 operation = 2
 size = Vector3(0.3, 2.5, 3.5)
@@ -371,8 +259,13 @@ transform = Transform3D(1, 0, 0, 0, 0.86602545, -0.50000006, 0, 0.50000006, 0.86
 size = Vector3(1.6, 0.25, 2.0354004)
 
 [node name="Aula_floor_lower" type="CSGBox3D" parent="ScaldaLevel" unique_id=484255071]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.620995, -1.0864687, 2.42)
-size = Vector3(45, 0.25, 25.7)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.620995, -1.0864687, 2.42)
+size = Vector3(41, 0.25, 25.7)
+
+[node name="trapgat" type="CSGBox3D" parent="ScaldaLevel/Aula_floor_lower" unique_id=915358238]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.851368, 0, 7.731654)
+operation = 2
+size = Vector3(4.6, 0.5, 6.100665)
 
 [node name="CSGBox3D35" type="CSGBox3D" parent="ScaldaLevel" unique_id=267505072]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.398543, -3.144397, 15.25)
@@ -456,271 +349,10 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 30.5
 [node name="GroupTable" parent="ScaldaLevel" unique_id=529351640 instance=ExtResource("11_tfv3i")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 26.1, -0.75, 11)
 
+[node name="Blocked" parent="ScaldaLevel" unique_id=301154592 instance=ExtResource("16_xmlpx")]
+transform = Transform3D(2.6401808, 0, 0, 0, 1.2852802, 0, 0, 0, 1, -2.2472792, 3.4941359, 4.210644)
+
 [node name="Environment" type="Node3D" parent="." unique_id=782699926]
-
-[node name="OfficeCHair3" parent="Environment" unique_id=868948596 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(-0.50000006, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.50000006, 14.652146, 0, 4.794382)
-
-[node name="GroupTable2" parent="Environment" unique_id=1128726540 instance=ExtResource("11_tfv3i")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 14.9, 0, 11)
-
-[node name="Monitor2" parent="Environment/GroupTable2" unique_id=1803825065 instance=ExtResource("12_khsvm")]
-transform = Transform3D(0.99619484, 0, -0.08715593, 0, 1, 0, 0.08715593, 0, 0.99619484, 0.45703793, 1.0537571, -0.03482628)
-
-[node name="Monitor3" parent="Environment/GroupTable2" unique_id=1650139103 instance=ExtResource("12_khsvm")]
-transform = Transform3D(-0.9999999, 0, 5.762045e-08, 0, 1, 0, -5.762045e-08, 0, -0.9999999, -0.5, 1.047016, -0.099998474)
-
-[node name="Monitor4" parent="Environment/GroupTable2" unique_id=1972836268 instance=ExtResource("12_khsvm")]
-transform = Transform3D(-0.96592504, 0, -0.2588189, 0, 1, 0, 0.2588189, 0, -0.96592504, -1.4000044, 1.058753, 0.0047216415)
-
-[node name="Monitor" parent="Environment/GroupTable2" unique_id=902179721 instance=ExtResource("12_khsvm")]
-transform = Transform3D(0.9961947, 0, 0.08715579, 0, 1, 0, -0.08715579, 0, 0.9961947, 1.4357281, 1.0579697, -0.035126686)
-
-[node name="OfficeCHair" parent="Environment/GroupTable2" unique_id=1858155357 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -1.3999996, 0, -0.99999905)
-
-[node name="OfficeCHair2" parent="Environment/GroupTable2" unique_id=866857861 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, -1.5999994, 0, -2.1999998)
-
-[node name="OfficeCHair3" parent="Environment/GroupTable2" unique_id=45439940 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 1, 0, -1.199997)
-
-[node name="OfficeCHair4" parent="Environment/GroupTable2" unique_id=133711382 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(0.9659258, 0, -0.2588191, 0, 1, 0, 0.2588191, 0, 0.9659258, -1.3000002, 0, 1.1000004)
-
-[node name="OfficeCHair" parent="Environment/GroupTable2/OfficeCHair4" unique_id=1340418736 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(0.93969256, 0, 0.34202015, 0, 1, 0, -0.34202015, 0, 0.93969256, 0.7935076, 0, -0.21261024)
-
-[node name="OfficeCHair" parent="Environment/GroupTable2/OfficeCHair4/OfficeCHair" unique_id=855653566 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(0.9961948, 0, -0.08715571, 0, 1, 0, 0.08715571, 0, 0.9961948, 1.8887901, 0, -0.035525322)
-
-[node name="OfficeCHair" parent="Environment/GroupTable2/OfficeCHair4/OfficeCHair/OfficeCHair" unique_id=1955012295 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(0.9961947, 0, 0.08715574, 0, 1, 0, -0.08715574, 0, 0.9961947, -0.800004, 0, 0.3000002)
-
-[node name="GroupTable3" parent="Environment" unique_id=714709744 instance=ExtResource("11_tfv3i")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 20.5, 0, 11)
-
-[node name="GroupTable" parent="Environment/GroupTable3" unique_id=1611478758 instance=ExtResource("11_tfv3i")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7.6000004, 0, -2.8999996)
-
-[node name="GroupTable4" parent="Environment" unique_id=2072680371 instance=ExtResource("11_tfv3i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.8, 0, 3.8000002)
-
-[node name="OfficeCHair" parent="Environment/GroupTable4" unique_id=713429479 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(0.25881907, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, 0.25881907, 0.80000114, 0, 8.5)
-
-[node name="OfficeCHair" parent="Environment/GroupTable4/OfficeCHair" unique_id=1218823023 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(0.9659258, 0, 0.2588191, 0, 1, 0, -0.2588191, 0, 0.9659258, 1.8611412, 0, -0.39516068)
-
-[node name="OfficeCHair" parent="Environment/GroupTable4/OfficeCHair/OfficeCHair" unique_id=178299555 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(-1, 0, 7.351371e-08, 0, 1, 0, -7.351371e-08, 0, -1, 0.70000076, 0, -2.2000027)
-
-[node name="OfficeCHair" parent="Environment/GroupTable4/OfficeCHair/OfficeCHair/OfficeCHair" unique_id=576611982 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(0.9659258, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.9659258, 1.8000002, 0, 0.10000038)
-
-[node name="OfficeCHair" parent="Environment/GroupTable4/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair" unique_id=2077891125 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(0.9396929, 0, 0.34202027, 0, 1, 0, -0.34202027, 0, 0.9396929, 0.8693323, 0, -0.23293686)
-
-[node name="Monitor" parent="Environment/GroupTable4/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair" unique_id=592491563 instance=ExtResource("12_khsvm")]
-transform = Transform3D(0.9961944, 0, -0.0871558, 0, 1, 0, 0.0871558, 0, 0.9961944, 0.13264942, 1.0520067, -1.1929722)
-
-[node name="Monitor" parent="Environment/GroupTable4/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/Monitor" unique_id=2110185500 instance=ExtResource("12_khsvm")]
-transform = Transform3D(-1, 0, -8.841487e-08, 0, 1, 0, 8.841487e-08, 0, -1, -0.92816925, 0.002179861, 0.1371975)
-
-[node name="Monitor" parent="Environment/GroupTable4/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair" unique_id=89232464 instance=ExtResource("12_khsvm")]
-transform = Transform3D(-0.99619544, 0, 0.08715597, 0, 1, 0, -0.08715597, 0, -0.99619544, 0.75865984, 0.8, -0.9038925)
-
-[node name="Monitor" parent="Environment/GroupTable4/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/Monitor" unique_id=994256517 instance=ExtResource("12_khsvm")]
-transform = Transform3D(-0.9903498, 0, -0.13858572, 0, 1, 0, 0.13858572, 0, -0.9903498, 2.0646229, 0.24695998, -0.30103302)
-
-[node name="Monitor" parent="Environment/GroupTable4/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor" unique_id=157602575 instance=ExtResource("12_khsvm")]
-transform = Transform3D(-0.9780242, 0, -0.20849209, 0, 1, 0, 0.20849209, 0, -0.9780242, 2.905199, 0.007368207, 3.9426746)
-
-[node name="Monitor" parent="Environment/GroupTable4/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor" unique_id=190162754 instance=ExtResource("12_khsvm")]
-transform = Transform3D(0.99999976, 0, -1.3510248e-07, 0, 1, 0, 1.3510248e-07, 0, 0.99999976, 1.9118032, 0.0012028217, -0.0022029877)
-
-[node name="Monitor" parent="Environment/GroupTable4/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor" unique_id=507091646 instance=ExtResource("12_khsvm")]
-transform = Transform3D(-0.9659258, 0, 0.25881907, 0, 1, 0, -0.25881907, 0, -0.9659258, 0.6977558, -0.2574122, 0.5264969)
-
-[node name="Monitor" parent="Environment/GroupTable4/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/Monitor" unique_id=1989391018 instance=ExtResource("12_khsvm")]
-transform = Transform3D(0.9063083, 0, 0.42261845, 0, 1, 0, -0.42261845, 0, 0.9063083, 4.0481915, 0.25253916, 5.1917133)
-
-[node name="Monitor" parent="Environment/GroupTable4/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/Monitor/Monitor" unique_id=1799467742 instance=ExtResource("12_khsvm")]
-transform = Transform3D(0.958137, 0, -0.28630692, 0, 1, 0, 0.28630692, 0, 0.958137, -0.88632107, 0.0109552145, -0.15628624)
-
-[node name="Monitor" parent="Environment/GroupTable4/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/Monitor/Monitor/Monitor" unique_id=927059789 instance=ExtResource("12_khsvm")]
-transform = Transform3D(0.9932987, 0, 0.11557872, 0, 1, 0, -0.11557872, 0, 0.9932987, -1.7966328, -0.01664126, 0.16432762)
-
-[node name="Monitor" parent="Environment/GroupTable4/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/Monitor/Monitor/Monitor/Monitor" unique_id=1478440026 instance=ExtResource("12_khsvm")]
-transform = Transform3D(-1, 0, -8.841487e-08, 0, 1, 0, 8.841487e-08, 0, -1, 0.47366047, 0.0063540936, 0.09441757)
-
-[node name="Monitor" parent="Environment/GroupTable4/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/Monitor/Monitor/Monitor/Monitor/Monitor" unique_id=989019505 instance=ExtResource("12_khsvm")]
-transform = Transform3D(0.17364834, 0, 0.9848077, 0, 1, 0, -0.9848077, 0, 0.17364834, 6.3455696, -0.00074255466, 11.849993)
-
-[node name="Monitor" parent="Environment/GroupTable4/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/Monitor/Monitor/Monitor/Monitor/Monitor/Monitor" unique_id=1408457743 instance=ExtResource("12_khsvm")]
-transform = Transform3D(-0.86602545, 0, -0.5000002, 0, 1, 0, 0.5000002, 0, -0.86602545, 0.18313217, -0.2505834, 0.46275806)
-
-[node name="Monitor2" parent="Environment/GroupTable4/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/Monitor" unique_id=2059955272 instance=ExtResource("12_khsvm")]
-transform = Transform3D(0.34202012, 0, -0.9396919, 0, 1, 0, 0.9396919, 0, 0.34202012, 8.650592, 0.24952501, -1.824234)
-
-[node name="Monitor" parent="Environment/GroupTable4" unique_id=1683089416 instance=ExtResource("12_khsvm")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.14046097, 1.050416, 0.048612356)
-
-[node name="Monitor" parent="Environment/GroupTable4/Monitor" unique_id=1648215085 instance=ExtResource("12_khsvm")]
-transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, 1.6213398, 0.00015938282, 0.048611403)
-
-[node name="Monitor" parent="Environment/GroupTable4/Monitor/Monitor" unique_id=2130566671 instance=ExtResource("12_khsvm")]
-transform = Transform3D(0.8660255, 0, -0.49999994, 0, 1, 0, 0.49999994, 0, 0.8660255, 4.1044903, 0.005591631, 1.5510406)
-
-[node name="Monitor" parent="Environment/GroupTable4/Monitor/Monitor/Monitor" unique_id=1234590627 instance=ExtResource("12_khsvm")]
-transform = Transform3D(0.9659255, 0, 0.2588187, 0, 1, 0, -0.2588187, 0, 0.9659255, 0.9167881, -0.0031342506, -0.2522459)
-
-[node name="Monitor" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor" unique_id=87566700 instance=ExtResource("12_khsvm")]
-transform = Transform3D(0.9659262, 0, 0.25881928, 0, 1, 0, -0.25881928, 0, 0.9659262, 1.7022228, 6.532669e-05, -0.029499292)
-
-[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor" unique_id=137242878 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(-0.9659258, 0, 0.25881913, 0, 1, 0, -0.25881913, 0, -0.9659258, 0.25880814, -1.0530981, -0.9659281)
-
-[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair" unique_id=875279175 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(0.9848077, 0, 0.17364818, 0, 1, 0, -0.17364818, 0, 0.9848077, 2, 0, 0.20000029)
-
-[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair" unique_id=1260724996 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(-0.98480785, 0, 0.17364809, 0, 1, 0, -0.17364809, 0, -0.98480785, 0.8570671, 0, -1.9812727)
-
-[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair" unique_id=180348882 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, 0.80000305, 0, 0.09999919)
-
-[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair" unique_id=1001833507 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(0.9659258, 0, -0.25881922, 0, 1, 0, 0.25881922, 0, 0.9659258, 1.9836159, 0, 0.32445335)
-
-[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair" unique_id=862766280 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(-0.25881916, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881916, -2.9000034, 0, -9.800001)
-
-[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair" unique_id=646622245 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(0.9659258, 0, -0.2588191, 0, 1, 0, 0.2588191, 0, 0.9659258, -0.81757164, 0, -0.42611694)
-
-[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair" unique_id=1533631821 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(0.9659258, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.9659258, -0.9000006, 0, 0.09999657)
-
-[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair" unique_id=135800259 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(0.9659263, 0, 0.25881913, 0, 1, 0, -0.25881913, 0, 0.9659263, -0.8245077, 0, 0.013872147)
-
-[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair" unique_id=806545988 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(-0.98480725, 0, -0.17364816, 0, 1, 0, 0.17364816, 0, -0.98480725, -0.09999466, 0, 3.5999966)
-
-[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair" unique_id=719193423 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(0.9063083, 0, -0.42261848, 0, 1, 0, 0.42261848, 0, 0.9063083, -0.8086109, 0, -0.19372368)
-
-[node name="OfficeCHair2" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair" unique_id=890379214 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(0.9848083, 0, -0.17364822, 0, 1, 0, 0.17364822, 0, 0.9848083, -2.530509, 0, -0.50253105)
-
-[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2" unique_id=1115807359 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(-0.9659252, 0, -0.25881884, 0, 1, 0, 0.25881884, 0, -0.9659252, -0.12067127, 0, -2.244522)
-
-[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair" unique_id=1609341852 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(0.9659258, 0, -0.2588191, 0, 1, 0, 0.2588191, 0, 0.9659258, -0.81756973, 0, -0.42611885)
-
-[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair" unique_id=341689254 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(-0.81915206, 0, 0.57357645, 0, 1, 0, -0.57357645, 0, -0.81915206, -1.4000006, 0, 0.4999962)
-
-[node name="GroupTable" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair" unique_id=1883389407 instance=ExtResource("11_tfv3i")]
-transform = Transform3D(0.57357645, 0, -0.81915206, 0, 1, 0, 0.81915206, 0, 0.57357645, 15.08183, 0, -1.6487579)
-
-[node name="GroupTable" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable" unique_id=323339829 instance=ExtResource("11_tfv3i")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.9073486e-06, 0, -4.9000006)
-
-[node name="Monitor" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable" unique_id=524227551 instance=ExtResource("12_khsvm")]
-transform = Transform3D(-0.2588191, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, -0.2588191, 4.9000006, 1.0498223, -6.062723)
-
-[node name="Monitor" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor" unique_id=42513569 instance=ExtResource("12_khsvm")]
-transform = Transform3D(-0.14853442, 0, 0.9889073, 0, 1, 0, -0.9889073, 0, -0.14853442, 3.3339977, 0.004099846, 5.7324295)
-
-[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor" unique_id=780229814 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(-0.9306859, 0, -0.36581904, 0, 1, 0, 0.36581904, 0, -0.9306859, 0.07793236, -1.0539222, -1.0896893)
-
-[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair" unique_id=1051115572 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(0.98480785, 0, -0.17364809, 0, 1, 0, 0.17364809, 0, 0.98480785, -1.7835026, 0, -0.68494034)
-
-[node name="Monitor" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair" unique_id=900957733 instance=ExtResource("12_khsvm")]
-transform = Transform3D(-0.9848078, 0, -0.17364816, 0, 1, 0, 0.17364816, 0, -0.9848078, 0.17806435, 1.0532516, -0.8878708)
-
-[node name="Monitor" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor" unique_id=973917066 instance=ExtResource("12_khsvm")]
-transform = Transform3D(-0.9659264, 0, 0.25881916, 0, 1, 0, -0.25881916, 0, -0.9659264, -0.9669223, 0.007838964, -0.2550907)
-
-[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor" unique_id=1478432118 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(-0.9999994, 0, 7.351365e-08, 0, 1, 0, -7.351365e-08, 0, -0.9999994, 0.10000229, -1.0610906, -0.8961258)
-
-[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair" unique_id=619976637 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(-0.7071067, 0, -0.7071068, 0, 1, 0, 0.7071068, 0, -0.7071067, -0.79999924, 0, 0.7000084)
-
-[node name="OfficeCHair2" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair" unique_id=1393210595 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(1, 0, -7.1054274e-15, 0, 1, 0, 7.1054274e-15, 0, 1, 1.5999999, 0, 0.20000839)
-
-[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2" unique_id=1353271243 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -2.1999989, 0, 2.1999989)
-
-[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair" unique_id=1195594022 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(0.9659258, 0, -0.2588191, 0, 1, 0, 0.2588191, 0, 0.9659258, -0.79999924, 0, 0.19999886)
-
-[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair" unique_id=2044944713 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(0.8660253, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660253, -1.4747715, 0, 0.29163933)
-
-[node name="Monitor" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair" unique_id=341625206 instance=ExtResource("12_khsvm")]
-transform = Transform3D(-0.81915253, 0, 0.5735768, 0, 1, 0, -0.5735768, 0, -0.81915253, 2.6995192, 1.0515268, -0.41547203)
-
-[node name="Monitor" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor" unique_id=838608546 instance=ExtResource("12_khsvm")]
-transform = Transform3D(0.9396922, 0, 0.34201998, 0, 1, 0, -0.34201998, 0, 0.9396922, 0.9603176, 0.003907323, -0.28535652)
-
-[node name="Monitor" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor" unique_id=660074242 instance=ExtResource("12_khsvm")]
-transform = Transform3D(0.86602545, 0, 0.5, 0, 1, 0, -0.5, 0, 0.86602545, 1.8999991, -0.009491444, -0.06309891)
-
-[node name="Monitor" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor" unique_id=139713045 instance=ExtResource("12_khsvm")]
-transform = Transform3D(-0.86602545, 0, 0.49999994, 0, 1, 0, -0.49999994, 0, -0.86602545, -0.7993598, 0.007970691, -0.49759293)
-
-[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor" unique_id=2044441907 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(-0.9659258, 0, 0.25881907, 0, 1, 0, -0.25881907, 0, -0.9659258, 1.8589382, -1.0539134, -1.2340469)
-
-[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/OfficeCHair" unique_id=1910787620 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(0.96592605, 0, 0.25881907, 0, 1, 0, -0.25881907, 0, 0.96592605, 1.8093777, 0, -0.5883484)
-
-[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair" unique_id=1376694240 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(0.86602527, 0, 0.49999988, 0, 1, 0, -0.49999988, 0, 0.86602527, 0.84150696, 0, 0)
-
-[node name="Monitor" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair" unique_id=1796216047 instance=ExtResource("12_khsvm")]
-transform = Transform3D(-0.9999999, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, -0.9999999, -1.000001, 0.8, -0.7179928)
-
-[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor" unique_id=1731820479 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(-0.25881913, 0, 0.9659257, 0, 1, 0, -0.9659257, 0, -0.25881913, -4.2000003, -0.8, -1.0179939)
-
-[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/OfficeCHair" unique_id=293979757 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(0.9659258, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, 0.9659258, -0.7468605, 0, -0.30364752)
-
-[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/OfficeCHair/OfficeCHair" unique_id=135189672 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(0.9659258, 0, -0.25881922, 0, 1, 0, 0.25881922, 0, 0.9659258, -1.3999996, 0, 0.39999962)
-
-[node name="Monitor" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/OfficeCHair/OfficeCHair/OfficeCHair" unique_id=1687969534 instance=ExtResource("12_khsvm")]
-transform = Transform3D(-0.9033428, 0, -0.42891946, 0, 1, 0, 0.42891946, 0, -0.9033428, -1.1213608, 1.0419583, -1.094017)
-
-[node name="Monitor" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/Monitor" unique_id=1660985027 instance=ExtResource("12_khsvm")]
-transform = Transform3D(-0.999976, 0, 0.006963715, 0, 1, 0, -0.006963715, 0, -0.999976, -2.9602985, 0.0001142025, -0.48934627)
-
-[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor" unique_id=765465162 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(-0.98480743, 0, 0.17364821, 0, 1, 0, -0.17364821, 0, -0.98480743, 0.075164795, -1.0420725, -1.0021727)
-
-[node name="OfficeCHair2" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair" unique_id=145176396 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(0.9396924, 0, 0.34202003, 0, 1, 0, -0.34202003, 0, 0.9396924, 2.4200573, 0, 0.25940955)
-
-[node name="OfficeCHair" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair" unique_id=1823932961 instance=ExtResource("10_jpd7b")]
-transform = Transform3D(0.99619454, 0, 0.08715572, 0, 1, 0, -0.08715572, 0, 0.99619454, 0.80000114, 0, 0.10000014)
-
-[node name="GroupTable2" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable" unique_id=1356306861 instance=ExtResource("11_tfv3i")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.300001, 0, -4.8999996)
-
-[node name="GroupTable" parent="Environment/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable2" unique_id=751617877 instance=ExtResource("11_tfv3i")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4.9000015, 0, 2.2000027)
-
-[node name="Monitor" parent="Environment" unique_id=1738520357 instance=ExtResource("12_khsvm")]
-transform = Transform3D(6.7055225e-08, 0, -1, 0, 1, 0, 1, 0, 6.7055225e-08, 26.15065, 1.0551251, 11.925508)
 
 [node name="Walls" type="Node3D" parent="Environment" unique_id=976044658]
 
@@ -728,40 +360,40 @@ transform = Transform3D(6.7055225e-08, 0, -1, 0, 1, 0, 1, 0, 6.7055225e-08, 26.1
 transform = Transform3D(-4.371139e-08, 0, 1.09, 0, 1, 0, -1, 0, -4.7645415e-08, 24.159245, -0.0004222989, -5.613985)
 
 [node name="ScaldaPanel52" parent="Environment/Walls/ScaldaPanel63" unique_id=1847391527 instance=ExtResource("9_afksl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.09, 1, 1.9995775, -0.011049271)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.09, 1, 2.3995776, -0.011049271)
 
 [node name="ScaldaPanel53" parent="Environment/Walls/ScaldaPanel63" unique_id=467829025 instance=ExtResource("9_afksl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.09, 1, 0.99957764, -0.011049271)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.09, 1, 1.3995776, -0.011049271)
 
 [node name="ScaldaPanel54" parent="Environment/Walls/ScaldaPanel63" unique_id=2060777545 instance=ExtResource("9_afksl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.09, 1, -0.0004222989, -0.011049271)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.09, 1, 0.3995777, -0.011049271)
 
 [node name="ScaldaPanel55" parent="Environment/Walls/ScaldaPanel63" unique_id=1704114821 instance=ExtResource("9_afksl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.09, 2, 1.9995775, -0.011049271)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.09, 2, 2.3995776, -0.011049271)
 
 [node name="ScaldaPanel56" parent="Environment/Walls/ScaldaPanel63" unique_id=485243512 instance=ExtResource("9_afksl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.09, 2, 0.99957764, -0.011049271)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.09, 2, 1.3995776, -0.011049271)
 
 [node name="ScaldaPanel57" parent="Environment/Walls/ScaldaPanel63" unique_id=1229442264 instance=ExtResource("9_afksl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.09, 2, -0.0004222989, -0.011049271)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.09, 2, 0.3995777, -0.011049271)
 
 [node name="ScaldaPanel58" parent="Environment/Walls/ScaldaPanel63" unique_id=974515296 instance=ExtResource("9_afksl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.09, 3, 1.9995775, -0.011049271)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.09, 3, 2.3995776, -0.011049271)
 
 [node name="ScaldaPanel59" parent="Environment/Walls/ScaldaPanel63" unique_id=1467377678 instance=ExtResource("9_afksl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.09, 3, 0.99957764, -0.011049271)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.09, 3, 1.3995776, -0.011049271)
 
 [node name="ScaldaPanel60" parent="Environment/Walls/ScaldaPanel63" unique_id=1286684651 instance=ExtResource("9_afksl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.09, 3, -0.0004222989, -0.011049271)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.09, 3, 0.3995777, -0.011049271)
 
 [node name="ScaldaPanel61" parent="Environment/Walls/ScaldaPanel63" unique_id=799083636 instance=ExtResource("9_afksl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.09, 4, 1.9995775, -0.011049271)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.09, 4, 2.3995776, -0.011049271)
 
 [node name="ScaldaPanel62" parent="Environment/Walls/ScaldaPanel63" unique_id=642048495 instance=ExtResource("9_afksl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.09, 4, 0.99957764, -0.011049271)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.09, 4, 1.3995776, -0.011049271)
 
 [node name="ScaldaPanel63" parent="Environment/Walls/ScaldaPanel63" unique_id=1033040358 instance=ExtResource("9_afksl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.09, 4, -0.0004222989, -0.011049271)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.09, 4, 0.3995777, -0.011049271)
 
 [node name="ScaldaPanel64" parent="Environment/Walls/ScaldaPanel63" unique_id=926568138 instance=ExtResource("9_afksl")]
 transform = Transform3D(-4.371139e-08, 0, -1.09, 0, 1, 0, 1, 0, -4.7645415e-08, 4.631877, 2.3995776, 0.61785316)
@@ -907,152 +539,278 @@ transform = Transform3D(-4.371139e-08, 0, -1.09, 0, 1, 0, 1, 0, -4.7645415e-08, 
 [node name="ScaldaPanel108" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87" unique_id=1637546152 instance=ExtResource("9_afksl")]
 transform = Transform3D(-4.371139e-08, 0, -1.09, 0, 1, 0, 1, 0, -4.7645415e-08, 0.6157551, -0.0004223287, 7.2295117)
 
-[node name="ScaldaPanel109" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87" unique_id=816513511 instance=ExtResource("9_afksl")]
-transform = Transform3D(-4.371139e-08, 0, -1.09, 0, 1, 0, 1, 0, -4.7645415e-08, 0.6157551, 1.9995775, 8.186798)
+[node name="ScaldaPanel112" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87" unique_id=1300890355 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.1881001, 0, 0.9999999, 0, 0.9999998, 0, -5.1933505e-08, 0.6157551, 1.9991548, 12.37849)
 
-[node name="ScaldaPanel110" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87" unique_id=1358981252 instance=ExtResource("9_afksl")]
-transform = Transform3D(-4.371139e-08, 0, -1.09, 0, 1, 0, 1, 0, -4.7645415e-08, 0.6157551, 0.99957764, 8.186798)
+[node name="ScaldaPanel113" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87" unique_id=752290343 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.1881001, 0, 0.9999999, 0, 0.9999998, 0, -5.1933505e-08, 0.6157551, 0.99915504, 12.37849)
 
-[node name="ScaldaPanel111" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87" unique_id=289369767 instance=ExtResource("9_afksl")]
-transform = Transform3D(-4.371139e-08, 0, -1.09, 0, 1, 0, 1, 0, -4.7645415e-08, 0.6157551, -0.0004223287, 8.186798)
+[node name="ScaldaPanel114" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87" unique_id=1855752376 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.1881001, 0, 0.9999999, 0, 0.9999998, 0, -5.1933505e-08, 0.6157551, -0.0008446574, 12.37849)
 
-[node name="ScaldaPanel109" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel111" unique_id=1300890355 instance=ExtResource("9_afksl")]
-transform = Transform3D(0.9999998, 0, 0, 0, 0.9999999, 0, 0, 0, 1.09, 4.1916933, 1.9995772, 0)
+[node name="ScaldaPanel115" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87" unique_id=215077509 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.1881001, 0, 0.99999976, 0, 0.9999997, 0, -5.1933505e-08, 0.6157551, 1.9991543, 13.374928)
 
-[node name="ScaldaPanel110" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel111" unique_id=752290343 instance=ExtResource("9_afksl")]
-transform = Transform3D(0.9999998, 0, 0, 0, 0.9999999, 0, 0, 0, 1.09, 4.1916933, 0.9995774, 0)
+[node name="ScaldaPanel116" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87" unique_id=1452315588 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.1881001, 0, 0.99999976, 0, 0.9999997, 0, -5.1933505e-08, 0.6157551, 0.9991548, 13.374928)
 
-[node name="ScaldaPanel111" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel111" unique_id=1855752376 instance=ExtResource("9_afksl")]
-transform = Transform3D(0.9999998, 0, 0, 0, 0.9999999, 0, 0, 0, 1.09, 4.1916933, -0.0004223287, 0)
+[node name="ScaldaPanel117" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87" unique_id=1701160782 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.1881001, 0, 0.99999976, 0, 0.9999997, 0, -5.1933505e-08, 0.6157551, -0.0008446574, 13.374928)
 
-[node name="ScaldaPanel112" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel111" unique_id=215077509 instance=ExtResource("9_afksl")]
-transform = Transform3D(0.99999964, 0, 0, 0, 0.99999976, 0, 7.1054274e-15, 0, 1.09, 5.1881313, 1.9995767, 0)
+[node name="ScaldaPanel118" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87" unique_id=1755971203 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.1881001, 0, 0.99999976, 0, 0.9999997, 0, -5.1933505e-08, 0.6157551, 1.9991543, 14.371094)
 
-[node name="ScaldaPanel113" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel111" unique_id=1452315588 instance=ExtResource("9_afksl")]
-transform = Transform3D(0.99999964, 0, 0, 0, 0.99999976, 0, 7.1054274e-15, 0, 1.09, 5.1881313, 0.99957716, 0)
+[node name="ScaldaPanel119" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87" unique_id=1699851197 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.1881001, 0, 0.99999976, 0, 0.9999997, 0, -5.1933505e-08, 0.6157551, 0.9991548, 14.371094)
 
-[node name="ScaldaPanel114" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel111" unique_id=1701160782 instance=ExtResource("9_afksl")]
-transform = Transform3D(0.99999964, 0, 0, 0, 0.99999976, 0, 7.1054274e-15, 0, 1.09, 5.1881313, -0.0004223287, 0)
+[node name="ScaldaPanel120" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87" unique_id=959919556 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.1881001, 0, 0.99999976, 0, 0.9999997, 0, -5.1933505e-08, 0.6157551, -0.0008446574, 14.371094)
 
-[node name="ScaldaPanel115" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel111" unique_id=1755971203 instance=ExtResource("9_afksl")]
-transform = Transform3D(0.99999964, 0, 0, 0, 0.99999976, 0, 7.1054274e-15, 0, 1.09, 6.184297, 1.9995767, 0)
+[node name="ScaldaPanel121" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87" unique_id=706532395 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.1881001, 0, 0.99999964, 0, 0.9999997, 0, -5.1933505e-08, 0.6157551, 1.9991539, 15.36025)
 
-[node name="ScaldaPanel116" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel111" unique_id=1699851197 instance=ExtResource("9_afksl")]
-transform = Transform3D(0.99999964, 0, 0, 0, 0.99999976, 0, 7.1054274e-15, 0, 1.09, 6.184297, 0.99957716, 0)
+[node name="ScaldaPanel122" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87" unique_id=73195849 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.1881001, 0, 0.99999964, 0, 0.9999997, 0, -5.1933505e-08, 0.6157551, 0.99915457, 15.36025)
 
-[node name="ScaldaPanel117" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel111" unique_id=959919556 instance=ExtResource("9_afksl")]
-transform = Transform3D(0.99999964, 0, 0, 0, 0.99999976, 0, 7.1054274e-15, 0, 1.09, 6.184297, -0.0004223287, 0)
+[node name="ScaldaPanel123" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87" unique_id=1222603082 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.1881001, 0, 0.99999964, 0, 0.9999997, 0, -5.1933505e-08, 0.6157551, -0.0008446574, 15.36025)
 
-[node name="ScaldaPanel118" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel111" unique_id=706532395 instance=ExtResource("9_afksl")]
-transform = Transform3D(0.99999964, 0, 0, 0, 0.99999964, 0, 7.1054274e-15, 0, 1.09, 7.1734533, 1.9995762, 0)
+[node name="ScaldaPanel124" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87" unique_id=1043038210 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.1881001, 0, 0.9999997, 0, 0.9999997, 0, -5.1933505e-08, 0.6157551, 1.9991541, 16.34961)
 
-[node name="ScaldaPanel119" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel111" unique_id=73195849 instance=ExtResource("9_afksl")]
-transform = Transform3D(0.99999964, 0, 0, 0, 0.99999964, 0, 7.1054274e-15, 0, 1.09, 7.1734533, 0.9995769, 0)
+[node name="ScaldaPanel125" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87" unique_id=417717382 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.1881001, 0, 0.9999997, 0, 0.9999997, 0, -5.1933505e-08, 0.6157551, 0.9991547, 16.34961)
 
-[node name="ScaldaPanel120" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel111" unique_id=1222603082 instance=ExtResource("9_afksl")]
-transform = Transform3D(0.99999964, 0, 0, 0, 0.99999964, 0, 7.1054274e-15, 0, 1.09, 7.1734533, -0.0004223287, 0)
+[node name="ScaldaPanel126" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87" unique_id=1682594517 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.1881001, 0, 0.9999997, 0, 0.9999997, 0, -5.1933505e-08, 0.6157551, -0.0008446574, 16.34961)
 
-[node name="ScaldaPanel121" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel111" unique_id=1043038210 instance=ExtResource("9_afksl")]
-transform = Transform3D(0.99999964, 0, 0, 0, 0.9999997, 0, 7.1054274e-15, 0, 1.09, 8.162812, 1.9995764, 0)
+[node name="ScaldaPanel127" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87" unique_id=2028156393 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.1881001, 0, 0.9999997, 0, 0.9999997, 0, -5.1933505e-08, 0.6157551, 1.9991541, 17.343489)
 
-[node name="ScaldaPanel122" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel111" unique_id=417717382 instance=ExtResource("9_afksl")]
-transform = Transform3D(0.99999964, 0, 0, 0, 0.9999997, 0, 7.1054274e-15, 0, 1.09, 8.162812, 0.99957705, 0)
+[node name="ScaldaPanel128" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87" unique_id=1271586792 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.1881001, 0, 0.9999997, 0, 0.9999997, 0, -5.1933505e-08, 0.6157551, 0.9991547, 17.343489)
 
-[node name="ScaldaPanel123" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel111" unique_id=1682594517 instance=ExtResource("9_afksl")]
-transform = Transform3D(0.99999964, 0, 0, 0, 0.9999997, 0, 7.1054274e-15, 0, 1.09, 8.162812, -0.0004223287, 0)
+[node name="ScaldaPanel129" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87" unique_id=1545443043 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.1881001, 0, 0.9999997, 0, 0.9999997, 0, -5.1933505e-08, 0.6157551, -0.0008446574, 17.343489)
 
-[node name="ScaldaPanel124" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel111" unique_id=2028156393 instance=ExtResource("9_afksl")]
-transform = Transform3D(0.99999964, 0, 0, 0, 0.9999997, 0, 7.1054274e-15, 0, 1.09, 9.156692, 1.9995764, 0)
+[node name="ScaldaPanel130" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87" unique_id=1743231158 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.1881001, 0, 0.9999997, 0, 0.9999997, 0, -5.1933505e-08, 0.6157551, 1.9991541, 18.345768)
 
-[node name="ScaldaPanel125" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel111" unique_id=1271586792 instance=ExtResource("9_afksl")]
-transform = Transform3D(0.99999964, 0, 0, 0, 0.9999997, 0, 7.1054274e-15, 0, 1.09, 9.156692, 0.99957705, 0)
+[node name="ScaldaPanel131" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87" unique_id=1092366563 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.1881001, 0, 0.9999997, 0, 0.9999997, 0, -5.1933505e-08, 0.6157551, 0.9991547, 18.345768)
 
-[node name="ScaldaPanel126" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel111" unique_id=1545443043 instance=ExtResource("9_afksl")]
-transform = Transform3D(0.99999964, 0, 0, 0, 0.9999997, 0, 7.1054274e-15, 0, 1.09, 9.156692, -0.0004223287, 0)
+[node name="ScaldaPanel132" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87" unique_id=1820458040 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.1881001, 0, 0.9999997, 0, 0.9999997, 0, -5.1933505e-08, 0.6157551, -0.0008446574, 18.345768)
 
-[node name="ScaldaPanel127" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel111" unique_id=1743231158 instance=ExtResource("9_afksl")]
-transform = Transform3D(0.99999964, 0, 0, 0, 0.9999997, 0, 7.1054274e-15, 0, 1.09, 10.158972, 1.9995764, 0)
+[node name="ScaldaPanel133" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87" unique_id=1405321183 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.1881001, 0, 0.99999964, 0, 0.9999997, 0, -5.1933505e-08, 0.6157551, 1.9991539, 19.312283)
 
-[node name="ScaldaPanel128" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel111" unique_id=1092366563 instance=ExtResource("9_afksl")]
-transform = Transform3D(0.99999964, 0, 0, 0, 0.9999997, 0, 7.1054274e-15, 0, 1.09, 10.158972, 0.99957705, 0)
+[node name="ScaldaPanel134" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87" unique_id=64079920 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.1881001, 0, 0.99999964, 0, 0.9999997, 0, -5.1933505e-08, 0.6157551, 0.99915457, 19.312283)
 
-[node name="ScaldaPanel129" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel111" unique_id=1820458040 instance=ExtResource("9_afksl")]
-transform = Transform3D(0.99999964, 0, 0, 0, 0.9999997, 0, 7.1054274e-15, 0, 1.09, 10.158972, -0.0004223287, 0)
+[node name="ScaldaPanel135" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87" unique_id=146500401 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.1881001, 0, 0.99999964, 0, 0.9999997, 0, -5.1933505e-08, 0.6157551, -0.0008446574, 19.312283)
 
-[node name="ScaldaPanel130" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel111" unique_id=1405321183 instance=ExtResource("9_afksl")]
-transform = Transform3D(0.99999964, 0, 0, 0, 0.99999964, 0, 7.1054274e-15, 0, 1.09, 11.125484, 1.9995762, 0)
+[node name="ScaldaPanel136" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87" unique_id=331067731 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.1881001, 0, 0.99999964, 0, 0.9999997, 0, -5.1933505e-08, 0.6157551, 1.9991539, 20.297274)
 
-[node name="ScaldaPanel131" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel111" unique_id=64079920 instance=ExtResource("9_afksl")]
-transform = Transform3D(0.99999964, 0, 0, 0, 0.99999964, 0, 7.1054274e-15, 0, 1.09, 11.125484, 0.9995769, 0)
+[node name="ScaldaPanel137" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87" unique_id=2104388203 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.1881001, 0, 0.99999964, 0, 0.9999997, 0, -5.1933505e-08, 0.6157551, 0.99915457, 20.297274)
 
-[node name="ScaldaPanel132" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel111" unique_id=146500401 instance=ExtResource("9_afksl")]
-transform = Transform3D(0.99999964, 0, 0, 0, 0.99999964, 0, 7.1054274e-15, 0, 1.09, 11.125484, -0.0004223287, 0)
+[node name="ScaldaPanel138" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87" unique_id=863319928 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.1881001, 0, 0.99999964, 0, 0.9999997, 0, -5.1933505e-08, 0.6157551, -0.0008446574, 20.297274)
 
-[node name="ScaldaPanel133" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel111" unique_id=331067731 instance=ExtResource("9_afksl")]
-transform = Transform3D(0.99999964, 0, 0, 0, 0.99999964, 0, 7.1054274e-15, 0, 1.09, 12.1104765, 1.9995762, 0)
+[node name="ScaldaPanel139" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87" unique_id=397276417 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.1881001, 0, 0.9999996, 0, 0.9999997, 0, -5.1933505e-08, 0.6157551, 1.9991536, 21.279089)
 
-[node name="ScaldaPanel134" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel111" unique_id=2104388203 instance=ExtResource("9_afksl")]
-transform = Transform3D(0.99999964, 0, 0, 0, 0.99999964, 0, 7.1054274e-15, 0, 1.09, 12.1104765, 0.9995769, 0)
+[node name="ScaldaPanel140" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87" unique_id=1849178391 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.1881001, 0, 0.9999996, 0, 0.9999997, 0, -5.1933505e-08, 0.6157551, 0.99915445, 21.279089)
 
-[node name="ScaldaPanel135" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel111" unique_id=863319928 instance=ExtResource("9_afksl")]
-transform = Transform3D(0.99999964, 0, 0, 0, 0.99999964, 0, 7.1054274e-15, 0, 1.09, 12.1104765, -0.0004223287, 0)
+[node name="ScaldaPanel141" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87" unique_id=375943078 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.1881001, 0, 0.9999996, 0, 0.9999997, 0, -5.1933505e-08, 0.6157551, -0.0008446574, 21.279089)
 
-[node name="ScaldaPanel136" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel111" unique_id=397276417 instance=ExtResource("9_afksl")]
-transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 13.092292, 1.999576, 0)
+[node name="ScaldaPanel145" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87" unique_id=1726749561 instance=ExtResource("9_afksl")]
+transform = Transform3D(-3.2783543e-08, 0, -1.1881001, 0, 0.9999998, 0, 0.74999976, 0, -5.1933505e-08, 0.6157551, 2.0864913, 11.563295)
 
-[node name="ScaldaPanel137" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel111" unique_id=1849178391 instance=ExtResource("9_afksl")]
-transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 13.092292, 0.9995768, 0)
+[node name="ScaldaPanel146" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87" unique_id=866059079 instance=ExtResource("9_afksl")]
+transform = Transform3D(-3.2783543e-08, 0, -1.1881001, 0, 0.9999998, 0, 0.74999976, 0, -5.1933505e-08, 0.6157551, 1.0864915, 11.563295)
 
-[node name="ScaldaPanel138" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel111" unique_id=375943078 instance=ExtResource("9_afksl")]
-transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 13.092292, -0.0004223287, 0)
+[node name="ScaldaPanel147" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87" unique_id=1370217704 instance=ExtResource("9_afksl")]
+transform = Transform3D(-3.2783543e-08, 0, -1.1881001, 0, 0.9999998, 0, 0.74999976, 0, -5.1933505e-08, 0.6157551, 0.086491466, 11.563295)
 
-[node name="ScaldaPanel139" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel111" unique_id=1448870132 instance=ExtResource("9_afksl")]
-transform = Transform3D(0.9999997, 0, 0, 0, 0.9999998, 0, 3.5527137e-15, 0, 1.09, 0.7530439, 2.4869137, 0)
+[node name="ScaldaPanel" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87" unique_id=1403531136 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.9174312, 0, 3.6091992e-09, 0, 1, 0, 3.311191e-09, 0, 0.9174312, -8.104813, 2.0008447, 0.003791809)
 
-[node name="ScaldaPanel140" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel111" unique_id=1188030956 instance=ExtResource("9_afksl")]
-transform = Transform3D(0.99999964, 0, 0, 0, 0.99999976, 0, 7.1054274e-15, 0, 1.09, 1.61247, 2.4869137, 0)
+[node name="ScaldaPanel" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=40306829 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0000001, -0.00078105927)
 
-[node name="ScaldaPanel141" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel111" unique_id=1197347194 instance=ExtResource("9_afksl")]
-transform = Transform3D(0.9999997, 0, 0, 0, 0.9999998, 0, 3.5527137e-15, 0, 1.09, 3.2847548, 2.4869137, 0)
+[node name="ScaldaPanel2" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=1567842590 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, -0.00078105927)
 
-[node name="ScaldaPanel142" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel111" unique_id=1402637870 instance=ExtResource("9_afksl")]
-transform = Transform3D(0.99999964, 0, 0, 0, 0.99999976, 0, 7.1054274e-15, 0, 1.09, 2.5590425, 2.4869137, -0.003211975)
+[node name="ScaldaPanel3" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=1199628257 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -1.0000001, -0.00078105927)
+
+[node name="ScaldaPanel4" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=699323512 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -0.00078105927)
+
+[node name="ScaldaPanel5" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=822518797 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -2, -0.00078105927)
+
+[node name="ScaldaPanel6" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=2105362212 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -1.0000001, -0.00078105927)
+
+[node name="ScaldaPanel7" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=147595271 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -0.00078105927)
+
+[node name="ScaldaPanel8" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=217791051 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -2, -0.00078105927)
+
+[node name="ScaldaPanel9" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=938851694 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -1.0000001, -0.00078105927)
+
+[node name="ScaldaPanel10" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=727244867 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -0.00078105927)
+
+[node name="ScaldaPanel11" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=1306787537 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -2, -0.00078105927)
+
+[node name="ScaldaPanel12" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=1992986815 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -1.0000001, -0.00078105927)
+
+[node name="ScaldaPanel13" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=2074183478 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -0.00078105927)
+
+[node name="ScaldaPanel14" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=1312994202 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -2, -0.00078105927)
+
+[node name="ScaldaPanel15" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=2138979061 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -1.0000001, -0.00078105927)
+
+[node name="ScaldaPanel16" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=1020165963 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -0.00078105927)
+
+[node name="ScaldaPanel17" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=2117958498 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -2, -0.00078105927)
+
+[node name="ScaldaPanel18" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=11002046 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -1.0000001, -0.00078105927)
+
+[node name="ScaldaPanel19" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=1130907296 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -0.00078105927)
+
+[node name="ScaldaPanel20" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=1041406318 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -2, -0.00078105927)
+
+[node name="ScaldaPanel21" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=1839992199 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -1.0000001, -0.00078105927)
+
+[node name="ScaldaPanel22" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=360842252 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -0.00078105927)
+
+[node name="ScaldaPanel23" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=1301054045 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -2, -0.00078105927)
+
+[node name="ScaldaPanel24" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=808944350 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -1.0000001, -0.00078105927)
+
+[node name="ScaldaPanel25" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=364204263 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -0.00078105927)
+
+[node name="ScaldaPanel26" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=2097408587 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -2, -0.00078105927)
+
+[node name="ScaldaPanel27" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=184702706 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, -1.0000001, -0.00078105927)
+
+[node name="ScaldaPanel28" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=240598119 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -0.00078105927)
+
+[node name="ScaldaPanel29" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=1330802334 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, -2, -0.00078105927)
+
+[node name="ScaldaPanel30" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=802485185 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -1.0000001, -0.00078105927)
+
+[node name="ScaldaPanel31" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=1512721650 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -0.00078105927)
+
+[node name="ScaldaPanel32" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=2031713313 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -2, -0.00078105927)
+
+[node name="ScaldaPanel33" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=1752018603 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, -1.0000001, -0.00078105927)
+
+[node name="ScaldaPanel34" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=387377520 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, -0.00078105927)
+
+[node name="ScaldaPanel35" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=1340248524 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, -2, -0.00078105927)
+
+[node name="ScaldaPanel36" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=376014444 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -1.0000001, -0.00078105927)
+
+[node name="ScaldaPanel37" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=1450062983 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -0.00078105927)
+
+[node name="ScaldaPanel38" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=640065843 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -2, -0.00078105927)
+
+[node name="ScaldaPanel39" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=288357183 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, -1.0000001, -0.00078105927)
+
+[node name="ScaldaPanel40" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=1961473427 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, -0.00078105927)
+
+[node name="ScaldaPanel41" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=1750547574 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, -2, -0.00078105927)
+
+[node name="ScaldaPanel42" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=250122764 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, -1.0000001, -0.00078105927)
+
+[node name="ScaldaPanel43" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=1745577540 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, -0.00078105927)
+
+[node name="ScaldaPanel44" parent="Environment/Walls/ScaldaPanel63/ScaldaPanel87/ScaldaPanel" unique_id=1879672917 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, -2, -0.00078105927)
+
+[node name="ScaldaPanel88" parent="Environment/Walls/ScaldaPanel63" unique_id=1229668407 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.09, 0, 0.39957768, -0.011049271)
 
 [node name="ScaldaPanel52" parent="Environment/Walls" unique_id=246977202 instance=ExtResource("9_afksl")]
-transform = Transform3D(-4.371139e-08, 0, 1.09, 0, 1, 0, -1, 0, -4.7645415e-08, 24.159245, 1.9995776, -2.6139848)
+transform = Transform3D(-4.371139e-08, 0, 1.09, 0, 1, 0, -1, 0, -4.7645415e-08, 24.159245, 2.3995776, -2.6139848)
 
 [node name="ScaldaPanel53" parent="Environment/Walls" unique_id=1120802469 instance=ExtResource("9_afksl")]
-transform = Transform3D(-4.371139e-08, 0, 1.09, 0, 1, 0, -1, 0, -4.7645415e-08, 24.159245, 0.99957764, -2.6139848)
+transform = Transform3D(-4.371139e-08, 0, 1.09, 0, 1, 0, -1, 0, -4.7645415e-08, 24.159245, 1.3995776, -2.6139848)
 
 [node name="ScaldaPanel54" parent="Environment/Walls" unique_id=1534277510 instance=ExtResource("9_afksl")]
-transform = Transform3D(-4.371139e-08, 0, 1.09, 0, 1, 0, -1, 0, -4.7645415e-08, 24.159245, -0.0004222989, -2.6139848)
+transform = Transform3D(-4.371139e-08, 0, 1.09, 0, 1, 0, -1, 0, -4.7645415e-08, 24.159245, 0.3995777, -2.6139848)
 
 [node name="ScaldaPanel55" parent="Environment/Walls" unique_id=857215575 instance=ExtResource("9_afksl")]
-transform = Transform3D(-4.371139e-08, 0, 1.09, 0, 1, 0, -1, 0, -4.7645415e-08, 24.159245, 1.9995776, -3.6139848)
+transform = Transform3D(-4.371139e-08, 0, 1.09, 0, 1, 0, -1, 0, -4.7645415e-08, 24.159245, 2.3995776, -3.6139848)
 
 [node name="ScaldaPanel56" parent="Environment/Walls" unique_id=634459560 instance=ExtResource("9_afksl")]
-transform = Transform3D(-4.371139e-08, 0, 1.09, 0, 1, 0, -1, 0, -4.7645415e-08, 24.159245, 0.99957764, -3.6139848)
+transform = Transform3D(-4.371139e-08, 0, 1.09, 0, 1, 0, -1, 0, -4.7645415e-08, 24.159245, 1.3995776, -3.6139848)
 
 [node name="ScaldaPanel57" parent="Environment/Walls" unique_id=583184443 instance=ExtResource("9_afksl")]
-transform = Transform3D(-4.371139e-08, 0, 1.09, 0, 1, 0, -1, 0, -4.7645415e-08, 24.159245, -0.0004222989, -3.6139848)
+transform = Transform3D(-4.371139e-08, 0, 1.09, 0, 1, 0, -1, 0, -4.7645415e-08, 24.159245, 0.3995777, -3.6139848)
 
 [node name="ScaldaPanel58" parent="Environment/Walls" unique_id=1063772725 instance=ExtResource("9_afksl")]
-transform = Transform3D(-4.371139e-08, 0, 1.09, 0, 1, 0, -1, 0, -4.7645415e-08, 24.159245, 1.9995776, -4.613985)
+transform = Transform3D(-4.371139e-08, 0, 1.09, 0, 1, 0, -1, 0, -4.7645415e-08, 24.159245, 2.3995776, -4.613985)
 
 [node name="ScaldaPanel59" parent="Environment/Walls" unique_id=1983196343 instance=ExtResource("9_afksl")]
-transform = Transform3D(-4.371139e-08, 0, 1.09, 0, 1, 0, -1, 0, -4.7645415e-08, 24.159245, 0.99957764, -4.613985)
+transform = Transform3D(-4.371139e-08, 0, 1.09, 0, 1, 0, -1, 0, -4.7645415e-08, 24.159245, 1.3995776, -4.613985)
 
 [node name="ScaldaPanel60" parent="Environment/Walls" unique_id=1421631701 instance=ExtResource("9_afksl")]
-transform = Transform3D(-4.371139e-08, 0, 1.09, 0, 1, 0, -1, 0, -4.7645415e-08, 24.159245, -0.0004222989, -4.613985)
+transform = Transform3D(-4.371139e-08, 0, 1.09, 0, 1, 0, -1, 0, -4.7645415e-08, 24.159245, 0.3995777, -4.613985)
 
 [node name="ScaldaPanel61" parent="Environment/Walls" unique_id=1539846705 instance=ExtResource("9_afksl")]
-transform = Transform3D(-4.371139e-08, 0, 1.09, 0, 1, 0, -1, 0, -4.7645415e-08, 24.159245, 1.9995776, -5.613985)
+transform = Transform3D(-4.371139e-08, 0, 1.09, 0, 1, 0, -1, 0, -4.7645415e-08, 24.159245, 2.3995776, -5.613985)
 
 [node name="ScaldaPanel62" parent="Environment/Walls" unique_id=188587085 instance=ExtResource("9_afksl")]
-transform = Transform3D(-4.371139e-08, 0, 1.09, 0, 1, 0, -1, 0, -4.7645415e-08, 24.159245, 0.99957764, -5.613985)
+transform = Transform3D(-4.371139e-08, 0, 1.09, 0, 1, 0, -1, 0, -4.7645415e-08, 24.159245, 1.3995776, -5.613985)
 
 [node name="ScaldaPanel43" parent="Environment/Walls" unique_id=136542647 instance=ExtResource("9_afksl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.09, 1.2982851, 1.9995776, -2.25)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.09, 1.2982851, 2.3995776, -2.25)
 
 [node name="ScaldaPanel44" parent="Environment/Walls" unique_id=137446072 instance=ExtResource("9_afksl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.09, 1.2982851, 0.99957764, -2.25)
@@ -1647,13 +1405,738 @@ transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0,
 [node name="ScaldaPanel276" parent="Environment/Walls/wallah" unique_id=513094364 instance=ExtResource("9_afksl")]
 transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, 0.39957768, 2.663742)
 
+[node name="ScaldaPanel277" parent="Environment/Walls/wallah" unique_id=933700759 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, 3.399576, 12.663742)
+
+[node name="ScaldaPanel278" parent="Environment/Walls/wallah" unique_id=1831752815 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, 3.399576, 11.663744)
+
+[node name="ScaldaPanel279" parent="Environment/Walls/wallah" unique_id=1643312690 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, 3.399576, 10.663742)
+
+[node name="ScaldaPanel280" parent="Environment/Walls/wallah" unique_id=1965253493 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, 3.399576, 9.663742)
+
+[node name="ScaldaPanel281" parent="Environment/Walls/wallah" unique_id=198479198 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, 3.399576, 8.663744)
+
+[node name="ScaldaPanel282" parent="Environment/Walls/wallah" unique_id=1055575789 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, 3.399576, 7.663742)
+
+[node name="ScaldaPanel283" parent="Environment/Walls/wallah" unique_id=496825554 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, 3.399576, 6.663742)
+
+[node name="ScaldaPanel284" parent="Environment/Walls/wallah" unique_id=826375685 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, 3.399576, 5.663744)
+
+[node name="ScaldaPanel285" parent="Environment/Walls/wallah" unique_id=935289864 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, 3.399576, 4.663742)
+
+[node name="ScaldaPanel286" parent="Environment/Walls/wallah" unique_id=1840456949 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -0.6004223, 12.663742)
+
+[node name="ScaldaPanel287" parent="Environment/Walls/wallah" unique_id=1103437387 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -0.6004223, 11.663744)
+
+[node name="ScaldaPanel288" parent="Environment/Walls/wallah" unique_id=727907165 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -0.6004223, 10.663742)
+
+[node name="ScaldaPanel289" parent="Environment/Walls/wallah" unique_id=1759962622 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -0.6004223, 9.663742)
+
+[node name="ScaldaPanel290" parent="Environment/Walls/wallah" unique_id=869862652 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -0.6004223, 8.663744)
+
+[node name="ScaldaPanel291" parent="Environment/Walls/wallah" unique_id=1644312390 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -0.6004223, 7.663742)
+
+[node name="ScaldaPanel292" parent="Environment/Walls/wallah" unique_id=1861034117 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -0.6004223, 6.663742)
+
+[node name="ScaldaPanel293" parent="Environment/Walls/wallah" unique_id=1209402026 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -0.6004223, 5.663744)
+
+[node name="ScaldaPanel294" parent="Environment/Walls/wallah" unique_id=987961310 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -0.6004223, 4.663742)
+
+[node name="ScaldaPanel295" parent="Environment/Walls/wallah" unique_id=1192363523 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -0.6004223, 3.663744)
+
+[node name="ScaldaPanel296" parent="Environment/Walls/wallah" unique_id=791429433 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -0.6004223, 2.663742)
+
+[node name="ScaldaPanel297" parent="Environment/Walls/wallah" unique_id=1834369588 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -1.6004224, 12.663742)
+
+[node name="ScaldaPanel298" parent="Environment/Walls/wallah" unique_id=1110177063 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -1.6004224, 11.663744)
+
+[node name="ScaldaPanel299" parent="Environment/Walls/wallah" unique_id=368056953 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -1.6004224, 10.663742)
+
+[node name="ScaldaPanel300" parent="Environment/Walls/wallah" unique_id=667730326 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -1.6004224, 9.663742)
+
+[node name="ScaldaPanel301" parent="Environment/Walls/wallah" unique_id=450392560 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -1.6004224, 8.663744)
+
+[node name="ScaldaPanel302" parent="Environment/Walls/wallah" unique_id=1693921303 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -1.6004224, 7.663742)
+
+[node name="ScaldaPanel303" parent="Environment/Walls/wallah" unique_id=1487329062 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -1.6004224, 6.663742)
+
+[node name="ScaldaPanel304" parent="Environment/Walls/wallah" unique_id=685710353 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -1.6004224, 5.663744)
+
+[node name="ScaldaPanel305" parent="Environment/Walls/wallah" unique_id=864973208 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -1.6004224, 4.663742)
+
+[node name="ScaldaPanel306" parent="Environment/Walls/wallah" unique_id=1731433384 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -1.6004224, 3.663744)
+
+[node name="ScaldaPanel307" parent="Environment/Walls/wallah" unique_id=1141507313 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -1.6004224, 2.663742)
+
+[node name="ScaldaPanel308" parent="Environment/Walls/wallah" unique_id=1970687601 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -2.6004224, 12.663742)
+
+[node name="ScaldaPanel309" parent="Environment/Walls/wallah" unique_id=1956458297 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -2.6004224, 11.663744)
+
+[node name="ScaldaPanel310" parent="Environment/Walls/wallah" unique_id=1329483548 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -2.6004224, 10.663742)
+
+[node name="ScaldaPanel311" parent="Environment/Walls/wallah" unique_id=1454853627 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -2.6004224, 9.663742)
+
+[node name="ScaldaPanel312" parent="Environment/Walls/wallah" unique_id=1438406756 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -2.6004224, 8.663744)
+
+[node name="ScaldaPanel313" parent="Environment/Walls/wallah" unique_id=1500689549 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -2.6004224, 7.663742)
+
+[node name="ScaldaPanel314" parent="Environment/Walls/wallah" unique_id=2146856195 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -2.6004224, 6.663742)
+
+[node name="ScaldaPanel315" parent="Environment/Walls/wallah" unique_id=555287104 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -2.6004224, 5.663744)
+
+[node name="ScaldaPanel316" parent="Environment/Walls/wallah" unique_id=1599526866 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -2.6004224, 4.663742)
+
+[node name="ScaldaPanel317" parent="Environment/Walls/wallah" unique_id=1046798715 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -2.6004224, 3.663744)
+
+[node name="ScaldaPanel318" parent="Environment/Walls/wallah" unique_id=268127902 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -2.6004224, 2.663742)
+
+[node name="ScaldaPanel319" parent="Environment/Walls/wallah" unique_id=1143652031 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -3.6004224, 12.663742)
+
+[node name="ScaldaPanel320" parent="Environment/Walls/wallah" unique_id=116107524 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -3.6004224, 11.663744)
+
+[node name="ScaldaPanel321" parent="Environment/Walls/wallah" unique_id=1368585606 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -3.6004224, 10.663742)
+
+[node name="ScaldaPanel322" parent="Environment/Walls/wallah" unique_id=1131824160 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -3.6004224, 9.663742)
+
+[node name="ScaldaPanel323" parent="Environment/Walls/wallah" unique_id=192452407 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -3.6004224, 8.663744)
+
+[node name="ScaldaPanel324" parent="Environment/Walls/wallah" unique_id=1327318337 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -3.6004224, 7.663742)
+
+[node name="ScaldaPanel325" parent="Environment/Walls/wallah" unique_id=771744475 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -3.6004224, 6.663742)
+
+[node name="ScaldaPanel326" parent="Environment/Walls/wallah" unique_id=1664336786 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -3.6004224, 5.663744)
+
+[node name="ScaldaPanel327" parent="Environment/Walls/wallah" unique_id=260560473 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -3.6004224, 4.663742)
+
+[node name="ScaldaPanel328" parent="Environment/Walls/wallah" unique_id=1479538325 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -3.6004224, 3.663744)
+
+[node name="ScaldaPanel329" parent="Environment/Walls/wallah" unique_id=811685823 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -3.6004224, 2.663742)
+
+[node name="ScaldaPanel330" parent="Environment/Walls/wallah" unique_id=1276096385 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -0.6004223, 12.663742)
+
+[node name="ScaldaPanel331" parent="Environment/Walls/wallah" unique_id=1627597005 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -0.6004223, 11.663744)
+
+[node name="ScaldaPanel332" parent="Environment/Walls/wallah" unique_id=337517009 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -0.6004223, 10.663742)
+
+[node name="ScaldaPanel333" parent="Environment/Walls/wallah" unique_id=1224091157 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -0.6004223, 9.663742)
+
+[node name="ScaldaPanel334" parent="Environment/Walls/wallah" unique_id=1450095954 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -0.6004223, 8.663744)
+
+[node name="ScaldaPanel335" parent="Environment/Walls/wallah" unique_id=1796997323 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -0.6004223, 7.663742)
+
+[node name="ScaldaPanel336" parent="Environment/Walls/wallah" unique_id=1083826859 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -0.6004223, 6.663742)
+
+[node name="ScaldaPanel337" parent="Environment/Walls/wallah" unique_id=1751867330 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -0.6004223, 5.663744)
+
+[node name="ScaldaPanel338" parent="Environment/Walls/wallah" unique_id=863184025 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -0.6004223, 4.663742)
+
+[node name="ScaldaPanel339" parent="Environment/Walls/wallah" unique_id=1572988438 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -0.6004223, 3.663744)
+
+[node name="ScaldaPanel340" parent="Environment/Walls/wallah" unique_id=576598862 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -0.6004223, 2.663742)
+
+[node name="ScaldaPanel341" parent="Environment/Walls/wallah" unique_id=949672473 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -1.6004224, 12.663742)
+
+[node name="ScaldaPanel342" parent="Environment/Walls/wallah" unique_id=847126970 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -1.6004224, 11.663744)
+
+[node name="ScaldaPanel343" parent="Environment/Walls/wallah" unique_id=1090903379 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -1.6004224, 10.663742)
+
+[node name="ScaldaPanel344" parent="Environment/Walls/wallah" unique_id=1531922804 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -1.6004224, 9.663742)
+
+[node name="ScaldaPanel345" parent="Environment/Walls/wallah" unique_id=1957930288 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -1.6004224, 8.663744)
+
+[node name="ScaldaPanel346" parent="Environment/Walls/wallah" unique_id=1101029274 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -1.6004224, 7.663742)
+
+[node name="ScaldaPanel347" parent="Environment/Walls/wallah" unique_id=2138922295 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -1.6004224, 6.663742)
+
+[node name="ScaldaPanel348" parent="Environment/Walls/wallah" unique_id=1163763661 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -1.6004224, 5.663744)
+
+[node name="ScaldaPanel349" parent="Environment/Walls/wallah" unique_id=2183683 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -1.6004224, 4.663742)
+
+[node name="ScaldaPanel350" parent="Environment/Walls/wallah" unique_id=383414088 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -1.6004224, 3.663744)
+
+[node name="ScaldaPanel351" parent="Environment/Walls/wallah" unique_id=991488909 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -1.6004224, 2.663742)
+
+[node name="ScaldaPanel352" parent="Environment/Walls/wallah" unique_id=572454094 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -2.6004224, 12.663742)
+
+[node name="ScaldaPanel353" parent="Environment/Walls/wallah" unique_id=657608541 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -2.6004224, 11.663744)
+
+[node name="ScaldaPanel354" parent="Environment/Walls/wallah" unique_id=1450890586 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -2.6004224, 10.663742)
+
+[node name="ScaldaPanel355" parent="Environment/Walls/wallah" unique_id=782056112 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -2.6004224, 9.663742)
+
+[node name="ScaldaPanel356" parent="Environment/Walls/wallah" unique_id=245731356 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -2.6004224, 8.663744)
+
+[node name="ScaldaPanel357" parent="Environment/Walls/wallah" unique_id=260845800 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -2.6004224, 7.663742)
+
+[node name="ScaldaPanel358" parent="Environment/Walls/wallah" unique_id=1446753796 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -2.6004224, 6.663742)
+
+[node name="ScaldaPanel359" parent="Environment/Walls/wallah" unique_id=1049515581 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -2.6004224, 5.663744)
+
+[node name="ScaldaPanel360" parent="Environment/Walls/wallah" unique_id=793976113 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -2.6004224, 4.663742)
+
+[node name="ScaldaPanel361" parent="Environment/Walls/wallah" unique_id=2015242426 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -2.6004224, 3.663744)
+
+[node name="ScaldaPanel362" parent="Environment/Walls/wallah" unique_id=1876659623 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -2.6004224, 2.663742)
+
+[node name="ScaldaPanel363" parent="Environment/Walls/wallah" unique_id=1255176617 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -3.6004224, 12.663742)
+
+[node name="ScaldaPanel364" parent="Environment/Walls/wallah" unique_id=1798944836 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -3.6004224, 11.663744)
+
+[node name="ScaldaPanel365" parent="Environment/Walls/wallah" unique_id=610669902 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -3.6004224, 10.663742)
+
+[node name="ScaldaPanel366" parent="Environment/Walls/wallah" unique_id=1319859641 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -3.6004224, 9.663742)
+
+[node name="ScaldaPanel367" parent="Environment/Walls/wallah" unique_id=248067676 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -3.6004224, 8.663744)
+
+[node name="ScaldaPanel368" parent="Environment/Walls/wallah" unique_id=1042862652 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -3.6004224, 7.663742)
+
+[node name="ScaldaPanel369" parent="Environment/Walls/wallah" unique_id=64392342 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -3.6004224, 6.663742)
+
+[node name="ScaldaPanel370" parent="Environment/Walls/wallah" unique_id=2055493100 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -3.6004224, 5.663744)
+
+[node name="ScaldaPanel371" parent="Environment/Walls/wallah" unique_id=2860963 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -3.6004224, 4.663742)
+
+[node name="ScaldaPanel372" parent="Environment/Walls/wallah" unique_id=865816333 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -3.6004224, 3.663744)
+
+[node name="ScaldaPanel373" parent="Environment/Walls/wallah" unique_id=1175580769 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, -3.6004224, 2.663742)
+
+[node name="ScaldaPanel374" parent="Environment/Walls/wallah" unique_id=785266538 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, 0.39957768, 12.663742)
+
+[node name="ScaldaPanel375" parent="Environment/Walls/wallah" unique_id=259547664 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, 0.39957768, 11.663744)
+
+[node name="ScaldaPanel376" parent="Environment/Walls/wallah" unique_id=1941840708 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, 0.39957768, 10.663742)
+
+[node name="ScaldaPanel377" parent="Environment/Walls/wallah" unique_id=2002703158 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, 0.39957768, 9.663742)
+
+[node name="ScaldaPanel378" parent="Environment/Walls/wallah" unique_id=955426315 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, 0.39957768, 8.663744)
+
+[node name="ScaldaPanel379" parent="Environment/Walls/wallah" unique_id=75153219 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, 0.39957768, 7.663742)
+
+[node name="ScaldaPanel380" parent="Environment/Walls/wallah" unique_id=1635832048 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, 0.39957768, 6.663742)
+
+[node name="ScaldaPanel381" parent="Environment/Walls/wallah" unique_id=1545772365 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, 0.39957768, 5.663744)
+
+[node name="ScaldaPanel382" parent="Environment/Walls/wallah" unique_id=4739248 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, 0.39957768, 4.663742)
+
+[node name="ScaldaPanel383" parent="Environment/Walls/wallah" unique_id=2120330945 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, 0.39957768, 3.663744)
+
+[node name="ScaldaPanel384" parent="Environment/Walls/wallah" unique_id=1645560041 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, 0.39957768, 2.663742)
+
+[node name="ScaldaPanel385" parent="Environment/Walls/wallah" unique_id=245466887 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, 1.3995776, 3.663744)
+
+[node name="ScaldaPanel386" parent="Environment/Walls/wallah" unique_id=1109257416 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, 1.3995776, 2.663742)
+
+[node name="ScaldaPanel387" parent="Environment/Walls/wallah" unique_id=800142569 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, 2.3995776, 3.663744)
+
+[node name="ScaldaPanel388" parent="Environment/Walls/wallah" unique_id=93912095 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.623423, 2.3995776, 2.663742)
+
+[node name="ScaldaPanel389" parent="Environment/Walls/wallah" unique_id=413436484 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -0.6004223, 13.663742)
+
+[node name="ScaldaPanel390" parent="Environment/Walls/wallah" unique_id=987314925 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -1.6004224, 13.663742)
+
+[node name="ScaldaPanel391" parent="Environment/Walls/wallah" unique_id=936515715 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -2.6004224, 13.663742)
+
+[node name="ScaldaPanel392" parent="Environment/Walls/wallah" unique_id=519338554 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -3.6004224, 13.663742)
+
+[node name="ScaldaPanel393" parent="Environment/Walls/wallah" unique_id=769760815 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -0.6004223, 14.663742)
+
+[node name="ScaldaPanel394" parent="Environment/Walls/wallah" unique_id=687059222 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -1.6004224, 14.663742)
+
+[node name="ScaldaPanel395" parent="Environment/Walls/wallah" unique_id=2032828777 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -2.6004224, 14.663742)
+
+[node name="ScaldaPanel396" parent="Environment/Walls/wallah" unique_id=1807253029 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -3.6004224, 14.663742)
+
+[node name="ScaldaPanel397" parent="Environment/Walls/wallah" unique_id=2138551422 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -4.6004224, 12.663742)
+
+[node name="ScaldaPanel398" parent="Environment/Walls/wallah" unique_id=1021990195 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -4.6004224, 11.663744)
+
+[node name="ScaldaPanel399" parent="Environment/Walls/wallah" unique_id=1440696532 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -4.6004224, 13.663742)
+
+[node name="ScaldaPanel400" parent="Environment/Walls/wallah" unique_id=1487512445 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, -4.6004224, 14.663742)
+
+[node name="ScaldaPanel244" parent="Environment/Walls" unique_id=1399000457 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, 4.399576, 12.663742)
+
+[node name="ScaldaPanel247" parent="Environment/Walls" unique_id=513177168 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, 4.399576, 11.663744)
+
+[node name="ScaldaPanel250" parent="Environment/Walls" unique_id=2064492963 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, 4.399576, 10.663742)
+
+[node name="ScaldaPanel253" parent="Environment/Walls" unique_id=644163735 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, 4.399576, 9.663742)
+
+[node name="ScaldaPanel256" parent="Environment/Walls" unique_id=1582691958 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, 4.399576, 8.663744)
+
+[node name="ScaldaPanel259" parent="Environment/Walls" unique_id=1219874715 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, 4.399576, 7.663742)
+
+[node name="ScaldaPanel262" parent="Environment/Walls" unique_id=1609810714 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, 4.399576, 6.663742)
+
+[node name="ScaldaPanel265" parent="Environment/Walls" unique_id=1665906401 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, 4.399576, 5.663744)
+
+[node name="ScaldaPanel268" parent="Environment/Walls" unique_id=704600300 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, 4.399576, 4.663742)
+
+[node name="Node3D" type="Node3D" parent="Environment/Walls" unique_id=633576054]
+
+[node name="ScaldaPanel244" parent="Environment/Walls/Node3D" unique_id=104650153 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, 5.399576, 12.663742)
+
+[node name="ScaldaPanel247" parent="Environment/Walls/Node3D" unique_id=601581849 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, 5.399576, 11.663744)
+
+[node name="ScaldaPanel250" parent="Environment/Walls/Node3D" unique_id=1928706016 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, 5.399576, 10.663742)
+
+[node name="ScaldaPanel253" parent="Environment/Walls/Node3D" unique_id=1355149951 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, 5.399576, 9.663742)
+
+[node name="ScaldaPanel256" parent="Environment/Walls/Node3D" unique_id=744122258 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, 5.399576, 8.663744)
+
+[node name="ScaldaPanel259" parent="Environment/Walls/Node3D" unique_id=2090985739 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, 5.399576, 7.663742)
+
+[node name="ScaldaPanel262" parent="Environment/Walls/Node3D" unique_id=620747695 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, 5.399576, 6.663742)
+
+[node name="ScaldaPanel265" parent="Environment/Walls/Node3D" unique_id=1962446036 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, 5.399576, 5.663744)
+
+[node name="ScaldaPanel268" parent="Environment/Walls/Node3D" unique_id=1087341224 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 0.13431835, 5.399576, 4.663742)
+
+[node name="ScaldaPanel245" parent="Environment/Walls/Node3D" unique_id=880201222 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 2.399576, 12.663742)
+
+[node name="ScaldaPanel248" parent="Environment/Walls/Node3D" unique_id=759771129 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 2.399576, 11.663744)
+
+[node name="ScaldaPanel251" parent="Environment/Walls/Node3D" unique_id=582818685 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 2.399576, 10.663742)
+
+[node name="ScaldaPanel254" parent="Environment/Walls/Node3D" unique_id=1252364441 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 2.399576, 9.663742)
+
+[node name="ScaldaPanel257" parent="Environment/Walls/Node3D" unique_id=1246417442 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 2.399576, 8.663744)
+
+[node name="ScaldaPanel260" parent="Environment/Walls/Node3D" unique_id=1325329447 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 2.399576, 7.663742)
+
+[node name="ScaldaPanel263" parent="Environment/Walls/Node3D" unique_id=875552801 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 2.399576, 6.663742)
+
+[node name="ScaldaPanel266" parent="Environment/Walls/Node3D" unique_id=882029552 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 2.399576, 5.663744)
+
+[node name="ScaldaPanel269" parent="Environment/Walls/Node3D" unique_id=1424075655 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 2.399576, 4.663742)
+
+[node name="ScaldaPanel246" parent="Environment/Walls/Node3D" unique_id=956750191 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 1.399576, 12.663742)
+
+[node name="ScaldaPanel249" parent="Environment/Walls/Node3D" unique_id=1381372811 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 1.399576, 11.663744)
+
+[node name="ScaldaPanel252" parent="Environment/Walls/Node3D" unique_id=1107862721 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 1.399576, 10.663742)
+
+[node name="ScaldaPanel255" parent="Environment/Walls/Node3D" unique_id=691474672 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 1.399576, 9.663742)
+
+[node name="ScaldaPanel258" parent="Environment/Walls/Node3D" unique_id=1584965163 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 1.399576, 8.663744)
+
+[node name="ScaldaPanel261" parent="Environment/Walls/Node3D" unique_id=1848249424 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 1.399576, 7.663742)
+
+[node name="ScaldaPanel264" parent="Environment/Walls/Node3D" unique_id=1016984536 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 1.399576, 6.663742)
+
+[node name="ScaldaPanel267" parent="Environment/Walls/Node3D" unique_id=1378197104 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 1.399576, 5.663744)
+
+[node name="ScaldaPanel270" parent="Environment/Walls/Node3D" unique_id=671599657 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 1.399576, 4.663742)
+
+[node name="ScaldaPanel271" parent="Environment/Walls/Node3D" unique_id=1222463411 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 3.399576, 12.663742)
+
+[node name="ScaldaPanel272" parent="Environment/Walls/Node3D" unique_id=130151857 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 3.399576, 11.663744)
+
+[node name="ScaldaPanel273" parent="Environment/Walls/Node3D" unique_id=2131337394 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 3.399576, 10.663742)
+
+[node name="ScaldaPanel274" parent="Environment/Walls/Node3D" unique_id=1666533471 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 3.399576, 9.663742)
+
+[node name="ScaldaPanel275" parent="Environment/Walls/Node3D" unique_id=1330939243 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 3.399576, 8.663744)
+
+[node name="ScaldaPanel276" parent="Environment/Walls/Node3D" unique_id=1977226075 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 3.399576, 7.663742)
+
+[node name="ScaldaPanel277" parent="Environment/Walls/Node3D" unique_id=1386045193 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 3.399576, 6.663742)
+
+[node name="ScaldaPanel278" parent="Environment/Walls/Node3D" unique_id=337532353 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 3.399576, 5.663744)
+
+[node name="ScaldaPanel279" parent="Environment/Walls/Node3D" unique_id=8785459 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 3.399576, 4.663742)
+
+[node name="ScaldaPanel280" parent="Environment/Walls/Node3D" unique_id=304028915 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 4.399576, 12.663742)
+
+[node name="ScaldaPanel281" parent="Environment/Walls/Node3D" unique_id=339411674 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 4.399576, 11.663744)
+
+[node name="ScaldaPanel282" parent="Environment/Walls/Node3D" unique_id=789152801 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 4.399576, 10.663742)
+
+[node name="ScaldaPanel283" parent="Environment/Walls/Node3D" unique_id=346124033 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 4.399576, 9.663742)
+
+[node name="ScaldaPanel284" parent="Environment/Walls/Node3D" unique_id=312470551 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 4.399576, 8.663744)
+
+[node name="ScaldaPanel285" parent="Environment/Walls/Node3D" unique_id=753708875 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 4.399576, 7.663742)
+
+[node name="ScaldaPanel286" parent="Environment/Walls/Node3D" unique_id=163858507 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 4.399576, 6.663742)
+
+[node name="ScaldaPanel287" parent="Environment/Walls/Node3D" unique_id=1555496338 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 4.399576, 5.663744)
+
+[node name="ScaldaPanel288" parent="Environment/Walls/Node3D" unique_id=143420999 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 4.399576, 4.663742)
+
+[node name="ScaldaPanel289" parent="Environment/Walls/Node3D" unique_id=873873936 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 5.399576, 12.663742)
+
+[node name="ScaldaPanel290" parent="Environment/Walls/Node3D" unique_id=1992034323 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 5.399576, 11.663744)
+
+[node name="ScaldaPanel291" parent="Environment/Walls/Node3D" unique_id=569944128 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 5.399576, 10.663742)
+
+[node name="ScaldaPanel292" parent="Environment/Walls/Node3D" unique_id=830485899 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 5.399576, 9.663742)
+
+[node name="ScaldaPanel293" parent="Environment/Walls/Node3D" unique_id=1401189665 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 5.399576, 8.663744)
+
+[node name="ScaldaPanel294" parent="Environment/Walls/Node3D" unique_id=1739948319 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 5.399576, 7.663742)
+
+[node name="ScaldaPanel295" parent="Environment/Walls/Node3D" unique_id=356913654 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 5.399576, 6.663742)
+
+[node name="ScaldaPanel296" parent="Environment/Walls/Node3D" unique_id=554043815 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 5.399576, 5.663744)
+
+[node name="ScaldaPanel297" parent="Environment/Walls/Node3D" unique_id=685305544 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, -4.634538, 5.399576, 4.663742)
+
+[node name="ScaldaPanel229" parent="Environment/Walls/Node3D" unique_id=1503839178 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, -0.47829938, 3.399576, 13.258955)
+
+[node name="ScaldaPanel232" parent="Environment/Walls/Node3D" unique_id=1107212255 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, -1.4782975, 3.399576, 13.258955)
+
+[node name="ScaldaPanel235" parent="Environment/Walls/Node3D" unique_id=760677957 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, -2.4782994, 3.399576, 13.258955)
+
+[node name="ScaldaPanel238" parent="Environment/Walls/Node3D" unique_id=1825526881 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, -3.4782994, 3.399576, 13.258955)
+
+[node name="ScaldaPanel241" parent="Environment/Walls/Node3D" unique_id=27202911 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, -4.478299, 3.399576, 13.258955)
+
+[node name="ScaldaPanel230" parent="Environment/Walls/Node3D" unique_id=357233532 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, -0.47829938, 4.399576, 13.258955)
+
+[node name="ScaldaPanel233" parent="Environment/Walls/Node3D" unique_id=649393639 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, -1.4782975, 4.399576, 13.258955)
+
+[node name="ScaldaPanel236" parent="Environment/Walls/Node3D" unique_id=716188412 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, -2.4782994, 4.399576, 13.258955)
+
+[node name="ScaldaPanel239" parent="Environment/Walls/Node3D" unique_id=1389626311 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, -3.4782994, 4.399576, 13.258955)
+
+[node name="ScaldaPanel242" parent="Environment/Walls/Node3D" unique_id=1206052338 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, -4.478299, 4.399576, 13.258955)
+
+[node name="ScaldaPanel231" parent="Environment/Walls/Node3D" unique_id=75060079 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, -0.47829938, 5.399576, 13.258955)
+
+[node name="ScaldaPanel234" parent="Environment/Walls/Node3D" unique_id=828831578 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, -1.4782975, 5.399576, 13.258955)
+
+[node name="ScaldaPanel237" parent="Environment/Walls/Node3D" unique_id=850925188 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, -2.4782994, 5.399576, 13.258955)
+
+[node name="ScaldaPanel240" parent="Environment/Walls/Node3D" unique_id=118676440 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, -3.4782994, 5.399576, 13.258955)
+
+[node name="ScaldaPanel243" parent="Environment/Walls/Node3D" unique_id=1771830894 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, -4.478299, 5.399576, 13.258955)
+
+[node name="ScaldaPanel298" parent="Environment/Walls/Node3D" unique_id=1812763168 instance=ExtResource("9_afksl")]
+transform = Transform3D(1.0999997, 0, 0, 0, 0.9999996, 0, 7.81597e-15, 0, 1.09, -0.5140046, -0.6004224, 13.258955)
+
+[node name="ScaldaPanel299" parent="Environment/Walls/Node3D" unique_id=2101826036 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, -1.538466, -0.6004223, 13.258955)
+
+[node name="ScaldaPanel300" parent="Environment/Walls/Node3D" unique_id=1332350622 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, -2.538468, -0.6004223, 13.258955)
+
+[node name="ScaldaPanel301" parent="Environment/Walls/Node3D" unique_id=1775803794 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, -3.538468, -0.6004223, 13.258955)
+
+[node name="ScaldaPanel302" parent="Environment/Walls/Node3D" unique_id=707827762 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, -4.538468, -0.6004223, 13.258955)
+
+[node name="ScaldaPanel303" parent="Environment/Walls/Node3D" unique_id=1569007138 instance=ExtResource("9_afksl")]
+transform = Transform3D(1.0999997, 0, 0, 0, 0.9999996, 0, 7.81597e-15, 0, 1.09, -0.5140046, -1.6004224, 13.258955)
+
+[node name="ScaldaPanel304" parent="Environment/Walls/Node3D" unique_id=278863607 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, -1.538466, -1.6004224, 13.258955)
+
+[node name="ScaldaPanel305" parent="Environment/Walls/Node3D" unique_id=286784420 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, -2.538468, -1.6004224, 13.258955)
+
+[node name="ScaldaPanel306" parent="Environment/Walls/Node3D" unique_id=1378153515 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, -3.538468, -1.6004224, 13.258955)
+
+[node name="ScaldaPanel307" parent="Environment/Walls/Node3D" unique_id=459439612 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, -4.538468, -1.6004224, 13.258955)
+
+[node name="ScaldaPanel308" parent="Environment/Walls/Node3D" unique_id=1500162809 instance=ExtResource("9_afksl")]
+transform = Transform3D(1.0999997, 0, 0, 0, 1.1999996, 0, 7.81597e-15, 0, 1.09, -0.5140046, -2.7004223, 13.258955)
+
+[node name="ScaldaPanel309" parent="Environment/Walls/Node3D" unique_id=630307572 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 1.1999996, 0, 7.1054274e-15, 0, 1.09, -1.538466, -2.7004223, 13.258955)
+
+[node name="ScaldaPanel310" parent="Environment/Walls/Node3D" unique_id=844848930 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 1.1999996, 0, 7.1054274e-15, 0, 1.09, -2.538468, -2.7004223, 13.258955)
+
+[node name="ScaldaPanel311" parent="Environment/Walls/Node3D" unique_id=1526910591 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 1.1999996, 0, 7.1054274e-15, 0, 1.09, -3.538468, -2.7004223, 13.258955)
+
+[node name="ScaldaPanel312" parent="Environment/Walls/Node3D" unique_id=4500475 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 1.1999996, 0, 7.1054274e-15, 0, 1.09, -4.538468, -2.7004223, 13.258955)
+
+[node name="ScaldaPanel64" parent="Environment/Walls" unique_id=2100396288 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.344553, 2.386514, -9.634376)
+
+[node name="ScaldaPanel" parent="Environment/Walls/ScaldaPanel64" unique_id=878733655 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, -1.3909066e-08, 0, 1, 0, 1.3909066e-08, 0, 1, 0.014227867, -0.986514, 0.0006351471)
+
+[node name="ScaldaPanel2" parent="Environment/Walls/ScaldaPanel64" unique_id=226490648 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, -1.3909066e-08, 0, 1, 0, 1.3909066e-08, 0, 1, 0.014227867, -1.986514, 0.0006351471)
+
+[node name="ScaldaPanel3" parent="Environment/Walls/ScaldaPanel64" unique_id=1977490913 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, -1.3909066e-08, 0, 1, 0, 1.3909066e-08, 0, 1, -0.98577213, -0.986514, 0.0006351471)
+
+[node name="ScaldaPanel4" parent="Environment/Walls/ScaldaPanel64" unique_id=28365761 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, -1.3909066e-08, 0, 1, 0, 1.3909066e-08, 0, 1, -0.98577213, -1.986514, 0.0006351471)
+
+[node name="ScaldaPanel5" parent="Environment/Walls/ScaldaPanel64" unique_id=2109071521 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, -1.3909066e-08, 0, 1, 0, 1.3909066e-08, 0, 1, -0.98577213, 0.013486147, 0.0006351471)
+
+[node name="ScaldaPanel6" parent="Environment/Walls/ScaldaPanel64" unique_id=936793386 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, -1.3909066e-08, 0, 1, 0, 1.3909066e-08, 0, 1, -1.9857731, -0.986514, 0.0006351471)
+
+[node name="ScaldaPanel7" parent="Environment/Walls/ScaldaPanel64" unique_id=1923372968 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, -1.3909066e-08, 0, 1, 0, 1.3909066e-08, 0, 1, -1.9857731, -1.986514, 0.0006351471)
+
+[node name="ScaldaPanel8" parent="Environment/Walls/ScaldaPanel64" unique_id=1836382779 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, -1.3909066e-08, 0, 1, 0, 1.3909066e-08, 0, 1, -1.9857731, 0.013486147, 0.0006351471)
+
+[node name="ScaldaPanel9" parent="Environment/Walls/ScaldaPanel64" unique_id=840604586 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, -1.3909066e-08, 0, 1, 0, 1.3909066e-08, 0, 1, -2.9857726, -0.986514, 0.0006351471)
+
+[node name="ScaldaPanel10" parent="Environment/Walls/ScaldaPanel64" unique_id=739495865 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, -1.3909066e-08, 0, 1, 0, 1.3909066e-08, 0, 1, -2.9857726, -1.986514, 0.0006351471)
+
+[node name="ScaldaPanel11" parent="Environment/Walls/ScaldaPanel64" unique_id=335714080 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, -1.3909066e-08, 0, 1, 0, 1.3909066e-08, 0, 1, -2.9857726, 0.013486147, 0.0006351471)
+
+[node name="ScaldaPanel12" parent="Environment/Walls/ScaldaPanel64" unique_id=823935791 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, -1.3909066e-08, 0, 1, 0, 1.3909066e-08, 0, 1, -3.9857736, -0.986514, 0.0006351471)
+
+[node name="ScaldaPanel13" parent="Environment/Walls/ScaldaPanel64" unique_id=1784295227 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, -1.3909066e-08, 0, 1, 0, 1.3909066e-08, 0, 1, -3.9857736, -1.986514, 0.0006351471)
+
+[node name="ScaldaPanel14" parent="Environment/Walls/ScaldaPanel64" unique_id=769714351 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, -1.3909066e-08, 0, 1, 0, 1.3909066e-08, 0, 1, -3.9857736, 0.013486147, 0.0006351471)
+
+[node name="ScaldaPanel15" parent="Environment/Walls/ScaldaPanel64" unique_id=120067208 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, -1.3909066e-08, 0, 1, 0, 1.3909066e-08, 0, 1, -4.9857726, -0.986514, 0.0006351471)
+
+[node name="ScaldaPanel16" parent="Environment/Walls/ScaldaPanel64" unique_id=488973095 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, -1.3909066e-08, 0, 1, 0, 1.3909066e-08, 0, 1, -4.9857726, -1.986514, 0.0006351471)
+
+[node name="ScaldaPanel17" parent="Environment/Walls/ScaldaPanel64" unique_id=1078166566 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, -1.3909066e-08, 0, 1, 0, 1.3909066e-08, 0, 1, -4.9857726, 0.013486147, 0.0006351471)
+
+[node name="ScaldaPanel18" parent="Environment/Walls/ScaldaPanel64" unique_id=1708813824 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, -1.3909066e-08, 0, 1, 0, 1.3909066e-08, 0, 1, -5.9857736, -0.986514, 0.0006351471)
+
+[node name="ScaldaPanel19" parent="Environment/Walls/ScaldaPanel64" unique_id=922453121 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, -1.3909066e-08, 0, 1, 0, 1.3909066e-08, 0, 1, -5.9857736, -1.986514, 0.0006351471)
+
+[node name="ScaldaPanel20" parent="Environment/Walls/ScaldaPanel64" unique_id=422291203 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, -1.3909066e-08, 0, 1, 0, 1.3909066e-08, 0, 1, -5.9857736, 0.013486147, 0.0006351471)
+
+[node name="ScaldaPanel21" parent="Environment/Walls/ScaldaPanel64" unique_id=356202794 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, -1.3909066e-08, 0, 1, 0, 1.3909066e-08, 0, 1, -6.9857745, -0.986514, 0.0006351471)
+
+[node name="ScaldaPanel22" parent="Environment/Walls/ScaldaPanel64" unique_id=2034166466 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, -1.3909066e-08, 0, 1, 0, 1.3909066e-08, 0, 1, -6.9857745, -1.986514, 0.0006351471)
+
+[node name="ScaldaPanel23" parent="Environment/Walls/ScaldaPanel64" unique_id=813523887 instance=ExtResource("9_afksl")]
+transform = Transform3D(1, 0, -1.3909066e-08, 0, 1, 0, 1.3909066e-08, 0, 1, -6.9857745, 0.013486147, 0.0006351471)
+
 [node name="WindowRods" type="Node3D" parent="Environment" unique_id=951807143]
 
 [node name="WindowRod" parent="Environment/WindowRods" unique_id=163434570 instance=ExtResource("2_14lxf")]
 transform = Transform3D(-4.8082526e-08, 11.476, 0, -1.1, -5.0163186e-07, 0, 0, 0, 1.1, 15.38789, 1.3950982, -2.2498407)
 
 [node name="WindowRod2" parent="Environment/WindowRods" unique_id=1741127665 instance=ExtResource("2_14lxf")]
-transform = Transform3D(-6.8495744e-08, 15.878996, 0, -1.567, -6.940928e-07, 0, 0, 0, 1.1, 16.364, 2.69, -2.25)
+transform = Transform3D(-6.8495744e-08, 15.878996, 0, -1.567, -6.940928e-07, 0, 0, 0, 1.1, 16.33832, 2.69, -2.25)
 
 [node name="WindowRod3" parent="Environment/WindowRods" unique_id=403108370 instance=ExtResource("2_14lxf")]
 transform = Transform3D(-5.2732272e-08, 11.56, 0, -1.2063738, -5.0530366e-07, 0, 0, 0, 1.1, 15.417534, 0.15063792, -2.2511885)
@@ -1710,7 +2193,7 @@ transform = Transform3D(2.8207679, 0, 0, 0, 2.9284732, 0, 0, 0, 1.1, 5.999122, 1
 transform = Transform3D(1.1, 0, 0, 0, 2.9284732, 0, 0, 0, 1.1, 7.8871045, 1.4353168, -2.25)
 
 [node name="WindowRod21" parent="Environment/WindowRods" unique_id=430290727 instance=ExtResource("2_14lxf")]
-transform = Transform3D(1.2127767, 0, 0, 0, 2.9284732, 0, 0, 0, 1.1, 6.199039, 1.4353168, -2.25)
+transform = Transform3D(1.2127767, 0, 0, 0, 2.9284732, 0, 0, 0, 1.1, 5.999039, 1.4353168, -2.25)
 
 [node name="WindowRod22" parent="Environment/WindowRods" unique_id=239094909 instance=ExtResource("2_14lxf")]
 transform = Transform3D(1.2127767, 0, 0, 0, 2.9284732, 0, 0, 0, 1.1, 1.8990388, 1.4353168, -2.25)
@@ -1751,9 +2234,6 @@ transform = Transform3D(1.2127767, 0, 0, 0, 2.9284732, 0, 0, 0, 1.1, -0.14547446
 [node name="WindowRod28" parent="Environment/WindowRods" unique_id=62588413 instance=ExtResource("2_14lxf")]
 transform = Transform3D(1.2127767, 0, 0, 0, 2.9284732, 0, 0, 0, 1.1, -4.3503947, 1.4353168, -2.25)
 
-[node name="WindowRod29" parent="Environment/WindowRods" unique_id=607954880 instance=ExtResource("2_14lxf")]
-transform = Transform3D(2.9940436e-15, -3.3837028e-07, 1.0999998, -1.5669999, -3.3837026e-07, 0, 6.849574e-08, -7.7410107, -4.8082523e-08, 24.164, 2.69, -6.25)
-
 [node name="WindowRod36" parent="Environment/WindowRods" unique_id=316304596 instance=ExtResource("2_14lxf")]
 transform = Transform3D(7.1054274e-15, -1.1745951e-06, 1.1000001, -1.5670002, -4.773329e-07, 1.6922076e-15, 6.8495744e-08, -10.920104, -8.940697e-08, 5.993945, 2.6904104, 7.7795477)
 
@@ -1768,6 +2248,15 @@ transform = Transform3D(1.1, 0, 0, 0, 2.9284732, 0, 0, 0, 1.3176767, 6.0015087, 
 
 [node name="WindowRod40" parent="Environment/WindowRods" unique_id=2076022265 instance=ExtResource("2_14lxf")]
 transform = Transform3D(1.1, 0, 0, 0, 2.9284732, 0, 0, 0, 1.3176767, 6.0015087, 1.4353168, 2.4032493)
+
+[node name="WindowRod41" parent="Environment/WindowRods" unique_id=794363517 instance=ExtResource("2_14lxf")]
+transform = Transform3D(1.1, 0, 0, 0, 2.9284732, 0, 0, 0, 1.1, 18.386456, 1.4353168, -2.25)
+
+[node name="WindowRod42" parent="Environment/WindowRods" unique_id=152328547 instance=ExtResource("2_14lxf")]
+transform = Transform3D(1.1, 0, 0, 0, 2.9284732, 0, 0, 0, 1.1, -0.082158, 1.4353168, 2.25)
+
+[node name="WindowRod43" parent="Environment/WindowRods" unique_id=161325461 instance=ExtResource("2_14lxf")]
+transform = Transform3D(1.1, 0, 0, 0, 2.9284732, 0, 0, 0, 1.1, -4.482158, 1.4353168, 2.25)
 
 [node name="BigTrashcan" parent="Environment" unique_id=238253868 instance=ExtResource("1_75qgl")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 6.2, -0.0018494576, 1.5)
@@ -1805,20 +2294,8 @@ transform = Transform3D(4.3907113, 0, 0, 0, 1.064305, 0, 0, 0, 1, 4.051328, 2, -
 [node name="Window9" parent="Environment" unique_id=266246035 instance=ExtResource("3_ofq4a")]
 transform = Transform3D(-4.723191e-07, 0, 1.0000002, 0, 1, 0, -10.805401, 0, -4.3711395e-08, 6, 0.79999995, 7.7999997)
 
-[node name="BlackdoorOtherway" parent="Environment" unique_id=1063213906 instance=ExtResource("5_1wci3")]
-transform = Transform3D(1.75, 0, 0, 0, 1.25, 0, 0, 0, 1, 23.025, 0, -2.25)
-
-[node name="BlackdoorLocked" parent="Environment" unique_id=4101460 instance=ExtResource("7_7o132")]
-transform = Transform3D(1.4, 0, 0, 0, 1.25, 0, 0, 0, 1, 7.7532434, -0.0004015267, -2.2585535)
-
-[node name="Blackdoor" parent="Environment" unique_id=1855600005 instance=ExtResource("7_she40")]
-transform = Transform3D(1.7294544, 0, -1.7484554e-07, 0, 1.25, 0, 3.023874e-07, 0, 0.9999999, 3.8735657, 0, 2.25)
-
 [node name="Blinds" parent="Environment" unique_id=1457352535 instance=ExtResource("6_cs5jf")]
 transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1, 4.0396433, 0.2987985, -2.3835535)
-
-[node name="Blackdoor2" parent="Environment" unique_id=940054297 instance=ExtResource("7_she40")]
-transform = Transform3D(2.3469968e-07, 0, 0.9999999, 0, 1.2499999, 0, -1.7897677, 0, 1.3113416e-07, 12, 0, 2.8631818)
 
 [node name="Window10" parent="Environment" unique_id=378102297 instance=ExtResource("3_ofq4a")]
 transform = Transform3D(-3.5896252e-07, 0, 1.0000002, 0, 1, 0, -8.212105, 0, -4.3711395e-08, 12, 0.79999995, 8.9)
@@ -1829,94 +2306,363 @@ transform = Transform3D(-4.5942852e-07, 0, 1.0000002, 0, 1, 0, -10.5105, 0, -4.3
 [node name="Window12" parent="Environment" unique_id=910251523 instance=ExtResource("4_vt2oj")]
 transform = Transform3D(-3.6570734e-07, 0, 1.0000002, 0, 1, 0, -8.36641, 0, -4.37114e-08, 12, 2, 8.982033)
 
-[node name="OfficeCHair" parent="Environment" unique_id=1726506496 instance=ExtResource("10_jpd7b")]
+[node name="Lokaaldeco" type="Node3D" parent="Environment" unique_id=71983378]
+
+[node name="OfficeCHair3" parent="Environment/Lokaaldeco" unique_id=780229814 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(-0.50000006, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.50000006, 14.652146, 0, 4.794382)
+
+[node name="GroupTable2" parent="Environment/Lokaaldeco" unique_id=1482520677 instance=ExtResource("11_tfv3i")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 14.9, 0, 11)
+
+[node name="Monitor2" parent="Environment/Lokaaldeco/GroupTable2" unique_id=524227551 instance=ExtResource("12_khsvm")]
+transform = Transform3D(0.99619484, 0, -0.08715593, 0, 1, 0, 0.08715593, 0, 0.99619484, 0.45703793, 1.0537571, -0.03482628)
+
+[node name="Monitor3" parent="Environment/Lokaaldeco/GroupTable2" unique_id=581177050 instance=ExtResource("12_khsvm")]
+transform = Transform3D(-0.9999999, 0, 5.762045e-08, 0, 1, 0, -5.762045e-08, 0, -0.9999999, -0.5, 1.047016, -0.099998474)
+
+[node name="Monitor4" parent="Environment/Lokaaldeco/GroupTable2" unique_id=1600565778 instance=ExtResource("12_khsvm")]
+transform = Transform3D(-0.96592504, 0, -0.2588189, 0, 1, 0, 0.2588189, 0, -0.96592504, -1.4000044, 1.058753, 0.0047216415)
+
+[node name="Monitor" parent="Environment/Lokaaldeco/GroupTable2" unique_id=653038283 instance=ExtResource("12_khsvm")]
+transform = Transform3D(0.9961947, 0, 0.08715579, 0, 1, 0, -0.08715579, 0, 0.9961947, 1.4357281, 1.0579697, -0.035126686)
+
+[node name="OfficeCHair" parent="Environment/Lokaaldeco/GroupTable2" unique_id=327599394 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -1.3999996, 0, -0.99999905)
+
+[node name="OfficeCHair2" parent="Environment/Lokaaldeco/GroupTable2" unique_id=891312227 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, -1.5999994, 0, -2.1999998)
+
+[node name="OfficeCHair3" parent="Environment/Lokaaldeco/GroupTable2" unique_id=2131218543 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 1, 0, -1.199997)
+
+[node name="OfficeCHair4" parent="Environment/Lokaaldeco/GroupTable2" unique_id=522039321 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(0.9659258, 0, -0.2588191, 0, 1, 0, 0.2588191, 0, 0.9659258, -1.3000002, 0, 1.1000004)
+
+[node name="OfficeCHair" parent="Environment/Lokaaldeco/GroupTable2/OfficeCHair4" unique_id=425269809 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(0.93969256, 0, 0.34202015, 0, 1, 0, -0.34202015, 0, 0.93969256, 0.7935076, 0, -0.21261024)
+
+[node name="OfficeCHair" parent="Environment/Lokaaldeco/GroupTable2/OfficeCHair4/OfficeCHair" unique_id=1636790917 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(0.9961948, 0, -0.08715571, 0, 1, 0, 0.08715571, 0, 0.9961948, 1.8887901, 0, -0.035525322)
+
+[node name="OfficeCHair" parent="Environment/Lokaaldeco/GroupTable2/OfficeCHair4/OfficeCHair/OfficeCHair" unique_id=514541655 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(0.9961947, 0, 0.08715574, 0, 1, 0, -0.08715574, 0, 0.9961947, -0.800004, 0, 0.3000002)
+
+[node name="GroupTable3" parent="Environment/Lokaaldeco" unique_id=1822046382 instance=ExtResource("11_tfv3i")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 20.5, 0, 11)
+
+[node name="GroupTable" parent="Environment/Lokaaldeco/GroupTable3" unique_id=1540766066 instance=ExtResource("11_tfv3i")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7.6000004, 0, -2.8999996)
+
+[node name="GroupTable4" parent="Environment/Lokaaldeco" unique_id=1028902788 instance=ExtResource("11_tfv3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.8, 0, 3.8000002)
+
+[node name="OfficeCHair" parent="Environment/Lokaaldeco/GroupTable4" unique_id=173582149 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(0.25881907, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, 0.25881907, 0.80000114, 0, 8.5)
+
+[node name="OfficeCHair" parent="Environment/Lokaaldeco/GroupTable4/OfficeCHair" unique_id=1502581306 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(0.9659258, 0, 0.2588191, 0, 1, 0, -0.2588191, 0, 0.9659258, 1.8611412, 0, -0.39516068)
+
+[node name="OfficeCHair" parent="Environment/Lokaaldeco/GroupTable4/OfficeCHair/OfficeCHair" unique_id=749262973 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(-1, 0, 7.351371e-08, 0, 1, 0, -7.351371e-08, 0, -1, 0.70000076, 0, -2.2000027)
+
+[node name="OfficeCHair" parent="Environment/Lokaaldeco/GroupTable4/OfficeCHair/OfficeCHair/OfficeCHair" unique_id=345244602 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(0.9659258, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.9659258, 1.8000002, 0, 0.10000038)
+
+[node name="OfficeCHair" parent="Environment/Lokaaldeco/GroupTable4/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair" unique_id=1576184916 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(0.9396929, 0, 0.34202027, 0, 1, 0, -0.34202027, 0, 0.9396929, 0.8693323, 0, -0.23293686)
+
+[node name="Monitor" parent="Environment/Lokaaldeco/GroupTable4/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair" unique_id=1678879842 instance=ExtResource("12_khsvm")]
+transform = Transform3D(0.9961944, 0, -0.0871558, 0, 1, 0, 0.0871558, 0, 0.9961944, 0.13264942, 1.0520067, -1.1929722)
+
+[node name="Monitor" parent="Environment/Lokaaldeco/GroupTable4/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/Monitor" unique_id=728890856 instance=ExtResource("12_khsvm")]
+transform = Transform3D(-1, 0, -8.841487e-08, 0, 1, 0, 8.841487e-08, 0, -1, -0.92816925, 0.002179861, 0.1371975)
+
+[node name="Monitor" parent="Environment/Lokaaldeco/GroupTable4/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair" unique_id=1703512242 instance=ExtResource("12_khsvm")]
+transform = Transform3D(-0.99619544, 0, 0.08715597, 0, 1, 0, -0.08715597, 0, -0.99619544, 0.75865984, 0.8, -0.9038925)
+
+[node name="Monitor" parent="Environment/Lokaaldeco/GroupTable4/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/Monitor" unique_id=753667132 instance=ExtResource("12_khsvm")]
+transform = Transform3D(-0.9903498, 0, -0.13858572, 0, 1, 0, 0.13858572, 0, -0.9903498, 2.0646229, 0.24695998, -0.30103302)
+
+[node name="Monitor" parent="Environment/Lokaaldeco/GroupTable4/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor" unique_id=2022291057 instance=ExtResource("12_khsvm")]
+transform = Transform3D(-0.9780242, 0, -0.20849209, 0, 1, 0, 0.20849209, 0, -0.9780242, 2.905199, 0.007368207, 3.9426746)
+
+[node name="Monitor" parent="Environment/Lokaaldeco/GroupTable4/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor" unique_id=1601633569 instance=ExtResource("12_khsvm")]
+transform = Transform3D(0.99999976, 0, -1.3510248e-07, 0, 1, 0, 1.3510248e-07, 0, 0.99999976, 1.9118032, 0.0012028217, -0.0022029877)
+
+[node name="Monitor" parent="Environment/Lokaaldeco/GroupTable4/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor" unique_id=932508865 instance=ExtResource("12_khsvm")]
+transform = Transform3D(-0.9659258, 0, 0.25881907, 0, 1, 0, -0.25881907, 0, -0.9659258, 0.6977558, -0.2574122, 0.5264969)
+
+[node name="Monitor" parent="Environment/Lokaaldeco/GroupTable4/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/Monitor" unique_id=481766601 instance=ExtResource("12_khsvm")]
+transform = Transform3D(0.9063083, 0, 0.42261845, 0, 1, 0, -0.42261845, 0, 0.9063083, 4.0481915, 0.25253916, 5.1917133)
+
+[node name="Monitor" parent="Environment/Lokaaldeco/GroupTable4/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/Monitor/Monitor" unique_id=1817345684 instance=ExtResource("12_khsvm")]
+transform = Transform3D(0.958137, 0, -0.28630692, 0, 1, 0, 0.28630692, 0, 0.958137, -0.88632107, 0.0109552145, -0.15628624)
+
+[node name="Monitor" parent="Environment/Lokaaldeco/GroupTable4/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/Monitor/Monitor/Monitor" unique_id=1952004445 instance=ExtResource("12_khsvm")]
+transform = Transform3D(0.9932987, 0, 0.11557872, 0, 1, 0, -0.11557872, 0, 0.9932987, -1.7966328, -0.01664126, 0.16432762)
+
+[node name="Monitor" parent="Environment/Lokaaldeco/GroupTable4/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/Monitor/Monitor/Monitor/Monitor" unique_id=828960514 instance=ExtResource("12_khsvm")]
+transform = Transform3D(-1, 0, -8.841487e-08, 0, 1, 0, 8.841487e-08, 0, -1, 0.47366047, 0.0063540936, 0.09441757)
+
+[node name="Monitor" parent="Environment/Lokaaldeco/GroupTable4/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/Monitor/Monitor/Monitor/Monitor/Monitor" unique_id=1187324674 instance=ExtResource("12_khsvm")]
+transform = Transform3D(0.17364834, 0, 0.9848077, 0, 1, 0, -0.9848077, 0, 0.17364834, 6.3455696, -0.00074255466, 11.849993)
+
+[node name="Monitor" parent="Environment/Lokaaldeco/GroupTable4/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/Monitor/Monitor/Monitor/Monitor/Monitor/Monitor" unique_id=361807452 instance=ExtResource("12_khsvm")]
+transform = Transform3D(-0.86602545, 0, -0.5000002, 0, 1, 0, 0.5000002, 0, -0.86602545, 0.18313217, -0.2505834, 0.46275806)
+
+[node name="Monitor2" parent="Environment/Lokaaldeco/GroupTable4/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/Monitor" unique_id=564835474 instance=ExtResource("12_khsvm")]
+transform = Transform3D(0.34202012, 0, -0.9396919, 0, 1, 0, 0.9396919, 0, 0.34202012, 8.650592, 0.24952501, -1.824234)
+
+[node name="Monitor" parent="Environment/Lokaaldeco/GroupTable4" unique_id=611164560 instance=ExtResource("12_khsvm")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.14046097, 1.050416, 0.048612356)
+
+[node name="Monitor" parent="Environment/Lokaaldeco/GroupTable4/Monitor" unique_id=1197683475 instance=ExtResource("12_khsvm")]
+transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, 1.6213398, 0.00015938282, 0.048611403)
+
+[node name="Monitor" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor" unique_id=489417730 instance=ExtResource("12_khsvm")]
+transform = Transform3D(0.8660255, 0, -0.49999994, 0, 1, 0, 0.49999994, 0, 0.8660255, 4.1044903, 0.005591631, 1.5510406)
+
+[node name="Monitor" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor" unique_id=558760707 instance=ExtResource("12_khsvm")]
+transform = Transform3D(0.9659255, 0, 0.2588187, 0, 1, 0, -0.2588187, 0, 0.9659255, 0.9167881, -0.0031342506, -0.2522459)
+
+[node name="Monitor" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor" unique_id=426215640 instance=ExtResource("12_khsvm")]
+transform = Transform3D(0.9659262, 0, 0.25881928, 0, 1, 0, -0.25881928, 0, 0.9659262, 1.7022228, 6.532669e-05, -0.029499292)
+
+[node name="OfficeCHair" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor" unique_id=1772906353 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(-0.9659258, 0, 0.25881913, 0, 1, 0, -0.25881913, 0, -0.9659258, 0.25880814, -1.0530981, -0.9659281)
+
+[node name="OfficeCHair" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair" unique_id=963551165 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(0.9848077, 0, 0.17364818, 0, 1, 0, -0.17364818, 0, 0.9848077, 2, 0, 0.20000029)
+
+[node name="OfficeCHair" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair" unique_id=655513013 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(-0.98480785, 0, 0.17364809, 0, 1, 0, -0.17364809, 0, -0.98480785, 0.8570671, 0, -1.9812727)
+
+[node name="OfficeCHair" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair" unique_id=1155504654 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, 0.80000305, 0, 0.09999919)
+
+[node name="OfficeCHair" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair" unique_id=2042022641 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(0.9659258, 0, -0.25881922, 0, 1, 0, 0.25881922, 0, 0.9659258, 1.9836159, 0, 0.32445335)
+
+[node name="OfficeCHair" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair" unique_id=1222855791 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(-0.25881916, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881916, -2.9000034, 0, -9.800001)
+
+[node name="OfficeCHair" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair" unique_id=1269749018 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(0.9659258, 0, -0.2588191, 0, 1, 0, 0.2588191, 0, 0.9659258, -0.81757164, 0, -0.42611694)
+
+[node name="OfficeCHair" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair" unique_id=1645553295 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(0.9659258, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.9659258, -0.9000006, 0, 0.09999657)
+
+[node name="OfficeCHair" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair" unique_id=1025614964 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(0.9659263, 0, 0.25881913, 0, 1, 0, -0.25881913, 0, 0.9659263, -0.8245077, 0, 0.013872147)
+
+[node name="OfficeCHair" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair" unique_id=1461532002 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(-0.98480725, 0, -0.17364816, 0, 1, 0, 0.17364816, 0, -0.98480725, -0.09999466, 0, 3.5999966)
+
+[node name="OfficeCHair" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair" unique_id=1512862299 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(0.9063083, 0, -0.42261848, 0, 1, 0, 0.42261848, 0, 0.9063083, -0.8086109, 0, -0.19372368)
+
+[node name="OfficeCHair2" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair" unique_id=1951093610 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(0.9848083, 0, -0.17364822, 0, 1, 0, 0.17364822, 0, 0.9848083, -2.530509, 0, -0.50253105)
+
+[node name="OfficeCHair" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2" unique_id=1300030642 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(-0.9659252, 0, -0.25881884, 0, 1, 0, 0.25881884, 0, -0.9659252, -0.12067127, 0, -2.244522)
+
+[node name="OfficeCHair" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair" unique_id=1980006319 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(0.9659258, 0, -0.2588191, 0, 1, 0, 0.2588191, 0, 0.9659258, -0.81756973, 0, -0.42611885)
+
+[node name="OfficeCHair" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair" unique_id=547041379 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(-0.81915206, 0, 0.57357645, 0, 1, 0, -0.57357645, 0, -0.81915206, -1.4000006, 0, 0.4999962)
+
+[node name="GroupTable" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair" unique_id=439974444 instance=ExtResource("11_tfv3i")]
+transform = Transform3D(0.57357645, 0, -0.81915206, 0, 1, 0, 0.81915206, 0, 0.57357645, 15.08183, 0, -1.6487579)
+
+[node name="GroupTable" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable" unique_id=642472516 instance=ExtResource("11_tfv3i")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.9073486e-06, 0, -4.9000006)
+
+[node name="Monitor" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable" unique_id=1610450067 instance=ExtResource("12_khsvm")]
+transform = Transform3D(-0.2588191, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, -0.2588191, 4.9000006, 1.0498223, -6.062723)
+
+[node name="Monitor" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor" unique_id=1667125964 instance=ExtResource("12_khsvm")]
+transform = Transform3D(-0.14853442, 0, 0.9889073, 0, 1, 0, -0.9889073, 0, -0.14853442, 3.3339977, 0.004099846, 5.7324295)
+
+[node name="OfficeCHair" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor" unique_id=1675639280 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(-0.9306859, 0, -0.36581904, 0, 1, 0, 0.36581904, 0, -0.9306859, 0.07793236, -1.0539222, -1.0896893)
+
+[node name="OfficeCHair" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair" unique_id=44149986 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(0.98480785, 0, -0.17364809, 0, 1, 0, 0.17364809, 0, 0.98480785, -1.7835026, 0, -0.68494034)
+
+[node name="Monitor" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair" unique_id=25180825 instance=ExtResource("12_khsvm")]
+transform = Transform3D(-0.9848078, 0, -0.17364816, 0, 1, 0, 0.17364816, 0, -0.9848078, 0.17806435, 1.0532516, -0.8878708)
+
+[node name="Monitor" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor" unique_id=1186738960 instance=ExtResource("12_khsvm")]
+transform = Transform3D(-0.9659264, 0, 0.25881916, 0, 1, 0, -0.25881916, 0, -0.9659264, -0.9669223, 0.007838964, -0.2550907)
+
+[node name="OfficeCHair" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor" unique_id=424104228 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(-0.9999994, 0, 7.351365e-08, 0, 1, 0, -7.351365e-08, 0, -0.9999994, 0.10000229, -1.0610906, -0.8961258)
+
+[node name="OfficeCHair" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair" unique_id=199928606 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(-0.7071067, 0, -0.7071068, 0, 1, 0, 0.7071068, 0, -0.7071067, -0.79999924, 0, 0.7000084)
+
+[node name="OfficeCHair2" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair" unique_id=474924184 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(1, 0, -7.1054274e-15, 0, 1, 0, 7.1054274e-15, 0, 1, 1.5999999, 0, 0.20000839)
+
+[node name="OfficeCHair" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2" unique_id=323366832 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -2.1999989, 0, 2.1999989)
+
+[node name="OfficeCHair" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair" unique_id=60079656 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(0.9659258, 0, -0.2588191, 0, 1, 0, 0.2588191, 0, 0.9659258, -0.79999924, 0, 0.19999886)
+
+[node name="OfficeCHair" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair" unique_id=20687734 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(0.8660253, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660253, -1.4747715, 0, 0.29163933)
+
+[node name="Monitor" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair" unique_id=977872325 instance=ExtResource("12_khsvm")]
+transform = Transform3D(-0.81915253, 0, 0.5735768, 0, 1, 0, -0.5735768, 0, -0.81915253, 2.6995192, 1.0515268, -0.41547203)
+
+[node name="Monitor" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor" unique_id=1871882520 instance=ExtResource("12_khsvm")]
+transform = Transform3D(0.9396922, 0, 0.34201998, 0, 1, 0, -0.34201998, 0, 0.9396922, 0.9603176, 0.003907323, -0.28535652)
+
+[node name="Monitor" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor" unique_id=254836868 instance=ExtResource("12_khsvm")]
+transform = Transform3D(0.86602545, 0, 0.5, 0, 1, 0, -0.5, 0, 0.86602545, 1.8999991, -0.009491444, -0.06309891)
+
+[node name="Monitor" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor" unique_id=157030784 instance=ExtResource("12_khsvm")]
+transform = Transform3D(-0.86602545, 0, 0.49999994, 0, 1, 0, -0.49999994, 0, -0.86602545, -0.7993598, 0.007970691, -0.49759293)
+
+[node name="OfficeCHair" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor" unique_id=1534690135 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(-0.9659258, 0, 0.25881907, 0, 1, 0, -0.25881907, 0, -0.9659258, 1.8589382, -1.0539134, -1.2340469)
+
+[node name="OfficeCHair" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/OfficeCHair" unique_id=622591505 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(0.96592605, 0, 0.25881907, 0, 1, 0, -0.25881907, 0, 0.96592605, 1.8093777, 0, -0.5883484)
+
+[node name="OfficeCHair" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair" unique_id=1883935127 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(0.86602527, 0, 0.49999988, 0, 1, 0, -0.49999988, 0, 0.86602527, 0.84150696, 0, 0)
+
+[node name="Monitor" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair" unique_id=242897416 instance=ExtResource("12_khsvm")]
+transform = Transform3D(-0.9999999, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, -0.9999999, -1.000001, 0.8, -0.7179928)
+
+[node name="OfficeCHair" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor" unique_id=130717018 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(-0.25881913, 0, 0.9659257, 0, 1, 0, -0.9659257, 0, -0.25881913, -4.2000003, -0.8, -1.0179939)
+
+[node name="OfficeCHair" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/OfficeCHair" unique_id=1686070098 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(0.9659258, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, 0.9659258, -0.7468605, 0, -0.30364752)
+
+[node name="OfficeCHair" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/OfficeCHair/OfficeCHair" unique_id=740737177 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(0.9659258, 0, -0.25881922, 0, 1, 0, 0.25881922, 0, 0.9659258, -1.3999996, 0, 0.39999962)
+
+[node name="Monitor" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/OfficeCHair/OfficeCHair/OfficeCHair" unique_id=1266917170 instance=ExtResource("12_khsvm")]
+transform = Transform3D(-0.9033428, 0, -0.42891946, 0, 1, 0, 0.42891946, 0, -0.9033428, -1.1213608, 1.0419583, -1.094017)
+
+[node name="Monitor" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/Monitor" unique_id=739389095 instance=ExtResource("12_khsvm")]
+transform = Transform3D(-0.999976, 0, 0.006963715, 0, 1, 0, -0.006963715, 0, -0.999976, -2.9602985, 0.0001142025, -0.48934627)
+
+[node name="OfficeCHair" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor" unique_id=1579235248 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(-0.98480743, 0, 0.17364821, 0, 1, 0, -0.17364821, 0, -0.98480743, 0.075164795, -1.0420725, -1.0021727)
+
+[node name="OfficeCHair2" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair" unique_id=1621583551 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(0.9396924, 0, 0.34202003, 0, 1, 0, -0.34202003, 0, 0.9396924, 2.4200573, 0, 0.25940955)
+
+[node name="OfficeCHair" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/Monitor/Monitor/OfficeCHair" unique_id=1303018800 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(0.99619454, 0, 0.08715572, 0, 1, 0, -0.08715572, 0, 0.99619454, 0.80000114, 0, 0.10000014)
+
+[node name="GroupTable2" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable" unique_id=2044361985 instance=ExtResource("11_tfv3i")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.300001, 0, -4.8999996)
+
+[node name="GroupTable" parent="Environment/Lokaaldeco/GroupTable4/Monitor/Monitor/Monitor/Monitor/Monitor/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair2/OfficeCHair/OfficeCHair/OfficeCHair/GroupTable/GroupTable2" unique_id=1226713011 instance=ExtResource("11_tfv3i")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4.9000015, 0, 2.2000027)
+
+[node name="Monitor" parent="Environment/Lokaaldeco" unique_id=1978761431 instance=ExtResource("12_khsvm")]
+transform = Transform3D(6.7055225e-08, 0, -1, 0, 1, 0, 1, 0, 6.7055225e-08, 26.15065, 1.0551251, 11.925508)
+
+[node name="OfficeCHair" parent="Environment/Lokaaldeco" unique_id=883766404 instance=ExtResource("10_jpd7b")]
 transform = Transform3D(-0.42261833, 0, 0.90630776, 0, 1, 0, -0.90630776, 0, -0.42261833, 17.7, 0, 3.3000002)
 
-[node name="GroupTable" parent="Environment" unique_id=338991116 instance=ExtResource("11_tfv3i")]
+[node name="GroupTable" parent="Environment/Lokaaldeco" unique_id=1720428926 instance=ExtResource("11_tfv3i")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 16, 0, 4.4)
 
-[node name="Monitor" parent="Environment/GroupTable" unique_id=604774305 instance=ExtResource("12_khsvm")]
+[node name="Monitor" parent="Environment/Lokaaldeco/GroupTable" unique_id=1288688053 instance=ExtResource("12_khsvm")]
 transform = Transform3D(0.9659258, 0, 0.2588191, 0, 1, 0, -0.2588191, 0, 0.9659258, 1.5808177, 1.0567058, -0.06462479)
 
-[node name="Monitor2" parent="Environment/GroupTable" unique_id=1270288933 instance=ExtResource("12_khsvm")]
+[node name="Monitor2" parent="Environment/Lokaaldeco/GroupTable" unique_id=84235691 instance=ExtResource("12_khsvm")]
 transform = Transform3D(1, 0, 7.351371e-08, 0, 1, 0, -7.351371e-08, 0, 1, 0.6695881, 1.0567058, 0.062107086)
 
-[node name="Monitor3" parent="Environment/GroupTable" unique_id=1665699391 instance=ExtResource("12_khsvm")]
+[node name="Monitor3" parent="Environment/Lokaaldeco/GroupTable" unique_id=1578572243 instance=ExtResource("12_khsvm")]
 transform = Transform3D(0.9659258, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.9659258, -1.4619105, 1.0495639, -0.10588074)
 
-[node name="Monitor4" parent="Environment/GroupTable" unique_id=916820420 instance=ExtResource("12_khsvm")]
+[node name="Monitor4" parent="Environment/Lokaaldeco/GroupTable" unique_id=247465047 instance=ExtResource("12_khsvm")]
 transform = Transform3D(-0.9659258, 0, -0.25881913, 0, 1, 0, 0.25881913, 0, -0.9659258, -0.9438777, 1.0548998, 0.08387375)
 
-[node name="OfficeCHair2" parent="Environment" unique_id=1642894096 instance=ExtResource("10_jpd7b")]
+[node name="OfficeCHair2" parent="Environment/Lokaaldeco" unique_id=1004681709 instance=ExtResource("10_jpd7b")]
 transform = Transform3D(0.08715569, 0, 0.9961947, 0, 1, 0, -0.9961947, 0, 0.08715569, 17.5, 0, 5.4)
 
-[node name="OfficeCHair" parent="Environment/OfficeCHair2" unique_id=594645329 instance=ExtResource("10_jpd7b")]
+[node name="OfficeCHair" parent="Environment/Lokaaldeco/OfficeCHair2" unique_id=1587565508 instance=ExtResource("10_jpd7b")]
 transform = Transform3D(-0.9848077, 0, 0.1736483, 0, 1, 0, -0.1736483, 0, -0.9848077, 1.7222071, 0, -3.2625113)
 
-[node name="OfficeCHair2" parent="Environment/OfficeCHair2" unique_id=1960392472 instance=ExtResource("10_jpd7b")]
+[node name="OfficeCHair2" parent="Environment/Lokaaldeco/OfficeCHair2" unique_id=1433333062 instance=ExtResource("10_jpd7b")]
 transform = Transform3D(-0.9961947, 0, -0.08715565, 0, 1, 0, 0.08715565, 0, -0.9961947, -0.6076517, 0, -2.3559961)
 
-[node name="DoubleDoors" parent="Environment" unique_id=1600821424 instance=ExtResource("14_khsvm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.371494, 0, 0)
-
-[node name="OfficeCHair4" parent="Environment" unique_id=1011821894 instance=ExtResource("10_jpd7b")]
+[node name="OfficeCHair4" parent="Environment/Lokaaldeco" unique_id=1325949715 instance=ExtResource("10_jpd7b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.3, 0, -2.2)
 
-[node name="OfficeCHair5" parent="Environment" unique_id=435529173 instance=ExtResource("10_jpd7b")]
+[node name="OfficeCHair5" parent="Environment/Lokaaldeco" unique_id=1188958587 instance=ExtResource("10_jpd7b")]
 transform = Transform3D(0.9848077, 0, -0.17364818, 0, 1, 0, 0.17364818, 0, 0.9848077, 31.300001, 0, -2.1000001)
 
-[node name="OfficeCHair6" parent="Environment" unique_id=71799221 instance=ExtResource("10_jpd7b")]
+[node name="OfficeCHair6" parent="Environment/Lokaaldeco" unique_id=545372674 instance=ExtResource("10_jpd7b")]
 transform = Transform3D(-0.9659258, 0, 0.25881913, 0, 1, 0, -0.25881913, 0, -0.9659258, 32.300003, 0, -4.2000003)
 
-[node name="Floor" type="Node3D" parent="Environment" unique_id=1893509071]
-
-[node name="ScaldaFloorTile" parent="Environment/Floor" unique_id=1771740729 instance=ExtResource("15_xmlpx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, -0.05, -1.6)
-
-[node name="ScaldaFloorTile2" parent="Environment/Floor" unique_id=946873663 instance=ExtResource("15_xmlpx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, -0.05, -0.6)
-
-[node name="ScaldaFloorTile3" parent="Environment/Floor" unique_id=1891669102 instance=ExtResource("15_xmlpx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, -0.05, 0.39999998)
-
-[node name="ScaldaFloorTile4" parent="Environment/Floor" unique_id=1799538195 instance=ExtResource("15_xmlpx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, -0.05, 1.4)
-
-[node name="ScaldaFloorTile5" parent="Environment/Floor" unique_id=1660152412 instance=ExtResource("15_xmlpx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, -0.05, -1.6)
-
-[node name="ScaldaFloorTile6" parent="Environment/Floor" unique_id=1955506682 instance=ExtResource("15_xmlpx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, -0.05, -0.6)
-
-[node name="ScaldaFloorTile7" parent="Environment/Floor" unique_id=569508540 instance=ExtResource("15_xmlpx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, -0.05, 0.39999998)
-
-[node name="ScaldaFloorTile8" parent="Environment/Floor" unique_id=313894023 instance=ExtResource("15_xmlpx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, -0.05, 1.4)
-
-[node name="ScaldaFloorTile9" parent="Environment/Floor" unique_id=71514768 instance=ExtResource("15_xmlpx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, -0.05, -1.6)
-
-[node name="ScaldaFloorTile10" parent="Environment/Floor" unique_id=1331387081 instance=ExtResource("15_xmlpx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, -0.05, -0.6)
-
-[node name="ScaldaFloorTile11" parent="Environment/Floor" unique_id=708678182 instance=ExtResource("15_xmlpx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, -0.05, 0.39999998)
-
-[node name="ScaldaFloorTile12" parent="Environment/Floor" unique_id=1400830075 instance=ExtResource("15_xmlpx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, -0.05, 1.4)
-
-[node name="ScaldaFloorTile13" parent="Environment/Floor" unique_id=774652797 instance=ExtResource("15_xmlpx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, -0.05, -1.6)
-
-[node name="ScaldaFloorTile14" parent="Environment/Floor" unique_id=2139412017 instance=ExtResource("15_xmlpx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, -0.05, -0.6)
-
-[node name="ScaldaFloorTile15" parent="Environment/Floor" unique_id=1258035478 instance=ExtResource("15_xmlpx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, -0.05, 0.39999998)
-
-[node name="ScaldaFloorTile16" parent="Environment/Floor" unique_id=773355938 instance=ExtResource("15_xmlpx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, -0.05, 1.4)
-
-[node name="Monitor2" parent="Environment" unique_id=155022853 instance=ExtResource("12_khsvm")]
+[node name="Monitor2" parent="Environment/Lokaaldeco" unique_id=1176046224 instance=ExtResource("12_khsvm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.7, 1.0478864, -3.1282897)
+
+[node name="Blocked" parent="Environment" unique_id=1035399230 instance=ExtResource("16_xmlpx")]
+transform = Transform3D(-1.0442074e-07, 0, -1, 0, 1.2246478, 0, 2.3888683, 0, -4.3711392e-08, 33.026306, 1.2539511, 0)
+
+[node name="Doors" type="Node3D" parent="." unique_id=698885645]
+
+[node name="DoubleDoors" parent="Doors" unique_id=1867932448 instance=ExtResource("14_khsvm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.97913, 0, 0)
+locked = true
+
+[node name="DoubleDoors2" parent="Doors" unique_id=1490452475 instance=ExtResource("14_khsvm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.371494, 0, 0)
+openOtherWay = true
+
+[node name="DoubleDoors3" parent="Doors" unique_id=769745961 instance=ExtResource("14_khsvm")]
+transform = Transform3D(-4.371139e-08, 0, 1.0577002, 0, 1, 0, -1, 0, -4.623354e-08, -2.2402787, 3.013533, 4.245397)
+locked = true
+
+[node name="Blackdoor" parent="Doors" unique_id=80017543 instance=ExtResource("7_she40")]
+transform = Transform3D(1.7499999, 0, -3.059797e-07, 0, 1.210187, 0, 3.059797e-07, 0, 1.7499999, 23.030954, 0.017248452, -2.3)
+openOtherWay = true
+
+[node name="Blackdoor2" parent="Doors" unique_id=237519196 instance=ExtResource("7_she40")]
+transform = Transform3D(-7.649492e-08, 0, -1.7499999, 0, 1.210187, 0, 1.7499999, 0, -7.649492e-08, 12, 0.039234757, 4.6249776)
+
+[node name="Blackdoor3" parent="Doors" unique_id=1711502282 instance=ExtResource("7_she40")]
+transform = Transform3D(1.75, 0, 0, 0, 1.2101871, 0, 0, 0, 1.75, 7.778965, 0.032199144, -2.2687209)
+locked = true
+
+[node name="Blocked" parent="Doors/Blackdoor3" unique_id=1085556402 instance=ExtResource("16_xmlpx")]
+transform = Transform3D(1.4, 0, 8.120488e-15, 0, 1.7848479, 0, -3.2481952e-14, 0, 0.57142854, -0.44512296, 1.1371443, -0.06689346)
+
+[node name="Blackdoor4" parent="Doors" unique_id=728519705 instance=ExtResource("7_she40")]
+transform = Transform3D(1.75, 0, 0, 0, 1.25, 0, 0, 0, 1.75, 3.9, 0, 2.25)
+
+[node name="DoubleDoors4" parent="Doors" unique_id=2119733614 instance=ExtResource("14_khsvm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.118483365, 0, 0)
+
+[node name="DoubleDoors5" parent="Doors" unique_id=1487677677 instance=ExtResource("14_khsvm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6131053, 0, 0)
+openOtherWay = true
+locked = true
+
+[node name="Blocked" parent="Doors/DoubleDoors5" unique_id=857197965 instance=ExtResource("16_xmlpx")]
+transform = Transform3D(-1.0644799e-07, 0, 1.0000001, 0, 1.345789, 0, -2.4352462, 0, -4.3711392e-08, -0.048174858, 1.2938441, 0)
+
+[node name="DoubleDoors6" parent="Doors" unique_id=2062294535 instance=ExtResource("14_khsvm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6131053, -3.3, 0)
+openOtherWay = true
+locked = true
+
+[node name="Blocked" parent="Doors/DoubleDoors6" unique_id=1381236473 instance=ExtResource("16_xmlpx")]
+transform = Transform3D(-1.0644799e-07, 0, 1.0000001, 0, 1.345789, 0, -2.4352462, 0, -4.3711392e-08, -0.048174858, 1.2938441, 0)
+
+[node name="DoubleDoors" parent="." unique_id=307666136 instance=ExtResource("14_khsvm")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2.269568, 0, 2.2411325)

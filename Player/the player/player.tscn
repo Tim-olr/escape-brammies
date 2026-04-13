@@ -75,7 +75,7 @@ shader = ExtResource("17_ierpi")
 shader_parameter/shake = 0.10000000475
 shader_parameter/noiseQuality = 125.00000186265
 shader_parameter/noiseIntensity = 0.001
-shader_parameter/offsetIntensity = 0.0009999999747
+shader_parameter/offsetIntensity = 0.0
 shader_parameter/colorOffsetIntensity = 0.10000000149012
 shader_parameter/pixelSize = 400.0000189525
 shader_parameter/grainIntensity = 0.0
@@ -147,9 +147,8 @@ animation = &"hand_grab"
 autoplay = "hand_idle"
 
 [node name="PlayerInteraction" type="RayCast3D" parent="Camera3D" unique_id=1949961184]
-transform = Transform3D(1, 0, 0, 0, -1.4409584e-07, -0.99999994, 0, 3.2965286, -4.3711385e-08, 0, 0, -0.4913714)
+transform = Transform3D(1, 0, 0, 0, -7.803274e-08, -0.99999994, 0, 1.7851812, -4.3711385e-08, 0, 0, -0.4913714)
 collide_with_areas = true
-collide_with_bodies = false
 script = ExtResource("7_63538")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=419720385]

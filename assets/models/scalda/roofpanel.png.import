@@ -2,23 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3of7661ys3ba"
-path="res://.godot/imported/sqlinjection_0.png-3c8ace27891151c1c61de2fe440a4901.ctex"
+uid="uid://ciijm6838yxjs"
+path.s3tc="res://.godot/imported/roofpanel.png-c1a949b8f2b5bad23a50df42b239add7.s3tc.ctex"
 metadata={
-"vram_texture": false
-}
-generator_parameters={
-"md5": "c0380541bebd79ec90c62d100c625363"
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
-source_file="res://assets/models/sqlinjection_0.png"
-dest_files=["res://.godot/imported/sqlinjection_0.png-3c8ace27891151c1c61de2fe440a4901.ctex"]
+source_file="res://assets/models/scalda/roofpanel.png"
+dest_files=["res://.godot/imported/roofpanel.png-c1a949b8f2b5bad23a50df42b239add7.s3tc.ctex"]
 
 [params]
 
-compress/mode=3
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
