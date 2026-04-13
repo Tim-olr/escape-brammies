@@ -7,6 +7,7 @@ class_name UsableItem
 @export var custom_texture: Texture2D # Kan niet null zijn pls
 @export var model: PackedScene
 @export var collision: PackedScene
+@export var delete_on_use: bool = false
 
 var _hold_timer: float = 0.0
 var _is_holding: bool = false
@@ -27,12 +28,18 @@ func use(delta: float):
 	if can_use:
 		if min_use_time == 0.0:
 			do_item_thing()
+			if delete_on_use: 
+				GlobalPlayer.inventory.delete_item_from_current_slot()
+				queue_free()
 		else:
 			_is_holding = true
 			_hold_timer += delta
 			if _hold_timer >= min_use_time and not _completed:
 				_completed = true
 				do_item_thing()
+				if delete_on_use: 
+					GlobalPlayer.inventory.delete_item_from_current_slot()
+					queue_free()
 
 # wanneer je extend, schrijf hier de logic voor wat de item doet.
 func do_item_thing():

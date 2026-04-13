@@ -80,8 +80,11 @@ func drop_item():
 	if current_slot and current_slot.selected:
 		if current_item:
 			current_item.drop()
-			current_slot.deselect()
-			set_slot_outline(current_slot, 0.0)
-			current_slot.held_item = null
-			current_slot.slot_sprite.texture = null
-			current_slot.has_item = false
+			delete_item_from_current_slot()
+
+func delete_item_from_current_slot():
+	current_slot.deselect()
+	set_slot_outline(current_slot, 0.0)
+	current_slot.held_item = null
+	current_slot.slot_sprite.texture = null
+	current_slot.has_item = false

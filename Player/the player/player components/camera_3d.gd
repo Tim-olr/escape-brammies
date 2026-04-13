@@ -23,7 +23,6 @@ func _process(delta: float) -> void:
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		_rotate_camera(event.relative)
-
 	if event.is_action_pressed("ui_cancel"):
 		var mode := Input.MOUSE_MODE_VISIBLE \
 			if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED \

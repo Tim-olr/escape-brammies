@@ -16,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://jil3b4784fhx" path="res://assets/textures/player/hand/grabbing/grabbing_4.png" id="9_ierpi"]
 [ext_resource type="Texture2D" uid="uid://dsw2jtww5o2br" path="res://assets/textures/player/hand/idle/idle_hand.png" id="10_ek1er"]
 [ext_resource type="Shader" uid="uid://ltdvcyyto6kr" path="res://Player/the player/inventory/slot_selection.gdshader" id="13_a05s0"]
+[ext_resource type="PackedScene" uid="uid://rhpwx4anaa7d" path="res://assets/UI/PauseMenu.tscn" id="14_ek1er"]
+[ext_resource type="Shader" uid="uid://dcmsuo1e6pgey" path="res://Player/the player/grayscale.gdshader" id="17_ierpi"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_du564"]
 
@@ -54,6 +56,17 @@ render_priority = 0
 shader = ExtResource("5_esvoh")
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_3wug4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8sggc"]
+shader = ExtResource("17_ierpi")
+shader_parameter/saturation = 1.0
+
+[sub_resource type="Gradient" id="Gradient_ierpi"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ek1er"]
+gradient = SubResource("Gradient_ierpi")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ierpi"]
 shader = ExtResource("13_a05s0")
@@ -122,6 +135,14 @@ script = ExtResource("7_63538")
 mesh = SubResource("CapsuleMesh_3wug4")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1640052681]
+
+[node name="grayscale" type="TextureRect" parent="CanvasLayer" unique_id=670922904]
+material = SubResource("ShaderMaterial_8sggc")
+offset_left = -60.0
+offset_top = -35.0
+offset_right = 1190.0
+offset_bottom = 703.0
+texture = SubResource("GradientTexture2D_ek1er")
 
 [node name="Control" type="Control" parent="CanvasLayer" unique_id=1978679016]
 layout_mode = 3
@@ -203,3 +224,9 @@ offset_top = 504.0
 offset_right = 680.0
 offset_bottom = 531.0
 show_percentage = false
+
+[node name="PauseMenu" parent="CanvasLayer" unique_id=2052854178 instance=ExtResource("14_ek1er")]
+
+[node name="PausedTimer" type="Timer" parent="." unique_id=1790369002]
+
+[connection signal="timeout" from="PausedTimer" to="PlayerManager" method="_on_paused_timer_timeout"]

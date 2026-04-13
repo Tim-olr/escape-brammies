@@ -1,11 +1,12 @@
 extends Interactable
 class_name TestInteractable
 
-const TEST_USABLE = preload("uid://dj0ij144jaak8")
+const SQL_INJECTION = preload("uid://dwwe753atfxn0")
+
 var usable
 
 func interact() -> bool:
-	usable = TEST_USABLE.instantiate()
+	usable = SQL_INJECTION.instantiate()
 	if GlobalPlayer.inventory.add_item(usable):
 		check_go_away()
 		return true
