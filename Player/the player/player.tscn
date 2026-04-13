@@ -86,7 +86,7 @@ shader_parameter/allow_out_of_bounds = true
 shader_parameter/outline_thickness = 0.0
 shader_parameter/outline_color = Color(1, 1, 1, 1)
 
-[node name="Player" type="CharacterBody3D" unique_id=1655037376]
+[node name="Player" type="CharacterBody3D" unique_id=1655037376 groups=["player"]]
 script = ExtResource("1_px32d")
 
 [node name="PlayerStats" type="Node3D" parent="." unique_id=532821307]
@@ -169,7 +169,7 @@ slot_sprite = NodePath("slot_sprite")
 [node name="slot_sprite" type="Sprite2D" parent="CanvasLayer/Control/Hotbar/Slot 1" unique_id=952546338]
 material = SubResource("ShaderMaterial_ierpi")
 position = Vector2(24.999985, 24.999977)
-scale = Vector2(0.35937524, 0.35937485)
+scale = Vector2(1.5, 1.5)
 
 [node name="slot_item" type="Node3D" parent="CanvasLayer/Control/Hotbar/Slot 1" unique_id=977270337]
 
@@ -184,7 +184,7 @@ slot_sprite = NodePath("slot_sprite")
 [node name="slot_sprite" type="Sprite2D" parent="CanvasLayer/Control/Hotbar/Slot 2" unique_id=1607367902]
 material = SubResource("ShaderMaterial_ek1er")
 position = Vector2(25.000004, 25.000004)
-scale = Vector2(0.359, 0.359)
+scale = Vector2(1.5, 1.5)
 
 [node name="slot_item" type="Node3D" parent="CanvasLayer/Control/Hotbar/Slot 2" unique_id=170195895]
 
@@ -199,7 +199,7 @@ slot_sprite = NodePath("slot_sprite")
 [node name="slot_sprite" type="Sprite2D" parent="CanvasLayer/Control/Hotbar/Slot 3" unique_id=1786566167]
 material = SubResource("ShaderMaterial_7tefi")
 position = Vector2(25, 25)
-scale = Vector2(0.359, 0.359)
+scale = Vector2(1.5, 1.5)
 
 [node name="slot_item" type="Node3D" parent="CanvasLayer/Control/Hotbar/Slot 3" unique_id=1923015803]
 

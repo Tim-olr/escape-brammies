@@ -1,26 +1,16 @@
 [gd_scene format=3 uid="uid://knu1taomhlhs"]
 
 [ext_resource type="Script" uid="uid://c1oyryc3i4e21" path="res://Items/interactables/test_item_interactable.gd" id="1_2rqnv"]
-[ext_resource type="Texture2D" uid="uid://1j0xo782toyr" path="res://icon.svg" id="2_vud55"]
+[ext_resource type="PackedScene" uid="uid://c7jixydl6llp3" path="res://assets/models/test_model.tscn" id="2_2rqnv"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_k21q8"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2nee1"]
-albedo_texture = ExtResource("2_vud55")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c72hq"]
-metallic = 1.0
-metallic_specular = 1.0
-
-[sub_resource type="BoxMesh" id="BoxMesh_pxbjx"]
-material = SubResource("StandardMaterial3D_c72hq")
+size = Vector3(1, 0.91101074, 0.030761719)
 
 [node name="TestItemInteractable" type="Area3D" unique_id=1183875761]
 script = ExtResource("1_2rqnv")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1227581695]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.46165687, -0.01586914)
 shape = SubResource("BoxShape3D_k21q8")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1372820345]
-material_override = SubResource("StandardMaterial3D_2nee1")
-mesh = SubResource("BoxMesh_pxbjx")
+[node name="test_model" parent="." unique_id=1289848154 instance=ExtResource("2_2rqnv")]

@@ -1,17 +1,12 @@
 [gd_scene format=3 uid="uid://c7jixydl6llp3"]
 
-[ext_resource type="Texture2D" uid="uid://1j0xo782toyr" path="res://icon.svg" id="1_m08ay"]
+[ext_resource type="Texture2D" uid="uid://dp1m26jb6af41" path="res://assets/models/sql_injection/sqlinjection_0.png" id="1_c72hq"]
+[ext_resource type="PackedScene" uid="uid://br5ed45ry5eno" path="res://assets/models/sql_injection/sqlinjection.glb" id="2_djukq"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2nee1"]
-albedo_texture = ExtResource("1_m08ay")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_krubm"]
+albedo_texture = ExtResource("1_c72hq")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c72hq"]
-metallic = 1.0
-metallic_specular = 1.0
+[node name="test_model" type="Sprite3D" unique_id=1877467533]
+material_override = SubResource("StandardMaterial3D_krubm")
 
-[sub_resource type="BoxMesh" id="BoxMesh_pxbjx"]
-material = SubResource("StandardMaterial3D_c72hq")
-
-[node name="test_model" type="MeshInstance3D" unique_id=1289848154]
-material_override = SubResource("StandardMaterial3D_2nee1")
-mesh = SubResource("BoxMesh_pxbjx")
+[node name="blockbench_export" parent="." unique_id=960366087 instance=ExtResource("2_djukq")]
