@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bvfw3qila66gp" path="res://assets/textures/player/hand/grabbing/grabbing_2.png" id="7_a05s0"]
 [ext_resource type="Script" uid="uid://76ajln6ewo8t" path="res://Player/the player/inventory/slot_1.gd" id="7_rr6jo"]
 [ext_resource type="Texture2D" uid="uid://bs523626oki5u" path="res://assets/textures/player/hand/grabbing/grabbing_3.png" id="8_2qv5j"]
-[ext_resource type="Script" uid="uid://rprrng123abc" path="res://Player/the player/repair_ring.gd" id="9_f8k7o"]
+[ext_resource type="Script" path="res://Player/the player/repair_ring.gd" id="9_f8k7o"]
 [ext_resource type="Texture2D" uid="uid://jil3b4784fhx" path="res://assets/textures/player/hand/grabbing/grabbing_4.png" id="9_ierpi"]
 [ext_resource type="Texture2D" uid="uid://dsw2jtww5o2br" path="res://assets/textures/player/hand/idle/idle_hand.png" id="10_ek1er"]
 [ext_resource type="Shader" uid="uid://ltdvcyyto6kr" path="res://Player/the player/inventory/slot_selection.gdshader" id="13_a05s0"]
@@ -19,6 +19,7 @@
 [ext_resource type="Script" path="res://Player/the player/UI.gd" id="14_ierpi"]
 [ext_resource type="Shader" uid="uid://dcmsuo1e6pgey" path="res://Player/the player/grayscale.gdshader" id="17_ierpi"]
 [ext_resource type="FontFile" uid="uid://ulbymda0vas8" path="res://assets/UI/Fonts/MedodicaRegular.otf" id="18_ek1er"]
+[ext_resource type="Shader" uid="uid://dcmsuo1e6pgey" path="res://Player/the player/grayscale.gdshader" id="17_ierpi"]
 [ext_resource type="Script" uid="uid://xviraojwfcqt" path="res://Player/the player/audio_stream_player_3d.gd" id="19_7tefi"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_du564"]
@@ -157,6 +158,14 @@ mesh = SubResource("CapsuleMesh_3wug4")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1640052681]
 script = ExtResource("14_ierpi")
+
+[node name="grayscale" type="TextureRect" parent="CanvasLayer" unique_id=670922904]
+material = SubResource("ShaderMaterial_8sggc")
+offset_left = -60.0
+offset_top = -35.0
+offset_right = 1190.0
+offset_bottom = 703.0
+texture = SubResource("GradientTexture2D_ek1er")
 
 [node name="grayscale" type="TextureRect" parent="CanvasLayer" unique_id=670922904]
 material = SubResource("ShaderMaterial_8sggc")

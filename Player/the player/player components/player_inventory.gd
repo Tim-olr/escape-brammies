@@ -91,14 +91,16 @@ func drop_item():
 			delete_item_from_current_slot()
 			drop_item_animation();
 
+func drop_item_animation():
+	hand.play("hand_drop")
+	await hand.animation_finished
+	hand.play("hand_idle")
+
 func delete_item_from_current_slot():
 	current_slot.deselect()
 	set_slot_outline(current_slot, 0.0)
 	current_slot.held_item = null
 	current_slot.slot_sprite.texture = null
 	current_slot.has_item = false
-
-func drop_item_animation():
-	hand.play("hand_drop")
-	await hand.animation_finished
-	hand.play("hand_idle")
+	current_item = null
+	GlobalPlayer.interaction.player_has_item_selected = false

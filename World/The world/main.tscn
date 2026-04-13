@@ -5,6 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://knu1taomhlhs" path="res://Items/interactables/test_item_interactable.tscn" id="2_j5njh"]
 [ext_resource type="Script" uid="uid://b6vygy2ti5qc4" path="res://World/The world/death_area.gd" id="4_abumu"]
 
+[ext_resource type="PackedScene" path="res://World/draaideur/draaideur.tscn" id="5_rvclf"]
+[ext_resource type="PackedScene" uid="uid://bpk1yakmd006" path="res://Items/interactables/repair_pickups/button_pickup.tscn" id="6_slyvb"]
+[ext_resource type="PackedScene" uid="uid://mpk1yakmd004" path="res://Items/interactables/repair_pickups/motor_pickup.tscn" id="7_eq6tm"]
+[ext_resource type="PackedScene" uid="uid://wpk1yakmd005" path="res://Items/interactables/repair_pickups/wires_pickup.tscn" id="8_78nbq"]
+
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ghcsx"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -69,5 +74,17 @@ script = ExtResource("4_abumu")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="death_area" unique_id=287892489]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.850769, 0.31732178, 41.816483)
 shape = SubResource("BoxShape3D_rvclf")
+
+[node name="Draaideur" parent="." unique_id=1944341719 instance=ExtResource("5_rvclf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.468445, -3.2450871, -2.2469466)
+
+[node name="ButtonPickup" parent="." unique_id=96722833 instance=ExtResource("6_slyvb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.761204, -3.1749995, 6.2858863)
+
+[node name="MotorPickup" parent="." unique_id=394935821 instance=ExtResource("7_eq6tm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.848824, -3.0499995, 6.1752205)
+
+[node name="WiresPickup" parent="." unique_id=1512566681 instance=ExtResource("8_78nbq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.969776, -3.1999996, 5.7294235)
 
 [connection signal="body_entered" from="death_area" to="death_area" method="_on_body_entered"]
