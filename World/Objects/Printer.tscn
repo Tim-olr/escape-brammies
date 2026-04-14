@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://i4w58j4rdp77"]
+
+[ext_resource type="PackedScene" uid="uid://dmyjaq7tbo27t" path="res://assets/models/scalda/Printer.glb" id="1_4egsg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8e4v5"]
+size = Vector3(1, 1.2, 1)
+
+[node name="Printer" type="Node3D" unique_id=489142715]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0, 0)
+
+[node name="blockbench_export" parent="." unique_id=698857545 instance=ExtResource("1_4egsg")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1308833858]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=65053205]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+shape = SubResource("BoxShape3D_8e4v5")

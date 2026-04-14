@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://blxw71p652hoo"]
+
+[ext_resource type="PackedScene" uid="uid://dp7vs3kh6qu2k" path="res://assets/models/scalda/Locker.glb" id="1_bfjjy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4xwna"]
+size = Vector3(1, 3.3, 0.5)
+
+[node name="Node3D" type="Node3D" unique_id=325220504]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+
+[node name="blockbench_export" parent="." unique_id=1959997959 instance=ExtResource("1_bfjjy")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1957873987]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1357224857]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65, 0)
+shape = SubResource("BoxShape3D_4xwna")
