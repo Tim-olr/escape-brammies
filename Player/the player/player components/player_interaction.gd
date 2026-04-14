@@ -36,13 +36,10 @@ func find_interactable(node: Node) -> Node:
 	
 func hide_interaction_visual() -> void:
 	repair_ring.hide_ring()
-
 func show_interactable_visual() -> void:
 	repair_ring.show_ring()
-
 func set_repair_progress(value: float) -> void:
 	repair_ring.set_progress(value)
-
 func grab_animation() -> void:
 	hand.play("hand_grab")
 	await hand.animation_finished

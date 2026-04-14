@@ -83,7 +83,6 @@ shader_parameter/noiseQuality = 125.00000186265
 shader_parameter/noiseIntensity = 0.001
 shader_parameter/offsetIntensity = 0.0
 shader_parameter/colorOffsetIntensity = 0.10000000149012
-shader_parameter/pixelSize = 400.0000189525
 shader_parameter/pixelSize = 250.0000118275
 shader_parameter/grainIntensity = 0.0
 shader_parameter/use_overlay = true
