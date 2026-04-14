@@ -2,20 +2,20 @@
 
 [ext_resource type="PackedScene" uid="uid://c24jguudievws" path="res://World/Objects/BigTrashcan.tscn" id="1_75qgl"]
 [ext_resource type="Texture2D" uid="uid://33eb5xi1di7m" path="res://assets/models/scalda/ScaldaTile_0.png" id="1_hik0p"]
-[ext_resource type="PackedScene" uid="uid://b666jh55r2pfs" path="res://World/Scalda/WindowRod.tscn" id="2_14lxf"]
-[ext_resource type="PackedScene" uid="uid://druw3htkwbsof" path="res://World/Scalda/BlurryWindow.tscn" id="3_ofq4a"]
-[ext_resource type="PackedScene" uid="uid://ykctmkx2lgy" path="res://World/Scalda/Window.tscn" id="4_vt2oj"]
-[ext_resource type="PackedScene" uid="uid://bieh6omnby6or" path="res://World/Scalda/Blinds.tscn" id="6_cs5jf"]
+[ext_resource type="PackedScene" path="res://World/Scalda/WindowRod.tscn" id="2_14lxf"]
+[ext_resource type="PackedScene" path="res://World/Scalda/BlurryWindow.tscn" id="3_ofq4a"]
+[ext_resource type="PackedScene" path="res://World/Scalda/Window.tscn" id="4_vt2oj"]
+[ext_resource type="PackedScene" path="res://World/Scalda/Blinds.tscn" id="6_cs5jf"]
 [ext_resource type="PackedScene" uid="uid://du3mdsaixyqti" path="res://World/Objects/Blackdoor.tscn" id="7_she40"]
-[ext_resource type="PackedScene" uid="uid://dwkdwwwk2h6le" path="res://World/Scalda/ScaldaPanel.tscn" id="9_afksl"]
+[ext_resource type="PackedScene" path="res://World/Scalda/ScaldaPanel.tscn" id="9_afksl"]
 [ext_resource type="PackedScene" uid="uid://bssfpe401vsyu" path="res://World/Objects/OfficeChair.tscn" id="10_jpd7b"]
 [ext_resource type="PackedScene" uid="uid://btvyh0tyi4b78" path="res://World/Objects/GroupTable.tscn" id="11_tfv3i"]
 [ext_resource type="PackedScene" uid="uid://dg3ym8w8bfcxt" path="res://World/Objects/Monitor.tscn" id="12_khsvm"]
-[ext_resource type="PackedScene" uid="uid://c6t4l8v81g2ht" path="res://World/Objects/class_table.tscn" id="12_xmlpx"]
-[ext_resource type="PackedScene" uid="uid://c1spkgstxa7h1" path="res://World/Objects/class_chair.tscn" id="13_rfg41"]
+[ext_resource type="PackedScene" path="res://World/Objects/class_table.tscn" id="12_xmlpx"]
+[ext_resource type="PackedScene" path="res://World/Objects/class_chair.tscn" id="13_rfg41"]
 [ext_resource type="PackedScene" uid="uid://c833c5fcuj5bf" path="res://assets/models/scalda/ProjectorBoard.glb" id="14_hik0p"]
 [ext_resource type="PackedScene" uid="uid://o61h16invbaw" path="res://World/Objects/DoubleDoor.tscn" id="14_khsvm"]
-[ext_resource type="PackedScene" uid="uid://cfkd6n236lwg5" path="res://World/Scalda/Blocked.tscn" id="16_xmlpx"]
+[ext_resource type="PackedScene" path="res://World/Scalda/Blocked.tscn" id="16_xmlpx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rfg41"]
 albedo_texture = ExtResource("1_hik0p")
@@ -48,6 +48,7 @@ size = Vector3(4.6, 0.5, 6.1)
 
 [node name="3rdFloor" type="CSGBox3D" parent="ScaldaLevel" unique_id=1894582334]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.174999, 2.25, 1.5)
+visible = false
 use_collision = true
 size = Vector3(37.825, 0.25, 23.75)
 material = SubResource("StandardMaterial3D_nhktn")
