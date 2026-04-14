@@ -19,17 +19,20 @@ _data = {
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1nsu2"]
-size = Vector3(0.121032715, 0.13293457, 0.14208984)
+size = Vector3(0.16744995, 0.13293457, 0.14208984)
 
-[node name="Brammy" type="CharacterBody3D" unique_id=1676838652 node_paths=PackedStringArray("nav", "PlayerCast", "PlayerArea", "interaction_timer")]
+[sub_resource type="BoxShape3D" id="BoxShape3D_vovia"]
+size = Vector3(3.2057, 1, 2.9753952)
+
+[node name="Brammy" type="CharacterBody3D" unique_id=1676838652 node_paths=PackedStringArray("nav", "PlayerCast", "PlayerArea", "attention_area")]
 script = ExtResource("1_wjene")
-wanderingSpeed = 3.0
-chaseSpeed = 4.0
-accel = 1.0
+wanderingSpeed = 5.0
+chaseSpeed = 6.5
+accel = 2.0
 nav = NodePath("NavigationAgent3D")
 PlayerCast = NodePath("SightRay")
 PlayerArea = NodePath("PlayerDetectionArea")
-interaction_timer = NodePath("Timer/interaction timer")
+attention_area = NodePath("PlayerAttentionArea")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1679712483]
 shape = SubResource("CapsuleShape3D_jf6uf")
@@ -47,7 +50,7 @@ height = 2.0
 debug_enabled = true
 
 [node name="SightRay" type="RayCast3D" parent="." unique_id=2104082355]
-transform = Transform3D(1, 0, 0, 0, -2.1064646e-07, -0.99999976, 0, 4.8190293, -4.3711378e-08, 0, 0.5390327, 0)
+transform = Transform3D(62.438274, 0, 0, 0, -8.9463083e-07, -0.99999964, 0, 20.466768, -4.3711374e-08, 0, 0.5390327, 0)
 collision_mask = 2
 
 [node name="Timer" type="Node" parent="." unique_id=739094003]
@@ -55,13 +58,17 @@ collision_mask = 2
 [node name="IdleTimer" type="Timer" parent="Timer" unique_id=1041876620]
 one_shot = true
 
-[node name="interaction timer" type="Timer" parent="Timer" unique_id=1751906284]
-one_shot = true
-
 [node name="PlayerDetectionArea" type="Area3D" parent="." unique_id=1075418863]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerDetectionArea" unique_id=2078348934]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.29205322, 0.103149414, 0.03173828)
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.05996704, 0.103149414, 0.03173828)
 shape = SubResource("BoxShape3D_1nsu2")
 
-[connection signal="timeout" from="Timer/interaction timer" to="." method="_on_interaction_timer_timeout"]
+[node name="PlayerAttentionArea" type="Area3D" parent="." unique_id=1794574618]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerAttentionArea" unique_id=165146626]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -0.30155182, 0, -0.4914093)
+shape = SubResource("BoxShape3D_vovia")
+
+[connection signal="body_entered" from="PlayerAttentionArea" to="." method="_on_player_attention_area_body_entered"]
+[connection signal="body_exited" from="PlayerAttentionArea" to="." method="_on_player_attention_area_body_exited"]
