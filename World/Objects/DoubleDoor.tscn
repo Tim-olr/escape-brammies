@@ -60,6 +60,16 @@ debug_fill = false
 surface_material_override/0 = SubResource("StandardMaterial3D_ekxy1")
 
 [node name="mesh14" parent="blockbench_export/Doo2" parent_id_path=PackedInt32Array(2089887862, 1773897014) index="7" unique_id=1108137646]
+[node name="mesh6" parent="blockbench_export/Door1" parent_id_path=PackedInt32Array(2089887862, 739319113) index="5" unique_id=2101930364]
+surface_material_override/0 = SubResource("StandardMaterial3D_svkij")
+
+[node name="mesh7" parent="blockbench_export/Door1" parent_id_path=PackedInt32Array(2089887862, 739319113) index="6" unique_id=775857002]
+surface_material_override/0 = SubResource("StandardMaterial3D_d3kye")
+
+[node name="mesh13" parent="blockbench_export/Doo2" parent_id_path=PackedInt32Array(2089887862, 1253109191) index="5" unique_id=1291401327]
+surface_material_override/0 = SubResource("StandardMaterial3D_ekxy1")
+
+[node name="mesh14" parent="blockbench_export/Doo2" parent_id_path=PackedInt32Array(2089887862, 1253109191) index="6" unique_id=103889812]
 surface_material_override/0 = SubResource("StandardMaterial3D_p0mw3")
 
 [node name="WindowRod41" parent="." unique_id=163434570 instance=ExtResource("2_5ykhr")]
