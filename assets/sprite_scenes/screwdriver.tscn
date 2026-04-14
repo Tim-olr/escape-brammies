@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b7bhphlq31sh1"]
+
+[ext_resource type="Texture2D" uid="uid://uk73uyng4d51" path="res://assets/models/Screwdriver/screwdriver.png" id="1_85uof"]
+
+[node name="Sprite3D" type="Sprite3D" unique_id=1214368778]
+billboard = 1
+texture_filter = 0
+texture = ExtResource("1_85uof")

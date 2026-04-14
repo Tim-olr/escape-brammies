@@ -17,7 +17,6 @@
 [ext_resource type="Shader" uid="uid://ltdvcyyto6kr" path="res://Player/the player/inventory/slot_selection.gdshader" id="13_a05s0"]
 [ext_resource type="PackedScene" uid="uid://rhpwx4anaa7d" path="res://assets/UI/PauseMenu.tscn" id="14_ek1er"]
 [ext_resource type="Script" uid="uid://d0niuj5q1mwqm" path="res://Player/the player/UI.gd" id="14_ierpi"]
-[ext_resource type="Script" path="res://Player/the player/UI.gd" id="14_ierpi"]
 [ext_resource type="Shader" uid="uid://dcmsuo1e6pgey" path="res://Player/the player/grayscale.gdshader" id="17_ierpi"]
 [ext_resource type="FontFile" uid="uid://ulbymda0vas8" path="res://assets/UI/Fonts/MedodicaRegular.otf" id="18_ek1er"]
 [ext_resource type="Script" uid="uid://xviraojwfcqt" path="res://Player/the player/audio_stream_player_3d.gd" id="19_7tefi"]
@@ -117,6 +116,8 @@ shader_parameter/outline_thickness = 0.0
 shader_parameter/outline_color = Color(1, 1, 1, 1)
 
 [node name="Player" type="CharacterBody3D" unique_id=1655037376 groups=["player"]]
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_px32d")
 
 [node name="PlayerStats" type="Node3D" parent="." unique_id=532821307]

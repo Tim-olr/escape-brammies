@@ -32,6 +32,8 @@ func find_interactable(node: Node) -> Node:
 	var parent = node.get_parent()
 	if parent != null and parent.has_method("can_interact"):
 		return parent
+	if parent.has_method("hello_area"):
+		return parent.area
 	return null
 	
 func hide_interaction_visual() -> void:
