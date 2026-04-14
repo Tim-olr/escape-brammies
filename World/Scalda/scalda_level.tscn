@@ -33,6 +33,9 @@ albedo_texture = SubResource("CompressedTexture2D_xmlpx")
 uv1_triplanar = true
 texture_filter = 0
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_7g4jt"]
+size = Vector3(0.5559387, 3.8267212, 2.2730103)
+
 [node name="ScaldaLevel" type="Node3D" unique_id=1905537615]
 
 [node name="ScaldaLevel" type="CSGCombiner3D" parent="." unique_id=2123380938]
@@ -357,6 +360,14 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 26.1
 
 [node name="Blocked" parent="ScaldaLevel" unique_id=301154592 instance=ExtResource("16_xmlpx")]
 transform = Transform3D(2.6401808, 0, 0, 0, 1.2852802, 0, 0, 0, 1, -2.2472792, 3.4941359, 4.210644)
+
+[node name="trap_blovker" type="StaticBody3D" parent="ScaldaLevel" unique_id=1326944145]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ScaldaLevel/trap_blovker" unique_id=90247955]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4030306, -0.9966016, 10.235156)
+shape = SubResource("BoxShape3D_7g4jt")
 
 [node name="Environment" type="Node3D" parent="." unique_id=782699926]
 
