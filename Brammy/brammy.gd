@@ -8,6 +8,10 @@ class_name enemy
 @export var PlayerCast: RayCast3D
 @export var PlayerArea: Area3D
 
+@export var interaction_timer: Timer
+
+var can_open_door: bool = true
+
 var speed
 var target
 var phase = 1
@@ -33,7 +37,9 @@ func _process(delta: float) -> void:
 	for p in PlayerArea.get_overlapping_bodies():
 		if p.is_in_group("player"):
 			p.manager.die()
-		if p.is_in_group("door"):
+		if p.is_in_group("door") and can_open_door:
+			interaction_timer.start()
+			can_open_door = false
 			p.get_parent().get_parent().get_parent().interact()
 
 func _physics_process(delta):
@@ -71,3 +77,7 @@ func _physics_process(delta):
 func loseAttention():
 	target = possies.get_random_pos()
 	phase = 1
+
+
+func _on_interaction_timer_timeout() -> void:
+	can_open_door = true
