@@ -3,7 +3,7 @@ class_name Player
 @onready var player_interaction: RayCast3D = $Camera3D/PlayerInteraction
 
 @onready var manager: PlayerManager = $PlayerManager
-
+@onready var player_movement: PlayerMovement = $PlayerMovement
 
 func _ready() -> void:
 	GlobalPlayer.player = self

@@ -13,6 +13,8 @@ var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 @export var stamina_bar: ProgressBar
 
+@export var can_move: bool = true
+
 var sprinting: bool = false
 var _was_sprinting: bool = false
 var can_sprint: bool = true
@@ -101,22 +103,23 @@ func _apply_gravity(body: CharacterBody3D, delta: float) -> void:
 		body.velocity.y -= gravity * delta
 
 func _handle_movement(body: CharacterBody3D, stats: PlayerStats, delta: float) -> void:
-	var input_dir := Input.get_vector("left", "right", "up", "down")
-	var direction := (body.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	var wants_sprint := Input.is_action_pressed("sprint") and direction != Vector3.ZERO
-	sprinting = wants_sprint and can_sprint
-	var target_speed: float = stats.speed
-	if sprinting:
-		target_speed *= stats.sprint_multiplier
-	if direction:
-		var accel_x := ACCELERATION
-		var accel_z := ACCELERATION
-		if sign(direction.x) != 0.0 and sign(direction.x) != sign(body.velocity.x) and abs(body.velocity.x) > 0.1:
-			accel_x *= COUNTER_STRAFE_MULTIPLIER
-		if sign(direction.z) != 0.0 and sign(direction.z) != sign(body.velocity.z) and abs(body.velocity.z) > 0.1:
-			accel_z *= COUNTER_STRAFE_MULTIPLIER
-		body.velocity.x = move_toward(body.velocity.x, direction.x * target_speed, accel_x * delta)
-		body.velocity.z = move_toward(body.velocity.z, direction.z * target_speed, accel_z * delta)
-	else:
-		body.velocity.x = move_toward(body.velocity.x, 0.0, FRICTION * delta)
-		body.velocity.z = move_toward(body.velocity.z, 0.0, FRICTION * delta)
+	if can_move:
+		var input_dir := Input.get_vector("left", "right", "up", "down")
+		var direction := (body.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+		var wants_sprint := Input.is_action_pressed("sprint") and direction != Vector3.ZERO
+		sprinting = wants_sprint and can_sprint
+		var target_speed: float = stats.speed
+		if sprinting:
+			target_speed *= stats.sprint_multiplier
+		if direction:
+			var accel_x := ACCELERATION
+			var accel_z := ACCELERATION
+			if sign(direction.x) != 0.0 and sign(direction.x) != sign(body.velocity.x) and abs(body.velocity.x) > 0.1:
+				accel_x *= COUNTER_STRAFE_MULTIPLIER
+			if sign(direction.z) != 0.0 and sign(direction.z) != sign(body.velocity.z) and abs(body.velocity.z) > 0.1:
+				accel_z *= COUNTER_STRAFE_MULTIPLIER
+			body.velocity.x = move_toward(body.velocity.x, direction.x * target_speed, accel_x * delta)
+			body.velocity.z = move_toward(body.velocity.z, direction.z * target_speed, accel_z * delta)
+		else:
+			body.velocity.x = move_toward(body.velocity.x, 0.0, FRICTION * delta)
+			body.velocity.z = move_toward(body.velocity.z, 0.0, FRICTION * delta)
