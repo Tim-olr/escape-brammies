@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://du3mdsaixyqti"]
 
 [ext_resource type="PackedScene" uid="uid://dkgeab32rnjnn" path="res://assets/models/scalda/Blackdoor.glb" id="1_cp5nl"]
-[ext_resource type="Script" uid="uid://qxmd5ad3wci" path="res://assets/Scripts/door.gd" id="1_dnk24"]
+[ext_resource type="Script" path="res://assets/Scripts/door.gd" id="1_dnk24"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0n5wq"]
 size = Vector3(1, 2, 0.09472656)
