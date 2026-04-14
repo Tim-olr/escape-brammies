@@ -3,11 +3,40 @@
 [ext_resource type="PackedScene" uid="uid://dkgeab32rnjnn" path="res://assets/models/scalda/Blackdoor.glb" id="1_cp5nl"]
 [ext_resource type="Script" path="res://assets/Scripts/door.gd" id="1_dnk24"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_dnk24"]
-size = Vector3(1, 2, 0.1)
+[sub_resource type="BoxShape3D" id="BoxShape3D_0n5wq"]
+size = Vector3(1, 2, 0.09472656)
 
-[node name="Blackdoor" type="Node3D" unique_id=1855600005]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
+[sub_resource type="BoxShape3D" id="BoxShape3D_svkij"]
+size = Vector3(0.2, 2.0011597, 1.0253906)
+
+[node name="Blackdoor" type="Area3D" unique_id=1867932448]
+transform = Transform3D(1.75, 0, 0, 0, 1.25, 0, 0, 0, 1.75, 0, 0, 0)
+[node name="Area3D" type="Area3D" parent="." unique_id=1331743600]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 4.371139e-08)
+script = ExtResource("1_dnk24")
+
+[node name="blockbench_export" parent="." unique_id=1514682739 instance=ExtResource("1_cp5nl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="blockbench_export/door" parent_id_path=PackedInt32Array(1514682739, 1398335651) index="1" unique_id=265273451]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999999, -0.49999994, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="blockbench_export/door/StaticBody3D" unique_id=1714113548]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1, 0, 0.9915825, 0)
+shape = SubResource("BoxShape3D_0n5wq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=621895279]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.5, 1.0005798, 0)
+shape = SubResource("BoxShape3D_svkij")
+
+[editable path="blockbench_export"]
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=167484285]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 4.371139e-08)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=426102344]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("BoxShape3D_dnk24")
+debug_fill = false
 
 [node name="Area3D" type="Area3D" parent="." unique_id=1331743600]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 4.371139e-08)

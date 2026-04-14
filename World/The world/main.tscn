@@ -19,6 +19,7 @@ sky_material = SubResource("ProceduralSkyMaterial_ghcsx")
 [sub_resource type="Environment" id="Environment_pc2j6"]
 background_mode = 2
 sky = SubResource("Sky_os8xc")
+ambient_light_sky_contribution = 0.15
 tonemap_mode = 2
 glow_enabled = true
 
@@ -34,8 +35,9 @@ environment = SubResource("Environment_pc2j6")
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 26.78246, 0.95087653, -0.098355055)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=835564989]
-transform = Transform3D(1, 0, 0, 0, 0.37285823, 0.92788833, 0, -0.92788833, 0.37285823, -0.56179345, 27.757853, 0)
+transform = Transform3D(0.25881907, -0.8962713, 0.36015338, 0, 0.37285823, 0.92788833, -0.9659258, -0.2401552, 0.09650282, 55.538208, 27.757853, 0)
 shadow_enabled = true
+shadow_bias = 0.0
 
 [node name="ScaldaLevel" parent="." unique_id=1905537615 instance=ExtResource("2_abumu")]
 

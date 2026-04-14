@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c1spkgstxa7h1"]
+
+[ext_resource type="PackedScene" uid="uid://13ot4g04pnxo" path="res://assets/models/scalda/ClassChair.glb" id="1_mm6ic"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7c3ei"]
+size = Vector3(0.4, 1, 0.5)
+
+[node name="ClassChair" type="Node3D" unique_id=1858635187]
+
+[node name="blockbench_export" parent="." unique_id=1305144163 instance=ExtResource("1_mm6ic")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1488786390]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=2011914105]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.050000004)
+shape = SubResource("BoxShape3D_7c3ei")
