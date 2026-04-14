@@ -42,6 +42,11 @@ animations = [{
 "name": &"hand_drop",
 "speed": 5.0
 }, {
+"frames": [],
+"loop": true,
+"name": &"hand_fuck_bram_krijg_de_tering",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 0.5,
 "texture": ExtResource("6_11607")
@@ -143,7 +148,7 @@ bob_amount = 25.0
 position = Vector2(791, 287)
 scale = Vector2(6, 6)
 sprite_frames = SubResource("SpriteFrames_f8k7o")
-animation = &"hand_grab"
+animation = &"hand_fuck_bram_krijg_de_tering"
 autoplay = "hand_idle"
 
 [node name="PlayerInteraction" type="RayCast3D" parent="Camera3D" unique_id=1949961184]

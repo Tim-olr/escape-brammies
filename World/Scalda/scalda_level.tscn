@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" path="res://World/Scalda/Blocked.tscn" id="16_xmlpx"]
 [ext_resource type="PackedScene" uid="uid://i4w58j4rdp77" path="res://World/Objects/Printer.tscn" id="17_rfg41"]
 [ext_resource type="PackedScene" uid="uid://blxw71p652hoo" path="res://World/Objects/Locker.tscn" id="18_nhktn"]
+[ext_resource type="PackedScene" uid="uid://f8rmwm6kslvf" path="res://World/Objects/big_round_table.tscn" id="20_7g4jt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rfg41"]
 albedo_texture = ExtResource("1_hik0p")
@@ -2846,3 +2847,117 @@ transform = Transform3D(-1.1999999, 0, 1.0490733e-07, 0, 1.1999999, 0, -1.049073
 
 [node name="Cabinet" parent="Cabinet3" unique_id=1507257605 instance=ExtResource("14_p6sjt")]
 transform = Transform3D(-1.0000001, 0, -8.742279e-08, 0, 1.0000001, 0, 8.742279e-08, 0, -1.0000001, -1.4166665, 0, 1.1920929e-07)
+
+[node name="blockbench_export" parent="." unique_id=1724285737 instance=ExtResource("14_hik0p")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 9, 0.5, 2.5)
+
+[node name="ClassTable" parent="blockbench_export" unique_id=492360170 instance=ExtResource("12_xmlpx")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.8000002, -0.5, -2.8)
+
+[node name="ClassTable" parent="blockbench_export/ClassTable" unique_id=467031170 instance=ExtResource("12_xmlpx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6, 0, 0.099999905)
+
+[node name="ClassTable" parent="blockbench_export/ClassTable/ClassTable" unique_id=1305082266 instance=ExtResource("12_xmlpx")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, -1)
+
+[node name="ClassTable" parent="blockbench_export/ClassTable/ClassTable/ClassTable" unique_id=585120709 instance=ExtResource("12_xmlpx")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9.536743e-07, 0, -3.2999997)
+
+[node name="ClassTable" parent="blockbench_export/ClassTable/ClassTable/ClassTable/ClassTable" unique_id=732971287 instance=ExtResource("12_xmlpx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6000009, 0, 0)
+
+[node name="ClassTable2" parent="blockbench_export/ClassTable/ClassTable/ClassTable/ClassTable" unique_id=1940427400 instance=ExtResource("12_xmlpx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.536743e-07, 0, 2.2000008)
+
+[node name="ClassTable" parent="blockbench_export/ClassTable/ClassTable/ClassTable/ClassTable/ClassTable2" unique_id=1856722313 instance=ExtResource("12_xmlpx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6000004, 0, 0)
+
+[node name="ClassTable" parent="blockbench_export/ClassTable/ClassTable/ClassTable/ClassTable/ClassTable2/ClassTable" unique_id=1158954718 instance=ExtResource("12_xmlpx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6, 0, 2)
+
+[node name="ClassTable" parent="blockbench_export/ClassTable/ClassTable/ClassTable/ClassTable/ClassTable2/ClassTable/ClassTable" unique_id=979924072 instance=ExtResource("12_xmlpx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7000003, 0, -9.536743e-07)
+
+[node name="OfficeCHair" parent="blockbench_export/ClassTable/ClassTable/ClassTable/ClassTable/ClassTable2/ClassTable/ClassTable/ClassTable" unique_id=381674969 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1000004, 0, -5.8999996)
+
+[node name="OfficeCHair" parent="blockbench_export/ClassTable/ClassTable/ClassTable/ClassTable/ClassTable2/ClassTable/ClassTable/ClassTable/OfficeCHair" unique_id=671986313 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(-0.8660254, 0, -0.50000006, 0, 1, 0, 0.50000006, 0, -0.8660254, 0.19999981, 0, -2.7)
+
+[node name="Monitor" parent="blockbench_export/ClassTable/ClassTable/ClassTable/ClassTable/ClassTable2/ClassTable/ClassTable/ClassTable/OfficeCHair/OfficeCHair" unique_id=1425825593 instance=ExtResource("12_khsvm")]
+transform = Transform3D(-0.8660254, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.8660254, 0.823205, 0.7, -1.0258331)
+
+[node name="Monitor" parent="blockbench_export/ClassTable/ClassTable/ClassTable/ClassTable/ClassTable2/ClassTable/ClassTable/ClassTable/OfficeCHair/OfficeCHair/Monitor" unique_id=2045511526 instance=ExtResource("12_khsvm")]
+transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, -0.39505148, 0, 0.3279767)
+
+[node name="ClassChair" parent="blockbench_export/ClassTable/ClassTable/ClassTable/ClassTable/ClassTable2/ClassTable/ClassTable/ClassTable/OfficeCHair/OfficeCHair/Monitor/Monitor" unique_id=1297142085 instance=ExtResource("13_rfg41")]
+transform = Transform3D(-1.7881393e-07, 0, 1.0000002, 0, 1, 0, -1.0000002, 0, -1.7881393e-07, -2.179954, -0.7, 4.380084)
+
+[node name="ClassChair" parent="blockbench_export/ClassTable/ClassTable/ClassTable/ClassTable/ClassTable2/ClassTable/ClassTable/ClassTable/OfficeCHair/OfficeCHair/Monitor/Monitor/ClassChair" unique_id=1997127692 instance=ExtResource("13_rfg41")]
+transform = Transform3D(0.866025, 0, -0.5000001, 0, 1, 0, 0.5000001, 0, 0.866025, 0.9210968, 0, 0.03975296)
+
+[node name="ClassChair" parent="blockbench_export/ClassTable/ClassTable/ClassTable/ClassTable/ClassTable2/ClassTable/ClassTable/ClassTable/OfficeCHair/OfficeCHair/Monitor/Monitor/ClassChair/ClassChair" unique_id=2142663609 instance=ExtResource("13_rfg41")]
+transform = Transform3D(-0.5, 0, -0.8660257, 0, 1, 0, 0.8660257, 0, -0.5, 2.5562353, 0, -0.89199567)
+
+[node name="ClassChair" parent="blockbench_export/ClassTable/ClassTable/ClassTable/ClassTable/ClassTable2/ClassTable/ClassTable/ClassTable/OfficeCHair/OfficeCHair/Monitor/Monitor/ClassChair/ClassChair/ClassChair" unique_id=1374837259 instance=ExtResource("13_rfg41")]
+transform = Transform3D(-0.25881895, 0, 0.9659256, 0, 1, 0, -0.9659256, 0, -0.25881895, -2.050609, 0, 0.7778177)
+
+[node name="ClassChair" parent="blockbench_export/ClassTable/ClassTable/ClassTable/ClassTable/ClassTable2/ClassTable/ClassTable/ClassTable/OfficeCHair/OfficeCHair/Monitor/Monitor/ClassChair/ClassChair/ClassChair/ClassChair" unique_id=139169515 instance=ExtResource("13_rfg41")]
+transform = Transform3D(0.9063082, 0, 0.42261863, 0, 1, 0, -0.42261863, 0, 0.9063082, -2.9676924, 0, 2.059808)
+
+[node name="OfficeCHair" parent="blockbench_export/ClassTable/ClassTable/ClassTable/ClassTable/ClassTable2/ClassTable/ClassTable/ClassTable/OfficeCHair/OfficeCHair/Monitor/Monitor/ClassChair/ClassChair/ClassChair/ClassChair/ClassChair" unique_id=2103731040 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(-0.9961945, 0, -0.087155595, 0, 1, 0, 0.087155595, 0, -0.9961945, -0.92272186, 0, -0.22041893)
+
+[node name="OfficeCHair" parent="blockbench_export/ClassTable/ClassTable/ClassTable/ClassTable/ClassTable2/ClassTable/ClassTable/ClassTable/OfficeCHair/OfficeCHair/Monitor/Monitor/ClassChair/ClassChair/ClassChair/ClassChair/ClassChair/OfficeCHair" unique_id=994592914 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(1, 0, 7.450581e-09, 0, 1, 0, -7.450581e-09, 0, 1, -9.536743e-07, 0, 4.3)
+
+[node name="OfficeCHair" parent="blockbench_export/ClassTable/ClassTable/ClassTable/ClassTable/ClassTable2/ClassTable/ClassTable/ClassTable/OfficeCHair/OfficeCHair/Monitor/Monitor/ClassChair/ClassChair/ClassChair/ClassChair/ClassChair/OfficeCHair/OfficeCHair" unique_id=1359053717 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.79999924, 0, 0)
+
+[node name="OfficeCHair" parent="blockbench_export/ClassTable/ClassTable/ClassTable/ClassTable/ClassTable2/ClassTable/ClassTable/ClassTable/OfficeCHair/OfficeCHair/Monitor/Monitor/ClassChair/ClassChair/ClassChair/ClassChair/ClassChair/OfficeCHair/OfficeCHair/OfficeCHair" unique_id=1381901966 instance=ExtResource("10_jpd7b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1000004, 0, -2.1000004)
+
+[node name="ClassChair" parent="blockbench_export/ClassTable/ClassTable/ClassTable/ClassTable/ClassTable2/ClassTable/ClassTable/ClassTable/OfficeCHair/OfficeCHair/Monitor/Monitor/ClassChair/ClassChair/ClassChair/ClassChair/ClassChair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair" unique_id=1304708931 instance=ExtResource("13_rfg41")]
+transform = Transform3D(-0.50000006, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.50000006, -0.7000003, 0, 0.10000038)
+
+[node name="ClassChair" parent="blockbench_export/ClassTable/ClassTable/ClassTable/ClassTable/ClassTable2/ClassTable/ClassTable/ClassTable/OfficeCHair/OfficeCHair/Monitor/Monitor/ClassChair/ClassChair/ClassChair/ClassChair/ClassChair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/ClassChair" unique_id=2002791813 instance=ExtResource("13_rfg41")]
+transform = Transform3D(0.9659258, 0, -0.25881907, 0, 1, 0, 0.25881907, 0, 0.9659258, -1.8186522, 0, -1.0500007)
+
+[node name="ClassChair" parent="blockbench_export/ClassTable/ClassTable/ClassTable/ClassTable/ClassTable2/ClassTable/ClassTable/ClassTable/OfficeCHair/OfficeCHair/Monitor/Monitor/ClassChair/ClassChair/ClassChair/ClassChair/ClassChair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/ClassChair/ClassChair" unique_id=1624382664 instance=ExtResource("13_rfg41")]
+transform = Transform3D(-0.08715579, 0, 0.9961947, 0, 1, 0, -0.9961947, 0, -0.08715579, 0.14981079, 0, 0.9718919)
+
+[node name="ClassChair" parent="blockbench_export/ClassTable/ClassTable/ClassTable/ClassTable/ClassTable2/ClassTable/ClassTable/ClassTable/OfficeCHair/OfficeCHair/Monitor/Monitor/ClassChair/ClassChair/ClassChair/ClassChair/ClassChair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/ClassChair/ClassChair/ClassChair" unique_id=1992495453 instance=ExtResource("13_rfg41")]
+transform = Transform3D(0.9659261, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.9659261, -4.162184, 0, 0.61743355)
+
+[node name="ClassChair" parent="blockbench_export/ClassTable/ClassTable/ClassTable/ClassTable/ClassTable2/ClassTable/ClassTable/ClassTable/OfficeCHair/OfficeCHair/Monitor/Monitor/ClassChair/ClassChair/ClassChair/ClassChair/ClassChair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/ClassChair/ClassChair/ClassChair/ClassChair" unique_id=653924534 instance=ExtResource("13_rfg41")]
+transform = Transform3D(0.93969226, 0, -0.34202033, 0, 1, 0, 0.34202033, 0, 0.93969226, 0.7969494, 0, 0.06972408)
+
+[node name="Blinds" parent="blockbench_export/ClassTable/ClassTable/ClassTable/ClassTable/ClassTable2/ClassTable/ClassTable/ClassTable/OfficeCHair/OfficeCHair/Monitor/Monitor/ClassChair/ClassChair/ClassChair/ClassChair/ClassChair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/ClassChair/ClassChair/ClassChair/ClassChair/ClassChair" unique_id=1145376914 instance=ExtResource("6_cs5jf")]
+transform = Transform3D(-0.9659258, 0, -0.25881916, 0, 1, 0, 0.25881916, 0, -0.9659258, 1.3607979, 0.7, -3.2634)
+
+[node name="Blinds2" parent="blockbench_export/ClassTable/ClassTable/ClassTable/ClassTable/ClassTable2/ClassTable/ClassTable/ClassTable/OfficeCHair/OfficeCHair/Monitor/Monitor/ClassChair/ClassChair/ClassChair/ClassChair/ClassChair/OfficeCHair/OfficeCHair/OfficeCHair/OfficeCHair/ClassChair/ClassChair/ClassChair/ClassChair/ClassChair" unique_id=913136521 instance=ExtResource("6_cs5jf")]
+transform = Transform3D(-0.9659258, 0, -0.25881916, 0, 1, 0, 0.25881916, 0, -0.9659258, -0.087750435, 0.7, -2.875267)
+
+[node name="Blinds" parent="." unique_id=1417835291 instance=ExtResource("6_cs5jf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.7, 0.7, 13.1)
+
+[node name="Blinds" parent="Blinds" unique_id=853793230 instance=ExtResource("6_cs5jf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.000001, 0, 0)
+
+[node name="Blinds" parent="Blinds/Blinds" unique_id=1198545652 instance=ExtResource("6_cs5jf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.500002, 0, 0)
+
+[node name="Blinds2" parent="Blinds/Blinds/Blinds" unique_id=479802968 instance=ExtResource("6_cs5jf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.199999, 0, 0)
+
+[node name="Monitor" parent="Blinds/Blinds/Blinds/Blinds2" unique_id=2041431202 instance=ExtResource("12_khsvm")]
+transform = Transform3D(1.0232891e-07, 0.17431165, 0.9961947, -1.6656082e-07, -1.9923894, 0.08715583, 2, -1.7484557e-07, -4.371139e-08, -24.7, 2.4, -6.3)
+
+[node name="Monitor2" parent="Blinds/Blinds/Blinds/Blinds2" unique_id=1507596812 instance=ExtResource("12_khsvm")]
+transform = Transform3D(1.0232891e-07, 0.17431165, 0.9961947, -1.6656082e-07, -1.9923894, 0.08715583, 2, -1.7484557e-07, -4.371139e-08, -24.7, 2.4, -4.2)
+
+[node name="BigRoundTable" parent="Blinds/Blinds/Blinds/Blinds2" unique_id=145398123 instance=ExtResource("20_7g4jt")]
+transform = Transform3D(1.8, 0, 0, 0, 1.25, 0, 0, 0, 1.55, -27.400002, -0.7, -5.1000004)
+
+[node name="Blinds" parent="Blinds/Blinds/Blinds" unique_id=2077729237 instance=ExtResource("6_cs5jf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.499998, 0, 0)
