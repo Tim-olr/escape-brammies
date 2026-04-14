@@ -34,13 +34,13 @@ script = ExtResource("1_r1bkj")
 [node name="blockbench_export" parent="." unique_id=2089887862 instance=ExtResource("1_tx77u")]
 transform = Transform3D(-7.6188954e-08, 0, 1.743, 0, 1.249, 0, -1.743, 0, -7.6188954e-08, 0, 0, 0)
 
-[node name="mesh6" parent="blockbench_export/Door1" parent_id_path=PackedInt32Array(2089887862, 535457563) index="5" unique_id=28090806]
+[node name="mesh6" parent="blockbench_export/Door1" parent_id_path=PackedInt32Array(2089887862, 739319113) index="5" unique_id=2101930364]
 surface_material_override/0 = SubResource("StandardMaterial3D_svkij")
 
-[node name="mesh7" parent="blockbench_export/Door1" parent_id_path=PackedInt32Array(2089887862, 535457563) index="6" unique_id=1170983769]
+[node name="mesh7" parent="blockbench_export/Door1" parent_id_path=PackedInt32Array(2089887862, 739319113) index="6" unique_id=775857002]
 surface_material_override/0 = SubResource("StandardMaterial3D_d3kye")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="blockbench_export/Door1" parent_id_path=PackedInt32Array(2089887862, 535457563) index="7" unique_id=1513850415]
+[node name="StaticBody3D" type="StaticBody3D" parent="blockbench_export/Door1" parent_id_path=PackedInt32Array(2089887862, 739319113) index="7" unique_id=1513850415 groups=["door"]]
 transform = Transform3D(2.5073534e-08, 0, 0.5736156, 0, 0.8005376, 0, -1, 0, 4.3711392e-08, -1.0000001, 0, -7.1054274e-15)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="blockbench_export/Door1/StaticBody3D" unique_id=2062593636]
@@ -48,7 +48,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7763564e-15, 1.2474365, 0.8
 shape = SubResource("BoxShape3D_r1bkj")
 debug_fill = false
 
-[node name="StaticBody3D" type="StaticBody3D" parent="blockbench_export/Doo2" parent_id_path=PackedInt32Array(2089887862, 1773897014) index="0" unique_id=915687740]
+[node name="StaticBody3D" type="StaticBody3D" parent="blockbench_export/Doo2" parent_id_path=PackedInt32Array(2089887862, 1253109191) index="0" unique_id=915687740 groups=["door"]]
 transform = Transform3D(2.5073534e-08, 0, 0.5736156, 0, 0.8005376, 0, -1, 0, 4.3711392e-08, -1.0000001, 0, -7.1054274e-15)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="blockbench_export/Doo2/StaticBody3D" unique_id=1501665078]
@@ -56,29 +56,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7763564e-15, 1.2474365, 0.8
 shape = SubResource("BoxShape3D_r1bkj")
 debug_fill = false
 
-[node name="mesh13" parent="blockbench_export/Doo2" parent_id_path=PackedInt32Array(2089887862, 1773897014) index="6" unique_id=1358569790]
+[node name="mesh13" parent="blockbench_export/Doo2" parent_id_path=PackedInt32Array(2089887862, 1253109191) index="6" unique_id=1291401327]
 surface_material_override/0 = SubResource("StandardMaterial3D_ekxy1")
 
-[node name="mesh14" parent="blockbench_export/Doo2" parent_id_path=PackedInt32Array(2089887862, 1773897014) index="7" unique_id=1108137646]
-[node name="mesh6" parent="blockbench_export/Door1" parent_id_path=PackedInt32Array(2089887862, 739319113) index="5" unique_id=2101930364]
-surface_material_override/0 = SubResource("StandardMaterial3D_svkij")
-
-[node name="mesh7" parent="blockbench_export/Door1" parent_id_path=PackedInt32Array(2089887862, 739319113) index="6" unique_id=775857002]
-surface_material_override/0 = SubResource("StandardMaterial3D_d3kye")
-
-[node name="mesh13" parent="blockbench_export/Doo2" parent_id_path=PackedInt32Array(2089887862, 1253109191) index="5" unique_id=1291401327]
-surface_material_override/0 = SubResource("StandardMaterial3D_ekxy1")
-
-[node name="mesh6" parent="blockbench_export/Door1" parent_id_path=PackedInt32Array(2089887862, 739319113) index="5" unique_id=2101930364]
-surface_material_override/0 = SubResource("StandardMaterial3D_svkij")
-
-[node name="mesh7" parent="blockbench_export/Door1" parent_id_path=PackedInt32Array(2089887862, 739319113) index="6" unique_id=775857002]
-surface_material_override/0 = SubResource("StandardMaterial3D_d3kye")
-
-[node name="mesh13" parent="blockbench_export/Doo2" parent_id_path=PackedInt32Array(2089887862, 1253109191) index="5" unique_id=1291401327]
-surface_material_override/0 = SubResource("StandardMaterial3D_ekxy1")
-
-[node name="mesh14" parent="blockbench_export/Doo2" parent_id_path=PackedInt32Array(2089887862, 1253109191) index="6" unique_id=103889812]
+[node name="mesh14" parent="blockbench_export/Doo2" parent_id_path=PackedInt32Array(2089887862, 1253109191) index="7" unique_id=103889812]
 surface_material_override/0 = SubResource("StandardMaterial3D_p0mw3")
 
 [node name="WindowRod41" parent="." unique_id=163434570 instance=ExtResource("2_5ykhr")]

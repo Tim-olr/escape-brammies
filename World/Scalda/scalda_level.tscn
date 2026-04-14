@@ -2,24 +2,26 @@
 
 [ext_resource type="PackedScene" uid="uid://c24jguudievws" path="res://World/Objects/BigTrashcan.tscn" id="1_75qgl"]
 [ext_resource type="Texture2D" uid="uid://33eb5xi1di7m" path="res://assets/models/scalda/ScaldaTile_0.png" id="1_hik0p"]
-[ext_resource type="PackedScene" path="res://World/Scalda/WindowRod.tscn" id="2_14lxf"]
-[ext_resource type="PackedScene" path="res://World/Scalda/BlurryWindow.tscn" id="3_ofq4a"]
-[ext_resource type="PackedScene" path="res://World/Scalda/Window.tscn" id="4_vt2oj"]
-[ext_resource type="PackedScene" path="res://World/Scalda/Blinds.tscn" id="6_cs5jf"]
-[ext_resource type="PackedScene" uid="uid://du3mdsaixyqti" path="res://World/Objects/Blackdoor.tscn" id="7_she40"]
-[ext_resource type="PackedScene" path="res://World/Scalda/ScaldaPanel.tscn" id="9_afksl"]
+[ext_resource type="PackedScene" uid="uid://b666jh55r2pfs" path="res://World/Scalda/WindowRod.tscn" id="2_14lxf"]
+[ext_resource type="PackedScene" uid="uid://druw3htkwbsof" path="res://World/Scalda/BlurryWindow.tscn" id="3_ofq4a"]
+[ext_resource type="PackedScene" uid="uid://ykctmkx2lgy" path="res://World/Scalda/Window.tscn" id="4_vt2oj"]
+[ext_resource type="PackedScene" uid="uid://bieh6omnby6or" path="res://World/Scalda/Blinds.tscn" id="6_cs5jf"]
+[ext_resource type="PackedScene" uid="uid://dwkdwwwk2h6le" path="res://World/Scalda/ScaldaPanel.tscn" id="9_afksl"]
 [ext_resource type="PackedScene" uid="uid://bssfpe401vsyu" path="res://World/Objects/OfficeChair.tscn" id="10_jpd7b"]
 [ext_resource type="PackedScene" uid="uid://btvyh0tyi4b78" path="res://World/Objects/GroupTable.tscn" id="11_tfv3i"]
 [ext_resource type="PackedScene" uid="uid://dg3ym8w8bfcxt" path="res://World/Objects/Monitor.tscn" id="12_khsvm"]
-[ext_resource type="PackedScene" path="res://World/Objects/class_table.tscn" id="12_xmlpx"]
-[ext_resource type="PackedScene" path="res://World/Objects/class_chair.tscn" id="13_rfg41"]
+[ext_resource type="PackedScene" uid="uid://c6t4l8v81g2ht" path="res://World/Objects/class_table.tscn" id="12_xmlpx"]
+[ext_resource type="PackedScene" uid="uid://c1spkgstxa7h1" path="res://World/Objects/class_chair.tscn" id="13_rfg41"]
 [ext_resource type="PackedScene" uid="uid://c833c5fcuj5bf" path="res://assets/models/scalda/ProjectorBoard.glb" id="14_hik0p"]
 [ext_resource type="PackedScene" uid="uid://o61h16invbaw" path="res://World/Objects/DoubleDoor.tscn" id="14_khsvm"]
 [ext_resource type="PackedScene" uid="uid://c4g6qw37bsgtp" path="res://World/Objects/Cabinet.tscn" id="14_p6sjt"]
-[ext_resource type="PackedScene" path="res://World/Scalda/Blocked.tscn" id="16_xmlpx"]
+[ext_resource type="PackedScene" uid="uid://cfkd6n236lwg5" path="res://World/Scalda/Blocked.tscn" id="16_xmlpx"]
+[ext_resource type="PackedScene" uid="uid://dqauytxsb5peu" path="res://World/Objects/BlackdoorLocked.tscn" id="17_cm112"]
 [ext_resource type="PackedScene" uid="uid://i4w58j4rdp77" path="res://World/Objects/Printer.tscn" id="17_rfg41"]
+[ext_resource type="PackedScene" path="res://World/Objects/blackdoor.tscn" id="18_kk7qi"]
 [ext_resource type="PackedScene" uid="uid://blxw71p652hoo" path="res://World/Objects/Locker.tscn" id="18_nhktn"]
 [ext_resource type="PackedScene" uid="uid://f8rmwm6kslvf" path="res://World/Objects/big_round_table.tscn" id="20_7g4jt"]
+[ext_resource type="PackedScene" uid="uid://dytap8501pb48" path="res://World/Objects/BlackdoorOtherway.tscn" id="20_kk7qi"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rfg41"]
 albedo_texture = ExtResource("1_hik0p")
@@ -2749,63 +2751,6 @@ transform = Transform3D(-3.278354e-08, 0, 0.75, 0, 0.75, 0, -0.75, 0, -3.278354e
 [node name="Blocked" parent="Environment" unique_id=1035399230 instance=ExtResource("16_xmlpx")]
 transform = Transform3D(-1.0442074e-07, 0, -1, 0, 1.2246478, 0, 2.3888683, 0, -4.3711392e-08, 33.026306, 1.2539511, 0)
 
-[node name="Doors" type="Node3D" parent="." unique_id=698885645]
-
-[node name="DoubleDoors" parent="Doors" unique_id=1867932448 instance=ExtResource("14_khsvm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.97913, 0, 0)
-locked = true
-
-[node name="DoubleDoors2" parent="Doors" unique_id=1490452475 instance=ExtResource("14_khsvm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.371494, 0, 0)
-openOtherWay = true
-
-[node name="DoubleDoors3" parent="Doors" unique_id=769745961 instance=ExtResource("14_khsvm")]
-transform = Transform3D(-4.371139e-08, 0, 1.0577002, 0, 1, 0, -1, 0, -4.623354e-08, -2.2402787, 3.013533, 4.245397)
-locked = true
-
-[node name="Blackdoor" parent="Doors" unique_id=80017543 instance=ExtResource("7_she40")]
-transform = Transform3D(1.7499999, 0, -3.059797e-07, 0, 1.210187, 0, 3.059797e-07, 0, 1.7499999, 23.031, 0.034570675, -2.25)
-openOtherWay = true
-
-[node name="Blackdoor2" parent="Doors" unique_id=237519196 instance=ExtResource("7_she40")]
-transform = Transform3D(-7.649492e-08, 0, -1.7499999, 0, 1.210187, 0, 1.7499999, 0, -7.649492e-08, 12, 0.039234757, 4.6249776)
-
-[node name="Blackdoor3" parent="Doors" unique_id=1711502282 instance=ExtResource("7_she40")]
-transform = Transform3D(1.75, 0, 0, 0, 1.2101871, 0, 0, 0, 1.75, 7.778965, 0.032199144, -2.2687209)
-locked = true
-
-[node name="Blocked" parent="Doors/Blackdoor3" unique_id=1085556402 instance=ExtResource("16_xmlpx")]
-transform = Transform3D(1.4, 0, 8.120488e-15, 0, 1.7848479, 0, -3.2481952e-14, 0, 0.57142854, -0.44512296, 1.1371443, -0.06689346)
-
-[node name="Blackdoor4" parent="Doors" unique_id=728519705 instance=ExtResource("7_she40")]
-transform = Transform3D(1.75, 0, 0, 0, 1.25, 0, 0, 0, 1.75, 3.9, 0, 2.25)
-
-[node name="DoubleDoors4" parent="Doors" unique_id=2119733614 instance=ExtResource("14_khsvm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.118483365, 0, 0)
-
-[node name="DoubleDoors5" parent="Doors" unique_id=1487677677 instance=ExtResource("14_khsvm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6131053, 0, 0)
-openOtherWay = true
-locked = true
-
-[node name="Blocked" parent="Doors/DoubleDoors5" unique_id=857197965 instance=ExtResource("16_xmlpx")]
-transform = Transform3D(-1.0644799e-07, 0, 1.0000001, 0, 1.345789, 0, -2.4352462, 0, -4.3711392e-08, -0.048174858, 1.2938441, 0)
-
-[node name="DoubleDoors6" parent="Doors" unique_id=2062294535 instance=ExtResource("14_khsvm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6131053, -3.3, 0)
-openOtherWay = true
-locked = true
-
-[node name="Blocked" parent="Doors/DoubleDoors6" unique_id=1381236473 instance=ExtResource("16_xmlpx")]
-transform = Transform3D(-1.0644799e-07, 0, 1.0000001, 0, 1.345789, 0, -2.4352462, 0, -4.3711392e-08, -0.048174858, 1.2938441, 0)
-
-[node name="DoubleDoors7" parent="Doors" unique_id=307666136 instance=ExtResource("14_khsvm")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2.269568, 0, 2.2411325)
-
-[node name="Blackdoor5" parent="Doors" unique_id=766657652 instance=ExtResource("7_she40")]
-transform = Transform3D(1.75, 0, 0, 0, 1.25, 0, 0, 0, 2.2794988, 16.840258, 0, 2.25)
-locked = true
-
 [node name="OfficeCHair" parent="." unique_id=624745251 instance=ExtResource("10_jpd7b")]
 transform = Transform3D(-0.1736482, 0, 0.9848077, 0, 1, 0, -0.9848077, 0, -0.1736482, 22.300001, 0, -8.900001)
 
@@ -2961,3 +2906,51 @@ transform = Transform3D(1.8, 0, 0, 0, 1.25, 0, 0, 0, 1.55, -27.400002, -0.7, -5.
 
 [node name="Blinds" parent="Blinds/Blinds/Blinds" unique_id=2077729237 instance=ExtResource("6_cs5jf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.499998, 0, 0)
+
+[node name="Doors" type="Node3D" parent="." unique_id=1039969312]
+
+[node name="DoubleDoors" parent="Doors" unique_id=1867932448 instance=ExtResource("14_khsvm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.97913, 0, 0)
+locked = true
+
+[node name="DoubleDoors2" parent="Doors" unique_id=1789614791 instance=ExtResource("14_khsvm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.371494, 0, 0)
+openOtherWay = true
+
+[node name="DoubleDoors3" parent="Doors" unique_id=1306704550 instance=ExtResource("14_khsvm")]
+transform = Transform3D(-4.371139e-08, 0, 1.0577002, 0, 1, 0, -1, 0, -4.623354e-08, -2.2402787, 3.013533, 4.245397)
+locked = true
+
+[node name="DoubleDoors4" parent="Doors" unique_id=339883507 instance=ExtResource("14_khsvm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.118483365, 0, 0)
+
+[node name="DoubleDoors5" parent="Doors" unique_id=1335953804 instance=ExtResource("14_khsvm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6131053, 0, 0)
+openOtherWay = true
+locked = true
+
+[node name="Blocked" parent="Doors/DoubleDoors5" unique_id=101723585 instance=ExtResource("16_xmlpx")]
+transform = Transform3D(-1.0644799e-07, 0, 1.0000001, 0, 1.345789, 0, -2.4352462, 0, -4.3711392e-08, -0.048174858, 1.2938441, 0)
+
+[node name="DoubleDoors6" parent="Doors" unique_id=1690156382 instance=ExtResource("14_khsvm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6131053, -3.3, 0)
+openOtherWay = true
+locked = true
+
+[node name="Blocked" parent="Doors/DoubleDoors6" unique_id=1378895351 instance=ExtResource("16_xmlpx")]
+transform = Transform3D(-1.0644799e-07, 0, 1.0000001, 0, 1.345789, 0, -2.4352462, 0, -4.3711392e-08, -0.048174858, 1.2938441, 0)
+
+[node name="DoubleDoors7" parent="Doors" unique_id=554541853 instance=ExtResource("14_khsvm")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2.269568, 0, 2.2411325)
+
+[node name="BlackdoorOtherway" parent="Doors" unique_id=277426334 groups=["door"] instance=ExtResource("20_kk7qi")]
+transform = Transform3D(1.75, 0, 0, 0, 1.25, 0, 0, 0, 1, 23.025, 0, -2.25)
+
+[node name="BlackdoorLocked" parent="Doors" unique_id=554401695 groups=["door"] instance=ExtResource("17_cm112")]
+transform = Transform3D(1.4, 0, 0, 0, 1.25, 0, 0, 0, 1, 7.7532434, -0.0004015267, -2.2585535)
+
+[node name="Blackdoor" parent="Doors" unique_id=2037902545 groups=["door"] instance=ExtResource("18_kk7qi")]
+transform = Transform3D(1.7294544, 0, -1.7484554e-07, 0, 1.25, 0, 3.023874e-07, 0, 0.9999999, 3.8735657, 0, 2.25)
+
+[node name="Blackdoor2" parent="Doors" unique_id=1105239204 groups=["door"] instance=ExtResource("18_kk7qi")]
+transform = Transform3D(2.3469968e-07, 0, 0.9999999, 0, 1.2499999, 0, -1.7897677, 0, 1.3113416e-07, 12, 0, 2.8631818)

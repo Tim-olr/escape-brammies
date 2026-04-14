@@ -11,8 +11,6 @@ size = Vector3(0.2, 2.0011597, 1.0253906)
 
 [node name="Blackdoor" type="Area3D" unique_id=1867932448]
 transform = Transform3D(1.75, 0, 0, 0, 1.25, 0, 0, 0, 1.75, 0, 0, 0)
-[node name="Area3D" type="Area3D" parent="." unique_id=1331743600]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 4.371139e-08)
 script = ExtResource("1_dnk24")
 
 [node name="blockbench_export" parent="." unique_id=1514682739 instance=ExtResource("1_cp5nl")]
@@ -30,32 +28,3 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.5
 shape = SubResource("BoxShape3D_svkij")
 
 [editable path="blockbench_export"]
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=167484285]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 4.371139e-08)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=426102344]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-shape = SubResource("BoxShape3D_dnk24")
-debug_fill = false
-
-[node name="Area3D" type="Area3D" parent="." unique_id=1331743600]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 4.371139e-08)
-script = ExtResource("1_dnk24")
-goes_away_on_interact = false
-
-[node name="blockbench_export" parent="Area3D" unique_id=97866307 instance=ExtResource("1_cp5nl")]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1275442636]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-shape = SubResource("BoxShape3D_dnk24")
-debug_fill = false
-
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=167484285]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 4.371139e-08)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=426102344]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-shape = SubResource("BoxShape3D_dnk24")
-debug_fill = false
-
-[editable path="Area3D/blockbench_export"]

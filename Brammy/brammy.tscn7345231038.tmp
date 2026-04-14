@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://bxfajs4cwyu4w"]
+
+[ext_resource type="Script" uid="uid://1gecpxjh1ys" path="res://Brammy/brammy.gd" id="1_wjene"]
+[ext_resource type="Texture2D" uid="uid://1j0xo782toyr" path="res://icon.svg" id="2_1nsu2"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jf6uf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vovia"]
+albedo_texture = ExtResource("2_1nsu2")
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_wjene"]
+
+[sub_resource type="Animation" id="Animation_1nsu2"]
+resource_name = "run"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vovia"]
+_data = {
+&"run": SubResource("Animation_1nsu2")
+}
+
+[node name="Brammy" type="CharacterBody3D" unique_id=1676838652 node_paths=PackedStringArray("nav_agent")]
+script = ExtResource("1_wjene")
+chase_speed = 0.0
+touch_range = 0.0
+nav_agent = NodePath("NavigationAgent3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1679712483]
+shape = SubResource("CapsuleShape3D_jf6uf")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1335043606]
+material_override = SubResource("StandardMaterial3D_vovia")
+mesh = SubResource("CapsuleMesh_wjene")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1927754190]
+libraries/ = SubResource("AnimationLibrary_vovia")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1345327597]
+height = 2.0
+
+[node name="SightRay" type="RayCast3D" parent="." unique_id=2104082355]
+transform = Transform3D(1, 0, 0, 0, -8.136733e-08, -1, 0, 1.8614676, -4.371139e-08, 0, 0.5390327, 0)
+collision_mask = 2
+
+[node name="Timer" type="Node" parent="." unique_id=739094003]
+
+[node name="IdleTimer" type="Timer" parent="Timer" unique_id=1041876620]
+one_shot = true
+
+[node name="Timer" type="Timer" parent="Timer" unique_id=1751906284]
