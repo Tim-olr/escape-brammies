@@ -17,6 +17,8 @@
 [ext_resource type="Texture2D" uid="uid://dy75ctfhvfs5m" path="res://assets/textures/balck.jpg" id="13_74mfr"]
 [ext_resource type="PackedScene" path="res://Items/interactables/hardcore_mode_interactable.tscn" id="16_x53gd"]
 
+[ext_resource type="PackedScene" uid="uid://ct7tcm0v78636" path="res://Items/interactables/hardcore_mode_interactable.tscn" id="16_x53gd"]
+
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ghcsx"]
 sky_top_color = Color(0.37338156, 0.4430481, 0.53593016, 1)
 sky_horizon_color = Color(0, 0, 0, 1)
