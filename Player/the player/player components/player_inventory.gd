@@ -93,10 +93,3 @@ func has_repair_part() -> bool:
 			if slot.held_item is RepairPart:
 				return true
 	return false
-
-func has_screwdriver() -> bool:
-	for slot in [slot_1, slot_2, slot_3]:
-		if slot.has_item and slot.held_item != null:
-			if slot.held_item is Screwdriver:
-				return true
-	return false

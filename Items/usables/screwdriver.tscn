@@ -1,13 +1,17 @@
-[gd_scene format=3 uid="uid://csxbsxad5e88"]
+[gd_scene format=3 uid="uid://boe6pp6mqavlk"]
 
-[ext_resource type="Script" uid="uid://c5ru7weca4iaq" path="res://Items/usables/screwdriver.gd" id="1_aqc00"]
+[ext_resource type="Script" uid="uid://csjxbumwpjvap" path="res://Items/usables/screwdriver.gd" id="1_aqc00"]
 [ext_resource type="Texture2D" uid="uid://uk73uyng4d51" path="res://assets/models/Screwdriver/screwdriver.png" id="2_k3snx"]
-[ext_resource type="PackedScene" uid="uid://b3uc84s6s1pm" path="res://assets/models/Screwdriver/screwdriver_shape.tscn" id="3_2r7dv"]
+[ext_resource type="PackedScene" uid="uid://bnl2cxd065uc4" path="res://assets/models/test_collison.tscn" id="3_bpawv"]
+[ext_resource type="PackedScene" path="res://assets/sprite_scenes/screwdriver.tscn" id="4_vebu4"]
+[ext_resource type="AudioStream" uid="uid://dqq4r0d83mnln" path="res://Items/usables/freesound_community-electric-screwdriver-70947.mp3" id="5_ghhpq"]
 
-[node name="Screwdriver" type="Node3D" unique_id=1578810768]
+[node name="Screwdriver" type="Node3D" unique_id=70481838]
 script = ExtResource("1_aqc00")
-item_name = "Screwdriver"
+item_name = "Screwdriber"
 custom_texture = ExtResource("2_k3snx")
-model = ExtResource("3_2r7dv")
+collision = ExtResource("3_bpawv")
 has_sprite_no_model = true
-drop_scene_path = "res://Items/interactables/screwdriver_interactable.tscn"
+sprite = ExtResource("4_vebu4")
+delete_on_use = true
+custom_sound_file = ExtResource("5_ghhpq")
