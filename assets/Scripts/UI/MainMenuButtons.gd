@@ -13,6 +13,7 @@ func _ready() -> void:
 
 
 func _on_Play_pressed():
+	GlobalPlayer.start_timer()
 	get_tree().change_scene_to_file("res://World/The world/main.tscn")
 
 func _on_Settings_pressed():

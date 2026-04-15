@@ -19,11 +19,12 @@
 [ext_resource type="PackedScene" uid="uid://ct7tcm0v78636" path="res://Items/interactables/hardcore_mode_interactable.tscn" id="16_x53gd"]
 [ext_resource type="PackedScene" uid="uid://du3mdsaixyqti" path="res://World/Objects/Blackdoor.tscn" id="17_vrh1m"]
 [ext_resource type="PackedScene" uid="uid://gy4jdj3afkio" path="res://World/Objects/Keypad.tscn" id="18_1tfbs"]
-[ext_resource type="PackedScene" path="res://Items/interactables/Note.tscn" id="19_cmh3a"]
+[ext_resource type="PackedScene" uid="uid://saxsy1hidu1g" path="res://Items/interactables/Note.tscn" id="19_cmh3a"]
 [ext_resource type="PackedScene" uid="uid://dyb1lcmkfiq4e" path="res://Items/interactables/struts2/struts_2_interactable.tscn" id="20_7d5iv"]
 [ext_resource type="PackedScene" uid="uid://cjrmlmetv0vhc" path="res://World/Objects/ElectricalBox.tscn" id="21_elbox"]
 [ext_resource type="PackedScene" uid="uid://bqthakx4h6ydl" path="res://Items/interactables/scrumbel/scrumbel_interactable.tscn" id="24_2jj54"]
 [ext_resource type="Texture2D" uid="uid://7v81h12e88i1" path="res://assets/models/scalda/rens.png" id="24_c17kt"]
+[ext_resource type="Script" uid="uid://sex8hq0co7as" path="res://World/The world/finishline.gd" id="25_2jj54"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ghcsx"]
 sky_top_color = Color(0.37338156, 0.4430481, 0.53593016, 1)
@@ -128,6 +129,9 @@ _data = {
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vhc53"]
 size = Vector3(11.776489, 4.7178955, 22.128326)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c17kt"]
+size = Vector3(3.4, 3.9, 3.7)
 
 [node name="Main" type="Node3D" unique_id=2005214468 node_paths=PackedStringArray("possies", "bin", "brammy", "brammy_spawn_possies", "world_en", "ap")]
 script = ExtResource("1_8j3rw")
@@ -442,10 +446,24 @@ shape = SubResource("BoxShape3D_vhc53")
 [node name="ScrumbelInteractable" parent="." unique_id=1541624235 instance=ExtResource("24_2jj54")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 23.373322, 1.0760485, 4.1914034)
 
+[node name="Timer" type="Timer" parent="." unique_id=44367682]
+wait_time = 999999.0
+one_shot = true
+autostart = true
+
+[node name="Finishline" type="Area3D" parent="." unique_id=612088724]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, -2, -6.5)
+script = ExtResource("25_2jj54")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Finishline" unique_id=811239222]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5999999)
+shape = SubResource("BoxShape3D_c17kt")
+
 [connection signal="body_entered" from="death_area" to="death_area" method="_on_body_entered"]
 [connection signal="body_entered" from="start_sequence_detection" to="." method="_on_start_sequence_detection_body_entered"]
 [connection signal="body_exited" from="start_sequence_detection" to="." method="_on_start_sequence_detection_body_exited"]
 [connection signal="body_entered" from="BellInteraction" to="." method="_on_bell_interaction_body_entered"]
 [connection signal="body_exited" from="BellInteraction" to="." method="_on_bell_interaction_body_exited"]
+[connection signal="body_entered" from="Finishline" to="Finishline" method="_on_body_entered"]
 
 [editable path="NavigationRegion3D/ScaldaLevel"]

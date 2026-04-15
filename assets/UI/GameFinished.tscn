@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://dny6v4bevt56w"]
+
+[ext_resource type="Texture2D" uid="uid://ba0rjnsp80q3f" path="res://assets/UI/blue-birthday-cake-with-balloons_1096472-7.png" id="1_kd6rl"]
+[ext_resource type="Script" uid="uid://buvs6osxb6o8l" path="res://assets/UI/game_finished.gd" id="1_ye0d8"]
+[ext_resource type="AudioStream" uid="uid://nlurqgn7wopu" path="res://assets/audio/kids-saying-yay-sound-effect_3.mp3" id="2_vamr0"]
+[ext_resource type="FontFile" uid="uid://ulbymda0vas8" path="res://assets/UI/Fonts/MedodicaRegular.otf" id="3_whtf1"]
+
+[node name="GameFinished" type="Control" unique_id=683244840]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ye0d8")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1913203212]
+stream = ExtResource("2_vamr0")
+
+[node name="BlueBirthdayCakeWithBalloons10964727" type="Sprite2D" parent="." unique_id=1804283248]
+position = Vector2(575.99994, 324)
+scale = Vector2(2.3039997, 2.3142855)
+texture = ExtResource("1_kd6rl")
+
+[node name="Menu" type="Button" parent="." unique_id=1167404349]
+layout_mode = 0
+offset_left = 509.0
+offset_top = 465.0
+offset_right = 626.0
+offset_bottom = 533.0
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_whtf1")
+theme_override_font_sizes/font_size = 60
+text = "Menu
+"
+
+[node name="TimeActual" type="RichTextLabel" parent="." unique_id=1784964825]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 93.0
+offset_right = 1153.0
+offset_bottom = 162.0
+theme_override_fonts/normal_font = ExtResource("3_whtf1")
+theme_override_font_sizes/normal_font_size = 64
+text = "It took you: "
+horizontal_alignment = 1
+
+[node name="Time" type="RichTextLabel" parent="." unique_id=762573028]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -2.0
+offset_right = 1153.0
+offset_bottom = 67.0
+theme_override_fonts/normal_font = ExtResource("3_whtf1")
+theme_override_font_sizes/normal_font_size = 64
+text = "You've escaped from Brammy!"
+horizontal_alignment = 1
