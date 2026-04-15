@@ -10,6 +10,7 @@ var _completed: bool = false
 @onready var indicator: MeshInstance3D = $IndicatorLight
 
 func _ready() -> void:
+	super()
 	goes_away_on_interact = false
 	_ui = ElectricalBoxUI.new()
 	add_child(_ui)

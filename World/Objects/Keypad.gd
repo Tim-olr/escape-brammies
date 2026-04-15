@@ -16,6 +16,7 @@ var _unlocked: bool = false
 @onready var indicator: MeshInstance3D = $IndicatorLight
 
 func _ready() -> void:
+	super()
 	goes_away_on_interact = false
 	if code.is_empty():
 		var n := ""

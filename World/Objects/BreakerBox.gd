@@ -15,6 +15,7 @@ var _hold_timer := 0.0
 var do_sound: bool = false
 
 func _ready() -> void:
+	super()
 	add_to_group("breaker_box")
 	handle.rotation_degrees.z = 50.0  # start in "off" position (leaning left)
 	power_light_on.visible = false
