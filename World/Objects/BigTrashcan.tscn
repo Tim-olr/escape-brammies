@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://baecg6f10a1r" path="res://World/Objects/big_trashcan.gd" id="1_hbk0x"]
 [ext_resource type="PackedScene" uid="uid://bml61owaclrsy" path="res://assets/models/scalda/trashcan_big.glb" id="1_tnhns"]
 [ext_resource type="Texture2D" uid="uid://bfdllm4ycjwhu" path="res://Brammy/brammy.png" id="3_i8p0h"]
+[ext_resource type="AudioStream" uid="uid://bhkxfx2hylfp0" path="res://Brammy/voicelines/Standard recording 1-[AudioTrimmer.com](6).mp3" id="4_cbolx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tnhns"]
 size = Vector3(1.8000001, 1.2, 1)
@@ -169,9 +170,10 @@ _data = {
 &"bram_pop_out": SubResource("Animation_hbk0x")
 }
 
-[node name="BigTrashcan" type="Node3D" unique_id=238253868 node_paths=PackedStringArray("ap")]
+[node name="BigTrashcan" type="Node3D" unique_id=238253868 node_paths=PackedStringArray("ap", "audio")]
 script = ExtResource("1_hbk0x")
 ap = NodePath("AnimationPlayer")
+audio = NodePath("AudioStreamPlayer3D")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=2147435971]
 
@@ -188,5 +190,9 @@ libraries/ = SubResource("AnimationLibrary_i8p0h")
 transform = Transform3D(0.15, 0, 0, 0, 0.1478994, -0.025015313, 0, 0.025015313, 0.1478994, 0, 0.60651094, -0.1434623)
 billboard = 1
 texture = ExtResource("3_i8p0h")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1909257757]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1054187, 0)
+stream = ExtResource("4_cbolx")
 
 [editable path="StaticBody3D/blockbench_export"]
