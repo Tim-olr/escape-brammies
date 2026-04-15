@@ -3,8 +3,6 @@ extends Node3D
 @export var bin: Bin
 @export var game_started: bool = false
 @export var brammy: enemy
-
-@export var debug: bool = false
 @export var brammy_spawn_possies: Node3D
 
 var has_walked: bool = false
@@ -20,10 +18,6 @@ func lerp_fov(target: float, duration: float = 0.6) -> void:
 	fov_tween.tween_property(GlobalPlayer.camera, "fov", target, duration).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 
 func _on_start_sequence_detection_body_entered(body: Node3D) -> void:
-	if body.is_in_group("player") and !game_started && !debug:
-		game_started = true
-		bin.ap.play("bram_pop_out")
-		brammy.started = true
 	if body.is_in_group("player") and !game_started:
 		game_started = true
 		bin.ap.play("bram_pop_out")

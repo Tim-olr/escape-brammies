@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bqgs0gi8as5aa"]
+[gd_scene format=3 uid="uid://fluolight0001"]
 
 [ext_resource type="Script" path="res://World/Objects/FluorescentLight.gd" id="1_fluo"]
 

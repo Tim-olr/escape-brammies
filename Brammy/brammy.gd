@@ -82,8 +82,6 @@ func _on_player_attention_area_body_exited(body: Node3D) -> void:
 		loseAttention()
 
 func _on_player_attention_area_body_entered(body: Node3D) -> void:
-	if body.is_in_group("player") and has_collided:
-		can_check = true
 	if body.is_in_group("player"):
 		can_check = true
 
