@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dqpufwbey0w82" path="res://assets/models/scalda/ProjectTable.glb" id="1_q1tno"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_f0jrg"]
-size = Vector3(4, 1.1, 2)
+size = Vector3(4, 0.681958, 2)
 
 [node name="GroupTable" type="Node3D" unique_id=1501587923]
 
@@ -14,7 +14,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.025, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=513982425]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.050000012, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.15902099, 0)
 shape = SubResource("BoxShape3D_f0jrg")
 
 [editable path="blockbench_export"]
