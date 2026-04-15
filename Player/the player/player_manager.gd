@@ -49,6 +49,8 @@ func hide_gray(duration: float = 0.5) -> void:
 	  .set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 
 func die():
+	GlobalPlayer.movement.can_move = false
+	GlobalPlayer.camera.can_look = false
 	GlobalPlayer.player.global_position = GlobalPlayer.player.death_pos.global_position
 	GlobalRefs.brammy.hide()
 	ap.speed_scale = 1.5
