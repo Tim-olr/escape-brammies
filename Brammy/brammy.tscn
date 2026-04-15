@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bxfajs4cwyu4w"]
 
 [ext_resource type="Script" uid="uid://1gecpxjh1ys" path="res://Brammy/brammy.gd" id="1_wjene"]
+[ext_resource type="Script" uid="uid://cypcrbwo8pnrn" path="res://Brammy/audio_stream_player_3d.gd" id="3_aiods"]
 [ext_resource type="Texture2D" uid="uid://bfdllm4ycjwhu" path="res://Brammy/brammy.png" id="3_vovia"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jf6uf"]
@@ -72,6 +73,12 @@ transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.02565229, 0)
 billboard = 1
 shaded = true
 texture = ExtResource("3_vovia")
+
+texture = ExtResource("3_vovia")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1427392352]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.705925, 0)
+script = ExtResource("3_aiods")
 
 [connection signal="timeout" from="Timer/Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="PlayerAttentionArea" to="." method="_on_player_attention_area_body_entered"]

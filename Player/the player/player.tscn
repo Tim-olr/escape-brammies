@@ -11,15 +11,17 @@
 [ext_resource type="Texture2D" uid="uid://bvfw3qila66gp" path="res://assets/textures/player/hand/grabbing/grabbing_2.png" id="7_a05s0"]
 [ext_resource type="Script" uid="uid://76ajln6ewo8t" path="res://Player/the player/inventory/slot_1.gd" id="7_rr6jo"]
 [ext_resource type="Texture2D" uid="uid://bs523626oki5u" path="res://assets/textures/player/hand/grabbing/grabbing_3.png" id="8_2qv5j"]
-[ext_resource type="Script" uid="uid://rprrng123abc" path="res://Player/the player/repair_ring.gd" id="9_f8k7o"]
+[ext_resource type="Script" path="res://Player/the player/repair_ring.gd" id="9_f8k7o"]
 [ext_resource type="Texture2D" uid="uid://jil3b4784fhx" path="res://assets/textures/player/hand/grabbing/grabbing_4.png" id="9_ierpi"]
 [ext_resource type="Texture2D" uid="uid://dsw2jtww5o2br" path="res://assets/textures/player/hand/idle/idle_hand.png" id="10_ek1er"]
 [ext_resource type="Shader" uid="uid://ltdvcyyto6kr" path="res://Player/the player/inventory/slot_selection.gdshader" id="13_a05s0"]
 [ext_resource type="PackedScene" uid="uid://rhpwx4anaa7d" path="res://assets/UI/PauseMenu.tscn" id="14_ek1er"]
 [ext_resource type="Script" uid="uid://d0niuj5q1mwqm" path="res://Player/the player/UI.gd" id="14_ierpi"]
+[ext_resource type="Script" path="res://Player/the player/UI.gd" id="14_ierpi"]
 [ext_resource type="Shader" uid="uid://dcmsuo1e6pgey" path="res://Player/the player/grayscale.gdshader" id="17_ierpi"]
 [ext_resource type="FontFile" uid="uid://ulbymda0vas8" path="res://assets/UI/Fonts/MedodicaRegular.otf" id="18_ek1er"]
 [ext_resource type="Script" uid="uid://xviraojwfcqt" path="res://Player/the player/audio_stream_player_3d.gd" id="19_7tefi"]
+[ext_resource type="Texture2D" uid="uid://bfdllm4ycjwhu" path="res://Brammy/brammy.png" id="21_de6yx"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_du564"]
 
@@ -114,6 +116,105 @@ shader = ExtResource("13_a05s0")
 shader_parameter/allow_out_of_bounds = true
 shader_parameter/outline_thickness = 0.0
 shader_parameter/outline_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Animation" id="Animation_jaclr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.49433023, -2.063394)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite3D:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_t1gkg"]
+resource_name = "jumpscare"
+length = 1.2333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.41, 0.8, 1.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0.49433023, -2.063394), Vector3(0, 0.19955188, -1.7632952), Vector3(0, -0.20231807, -1.129624), Vector3(0, -0.20231807, -0.5592245)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.41, 0.8, 0.88, 0.96, 1.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0.49944338, 0, 0), Vector3(0.49944338, 0, 0), Vector3(0.4978031, 0.042258404, 0.08832228), Vector3(0.49677882, -0.05382215, -0.112561636), Vector3(0.1593835, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite3D:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.2666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PlayerManager")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"move_to_menu"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h1foe"]
+_data = {
+&"RESET": SubResource("Animation_jaclr"),
+&"jumpscare": SubResource("Animation_t1gkg")
+}
 
 [node name="Player" type="CharacterBody3D" unique_id=1655037376 groups=["player"]]
 collision_layer = 3
@@ -276,5 +377,11 @@ script = ExtResource("19_7tefi")
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1315015798]
 light_energy = 0.5
 omni_range = 5.1
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2042928918]
+libraries/ = SubResource("AnimationLibrary_h1foe")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=207096290]
+transform = Transform3D(0.39999995, 0, 0, 0, 0.39999995, 0, 0, 0, 0.39999995, 0, 0.49433023, -2.063394)
+texture = ExtResource("21_de6yx")
 
 [connection signal="timeout" from="PausedTimer" to="PlayerManager" method="_on_paused_timer_timeout"]

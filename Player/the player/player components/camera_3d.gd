@@ -7,6 +7,8 @@ const PITCH_LIMIT: float = 1.5
 @export var bob_speed: float = 8.0
 @export var bob_amount: float = 20.0
 
+@export var can_look := true
+
 @onready var sprite: AnimatedSprite2D = $Hand
 
 var _bob_time: float = 0.0
@@ -21,13 +23,14 @@ func _process(delta: float) -> void:
 	_update_bob(delta)
 
 func _input(event: InputEvent) -> void:
-	if event is InputEventMouseMotion:
-		_rotate_camera(event.relative)
-	if event.is_action_pressed("ui_cancel"):
-		var mode := Input.MOUSE_MODE_VISIBLE \
-			if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED \
-			else Input.MOUSE_MODE_CAPTURED
-		Input.set_mouse_mode(mode)
+	if can_look:
+		if event is InputEventMouseMotion:
+			_rotate_camera(event.relative)
+		if event.is_action_pressed("ui_cancel"):
+			var mode := Input.MOUSE_MODE_VISIBLE \
+				if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED \
+				else Input.MOUSE_MODE_CAPTURED
+			Input.set_mouse_mode(mode)
 
 func _rotate_camera(mouse_delta: Vector2) -> void:
 	var stats: PlayerStats = GlobalPlayer.stats

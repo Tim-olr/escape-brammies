@@ -13,6 +13,9 @@
 [ext_resource type="Script" path="res://World/Scalda/roam_positions.gd" id="10_78nbq"]
 [ext_resource type="Script" path="res://World/The world/navigation_region_3d.gd" id="10_jhyn3"]
 [ext_resource type="PackedScene" path="res://Items/interactables/screwdriver_interactable.tscn" id="13_74mfr"]
+[ext_resource type="Script" uid="uid://b0to2gwbsf6oc" path="res://World/Scalda/roam_positions.gd" id="10_78nbq"]
+[ext_resource type="Script" uid="uid://crs2ithxj3t0y" path="res://World/The world/navigation_region_3d.gd" id="10_jhyn3"]
+[ext_resource type="Texture2D" uid="uid://dy75ctfhvfs5m" path="res://assets/textures/balck.jpg" id="13_74mfr"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ghcsx"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -46,6 +49,14 @@ agent_height = 2.0
 [sub_resource type="BoxShape3D" id="BoxShape3D_8j3rw"]
 size = Vector3(5.18396, 1, 3.8355103)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_irxse"]
+size = Vector3(5.775757, 1, 7.063904)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aixqs"]
+albedo_texture = ExtResource("13_74mfr")
+
+[sub_resource type="BoxMesh" id="BoxMesh_x53gd"]
+
 [node name="Main" type="Node3D" unique_id=2005214468 node_paths=PackedStringArray("possies", "bin", "brammy", "brammy_spawn_possies")]
 script = ExtResource("1_8j3rw")
 possies = NodePath("RoamPositions")
@@ -57,8 +68,9 @@ brammy_spawn_possies = NodePath("BrammySpawnPos")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1700724351]
 environment = SubResource("Environment_pc2j6")
 
-[node name="Player" parent="." unique_id=1655037376 instance=ExtResource("1_ejmfg")]
+[node name="Player" parent="." unique_id=1655037376 node_paths=PackedStringArray("death_pos") instance=ExtResource("1_ejmfg")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 26.78246, 0.95087653, -0.098355055)
+death_pos = NodePath("../The death chamber/death_pos")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=835564989]
 transform = Transform3D(0.25881907, -0.8962713, 0.36015338, 0, 0.37285823, 0.92788833, -0.9659258, -0.2401552, 0.09650282, 55.538208, 27.757853, 0)
@@ -189,6 +201,194 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.329091, 0.75698304, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="start_sequence_detection" unique_id=487922464]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.138977, 0, -0.21939087)
 shape = SubResource("BoxShape3D_8j3rw")
+
+[node name="RoamPositions" type="Node3D" parent="." unique_id=946415591]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.30027103, 0)
+script = ExtResource("10_78nbq")
+
+[node name="Marker3D" type="Marker3D" parent="RoamPositions" unique_id=1733062163]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.381426, 0.031992972, 0)
+
+[node name="Marker3D2" type="Marker3D" parent="RoamPositions" unique_id=438509463]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.236513, 0.031992972, -5.8561015)
+
+[node name="Marker3D3" type="Marker3D" parent="RoamPositions" unique_id=200183182]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.531837, 0.031992972, 7.2407093)
+
+[node name="Marker3D4" type="Marker3D" parent="RoamPositions" unique_id=1463784799]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.329922, 0.063985944, 7.2407093)
+
+[node name="Marker3D5" type="Marker3D" parent="RoamPositions" unique_id=668831984]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.550503, 0.031992972, 7.330054)
+
+[node name="Marker3D6" type="Marker3D" parent="RoamPositions" unique_id=2027390037]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.272131, 0.031992972, 0)
+
+[node name="Marker3D7" type="Marker3D" parent="RoamPositions" unique_id=787464139]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3508017, 0.031992972, 0)
+
+[node name="Marker3D8" type="Marker3D" parent="RoamPositions" unique_id=1272533189]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3508017, -3.1873136, 0)
+
+[node name="Marker3D9" type="Marker3D" parent="RoamPositions" unique_id=980502620]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.103634, -3.1873136, 0)
+
+[node name="Marker3D10" type="Marker3D" parent="RoamPositions" unique_id=1668345630]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6507425, -3.1873136, 3.1990714)
+
+[node name="Marker3D11" type="Marker3D" parent="RoamPositions" unique_id=609029293]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.014013, -3.1873136, 5.2682996)
+
+[node name="Marker3D12" type="Marker3D" parent="RoamPositions" unique_id=1024749402]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.85943, -3.1873136, 5.2682996)
+
+[node name="Marker3D13" type="Marker3D" parent="RoamPositions" unique_id=1869050055]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.44264, -3.1873136, 12.118448)
+
+[node name="Marker3D14" type="Marker3D" parent="RoamPositions" unique_id=1789425359]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.390076, -3.1873136, 12.118448)
+
+[node name="Marker3D15" type="Marker3D" parent="RoamPositions" unique_id=692625929]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.390076, -3.1873136, 10.639016)
+
+[node name="Marker3D16" type="Marker3D" parent="RoamPositions" unique_id=839935023]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.757576, -3.1873136, 9.106392)
+
+[node name="Marker3D17" type="Marker3D" parent="RoamPositions" unique_id=824961964]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.837458, -3.1873136, 8.082991)
+
+[node name="Marker3D18" type="Marker3D" parent="RoamPositions" unique_id=1094114260]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.382679, -4.209466, 12.86279)
+
+[node name="Marker3D19" type="Marker3D" parent="RoamPositions" unique_id=1600531639]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.437181, -4.209466, 12.86279)
+
+[node name="Marker3D20" type="Marker3D" parent="RoamPositions" unique_id=1378807476]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6964245, -4.209466, 12.86279)
+
+[node name="BrammySpawnPos" type="Node3D" parent="." unique_id=641586798]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.651989, 0)
+
+[node name="Marker3D" type="Marker3D" parent="BrammySpawnPos" unique_id=1995049237]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.029257, 0.2700249, 8.161325)
+
+[node name="Marker3D2" type="Marker3D" parent="BrammySpawnPos" unique_id=1261994246]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.115818, 0.2700249, 6.919183)
+
+[node name="Marker3D3" type="Marker3D" parent="BrammySpawnPos" unique_id=934382537]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.850473, 0.2700249, 6.919183)
+
+[node name="Marker3D4" type="Marker3D" parent="BrammySpawnPos" unique_id=97658216]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.036888, 0.2700249, -5.188385)
+
+[node name="Marker3D5" type="Marker3D" parent="BrammySpawnPos" unique_id=1136853748]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8366954, 3.5069273, 5.4613876)
+
+[node name="Marker3D6" type="Marker3D" parent="BrammySpawnPos" unique_id=396709728]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7589679, -2.931986, 0.8401165)
+
+[node name="Marker3D7" type="Marker3D" parent="BrammySpawnPos" unique_id=1866370213]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.7397785, -2.931986, 7.138258)
+
+[node name="Marker3D8" type="Marker3D" parent="BrammySpawnPos" unique_id=1147996662]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.7397785, -3.8911662, 13.000392)
+
+[node name="Marker3D9" type="Marker3D" parent="BrammySpawnPos" unique_id=1373050204]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.371876, -2.9411237, 4.1511106)
+
+[node name="Brammy" parent="." unique_id=1676838652 instance=ExtResource("9_eq6tm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.023006, -1.9995766, 0.24800557)
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=961822126]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25042295, 0)
+navigation_mesh = SubResource("NavigationMesh_eq6tm")
+script = ExtResource("10_jhyn3")
+
+[node name="ScaldaLevel" parent="NavigationRegion3D" unique_id=1905537615 instance=ExtResource("2_abumu")]
+
+[node name="start_sequence_detection" type="Area3D" parent="." unique_id=1996265121]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.329091, 0.75698304, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="start_sequence_detection" unique_id=487922464]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.138977, 0, -0.21939087)
+shape = SubResource("BoxShape3D_8j3rw")
+
+[node name="The death chamber" type="Node3D" parent="." unique_id=286456421]
+transform = Transform3D(1.1778817, 0, 0, 0, 1.2508225, 0, 0, 0, 1, 87.32456, 0, -60.689533)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="The death chamber" unique_id=577869882]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="The death chamber/StaticBody3D" unique_id=2133397647]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.09442139, 0, 0.6095276)
+shape = SubResource("BoxShape3D_irxse")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="The death chamber/StaticBody3D" unique_id=901813974]
+transform = Transform3D(6.0779333, 0, 0, 0, 1, 0, 0, 0, 6.979299, 0, 0, 0.59695816)
+material_override = SubResource("StandardMaterial3D_aixqs")
+mesh = SubResource("BoxMesh_x53gd")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="The death chamber" unique_id=1127937219]
+transform = Transform3D(1, 0, 0, 0, 6.13048, 0, 0, 0, 0.16536951, 0, 0, 2.8675842)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="The death chamber/StaticBody3D2" unique_id=1334901321]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.09442139, 0, 0.6095276)
+shape = SubResource("BoxShape3D_irxse")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="The death chamber/StaticBody3D2" unique_id=1009618516]
+transform = Transform3D(6.0779333, 0, 0, 0, 1, 0, 0, 0, 6.979299, 0, 0, 0.59695816)
+material_override = SubResource("StandardMaterial3D_aixqs")
+mesh = SubResource("BoxMesh_x53gd")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="The death chamber" unique_id=295464098]
+transform = Transform3D(1, 0, 0, 0, 6.13048, 0, 0, 0, 0.16536951, 0, 0, -3.0633736)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="The death chamber/StaticBody3D3" unique_id=2138478899]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.09442139, 0, 0.6095276)
+shape = SubResource("BoxShape3D_irxse")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="The death chamber/StaticBody3D3" unique_id=183391680]
+transform = Transform3D(6.0779333, 0, 0, 0, 1, 0, 0, 0, 6.979299, 0, 0, 0.59695816)
+material_override = SubResource("StandardMaterial3D_aixqs")
+mesh = SubResource("BoxMesh_x53gd")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="The death chamber" unique_id=1920438083]
+transform = Transform3D(-4.371139e-08, 0, 0.16536951, 0, 6.13048, 0, -1, 0, -7.228531e-09, 3.117859, 0, -0.31162262)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="The death chamber/StaticBody3D4" unique_id=364707576]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.09442139, 0, 0.6095276)
+shape = SubResource("BoxShape3D_irxse")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="The death chamber/StaticBody3D4" unique_id=2000536677]
+transform = Transform3D(6.0779333, 0, 0, 0, 1, 0, 0, 0, 6.979299, 0, 0, 0.59695816)
+material_override = SubResource("StandardMaterial3D_aixqs")
+mesh = SubResource("BoxMesh_x53gd")
+
+[node name="StaticBody3D5" type="StaticBody3D" parent="The death chamber" unique_id=1290140519]
+transform = Transform3D(-4.371139e-08, 0, 0.16536951, 0, 6.13048, 0, -1, 0, -7.228531e-09, -3.2594986, 0, -0.31162262)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="The death chamber/StaticBody3D5" unique_id=788807628]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.09442139, 0, 0.6095276)
+shape = SubResource("BoxShape3D_irxse")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="The death chamber/StaticBody3D5" unique_id=1169396262]
+transform = Transform3D(6.0779333, 0, 0, 0, 1, 0, 0, 0, 6.979299, 0, 0, 0.59695816)
+material_override = SubResource("StandardMaterial3D_aixqs")
+mesh = SubResource("BoxMesh_x53gd")
+
+[node name="StaticBody3D6" type="StaticBody3D" parent="The death chamber" unique_id=972286052]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.281132, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="The death chamber/StaticBody3D6" unique_id=38851861]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.09442139, 0, 0.6095276)
+shape = SubResource("BoxShape3D_irxse")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="The death chamber/StaticBody3D6" unique_id=622003704]
+transform = Transform3D(6.0779333, 0, 0, 0, 1, 0, 0, 0, 6.979299, 0, 0, 0.59695816)
+material_override = SubResource("StandardMaterial3D_aixqs")
+mesh = SubResource("BoxMesh_x53gd")
+
+[node name="death_pos" type="Marker3D" parent="The death chamber" unique_id=542555318]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1267273, 0)
 
 [connection signal="body_entered" from="death_area" to="death_area" method="_on_body_entered"]
 [connection signal="body_entered" from="start_sequence_detection" to="." method="_on_start_sequence_detection_body_entered"]
