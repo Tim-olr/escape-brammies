@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bhxi0vobytl3h"]
+
+[ext_resource type="PackedScene" uid="uid://cpkh5sxihai48" path="res://assets/models/scalda/CafetariaBank.glb" id="1_h33od"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h33od"]
+size = Vector3(1, 1, 2)
+
+[node name="CafetariaBankje" type="Node3D" unique_id=1819388694]
+
+[node name="blockbench_export" parent="." unique_id=2090762751 instance=ExtResource("1_h33od")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1756907765]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1730267841]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_h33od")
