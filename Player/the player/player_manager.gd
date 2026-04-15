@@ -3,10 +3,13 @@ class_name PlayerManager
 var is_paused: bool = false
 @onready var paused_timer: Timer = $"../PausedTimer"
 @onready var gray: TextureRect = $"../CanvasLayer/grayscale"
+@onready var ap: AnimationPlayer = $"../AnimationPlayer"
+@onready var sprite_3d: Sprite3D = $"../Sprite3D"
 
 var can_sql: bool = true
 
 func _ready() -> void:
+	sprite_3d.visible = false
 	GlobalPlayer.manager = self
 
 func calculate_drop_height():
@@ -46,4 +49,9 @@ func hide_gray(duration: float = 0.5) -> void:
 	  .set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 
 func die():
+	GlobalRefs.brammy.hide()
+	ap.speed_scale = 1.5
+	ap.play("jumpscare")
+
+func move_to_menu():
 	get_tree().change_scene_to_file("res://assets/UI/MainMenu.tscn")

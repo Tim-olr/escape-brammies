@@ -23,6 +23,7 @@ var has_collided: bool = false
 var can_check: bool = false
 
 func _ready() -> void:
+	GlobalRefs.brammy = self
 	main_parent = get_parent()
 	possies = main_parent.possies
 	attentionTimer = Timer.new()
