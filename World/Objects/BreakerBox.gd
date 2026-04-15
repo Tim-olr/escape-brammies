@@ -64,6 +64,7 @@ func _toggle_power() -> void:
 		if power_on:
 			light.turn_on()
 		else:
+			power_off()
 			light.turn_off()
 
 	if power_on:
