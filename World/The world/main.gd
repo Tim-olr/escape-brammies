@@ -1,15 +1,21 @@
 extends Node3D
+class_name MainScene
+
 @export var possies: Node3D
 @export var bin: Bin
 @export var game_started: bool = false
 @export var brammy: enemy
 @export var brammy_spawn_possies: Node3D
+@export var world_en: WorldEnvironment
+@onready var breaker_pos: Marker3D = $breaker_pos
 
 var has_walked: bool = false
 var fov_tween: Tween
 
 func _ready() -> void:
 	GlobalRefs.world_positions = possies
+	GlobalRefs.breaker_pos = breaker_pos
+	GlobalRefs.main = self
 
 func lerp_fov(target: float, duration: float = 0.6) -> void:
 	if fov_tween:

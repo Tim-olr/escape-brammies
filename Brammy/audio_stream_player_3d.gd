@@ -15,6 +15,13 @@ func audio_proc():
 
 func _on_timer_timeout() -> void:
 	if GlobalRefs.brammy.started:
-		stream = choose_random_audio()
-		play()
+		do_rand_audio()
 	audio_proc()
+
+func do_rand_audio():
+	stream = choose_random_audio()
+	play()
+
+func see():
+	stream = preload("uid://bguib46vqh0du")
+	play()

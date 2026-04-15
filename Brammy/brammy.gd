@@ -11,6 +11,8 @@ class_name enemy
 @export var started: bool = false
 @onready var sprite_3d: Sprite3D = $Sprite3D
 
+@export var audio: AudioStreamPlayer3D
+
 var can_open_door: bool = true
 var speed
 var target
@@ -21,6 +23,8 @@ var main_parent
 var possies
 var has_collided: bool = false
 var can_check: bool = false
+
+var has_seen: bool = false
 
 func _ready() -> void:
 	GlobalRefs.brammy = self
@@ -57,10 +61,19 @@ func _physics_process(delta):
 				target = GlobalPlayer.player
 			if phase == 2:
 				speed = chaseSpeed
+				if !has_seen:
+					has_seen = true
+					audio.see()
 			elif phase == 1:
 				speed = wanderingSpeed
 				if global_position.distance_to(target.global_position) < 3:
 					target = possies.get_random_pos()
+			elif phase == 4:
+				speed = chaseSpeed
+				target = GlobalRefs.breaker_pos
+				if global_position.distance_to(target.global_position) < 3:
+					target = possies.get_random_pos()
+					phase = 1
 		if is_instance_valid(target):
 			nav.target_position = target.global_position if not target is Vector3 else target
 		var direction = (nav.get_next_path_position() - global_position).normalized()
@@ -75,6 +88,7 @@ func loseAttention():
 	target = possies.get_random_pos()
 	can_check = false
 	has_collided = false
+	has_seen = false
 	phase = 1
 
 func _on_player_attention_area_body_exited(body: Node3D) -> void:
