@@ -44,7 +44,7 @@ func _process(delta: float) -> void:
 			_hold_timer = 0.0
 			GlobalPlayer.interaction.set_repair_progress(0.0)
 
-func _toggle_power() -> void:
+func _toggle_power(by_brammy: bool = false) -> void:
 	power_on = not power_on
 	if is_instance_valid(GlobalRefs.brammy.phase):
 		GlobalRefs.brammy.phase = 4
@@ -74,9 +74,15 @@ func _toggle_power() -> void:
 	if power_on:
 		power_restored.emit()
 		GlobalPlayer.promptinstance.show_prompt("Power restored!", 3.0)
+		if GlobalRefs.brammy != null:
+			GlobalRefs.brammy.start_sabotage_timer()
 	else:
 		power_cut.emit()
-		GlobalPlayer.promptinstance.show_prompt("Power cut.", 3.0)
+		if by_brammy:
+			power_off()
+			GlobalPlayer.promptinstance.show_prompt("Looks like Brammy cut off the power", 3.0)
+		else:
+			GlobalPlayer.promptinstance.show_prompt("Power cut.", 3.0)
 
 func _is_aimed_at(collider) -> bool:
 	if collider == null:
@@ -87,6 +93,10 @@ func _is_aimed_at(collider) -> bool:
 			return true
 		node = node.get_parent()
 	return false
+
+func cut_power() -> void:
+	if power_on:
+		_toggle_power(true)
 
 func power_off():
 	GlobalPlayer.audio.set_stream_and_audio(preload("uid://cu6jpka2p7xbb"), 0)

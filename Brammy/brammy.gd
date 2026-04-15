@@ -39,6 +39,7 @@ func _ready() -> void:
 	attentionTimer.one_shot = true
 	attentionTimer.timeout.connect(loseAttention)
 	add_child(attentionTimer)
+
 	target = possies.get_random_pos()
 	await get_tree().process_frame
 	PlayerCast.enabled = true
@@ -77,6 +78,8 @@ func _physics_process(delta):
 				speed = chaseSpeed
 				target = GlobalRefs.breaker_pos
 				if global_position.distance_to(target.global_position) < 3:
+					if GlobalRefs.breaker != null:
+						GlobalRefs.breaker.cut_power()
 					target = possies.get_random_pos()
 					phase = 1
 		if is_instance_valid(target):
@@ -112,3 +115,15 @@ func _on_timer_timeout() -> void:
 
 func _on_smeur_timer_timeout() -> void:
 	can_bad_smeur = true
+
+func start_sabotage_timer() -> void:
+	var timer := Timer.new()
+	timer.wait_time = randf_range(60.0, 120.0)
+	timer.one_shot = true
+	timer.autostart = true
+	timer.timeout.connect(func():
+		if started and phase == 1:
+			phase = 4
+		timer.queue_free()
+	)
+	add_child(timer)

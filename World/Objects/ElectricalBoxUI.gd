@@ -7,7 +7,6 @@ var _callback: Callable
 func _ready() -> void:
 	layer = 10
 	visible = false
-	process_mode = Node.PROCESS_MODE_ALWAYS
 	_build_ui()
 
 func _build_ui() -> void:
@@ -68,15 +67,12 @@ func open(callback: Callable) -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	GlobalPlayer.movement.can_move = false
 	GlobalPlayer.camera.can_look = false
-	GlobalPlayer.player.process_mode = Node.PROCESS_MODE_INHERIT
-	get_tree().paused = true
 
 func close() -> void:
 	visible = false
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	GlobalPlayer.movement.can_move = true
 	GlobalPlayer.camera.can_look = true
-	get_tree().paused = false
 
 func _on_complete() -> void:
 	var sfx := load("res://assets/models/scalda/Electric SHOCK.mp3")
