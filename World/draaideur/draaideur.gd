@@ -38,8 +38,10 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if not _is_repaired:
 		return
-	var target := rotation_speed if _bodies_inside > 0 else 0.0
-	var rate := acceleration if _bodies_inside > 0 else deceleration
+	var breaker := get_tree().get_first_node_in_group("breaker_box") as BreakerBox
+	var has_power: bool = breaker != null and breaker.power_on
+	var target := rotation_speed if _bodies_inside > 0 and has_power else 0.0
+	var rate := acceleration if _bodies_inside > 0 and has_power else deceleration
 	_current_speed = move_toward(_current_speed, target, rate * delta)
 	if abs(_current_speed) > 0.01:
 		rotating_part.rotate_y(deg_to_rad(_current_speed) * delta)

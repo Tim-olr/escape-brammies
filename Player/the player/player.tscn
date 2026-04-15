@@ -21,6 +21,7 @@
 [ext_resource type="FontFile" uid="uid://ulbymda0vas8" path="res://assets/UI/Fonts/MedodicaRegular.otf" id="18_ek1er"]
 [ext_resource type="Script" uid="uid://xviraojwfcqt" path="res://Player/the player/audio_stream_player_3d.gd" id="19_7tefi"]
 [ext_resource type="Texture2D" uid="uid://bfdllm4ycjwhu" path="res://Brammy/brammy.png" id="21_de6yx"]
+[ext_resource type="Script" path="res://Player/the player/objectives.gd" id="22_obj"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_du564"]
 
@@ -347,6 +348,54 @@ text = "."
 [node name="RepairRing" type="Node2D" parent="CanvasLayer/Control" unique_id=459050981]
 position = Vector2(576, 323)
 script = ExtResource("9_f8k7o")
+
+[node name="ObjectivesHUD" type="VBoxContainer" parent="CanvasLayer/Control" unique_id=812345678]
+layout_mode = 0
+offset_left = 870.0
+offset_top = 20.0
+offset_right = 1140.0
+offset_bottom = 140.0
+theme_override_constants/separation = 6
+script = ExtResource("22_obj")
+
+[node name="Title" type="Label" parent="CanvasLayer/Control/ObjectivesHUD" unique_id=812345679]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("18_ek1er")
+theme_override_font_sizes/font_size = 15
+text = "Repair the door"
+modulate = Color(1, 1, 1, 0.6)
+
+[node name="MotorLabel" type="Label" parent="CanvasLayer/Control/ObjectivesHUD" unique_id=812345680]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("18_ek1er")
+theme_override_font_sizes/font_size = 13
+text = "[ ] Repair the Motor"
+
+[node name="WiresLabel" type="Label" parent="CanvasLayer/Control/ObjectivesHUD" unique_id=812345681]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("18_ek1er")
+theme_override_font_sizes/font_size = 13
+text = "[ ] Repair the Wires"
+
+[node name="ButtonLabel" type="Label" parent="CanvasLayer/Control/ObjectivesHUD" unique_id=812345682]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("18_ek1er")
+theme_override_font_sizes/font_size = 13
+text = "[ ] Repair the Button"
+
+[node name="RestorePowerLabel" type="Label" parent="CanvasLayer/Control/ObjectivesHUD" unique_id=812345683]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("18_ek1er")
+theme_override_font_sizes/font_size = 13
+text = "[ ] Restore power"
+visible = false
+
+[node name="EscapeLabel" type="Label" parent="CanvasLayer/Control/ObjectivesHUD" unique_id=812345684]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("18_ek1er")
+theme_override_font_sizes/font_size = 13
+text = ">>> Escape! <<<"
+visible = false
 
 [node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/Control" unique_id=503505123]
 layout_mode = 0

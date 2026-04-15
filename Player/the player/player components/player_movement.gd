@@ -106,9 +106,12 @@ func _handle_movement(body: CharacterBody3D, stats: PlayerStats, delta: float) -
 	if can_move:
 		var input_dir := Input.get_vector("left", "right", "up", "down")
 		var direction := (body.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+		var carrying_heavy := GlobalPlayer.inventory != null and GlobalPlayer.inventory.has_repair_part()
 		var wants_sprint := Input.is_action_pressed("sprint") and direction != Vector3.ZERO
-		sprinting = wants_sprint and can_sprint
+		sprinting = wants_sprint and can_sprint and not carrying_heavy
 		var target_speed: float = stats.speed
+		if carrying_heavy:
+			target_speed *= 0.75
 		if sprinting:
 			target_speed *= stats.sprint_multiplier
 		if direction:
