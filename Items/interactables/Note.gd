@@ -2,6 +2,7 @@ extends Node3D
 class_name Note
 
 ## The note text. Use {code} as a placeholder for the linked keypad's code.
+## When digit_index is set, {code} is replaced with just that one digit.
 ## Example: "The first digit is {code}."
 @export_multiline var text: String = "{code}"
 
@@ -12,14 +13,28 @@ class_name Note
 ## Set to -1 to show the full code instead.
 @export var digit_index: int = -1
 
-@onready var label: Label3D = $Label3D
-
-func _ready() -> void:
-	call_deferred("_update_label")
-
 const ORDINALS := ["First", "Second", "Third", "Fourth", "Fifth", "Sixth"]
 
+@onready var label: Label3D = $Label3D
+
+var _revealed: bool = false
+
+func _ready() -> void:
+	label.text = ""
+	call_deferred("_update_label")
+
+func _process(_delta: float) -> void:
+	if _revealed:
+		return
+	if GlobalRefs.brammy != null and GlobalRefs.brammy.started:
+		_revealed = true
+		_update_label()
+
 func _update_label() -> void:
+	if not _revealed:
+		label.text = ""
+		return
+
 	if keypad == null:
 		label.text = text
 		return
