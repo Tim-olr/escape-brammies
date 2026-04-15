@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bsnn6txjxvln2"]
+
+[ext_resource type="Script" uid="uid://xth6vqifkja0" path="res://Items/usables/white_brew/white_brew.gd" id="1_ja538"]
+[ext_resource type="Texture2D" uid="uid://drg3nipw8d4nm" path="res://assets/textures/white_monster_sample2.png" id="2_3a2w8"]
+[ext_resource type="PackedScene" uid="uid://bnl2cxd065uc4" path="res://assets/models/test_collison.tscn" id="3_fowx8"]
+[ext_resource type="PackedScene" uid="uid://u5nkto6p5nf8" path="res://assets/sprite_scenes/white_brew_sprite.tscn" id="4_5767w"]
+[ext_resource type="AudioStream" uid="uid://duakxe6qseup8" path="res://Items/usables/white_brew/bloxy-cola.mp3" id="5_fowx8"]
+
+[node name="WhiteBrew" type="Node3D" unique_id=742520098]
+script = ExtResource("1_ja538")
+item_name = "White Brew"
+custom_texture = ExtResource("2_3a2w8")
+collision = ExtResource("3_fowx8")
+has_sprite_no_model = true
+sprite = ExtResource("4_5767w")
+delete_on_use = true
+custom_sound_file = ExtResource("5_fowx8")

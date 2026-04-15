@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://u5nkto6p5nf8"]
+
+[ext_resource type="Texture2D" uid="uid://drg3nipw8d4nm" path="res://assets/textures/white_monster_sample2.png" id="1_gdav3"]
+
+[node name="white_brew_sprite" type="Sprite3D" unique_id=565232951]
+billboard = 1
+texture_filter = 0
+texture = ExtResource("1_gdav3")

@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://hfpoldbrm7p8" path="res://Player/the player/player.tscn" id="1_ejmfg"]
 [ext_resource type="PackedScene" uid="uid://b5hrdo86dnvob" path="res://World/Scalda/scalda_level.tscn" id="2_abumu"]
 [ext_resource type="PackedScene" uid="uid://knu1taomhlhs" path="res://Items/interactables/test_item_interactable.tscn" id="2_j5njh"]
+[ext_resource type="PackedScene" uid="uid://ptlmbuje4pq4" path="res://Items/interactables/white_brew/white_brew_interactable.tscn" id="4_6w2ka"]
 [ext_resource type="Script" uid="uid://b6vygy2ti5qc4" path="res://World/The world/death_area.gd" id="4_abumu"]
 [ext_resource type="PackedScene" uid="uid://cp5jn7lrte8f" path="res://World/draaideur/draaideur.tscn" id="5_rvclf"]
 [ext_resource type="PackedScene" uid="uid://bpk1yakmd006" path="res://Items/interactables/repair_pickups/button_pickup.tscn" id="6_slyvb"]
@@ -70,7 +71,7 @@ bin = NodePath("NavigationRegion3D/ScaldaLevel/Environment/BigTrashcan")
 brammy = NodePath("Brammy")
 brammy_spawn_possies = NodePath("BrammySpawnPos")
 world_en = NodePath("WorldEnvironment")
-interactables = Array[PackedScene]([ExtResource("2_j5njh"), ExtResource("20_7d5iv")])
+interactables = Array[PackedScene]([ExtResource("2_j5njh"), ExtResource("20_7d5iv"), ExtResource("4_6w2ka")])
 
 [node name="breaker_pos" type="Marker3D" parent="." unique_id=834914983]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.688698, -2.6422873, 6.392188)
