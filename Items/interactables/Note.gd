@@ -35,32 +35,6 @@ func _update_label() -> void:
 		label.text = ""
 		return
 
-@onready var label: Label3D = $Label3D
-
-const ORDINALS := ["First", "Second", "Third", "Fourth", "Fifth", "Sixth"]
-
-const ORDINALS := ["First", "Second", "Third", "Fourth", "Fifth", "Sixth"]
-
-@onready var label: Label3D = $Label3D
-
-var _revealed: bool = false
-
-func _ready() -> void:
-	label.text = ""
-	call_deferred("_update_label")
-
-func _process(_delta: float) -> void:
-	if _revealed:
-		return
-	if GlobalRefs.brammy != null and GlobalRefs.brammy.started:
-		_revealed = true
-		_update_label()
-
-func _update_label() -> void:
-	if not _revealed:
-		label.text = ""
-		return
-
 	if keypad == null:
 		label.text = text
 		return
