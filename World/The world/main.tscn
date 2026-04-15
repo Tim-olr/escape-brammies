@@ -269,7 +269,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.7397785, -3.8911662, 13.000
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.371876, -2.9411237, 4.1511106)
 
 [node name="Brammy" parent="." unique_id=1676838652 instance=ExtResource("9_eq6tm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.023006, -1.9995766, 0.24800557)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 23.023006, -1.9995766, 0.24800557)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=961822126]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25042295, 0)
@@ -442,6 +442,12 @@ shape = SubResource("BoxShape3D_vhc53")
 
 [node name="ScrumbelInteractable" parent="." unique_id=1541624235 instance=ExtResource("24_2jj54")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 23.373322, 1.0760485, 4.1914034)
+
+[node name="TestItemInteractable" parent="." unique_id=1183875761 instance=ExtResource("2_j5njh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.238468, 0.64725554, -0.6379926)
+
+[node name="ScrewdriverInteractable" parent="." unique_id=1382613018 instance=ExtResource("5_qk4u2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.394428, 0.5704233, -0.66045594)
 
 [connection signal="body_entered" from="death_area" to="death_area" method="_on_body_entered"]
 [connection signal="body_entered" from="start_sequence_detection" to="." method="_on_start_sequence_detection_body_entered"]

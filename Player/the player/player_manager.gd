@@ -21,6 +21,7 @@ func calculate_drop_height():
 
 func pause_everything_except_player():
 	if !is_paused:
+		GlobalRefs.brammy.nav.set_debug_enabled(true)
 		show_gray()
 		GlobalRefs.pause_menu.process_mode = Node.PROCESS_MODE_ALWAYS
 		GlobalPlayer.player.process_mode = Node.PROCESS_MODE_ALWAYS
@@ -30,6 +31,7 @@ func pause_everything_except_player():
 
 func unpause_everything():
 	if is_paused:
+		GlobalRefs.brammy.nav.set_debug_enabled(false)
 		hide_gray()
 		is_paused = false
 		get_tree().paused = false
