@@ -52,6 +52,8 @@ func die():
 	GlobalPlayer.movement.can_move = false
 	GlobalPlayer.camera.can_look = false
 	GlobalPlayer.player.global_position = GlobalPlayer.player.death_pos.global_position
+	GlobalPlayer.audio.set_stream_and_audio(preload("uid://cny77gnc4s4d"), 0)
+	GlobalPlayer.audio.play()
 	GlobalRefs.brammy.hide()
 	ap.speed_scale = 1.5
 	ap.play("jumpscare")

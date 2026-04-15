@@ -4,6 +4,7 @@ extends Node3D
 @export var game_started: bool = false
 @export var brammy: enemy
 @export var brammy_spawn_possies: Node3D
+@export var world_en: WorldEnvironment
 
 var has_walked: bool = false
 var fov_tween: Tween

@@ -44,6 +44,7 @@ func _process(delta: float) -> void:
 func _toggle_power() -> void:
 	_power_on = not _power_on
 
+
 	var target_angle := deg_to_rad(-50.0) if _power_on else deg_to_rad(50.0)
 	var tween := create_tween()
 	tween.tween_property(handle, "rotation:z", target_angle, 0.35).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BACK)
@@ -73,3 +74,7 @@ func _is_aimed_at(collider) -> bool:
 			return true
 		node = node.get_parent()
 	return false
+
+func power_off():
+	GlobalPlayer.audio.set_stream_and_audio(preload("uid://cu6jpka2p7xbb"), 0)
+	GlobalPlayer.audio.play()

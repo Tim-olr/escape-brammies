@@ -12,8 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://bxfajs4cwyu4w" path="res://Brammy/brammy.tscn" id="9_eq6tm"]
 [ext_resource type="Script" uid="uid://b0to2gwbsf6oc" path="res://World/Scalda/roam_positions.gd" id="10_78nbq"]
 [ext_resource type="Script" uid="uid://crs2ithxj3t0y" path="res://World/The world/navigation_region_3d.gd" id="10_jhyn3"]
-[ext_resource type="PackedScene" path="res://World/Objects/BreakerBox.tscn" id="11_brk"]
-[ext_resource type="PackedScene" path="res://World/Objects/FluorescentLight.tscn" id="12_fluo"]
+[ext_resource type="PackedScene" uid="uid://brkbox00001" path="res://World/Objects/BreakerBox.tscn" id="11_brk"]
+[ext_resource type="PackedScene" uid="uid://bqgs0gi8as5aa" path="res://World/Objects/FluorescentLight.tscn" id="12_fluo"]
 [ext_resource type="Texture2D" uid="uid://dy75ctfhvfs5m" path="res://assets/textures/balck.jpg" id="13_74mfr"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ghcsx"]
@@ -29,6 +29,10 @@ sky = SubResource("Sky_os8xc")
 ambient_light_sky_contribution = 0.15
 tonemap_mode = 2
 glow_enabled = true
+fog_enabled = true
+fog_light_color = Color(0, 0, 0, 1)
+fog_density = 0.1575
+volumetric_fog_enabled = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rvclf"]
 size = Vector3(1103.5992, 2041.0796, 1246.0518)
@@ -51,12 +55,13 @@ albedo_texture = ExtResource("13_74mfr")
 
 [sub_resource type="BoxMesh" id="BoxMesh_x53gd"]
 
-[node name="Main" type="Node3D" unique_id=2005214468 node_paths=PackedStringArray("possies", "bin", "brammy", "brammy_spawn_possies")]
+[node name="Main" type="Node3D" unique_id=2005214468 node_paths=PackedStringArray("possies", "bin", "brammy", "brammy_spawn_possies", "world_en")]
 script = ExtResource("1_8j3rw")
 possies = NodePath("RoamPositions")
 bin = NodePath("NavigationRegion3D/ScaldaLevel/Environment/BigTrashcan")
 brammy = NodePath("Brammy")
 brammy_spawn_possies = NodePath("BrammySpawnPos")
+world_en = NodePath("WorldEnvironment")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1700724351]
 environment = SubResource("Environment_pc2j6")
