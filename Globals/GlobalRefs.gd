@@ -7,3 +7,4 @@ class_name Refs
 @onready var brammy: enemy
 @onready var breaker_pos: Marker3D
 @onready var main: MainScene
+@onready var breaker: BreakerBox

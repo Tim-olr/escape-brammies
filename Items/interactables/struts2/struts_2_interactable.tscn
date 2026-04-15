@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dyb1lcmkfiq4e"]
+
+[ext_resource type="Script" uid="uid://bn5lhrik5lkag" path="res://Items/interactables/struts2/struts_2_interactable.gd" id="1_pt8n4"]
+[ext_resource type="PackedScene" uid="uid://cuy1rhbjgn0wx" path="res://assets/models/sql_injection/sql_injection_shape.tscn" id="2_pt8n4"]
+[ext_resource type="PackedScene" uid="uid://b0udeb0msng2" path="res://assets/sprite_scenes/struts2.tscn" id="3_pt8n4"]
+
+[node name="Struts2Interactable" type="Area3D" unique_id=1183875761]
+script = ExtResource("1_pt8n4")
+
+[node name="sql_injection_shape" parent="." unique_id=804056314 instance=ExtResource("2_pt8n4")]
+
+[node name="Struts2" parent="." unique_id=1293599535 instance=ExtResource("3_pt8n4")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0.4189005, 0)

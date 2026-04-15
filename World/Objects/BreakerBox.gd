@@ -12,12 +12,14 @@ var _hold_timer := 0.0
 @onready var handle: Node3D = $Handle
 @onready var power_light_on: MeshInstance3D = $PowerLightOn
 @onready var power_light_off: MeshInstance3D = $PowerLightOff
+var do_sound: bool = false
 
 func _ready() -> void:
 	add_to_group("breaker_box")
 	handle.rotation_degrees.z = 50.0  # start in "off" position (leaning left)
 	power_light_on.visible = false
 	power_light_off.visible = true
+	GlobalRefs.breaker = self
 
 func can_interact() -> void:
 	pass
@@ -44,7 +46,8 @@ func _process(delta: float) -> void:
 
 func _toggle_power() -> void:
 	power_on = not power_on
-	GlobalRefs.brammy.phase = 4
+	if is_instance_valid(GlobalRefs.brammy.phase):
+		GlobalRefs.brammy.phase = 4
 
 	var target_angle := deg_to_rad(-50.0) if power_on else deg_to_rad(50.0)
 	var tween := create_tween()
@@ -64,7 +67,8 @@ func _toggle_power() -> void:
 		if power_on:
 			light.turn_on()
 		else:
-			power_off()
+			if do_sound:
+				power_off()
 			light.turn_off()
 
 	if power_on:
@@ -87,3 +91,13 @@ func _is_aimed_at(collider) -> bool:
 func power_off():
 	GlobalPlayer.audio.set_stream_and_audio(preload("uid://cu6jpka2p7xbb"), 0)
 	GlobalPlayer.audio.play()
+
+func begin_light_on():
+	GlobalRefs.main.world_en.environment.fog_density = 0.0
+	for light in get_tree().get_nodes_in_group("powered_lights"):
+		light.turn_on()
+
+func begin_light_off():
+	GlobalRefs.main.world_en.environment.fog_density = 0.1575
+	for light in get_tree().get_nodes_in_group("powered_lights"):
+		light.turn_off()
