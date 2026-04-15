@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dshklnouom7as"]
+
+[ext_resource type="Texture2D" uid="uid://dmh3mj5rmw2qr" path="res://Items/interactables/repair_pickups/button.png" id="1_ot5q2"]
+
+[node name="ButtonSprite" type="Sprite3D" unique_id=501189920]
+billboard = 1
+texture_filter = 0
+texture = ExtResource("1_ot5q2")

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b60fqj6pnqffx"]
+
+[ext_resource type="Texture2D" uid="uid://c3dhlm56qusau" path="res://Items/interactables/repair_pickups/engine.png" id="1_ak0q4"]
+
+[node name="EngineSprite" type="Sprite3D" unique_id=1553284389]
+billboard = 1
+texture_filter = 0
+texture = ExtResource("1_ak0q4")

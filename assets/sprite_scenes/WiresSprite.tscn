@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ukisjhjmod88"]
+
+[ext_resource type="Texture2D" uid="uid://cq0bylu8lovpd" path="res://Items/interactables/repair_pickups/wires.png" id="1_rnbgk"]
+
+[node name="WiresSprite" type="Sprite3D" unique_id=1470020384]
+billboard = 1
+texture_filter = 0
+texture = ExtResource("1_rnbgk")

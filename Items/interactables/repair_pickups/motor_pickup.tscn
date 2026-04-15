@@ -1,24 +1,18 @@
-[gd_scene format=3 uid="uid://mpk1x9kmd004"]
+[gd_scene format=3 uid="uid://mpk1yakmd004"]
 
-[ext_resource type="Script" uid="uid://pkp1x9kmdaab" path="res://Items/interactables/repair_pickups/repair_pickup.gd" id="1_mpk"]
-[ext_resource type="PackedScene" uid="uid://mtr1x9kmd001" path="res://Items/usables/repair/motor.tscn" id="2_mpk"]
+[ext_resource type="Script" uid="uid://pkp1yakmdaab" path="res://Items/interactables/repair_pickups/repair_pickup.gd" id="1_mpk"]
+[ext_resource type="PackedScene" uid="uid://mtr1yakmd001" path="res://Items/usables/repair/motor.tscn" id="2_mpk"]
+[ext_resource type="PackedScene" uid="uid://b60fqj6pnqffx" path="res://assets/sprite_scenes/EngineSprite.tscn" id="3_4obcr"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mpk"]
 size = Vector3(0.4, 0.4, 0.4)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mpk"]
-albedo_color = Color(0.2, 0.2, 0.2, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_mpk"]
-size = Vector3(0.4, 0.4, 0.4)
-material = SubResource("StandardMaterial3D_mpk")
-
-[node name="MotorPickup" type="Area3D"]
+[node name="MotorPickup" type="Area3D" unique_id=1849098981]
 script = ExtResource("1_mpk")
 item_scene = ExtResource("2_mpk")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("BoxShape3D_mpk")
+[node name="EngineSprite" parent="." unique_id=1553284389 instance=ExtResource("3_4obcr")]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0, 0, 0)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("BoxMesh_mpk")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=835862165]
+shape = SubResource("BoxShape3D_mpk")

@@ -1,24 +1,18 @@
-[gd_scene format=3 uid="uid://wpk1x9kmd005"]
+[gd_scene format=3 uid="uid://wpk1yakmd005"]
 
-[ext_resource type="Script" uid="uid://pkp1x9kmdaab" path="res://Items/interactables/repair_pickups/repair_pickup.gd" id="1_wpk"]
-[ext_resource type="PackedScene" uid="uid://wrs1x9kmd002" path="res://Items/usables/repair/wires.tscn" id="2_wpk"]
+[ext_resource type="Script" uid="uid://pkp1yakmdaab" path="res://Items/interactables/repair_pickups/repair_pickup.gd" id="1_wpk"]
+[ext_resource type="PackedScene" uid="uid://wrs1yakmd002" path="res://Items/usables/repair/wires.tscn" id="2_wpk"]
+[ext_resource type="PackedScene" uid="uid://ukisjhjmod88" path="res://assets/sprite_scenes/WiresSprite.tscn" id="3_3bwui"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wpk"]
-size = Vector3(0.3, 0.1, 0.3)
+size = Vector3(0.3, 0.22299805, 0.3)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wpk"]
-albedo_color = Color(0.9, 0.7, 0.0, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_wpk"]
-size = Vector3(0.3, 0.1, 0.3)
-material = SubResource("StandardMaterial3D_wpk")
-
-[node name="WiresPickup" type="Area3D"]
+[node name="WiresPickup" type="Area3D" unique_id=1683492577]
 script = ExtResource("1_wpk")
 item_scene = ExtResource("2_wpk")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("BoxShape3D_wpk")
+[node name="WiresSprite" parent="." unique_id=1470020384 instance=ExtResource("3_3bwui")]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("BoxMesh_wpk")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1443790259]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.029614259, 0)
+shape = SubResource("BoxShape3D_wpk")

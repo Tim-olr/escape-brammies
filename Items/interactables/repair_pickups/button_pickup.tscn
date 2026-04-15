@@ -1,24 +1,17 @@
-[gd_scene format=3 uid="uid://bpk1x9kmd006"]
+[gd_scene format=3 uid="uid://bpk1yakmd006"]
 
-[ext_resource type="Script" uid="uid://pkp1x9kmdaab" path="res://Items/interactables/repair_pickups/repair_pickup.gd" id="1_bpk"]
-[ext_resource type="PackedScene" uid="uid://btn1x9kmd003" path="res://Items/usables/repair/button.tscn" id="2_bpk"]
+[ext_resource type="Script" uid="uid://pkp1yakmdaab" path="res://Items/interactables/repair_pickups/repair_pickup.gd" id="1_bpk"]
+[ext_resource type="PackedScene" uid="uid://btn1yakmd003" path="res://Items/usables/repair/button.tscn" id="2_bpk"]
+[ext_resource type="PackedScene" uid="uid://dshklnouom7as" path="res://assets/sprite_scenes/ButtonSprite.tscn" id="3_cbefx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bpk"]
 size = Vector3(0.15, 0.15, 0.15)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bpk"]
-albedo_color = Color(0.8, 0.1, 0.1, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_bpk"]
-size = Vector3(0.15, 0.15, 0.15)
-material = SubResource("StandardMaterial3D_bpk")
-
-[node name="ButtonPickup" type="Area3D"]
+[node name="ButtonPickup" type="Area3D" unique_id=866914449]
 script = ExtResource("1_bpk")
 item_scene = ExtResource("2_bpk")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1620817522]
 shape = SubResource("BoxShape3D_bpk")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("BoxMesh_bpk")
+[node name="ButtonSprite" parent="." unique_id=501189920 instance=ExtResource("3_cbefx")]

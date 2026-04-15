@@ -1,13 +1,12 @@
-[gd_scene format=3 uid="uid://mtr1x9kmd001"]
+[gd_scene format=3 uid="uid://mtr1yakmd001"]
 
-[ext_resource type="Script" uid="uid://drp1x9kmda1a" path="res://Items/usables/repair/repair_part.gd" id="1_motor"]
-[ext_resource type="Texture2D" uid="uid://1j0xo782toyr" path="res://icon.svg" id="2_motor"]
+[ext_resource type="Script" uid="uid://drp1yakmda1a" path="res://Items/usables/repair/repair_part.gd" id="1_motor"]
+[ext_resource type="Texture2D" uid="uid://c3dhlm56qusau" path="res://Items/interactables/repair_pickups/engine.png" id="2_mengu"]
 
-[node name="Motor" type="Node3D"]
+[node name="Motor" type="Node3D" unique_id=1326850683]
 script = ExtResource("1_motor")
+part_id = "motor"
 item_name = "Motor"
 min_use_time = 1.5
-custom_texture = ExtResource("2_motor")
-delete_on_use = false
-part_id = "motor"
+custom_texture = ExtResource("2_mengu")
 drop_scene_path = "res://Items/interactables/repair_pickups/motor_pickup.tscn"
