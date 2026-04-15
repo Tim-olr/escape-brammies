@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b0udeb0msng2"]
+
+[ext_resource type="Texture2D" uid="uid://cbm4klrhehyw5" path="res://assets/textures/struts2.png" id="1_0otlp"]
+
+[node name="Struts2" type="Sprite3D" unique_id=1293599535]
+billboard = 1
+texture_filter = 0
+texture = ExtResource("1_0otlp")

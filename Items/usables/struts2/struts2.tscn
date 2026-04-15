@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b78rvo83hladx"]
+
+[ext_resource type="Script" uid="uid://bke44yxtlua56" path="res://Items/usables/struts2/struts_2.gd" id="1_0d84h"]
+[ext_resource type="Texture2D" uid="uid://cbm4klrhehyw5" path="res://assets/textures/struts2.png" id="2_oroo6"]
+[ext_resource type="PackedScene" uid="uid://cuy1rhbjgn0wx" path="res://assets/models/sql_injection/sql_injection_shape.tscn" id="3_1i2tl"]
+[ext_resource type="PackedScene" uid="uid://b0udeb0msng2" path="res://assets/sprite_scenes/struts2.tscn" id="4_0iy18"]
+[ext_resource type="AudioStream" uid="uid://cd2hfy81jlxv3" path="res://Items/usables/struts2/goofy-ahh-runnin.mp3" id="5_0iy18"]
+
+[node name="Struts2" type="Node3D" unique_id=347004369]
+script = ExtResource("1_0d84h")
+item_name = "Struts2"
+custom_texture = ExtResource("2_oroo6")
+collision = ExtResource("3_1i2tl")
+has_sprite_no_model = true
+sprite = ExtResource("4_0iy18")
+delete_on_use = true
+custom_sound_file = ExtResource("5_0iy18")

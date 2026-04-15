@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://ptlmbuje4pq4"]
+
+[ext_resource type="PackedScene" uid="uid://cuy1rhbjgn0wx" path="res://assets/models/sql_injection/sql_injection_shape.tscn" id="1_63x4h"]
+[ext_resource type="Script" uid="uid://u5mnwbxftdg1" path="res://Items/interactables/white_brew/white_brew_interactable.gd" id="1_dnsug"]
+[ext_resource type="PackedScene" uid="uid://u5nkto6p5nf8" path="res://assets/sprite_scenes/white_brew_sprite.tscn" id="3_0xtik"]
+
+[node name="WhiteBrewInteractable" type="Area3D" unique_id=2008203906]
+script = ExtResource("1_dnsug")
+
+[node name="sql_injection_shape" parent="." unique_id=804056314 instance=ExtResource("1_63x4h")]
+
+[node name="white_brew_sprite" parent="." unique_id=565232951 instance=ExtResource("3_0xtik")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0.30520117, 0)
