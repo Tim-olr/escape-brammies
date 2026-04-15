@@ -13,3 +13,4 @@ custom_texture = ExtResource("2_x2rfk")
 model = ExtResource("3_ayyfk")
 collision = ExtResource("4_ayyfk")
 custom_sound_file = ExtResource("5_mcjd2")
+drop_scene_path = "res://Items/interactables/scrumbel/scrumbel_interactable.tscn"
