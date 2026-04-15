@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cq86e2mvf1rdt"]
+
+[ext_resource type="PackedScene" uid="uid://c6husr4wvsge7" path="res://assets/models/scalda/StaTafel.glb" id="1_d5w64"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ngywj"]
+size = Vector3(0.5, 1.1, 0.5)
+
+[node name="StaTafel" type="Node3D" unique_id=1965866260]
+
+[node name="blockbench_export" parent="." unique_id=1999183738 instance=ExtResource("1_d5w64")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1357420116]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1272031193]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.55, 0)
+shape = SubResource("BoxShape3D_ngywj")

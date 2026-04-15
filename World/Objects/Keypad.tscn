@@ -14,7 +14,7 @@ roughness = 0.3
 size = Vector3(0.14, 0.22, 0.04)
 
 [sub_resource type="StandardMaterial3D" id="Mat_housing"]
-albedo_color = Color(0.5211406, 0.52114064, 0.52114046, 1)
+albedo_color = Color(0.52, 0.52, 0.52, 1)
 metallic = 0.5
 roughness = 0.5
 
@@ -31,7 +31,7 @@ emission_energy_multiplier = 0.4
 size = Vector3(0.105, 0.105, 0.003)
 
 [sub_resource type="StandardMaterial3D" id="Mat_buttons"]
-albedo_color = Color(0.39080548, 0.39080545, 0.39080545, 1)
+albedo_color = Color(0.39, 0.39, 0.39, 1)
 metallic = 0.3
 roughness = 0.7
 
@@ -48,34 +48,35 @@ emission_energy_multiplier = 3.0
 [sub_resource type="BoxShape3D" id="BoxShape3D_col"]
 size = Vector3(0.14, 0.22, 0.1)
 
-[node name="Keypad" type="Area3D" unique_id=1221865043]
+[node name="Keypad" type="Area3D"]
+collision_layer = 1
 collision_mask = 0
 script = ExtResource("1_kpd")
 
-[node name="Trim" type="MeshInstance3D" parent="." unique_id=147350503]
+[node name="Trim" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0005)
 mesh = SubResource("BoxMesh_trim")
 surface_material_override/0 = SubResource("Mat_trim")
 
-[node name="Housing" type="MeshInstance3D" parent="." unique_id=696352465]
+[node name="Housing" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.021)
 mesh = SubResource("BoxMesh_housing")
 surface_material_override/0 = SubResource("Mat_housing")
 
-[node name="Screen" type="MeshInstance3D" parent="." unique_id=2116067641]
+[node name="Screen" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.072, 0.043)
 mesh = SubResource("BoxMesh_screen")
 surface_material_override/0 = SubResource("Mat_screen")
 
-[node name="ButtonArea" type="MeshInstance3D" parent="." unique_id=40640191]
+[node name="ButtonArea" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.03, 0.043)
 mesh = SubResource("BoxMesh_buttons")
 surface_material_override/0 = SubResource("Mat_buttons")
 
-[node name="IndicatorLight" type="MeshInstance3D" parent="." unique_id=1515879636]
+[node name="IndicatorLight" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.052, 0.088, 0.043)
 mesh = SubResource("SphereMesh_light")
 surface_material_override/0 = SubResource("Mat_light_red")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1772264296]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_col")

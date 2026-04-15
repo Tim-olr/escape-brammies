@@ -70,6 +70,7 @@ func _toggle_power(by_brammy: bool = false) -> void:
 		else:
 			if do_sound:
 				power_off()
+			power_off()
 			light.turn_off()
 
 	if power_on:
