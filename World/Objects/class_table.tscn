@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c6t4l8v81g2ht"]
+
+[ext_resource type="PackedScene" uid="uid://djyycokbgodaw" path="res://assets/models/scalda/ClassTable.glb" id="1_xjpdi"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v8tcb"]
+size = Vector3(2, 0.7, 1)
+
+[node name="ClassTable" type="Node3D" unique_id=803616612]
+
+[node name="blockbench_export" parent="." unique_id=156358025 instance=ExtResource("1_xjpdi")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=866830689]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=522641428]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35, 0)
+shape = SubResource("BoxShape3D_v8tcb")

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c4g6qw37bsgtp"]
+
+[ext_resource type="PackedScene" uid="uid://bkwabwlq0dsof" path="res://assets/models/scalda/kast.glb" id="1_0js5n"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_30iah"]
+size = Vector3(1, 2, 0.5)
+
+[node name="Cabinet" type="Node3D" unique_id=1098823563]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
+
+[node name="blockbench_export" parent="." unique_id=1504634260 instance=ExtResource("1_0js5n")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1222581781]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1032687979]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("BoxShape3D_30iah")

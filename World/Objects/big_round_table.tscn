@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://f8rmwm6kslvf"]
+
+[ext_resource type="PackedScene" uid="uid://12et4i5hrquu" path="res://assets/models/scalda/BigRoundTable.glb" id="1_osx40"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_osx40"]
+radius = 0.7
+height = 2.8
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3va5l"]
+height = 4.0
+
+[node name="BigRoundTable" type="Node3D" unique_id=145398123]
+
+[node name="blockbench_export" parent="." unique_id=1052695723 instance=ExtResource("1_osx40")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1933382705]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1198565710]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0.5, 0)
+shape = SubResource("CapsuleShape3D_osx40")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=233700866]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0.5, 0)
+shape = SubResource("CapsuleShape3D_3va5l")
+debug_fill = false

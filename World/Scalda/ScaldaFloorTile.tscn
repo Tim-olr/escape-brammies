@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bcxvphne10ctd"]
+
+[ext_resource type="PackedScene" uid="uid://2a45adqr4q1" path="res://assets/models/scalda/ScaldaTile.glb" id="1_2gigm"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jh8ak"]
+size = Vector3(1, 0.1, 1)
+
+[node name="ScaldaFloorTile" type="Node3D" unique_id=1771740729]
+
+[node name="blockbench_export" parent="." unique_id=179624208 instance=ExtResource("1_2gigm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.075, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1135678613]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=333953689]
+shape = SubResource("BoxShape3D_jh8ak")
+
+[editable path="blockbench_export"]

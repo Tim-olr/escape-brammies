@@ -1,11 +1,177 @@
 [gd_scene format=3 uid="uid://c24jguudievws"]
 
+[ext_resource type="Script" uid="uid://baecg6f10a1r" path="res://World/Objects/big_trashcan.gd" id="1_hbk0x"]
 [ext_resource type="PackedScene" uid="uid://bml61owaclrsy" path="res://assets/models/scalda/trashcan_big.glb" id="1_tnhns"]
+[ext_resource type="Texture2D" uid="uid://bfdllm4ycjwhu" path="res://Brammy/brammy.png" id="3_i8p0h"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tnhns"]
 size = Vector3(1.8000001, 1.2, 1)
 
-[node name="BigTrashcan" type="Node3D" unique_id=238253868]
+[sub_resource type="Animation" id="Animation_tnhns"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody3D/blockbench_export/trashcan2/lid2/lid:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.0019531, -0.5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("StaticBody3D/blockbench_export/trashcan2/lid2/lid:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MeshInstance3D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.1675516, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MeshInstance3D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.60651094, -0.1434623)]
+}
+
+[sub_resource type="Animation" id="Animation_i8p0h"]
+resource_name = "bram_in"
+length = 0.6333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody3D/blockbench_export/trashcan2/lid2/lid:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0.6),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.0019531, -0.5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("StaticBody3D/blockbench_export/trashcan2/lid2/lid:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(0.9330339, 1.6245195),
+"update": 0,
+"values": [Vector3(-0.6702064, 0, 0), Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MeshInstance3D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = false
+tracks/2/keys = {
+"times": PackedFloat32Array(0.6),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.1675516, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MeshInstance3D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = false
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 1.0596716, 0.08647245), Vector3(0, 0.74957675, 0.029729486), Vector3(0, 0.60651094, -0.1434623)]
+}
+
+[sub_resource type="Animation" id="Animation_hbk0x"]
+resource_name = "bram_pop_out"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody3D/blockbench_export/trashcan2/lid2/lid:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.0019531, -0.5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("StaticBody3D/blockbench_export/trashcan2/lid2/lid:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.51),
+"transitions": PackedFloat32Array(1.6245195, 0.9330339),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-0.6702064, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MeshInstance3D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.1675516, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MeshInstance3D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.28, 0.48),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0.60651094, -0.1434623), Vector3(0, 0.74957675, 0.029729486), Vector3(0, 1.0596716, 0.08647245)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i8p0h"]
+_data = {
+&"RESET": SubResource("Animation_tnhns"),
+&"bram_in": SubResource("Animation_i8p0h"),
+&"bram_pop_out": SubResource("Animation_hbk0x")
+}
+
+[node name="BigTrashcan" type="Node3D" unique_id=238253868 node_paths=PackedStringArray("ap")]
+script = ExtResource("1_hbk0x")
+ap = NodePath("AnimationPlayer")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=2147435971]
 
@@ -14,5 +180,13 @@ size = Vector3(1.8000001, 1.2, 1)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1302016424]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.940697e-08, 0.59999996, 0)
 shape = SubResource("BoxShape3D_tnhns")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1091049220]
+libraries/ = SubResource("AnimationLibrary_i8p0h")
+
+[node name="MeshInstance3D" type="Sprite3D" parent="." unique_id=1575059715]
+transform = Transform3D(0.15, 0, 0, 0, 0.1478994, -0.025015313, 0, 0.025015313, 0.1478994, 0, 0.60651094, -0.1434623)
+billboard = 1
+texture = ExtResource("3_i8p0h")
 
 [editable path="StaticBody3D/blockbench_export"]
