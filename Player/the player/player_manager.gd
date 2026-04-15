@@ -4,7 +4,8 @@ var is_paused: bool = false
 @onready var paused_timer: Timer = $"../PausedTimer"
 @onready var gray: TextureRect = $"../CanvasLayer/grayscale"
 @onready var ap: AnimationPlayer = $"../AnimationPlayer"
-@onready var sprite_3d: Sprite3D = $"../Sprite3D"
+@onready var sprite_3d: Sprite3D = $"../Camera3D/Sprite3D"
+
 
 var can_sql: bool = true
 

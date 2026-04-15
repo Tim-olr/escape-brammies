@@ -121,7 +121,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite3D:position")
+tracks/0/path = NodePath("Camera3D/Sprite3D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -133,7 +133,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite3D:rotation")
+tracks/1/path = NodePath("Camera3D/Sprite3D:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -145,7 +145,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite3D:visible")
+tracks/2/path = NodePath("Camera3D/Sprite3D:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -161,7 +161,7 @@ length = 2.9333334
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite3D:position")
+tracks/0/path = NodePath("Camera3D/Sprite3D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -173,7 +173,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite3D:rotation")
+tracks/1/path = NodePath("Camera3D/Sprite3D:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -185,7 +185,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite3D:visible")
+tracks/2/path = NodePath("Camera3D/Sprite3D:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -245,6 +245,10 @@ shape = SubResource("CapsuleShape3D_du564")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.55917895, 0)
 script = ExtResource("4_3wug4")
 bob_amount = 25.0
+
+[node name="Sprite3D" type="Sprite3D" parent="Camera3D" unique_id=207096290]
+transform = Transform3D(0.39999995, 0, 0, 0, 0.39999995, 0, 0, 0, 0.39999995, 0, 0.49433023, -2.063394)
+texture = ExtResource("21_de6yx")
 
 [node name="Hand" type="AnimatedSprite2D" parent="Camera3D" unique_id=227232955]
 position = Vector2(791, 287)
@@ -375,9 +379,5 @@ script = ExtResource("19_7tefi")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2042928918]
 libraries/ = SubResource("AnimationLibrary_h1foe")
-
-[node name="Sprite3D" type="Sprite3D" parent="." unique_id=207096290]
-transform = Transform3D(0.39999995, 0, 0, 0, 0.39999995, 0, 0, 0, 0.39999995, 0, 0.49433023, -2.063394)
-texture = ExtResource("21_de6yx")
 
 [connection signal="timeout" from="PausedTimer" to="PlayerManager" method="_on_paused_timer_timeout"]
