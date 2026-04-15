@@ -37,15 +37,7 @@ func _update_label() -> void:
 
 @onready var label: Label3D = $Label3D
 
-func _ready() -> void:
-	call_deferred("_update_label")
-
 const ORDINALS := ["First", "Second", "Third", "Fourth", "Fifth", "Sixth"]
-
-func _update_label() -> void:
-const ORDINALS := ["First", "Second", "Third", "Fourth", "Fifth", "Sixth"]
-
-@onready var label: Label3D = $Label3D
 
 var _revealed: bool = false
 
