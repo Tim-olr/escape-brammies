@@ -54,7 +54,7 @@ func _is_ignored(node: Node) -> bool:
 
 func find_interactable(node: Node) -> Node:
 	# Check de node zelf
-	if node.has_method("can_interact"):
+	if node.has_method("can_interact") and node.is_in_group("interactable"):
 		return node
 	# Check direct de parent, niet verder
 	var parent = node.get_parent()
