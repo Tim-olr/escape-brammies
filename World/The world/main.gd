@@ -28,7 +28,8 @@ func _on_start_sequence_detection_body_entered(body: Node3D) -> void:
 		game_started = true
 		bin.ap.play("bram_pop_out")
 		bin.audio.play()
-		brammy.started = false
+		GlobalRefs.brammy.footsteps.play()
+		brammy.started = true
 		var rand_pos = brammy_spawn_possies.get_children().pick_random()
 		brammy.global_position = rand_pos.global_position
 		lerp_fov(32.0)

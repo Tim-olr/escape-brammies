@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://udfeloq2us80"]
+
+[ext_resource type="PackedScene" path="res://World/Scalda/WindowRod.tscn" id="1_aqono"]
+
+[node name="Deurpost" type="Node3D" unique_id=1542437380]
+
+[node name="WindowRod45" parent="." unique_id=163434570 instance=ExtResource("1_aqono")]
+transform = Transform3D(1.8096125, 0, 0, 0, 2.9284732, 0, 0, 0, 1.1, 0.1753376, 1.4353168, 1.9786687)
+
+[node name="WindowRod46" parent="." unique_id=1168993995 instance=ExtResource("1_aqono")]
+transform = Transform3D(1.8096125, 0, 0, 0, 2.9284732, 0, 0, 0, 1.1, 0.1753376, 1.4353168, -1.9783607)
+
+[node name="WindowRod47" parent="." unique_id=1736309471 instance=ExtResource("1_aqono")]
+transform = Transform3D(1.8096125, 0, 0, 0, -1.7436166e-07, 1.2619795, 0, -3.98893, -5.516287e-08, 0.1753376, 2.7353168, -0.0009481311)

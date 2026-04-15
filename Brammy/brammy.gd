@@ -10,6 +10,10 @@ class_name enemy
 @export var attention_area: Area3D
 @export var started: bool = false
 @onready var sprite_3d: Sprite3D = $Sprite3D
+@onready var footsteps: AudioStreamPlayer3D = $footsteps
+@onready var smeur_timer: Timer = $AudioStreamPlayer3D/smeur_timer
+
+@export var can_bad_smeur: bool = true
 
 @export var audio: AudioStreamPlayer3D
 
@@ -61,8 +65,9 @@ func _physics_process(delta):
 				target = GlobalPlayer.player
 			if phase == 2:
 				speed = chaseSpeed
-				if !has_seen:
+				if !has_seen and can_bad_smeur:
 					has_seen = true
+					smeur_timer.start()
 					audio.see()
 			elif phase == 1:
 				speed = wanderingSpeed
@@ -89,6 +94,7 @@ func loseAttention():
 	can_check = false
 	has_collided = false
 	has_seen = false
+	can_bad_smeur = false
 	phase = 1
 
 func _on_player_attention_area_body_exited(body: Node3D) -> void:
@@ -103,3 +109,6 @@ func _on_timer_timeout() -> void:
 	if sprite_3d.flip_h:
 		sprite_3d.flip_h = false
 	else: sprite_3d.flip_h = true
+
+func _on_smeur_timer_timeout() -> void:
+	can_bad_smeur = true

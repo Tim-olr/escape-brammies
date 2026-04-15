@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://brkbox00001" path="res://World/Objects/BreakerBox.tscn" id="11_brk"]
 [ext_resource type="PackedScene" uid="uid://bqgs0gi8as5aa" path="res://World/Objects/FluorescentLight.tscn" id="12_fluo"]
 [ext_resource type="Texture2D" uid="uid://dy75ctfhvfs5m" path="res://assets/textures/balck.jpg" id="13_74mfr"]
-[ext_resource type="PackedScene" path="res://Items/interactables/hardcore_mode_interactable.tscn" id="16_x53gd"]
+[ext_resource type="PackedScene" uid="uid://ct7tcm0v78636" path="res://Items/interactables/hardcore_mode_interactable.tscn" id="16_x53gd"]
 [ext_resource type="PackedScene" uid="uid://du3mdsaixyqti" path="res://World/Objects/Blackdoor.tscn" id="17_vrh1m"]
 [ext_resource type="PackedScene" path="res://World/Objects/Keypad.tscn" id="18_1tfbs"]
 [ext_resource type="PackedScene" path="res://Items/interactables/Note.tscn" id="19_cmh3a"]
@@ -60,6 +60,8 @@ albedo_texture = ExtResource("13_74mfr")
 
 [sub_resource type="BoxMesh" id="BoxMesh_x53gd"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_x53gd"]
+
 [node name="Main" type="Node3D" unique_id=2005214468 node_paths=PackedStringArray("possies", "bin", "brammy", "brammy_spawn_possies", "world_en")]
 script = ExtResource("1_8j3rw")
 possies = NodePath("RoamPositions")
@@ -77,11 +79,6 @@ environment = SubResource("Environment_pc2j6")
 [node name="Player" parent="." unique_id=1655037376 node_paths=PackedStringArray("death_pos") instance=ExtResource("1_ejmfg")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 26.78246, 0.95087653, -0.098355055)
 death_pos = NodePath("../The death chamber/death_pos")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=835564989]
-transform = Transform3D(0.25881907, -0.8962713, 0.36015338, 0, 0.37285823, 0.92788833, -0.9659258, -0.2401552, 0.09650282, 55.538208, 27.757853, 0)
-shadow_enabled = true
-shadow_bias = 0.0
 
 [node name="TestItemInteractable" parent="." unique_id=1183875761 instance=ExtResource("2_j5njh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.728243, 0.70000005, 5.8982162)
@@ -234,7 +231,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.138977, 0, -0.21939087)
 shape = SubResource("BoxShape3D_8j3rw")
 
 [node name="The death chamber" type="Node3D" parent="." unique_id=286456421]
-transform = Transform3D(1.1778817, 0, 0, 0, 1.2508225, 0, 0, 0, 1, 87.32456, 0, -60.689533)
+transform = Transform3D(2.8154967, 0, 0, 0, 3.3353047, 0, 0, 0, 3.3521059, 87.32456, 0, -60.689533)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="The death chamber" unique_id=577869882]
 
@@ -308,7 +305,13 @@ material_override = SubResource("StandardMaterial3D_aixqs")
 mesh = SubResource("BoxMesh_x53gd")
 
 [node name="death_pos" type="Marker3D" parent="The death chamber" unique_id=542555318]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1267273, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6833652, 0)
+
+[node name="StaticBody3D7" type="StaticBody3D" parent="The death chamber" unique_id=1689233755]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.78978497, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="The death chamber/StaticBody3D7" unique_id=368033549]
+shape = SubResource("BoxShape3D_x53gd")
 
 [node name="HardcoreModeInteractable" parent="." unique_id=1111146323 instance=ExtResource("16_x53gd")]
 transform = Transform3D(1.6368879, 0, 0, 0, 1.2698495, 0, 0, 0, -1.3069758, 19.013578, 1.804839, 2.0692995)
