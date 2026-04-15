@@ -15,10 +15,11 @@
 [ext_resource type="PackedScene" uid="uid://brkbox00001" path="res://World/Objects/BreakerBox.tscn" id="11_brk"]
 [ext_resource type="PackedScene" uid="uid://bqgs0gi8as5aa" path="res://World/Objects/FluorescentLight.tscn" id="12_fluo"]
 [ext_resource type="Texture2D" uid="uid://dy75ctfhvfs5m" path="res://assets/textures/balck.jpg" id="13_74mfr"]
-[ext_resource type="PackedScene" uid="uid://ct7tcm0v78636" path="res://Items/interactables/hardcore_mode_interactable.tscn" id="16_x53gd"]
+[ext_resource type="PackedScene" path="res://Items/interactables/hardcore_mode_interactable.tscn" id="16_x53gd"]
 [ext_resource type="PackedScene" uid="uid://du3mdsaixyqti" path="res://World/Objects/Blackdoor.tscn" id="17_vrh1m"]
 [ext_resource type="PackedScene" path="res://World/Objects/Keypad.tscn" id="18_1tfbs"]
 [ext_resource type="PackedScene" path="res://Items/interactables/Note.tscn" id="19_cmh3a"]
+[ext_resource type="PackedScene" path="res://World/Objects/ElectricalBox.tscn" id="20_7d5iv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ghcsx"]
 sky_top_color = Color(0.37338156, 0.4430481, 0.53593016, 1)
@@ -343,6 +344,9 @@ digit_index = 2
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.5459265, 1.645789, 2.1076849)
 keypad = NodePath("../Keypad")
 digit_index = 3
+
+[node name="ElectricalBox" parent="." unique_id=1677314136 instance=ExtResource("20_7d5iv")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.05863419, 4.768268, 5.51781)
 
 [connection signal="body_entered" from="death_area" to="death_area" method="_on_body_entered"]
 [connection signal="body_entered" from="start_sequence_detection" to="." method="_on_start_sequence_detection_body_entered"]
