@@ -1,4 +1,6 @@
 extends Node3D
+class_name MainScene
+
 @export var possies: Node3D
 @export var bin: Bin
 @export var game_started: bool = false
@@ -13,6 +15,7 @@ var fov_tween: Tween
 func _ready() -> void:
 	GlobalRefs.world_positions = possies
 	GlobalRefs.breaker_pos = breaker_pos
+	GlobalRefs.main = self
 
 func lerp_fov(target: float, duration: float = 0.6) -> void:
 	if fov_tween:

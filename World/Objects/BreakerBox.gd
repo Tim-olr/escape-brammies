@@ -54,8 +54,12 @@ func _toggle_power() -> void:
 
 	for light in get_tree().get_nodes_in_group("powered_lights"):
 		if _power_on:
+			GlobalPlayer.audio.set_stream_and_audio(preload("uid://cosfh1l0wuy5b"), 0)
+			GlobalPlayer.audio.play()
+			GlobalRefs.main.world_en.environment.fog_density = 0.0
 			light.turn_on()
 		else:
+			GlobalRefs.main.world_en.environment.fog_density = 0.1575
 			light.turn_off()
 
 	if _power_on:

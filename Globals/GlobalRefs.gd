@@ -6,3 +6,4 @@ class_name Refs
 @onready var region: NavigationRegion3D
 @onready var brammy: enemy
 @onready var breaker_pos: Marker3D
+@onready var main: MainScene
