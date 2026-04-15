@@ -420,6 +420,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2291081, -2.0738056, 6.471
 [node name="Marker3D6" type="Marker3D" parent="Interactable spawn locations" unique_id=2141353749]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.4811373, -3.223401, 13.510771)
 
+[node name="Marker3D7" type="Marker3D" parent="Interactable spawn locations" unique_id=1280231436]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.95876, 1.5834708, -8.811533)
+
 [node name="ElectricalBox" parent="." unique_id=1677314136 instance=ExtResource("21_elbox")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.05863419, 4.768268, 5.51781)
 

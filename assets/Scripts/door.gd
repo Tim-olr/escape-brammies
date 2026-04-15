@@ -8,6 +8,7 @@ var opened: bool = false
 var initial_rotation: float
 
 func _ready() -> void:
+	super()
 	opened = false
 	initial_rotation = door.rotation_degrees.y
 
