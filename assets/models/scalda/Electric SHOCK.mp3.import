@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://djavrc1b17b0i"
+path="res://.godot/imported/Electric SHOCK.mp3-566de06940fc2632f650f0fd890233a4.mp3str"
+
+[deps]
+
+source_file="res://assets/models/scalda/Electric SHOCK.mp3"
+dest_files=["res://.godot/imported/Electric SHOCK.mp3-566de06940fc2632f650f0fd890233a4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
