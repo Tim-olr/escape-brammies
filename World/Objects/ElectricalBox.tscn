@@ -4,6 +4,9 @@
 [gd_scene format=3 uid="uid://vt5j80c3vndo"]
 
 [ext_resource type="Script" uid="uid://bm2k9qx4nrp7v" path="res://World/Objects/ElectricalBox.gd" id="1_elbox"]
+[gd_scene format=3 uid="uid://cjrmlmetv0vhc"]
+
+[ext_resource type="Script" path="res://World/Objects/ElectricalBox.gd" id="1_elbox"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_housing"]
 size = Vector3(0.32, 0.42, 0.07)
@@ -27,6 +30,7 @@ size = Vector3(0.28, 0.06, 0.003)
 [sub_resource type="StandardMaterial3D" id="Mat_stripe"]
 albedo_color = Color(0.9, 0.75, 0, 1)
 albedo_color = Color(0.9, 0.75, 0.0, 1)
+albedo_color = Color(0.9, 0.75, 0, 1)
 roughness = 0.8
 
 [sub_resource type="BoxMesh" id="BoxMesh_breaker"]
@@ -54,6 +58,9 @@ emission = Color(1, 0.1, 0.1, 1)
 albedo_color = Color(1.0, 0.1, 0.1, 1)
 emission_enabled = true
 emission = Color(1.0, 0.1, 0.1, 1)
+albedo_color = Color(1, 0.1, 0.1, 1)
+emission_enabled = true
+emission = Color(1, 0.1, 0.1, 1)
 emission_energy_multiplier = 3.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_col"]
@@ -79,58 +86,76 @@ mesh = SubResource("BoxMesh_housing")
 surface_material_override/0 = SubResource("Mat_housing")
 
 [node name="FrontPanel" type="MeshInstance3D" parent="."]
+[node name="ElectricalBox" type="Area3D" unique_id=785648226]
+collision_mask = 0
+script = ExtResource("1_elbox")
+
+[node name="Housing" type="MeshInstance3D" parent="." unique_id=1442870569]
+mesh = SubResource("BoxMesh_housing")
+surface_material_override/0 = SubResource("Mat_housing")
+
+[node name="FrontPanel" type="MeshInstance3D" parent="." unique_id=1844799134]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.037)
 mesh = SubResource("BoxMesh_panel")
 surface_material_override/0 = SubResource("Mat_panel")
 
 [node name="WarningStripe" type="MeshInstance3D" parent="." unique_id=1139685009]
 [node name="WarningStripe" type="MeshInstance3D" parent="."]
+[node name="WarningStripe" type="MeshInstance3D" parent="." unique_id=1139685009]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0.038)
 mesh = SubResource("BoxMesh_stripe")
 surface_material_override/0 = SubResource("Mat_stripe")
 
 [node name="Breaker1" type="MeshInstance3D" parent="." unique_id=974968705]
 [node name="Breaker1" type="MeshInstance3D" parent="."]
+[node name="Breaker1" type="MeshInstance3D" parent="." unique_id=974968705]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08, 0.03, 0.04)
 mesh = SubResource("BoxMesh_breaker")
 surface_material_override/0 = SubResource("Mat_breaker")
 
 [node name="Breaker1Toggle" type="MeshInstance3D" parent="Breaker1" unique_id=1362730450]
 [node name="Breaker1Toggle" type="MeshInstance3D" parent="Breaker1"]
+[node name="Breaker1Toggle" type="MeshInstance3D" parent="Breaker1" unique_id=1362730450]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.015, 0.01)
 mesh = SubResource("BoxMesh_breaker_toggle")
 surface_material_override/0 = SubResource("Mat_toggle")
 
 [node name="Breaker2" type="MeshInstance3D" parent="." unique_id=189916312]
 [node name="Breaker2" type="MeshInstance3D" parent="."]
+[node name="Breaker2" type="MeshInstance3D" parent="." unique_id=189916312]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03, 0.04)
 mesh = SubResource("BoxMesh_breaker")
 surface_material_override/0 = SubResource("Mat_breaker")
 
 [node name="Breaker2Toggle" type="MeshInstance3D" parent="Breaker2" unique_id=1120546872]
 [node name="Breaker2Toggle" type="MeshInstance3D" parent="Breaker2"]
+[node name="Breaker2Toggle" type="MeshInstance3D" parent="Breaker2" unique_id=1120546872]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.015, 0.01)
 mesh = SubResource("BoxMesh_breaker_toggle")
 surface_material_override/0 = SubResource("Mat_toggle")
 
 [node name="Breaker3" type="MeshInstance3D" parent="." unique_id=1413287409]
 [node name="Breaker3" type="MeshInstance3D" parent="."]
+[node name="Breaker3" type="MeshInstance3D" parent="." unique_id=1413287409]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08, 0.03, 0.04)
 mesh = SubResource("BoxMesh_breaker")
 surface_material_override/0 = SubResource("Mat_breaker")
 
 [node name="Breaker3Toggle" type="MeshInstance3D" parent="Breaker3" unique_id=1389404770]
 [node name="Breaker3Toggle" type="MeshInstance3D" parent="Breaker3"]
+[node name="Breaker3Toggle" type="MeshInstance3D" parent="Breaker3" unique_id=1389404770]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.015, 0.01)
 mesh = SubResource("BoxMesh_breaker_toggle")
 surface_material_override/0 = SubResource("Mat_toggle")
 
 [node name="IndicatorLight" type="MeshInstance3D" parent="." unique_id=49272704]
 [node name="IndicatorLight" type="MeshInstance3D" parent="."]
+[node name="IndicatorLight" type="MeshInstance3D" parent="." unique_id=49272704]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12, -0.165, 0.04)
 mesh = SubResource("SphereMesh_light")
 surface_material_override/0 = SubResource("Mat_light_red")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1808983366]
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1808983366]
 shape = SubResource("BoxShape3D_col")

@@ -35,6 +35,10 @@
 [ext_resource type="PackedScene" path="res://Items/interactables/Note.tscn" id="19_cmh3a"]
 [ext_resource type="PackedScene" uid="uid://dyb1lcmkfiq4e" path="res://Items/interactables/struts2/struts_2_interactable.tscn" id="20_7d5iv"]
 [ext_resource type="PackedScene" path="res://World/Objects/ElectricalBox.tscn" id="21_elbox"]
+[ext_resource type="PackedScene" uid="uid://gy4jdj3afkio" path="res://World/Objects/Keypad.tscn" id="18_1tfbs"]
+[ext_resource type="PackedScene" path="res://Items/interactables/Note.tscn" id="19_cmh3a"]
+[ext_resource type="PackedScene" uid="uid://dyb1lcmkfiq4e" path="res://Items/interactables/struts2/struts_2_interactable.tscn" id="20_7d5iv"]
+[ext_resource type="PackedScene" uid="uid://cjrmlmetv0vhc" path="res://World/Objects/ElectricalBox.tscn" id="21_elbox"]
 [ext_resource type="PackedScene" uid="uid://bqthakx4h6ydl" path="res://Items/interactables/scrumbel/scrumbel_interactable.tscn" id="24_2jj54"]
 [ext_resource type="Texture2D" uid="uid://7v81h12e88i1" path="res://assets/models/scalda/rens.png" id="24_c17kt"]
 
@@ -490,6 +494,13 @@ shape = SubResource("BoxShape3D_vhc53")
 
 [node name="ScrumbelInteractable" parent="." unique_id=1541624235 instance=ExtResource("24_2jj54")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.936981, 1.1303158, 9.207291)
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 23.373322, 1.0760485, 4.1914034)
+
+[node name="TestItemInteractable" parent="." unique_id=1183875761 instance=ExtResource("2_j5njh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.238468, 0.64725554, -0.6379926)
+
+[node name="ScrewdriverInteractable" parent="." unique_id=1382613018 instance=ExtResource("5_qk4u2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.394428, 0.5704233, -0.66045594)
 
 [connection signal="body_entered" from="death_area" to="death_area" method="_on_body_entered"]
 [connection signal="body_entered" from="start_sequence_detection" to="." method="_on_start_sequence_detection_body_entered"]

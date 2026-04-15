@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://boe6pp6mqavlk"]
+[gd_scene format=3 uid="uid://bcxky2a8kxhfs"]
 
 [ext_resource type="Script" uid="uid://csjxbumwpjvap" path="res://Items/interactables/screwdriver.gd" id="1_rooiy"]
 [ext_resource type="Texture2D" uid="uid://uk73uyng4d51" path="res://assets/models/Screwdriver/screwdriver.png" id="2_6tw4n"]
