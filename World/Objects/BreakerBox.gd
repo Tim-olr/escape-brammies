@@ -44,6 +44,7 @@ func _process(delta: float) -> void:
 
 func _toggle_power() -> void:
 	power_on = not power_on
+	GlobalRefs.brammy.phase = 4
 
 	var target_angle := deg_to_rad(-50.0) if power_on else deg_to_rad(50.0)
 	var tween := create_tween()
@@ -51,6 +52,13 @@ func _toggle_power() -> void:
 
 	power_light_on.visible = power_on
 	power_light_off.visible = not power_on
+
+	if power_on:
+		GlobalPlayer.audio.set_stream_and_audio(preload("uid://cosfh1l0wuy5b"), 0)
+		GlobalPlayer.audio.play()
+		GlobalRefs.main.world_en.environment.fog_density = 0.0
+	else:
+		GlobalRefs.main.world_en.environment.fog_density = 0.1575
 
 	for light in get_tree().get_nodes_in_group("powered_lights"):
 		if power_on:
@@ -74,3 +82,7 @@ func _is_aimed_at(collider) -> bool:
 			return true
 		node = node.get_parent()
 	return false
+
+func power_off():
+	GlobalPlayer.audio.set_stream_and_audio(preload("uid://cu6jpka2p7xbb"), 0)
+	GlobalPlayer.audio.play()

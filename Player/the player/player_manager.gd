@@ -4,7 +4,8 @@ var is_paused: bool = false
 @onready var paused_timer: Timer = $"../PausedTimer"
 @onready var gray: TextureRect = $"../CanvasLayer/grayscale"
 @onready var ap: AnimationPlayer = $"../AnimationPlayer"
-@onready var sprite_3d: Sprite3D = $"../Sprite3D"
+@onready var sprite_3d: Sprite3D = $"../Camera3D/Sprite3D"
+
 
 var can_sql: bool = true
 
@@ -52,6 +53,8 @@ func die():
 	GlobalPlayer.movement.can_move = false
 	GlobalPlayer.camera.can_look = false
 	GlobalPlayer.player.global_position = GlobalPlayer.player.death_pos.global_position
+	GlobalPlayer.audio.set_stream_and_audio(preload("uid://cny77gnc4s4d"), 0)
+	GlobalPlayer.audio.play()
 	GlobalRefs.brammy.hide()
 	ap.speed_scale = 1.5
 	ap.play("jumpscare")
