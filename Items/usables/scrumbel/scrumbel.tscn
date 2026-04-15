@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://sk8gw3cysmfg"]
+
+[ext_resource type="Script" uid="uid://d4ccs8ta0ti5b" path="res://Items/usables/scrumbel/scrumbel.gd" id="1_oopj0"]
+[ext_resource type="Texture2D" uid="uid://c6fjuwlkxl7dn" path="res://Items/usables/scrumbel/scrumbel.png" id="2_x2rfk"]
+[ext_resource type="PackedScene" uid="uid://ca1g4ml3ua6iy" path="res://Items/interactables/scrumbel/Scrumbel.glb" id="3_ayyfk"]
+[ext_resource type="PackedScene" uid="uid://bnl2cxd065uc4" path="res://assets/models/test_collison.tscn" id="4_ayyfk"]
+
+[node name="Scrumbel" type="Node3D" unique_id=1079657036]
+script = ExtResource("1_oopj0")
+item_name = "Scrumbel"
+custom_texture = ExtResource("2_x2rfk")
+model = ExtResource("3_ayyfk")
+collision = ExtResource("4_ayyfk")

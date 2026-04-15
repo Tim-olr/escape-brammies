@@ -9,6 +9,9 @@ class_name MainScene
 @export var world_en: WorldEnvironment
 @onready var breaker_pos: Marker3D = $breaker_pos
 @onready var interactable_spawn_locations: Node3D = $"Interactable spawn locations"
+@export var ap: AnimationPlayer
+
+var can_ding: bool = false
 
 @export var interactables: Array[PackedScene]
 
@@ -56,3 +59,14 @@ func spawn_random_inter():
 			var int_scene = interactable.instantiate()
 			add_child(int_scene)
 			int_scene.global_position = i.global_position
+
+func ding():
+	if can_ding:
+		ap.play("show_button")
+
+func _on_bell_interaction_body_entered(body: Node3D) -> void:
+	if body.is_in_group("player"):
+		can_ding = true
+
+func _on_bell_interaction_body_exited(body: Node3D) -> void:
+	can_ding = false

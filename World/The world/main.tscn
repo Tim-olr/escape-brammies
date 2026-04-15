@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" path="res://Items/interactables/Note.tscn" id="19_cmh3a"]
 [ext_resource type="PackedScene" uid="uid://dyb1lcmkfiq4e" path="res://Items/interactables/struts2/struts_2_interactable.tscn" id="20_7d5iv"]
 [ext_resource type="PackedScene" path="res://World/Objects/ElectricalBox.tscn" id="21_elbox"]
+[ext_resource type="PackedScene" uid="uid://bqthakx4h6ydl" path="res://Items/interactables/scrumbel/scrumbel_interactable.tscn" id="24_2jj54"]
 [ext_resource type="Texture2D" uid="uid://7v81h12e88i1" path="res://assets/models/scalda/rens.png" id="24_c17kt"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ghcsx"]
@@ -66,13 +67,77 @@ albedo_texture = ExtResource("13_74mfr")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_x53gd"]
 
-[node name="Main" type="Node3D" unique_id=2005214468 node_paths=PackedStringArray("possies", "bin", "brammy", "brammy_spawn_possies", "world_en")]
+[sub_resource type="Animation" id="Animation_c17kt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(36.739803, -3.769992, 7.1133337)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ButtonPickup:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(37.99386, -2.2017694, 6.2858863)]
+}
+
+[sub_resource type="Animation" id="Animation_2jj54"]
+resource_name = "show_button"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.99),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(36.739803, -3.769992, 7.1133337), Vector3(36.739803, -2.1440709, 7.1133337)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ButtonPickup:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0009999999, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(37.99386, -2.2017694, 6.2858863), Vector3(37.99386, -1.9346201, 6.2858863)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tumtg"]
+_data = {
+&"RESET": SubResource("Animation_c17kt"),
+&"show_button": SubResource("Animation_2jj54")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vhc53"]
+size = Vector3(11.776489, 4.7178955, 22.128326)
+
+[node name="Main" type="Node3D" unique_id=2005214468 node_paths=PackedStringArray("possies", "bin", "brammy", "brammy_spawn_possies", "world_en", "ap")]
 script = ExtResource("1_8j3rw")
 possies = NodePath("RoamPositions")
 bin = NodePath("NavigationRegion3D/ScaldaLevel/Environment/BigTrashcan")
 brammy = NodePath("Brammy")
 brammy_spawn_possies = NodePath("BrammySpawnPos")
 world_en = NodePath("WorldEnvironment")
+ap = NodePath("AnimationPlayer")
 interactables = Array[PackedScene]([ExtResource("2_j5njh"), ExtResource("20_7d5iv"), ExtResource("4_6w2ka"), ExtResource("5_qk4u2")])
 
 [node name="breaker_pos" type="Marker3D" parent="." unique_id=834914983]
@@ -99,7 +164,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.468445, -3.2450871, -2.246
 
 [node name="ButtonPickup" parent="." unique_id=96722833 instance=ExtResource("6_slyvb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.99386, -2.2017694, 6.2858863)
-visible = false
 
 [node name="MotorPickup" parent="." unique_id=394935821 instance=ExtResource("7_eq6tm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0203779, 1.3144246, 5.4325275)
@@ -362,8 +426,23 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.0
 transform = Transform3D(-4.371139e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.371139e-09, 36.739803, -3.769992, 7.1133337)
 texture = ExtResource("24_c17kt")
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=320756737]
+libraries/ = SubResource("AnimationLibrary_tumtg")
+
+[node name="BellInteraction" type="Area3D" parent="." unique_id=1178911685]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.068504, 0, 7.701845)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BellInteraction" unique_id=59357821]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0791054, -1.6988063, -0.7301941)
+shape = SubResource("BoxShape3D_vhc53")
+
+[node name="ScrumbelInteractable" parent="." unique_id=1541624235 instance=ExtResource("24_2jj54")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.936981, 1.1303158, 9.207291)
+
 [connection signal="body_entered" from="death_area" to="death_area" method="_on_body_entered"]
 [connection signal="body_entered" from="start_sequence_detection" to="." method="_on_start_sequence_detection_body_entered"]
 [connection signal="body_exited" from="start_sequence_detection" to="." method="_on_start_sequence_detection_body_exited"]
+[connection signal="body_entered" from="BellInteraction" to="." method="_on_bell_interaction_body_entered"]
+[connection signal="body_exited" from="BellInteraction" to="." method="_on_bell_interaction_body_exited"]
 
 [editable path="NavigationRegion3D/ScaldaLevel"]
