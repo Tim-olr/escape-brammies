@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bqthakx4h6ydl"]
+
+[ext_resource type="PackedScene" uid="uid://cuy1rhbjgn0wx" path="res://assets/models/sql_injection/sql_injection_shape.tscn" id="1_frx26"]
+[ext_resource type="Script" uid="uid://c6iqtegme8o24" path="res://Items/interactables/scrumbel/scrumbel_interactable.gd" id="1_h8nbr"]
+[ext_resource type="PackedScene" uid="uid://ca1g4ml3ua6iy" path="res://Items/interactables/scrumbel/Scrumbel.glb" id="2_h8nbr"]
+
+[node name="ScrumbelInteractable" type="Area3D" unique_id=1541624235]
+script = ExtResource("1_h8nbr")
+
+[node name="sql_injection_shape" parent="." unique_id=804056314 instance=ExtResource("1_frx26")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.014587402, 0.18767005, 0.032180786)
+
+[node name="blockbench_export" parent="." unique_id=260684579 instance=ExtResource("2_h8nbr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.014532819, 0, 0.05301428)
