@@ -10,6 +10,7 @@ class_name MainScene
 @onready var breaker_pos: Marker3D = $breaker_pos
 @onready var interactable_spawn_locations: Node3D = $"Interactable spawn locations"
 @export var ap: AnimationPlayer
+@export var dinged: bool = false
 
 var can_ding: bool = false
 
@@ -61,7 +62,7 @@ func spawn_random_inter():
 			int_scene.global_position = i.global_position
 
 func ding():
-	if can_ding:
+	if can_ding and !dinged:
 		ap.play("show_button")
 
 func _on_bell_interaction_body_entered(body: Node3D) -> void:
