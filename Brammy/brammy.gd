@@ -68,6 +68,12 @@ func _physics_process(delta):
 				speed = wanderingSpeed
 				if global_position.distance_to(target.global_position) < 3:
 					target = possies.get_random_pos()
+			elif phase == 4:
+				speed = chaseSpeed
+				target = GlobalRefs.breaker_pos
+				if global_position.distance_to(target.global_position) < 3:
+					target = possies.get_random_pos()
+					phase = 1
 		if is_instance_valid(target):
 			nav.target_position = target.global_position if not target is Vector3 else target
 		var direction = (nav.get_next_path_position() - global_position).normalized()

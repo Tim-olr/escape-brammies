@@ -63,6 +63,9 @@ brammy = NodePath("Brammy")
 brammy_spawn_possies = NodePath("BrammySpawnPos")
 world_en = NodePath("WorldEnvironment")
 
+[node name="breaker_pos" type="Marker3D" parent="." unique_id=834914983]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.688698, -2.6422873, 6.392188)
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1700724351]
 environment = SubResource("Environment_pc2j6")
 

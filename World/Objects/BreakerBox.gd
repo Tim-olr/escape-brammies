@@ -43,7 +43,7 @@ func _process(delta: float) -> void:
 
 func _toggle_power() -> void:
 	_power_on = not _power_on
-
+	GlobalRefs.brammy.phase = 4
 
 	var target_angle := deg_to_rad(-50.0) if _power_on else deg_to_rad(50.0)
 	var tween := create_tween()
