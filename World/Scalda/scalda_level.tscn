@@ -121,6 +121,9 @@ albedo_color = Color(1, 0.41660297, 0.3479252, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_7g4jt"]
 size = Vector3(0.5559387, 3.8267212, 2.2730103)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_om1gr"]
+albedo_color = Color(0.60933006, 0.6093301, 0.60933006, 1)
+
 [node name="ScaldaLevel" type="Node3D" unique_id=1905537615]
 
 [node name="ScaldaLevel" type="CSGCombiner3D" parent="." unique_id=2123380938]
@@ -349,6 +352,32 @@ collision_mask = 4
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ScaldaLevel/trap_blovker" unique_id=90247955]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4030306, -0.9966016, 10.235156)
 shape = SubResource("BoxShape3D_7g4jt")
+
+[node name="Outside" type="Node3D" parent="ScaldaLevel" unique_id=678908355]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/Outside" unique_id=280091515]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, -4.1000004, -6.3)
+use_collision = true
+size = Vector3(2.6000001, 0.3, 7.4)
+material = SubResource("StandardMaterial3D_om1gr")
+
+[node name="Blocked" parent="ScaldaLevel/Outside" unique_id=1503655149 instance=ExtResource("16_xmlpx")]
+transform = Transform3D(2.9, 0, 0, 0, 2, 0, 0, 0, 1, 38.181305, -2.65, -2.368412)
+
+[node name="Blocked2" parent="ScaldaLevel/Outside" unique_id=150914355 instance=ExtResource("16_xmlpx")]
+transform = Transform3D(2.9, 0, 0, 0, 2, 0, 0, 0, 1, 44.681305, -2.65, -2.368412)
+
+[node name="Blocked3" parent="ScaldaLevel/Outside" unique_id=986478680 instance=ExtResource("16_xmlpx")]
+transform = Transform3D(4.5486277e-07, 0, 0.99999994, 0, 1.9999998, 0, -6.323104, 0, 5.215406e-08, 40.209427, -2.782461, -6.2684126)
+
+[node name="Blocked4" parent="ScaldaLevel/Outside" unique_id=889579520 instance=ExtResource("16_xmlpx")]
+transform = Transform3D(4.5486277e-07, 0, 0.99999994, 0, 1.9999998, 0, -6.323104, 0, 5.215406e-08, 42.709427, -2.782461, -6.2684126)
+
+[node name="Blocked5" parent="ScaldaLevel/Outside" unique_id=1652064491 instance=ExtResource("16_xmlpx")]
+transform = Transform3D(2.9, 0, 0, 0, 2, 0, 0, 0, 1, 41.381306, -2.65, -9.568412)
+
+[node name="Blocked6" parent="ScaldaLevel/Outside" unique_id=1011546204 instance=ExtResource("16_xmlpx")]
+transform = Transform3D(2.175, 0, 0, 0, -2.5789717e-07, 1, 0, -5.8999996, -4.371139e-08, 41.381306, -1.45, -6.068412)
 
 [node name="Environment" type="Node3D" parent="." unique_id=782699926]
 
