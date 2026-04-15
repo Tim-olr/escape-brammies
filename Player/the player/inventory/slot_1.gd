@@ -7,7 +7,7 @@ var has_item := false
 @export var slot_item: Node3D
 @export var slot_sprite: Sprite2D
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if selected:
 		pass
 
