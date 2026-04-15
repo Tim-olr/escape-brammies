@@ -18,10 +18,10 @@
 [ext_resource type="Texture2D" uid="uid://dy75ctfhvfs5m" path="res://assets/textures/balck.jpg" id="13_74mfr"]
 [ext_resource type="PackedScene" uid="uid://ct7tcm0v78636" path="res://Items/interactables/hardcore_mode_interactable.tscn" id="16_x53gd"]
 [ext_resource type="PackedScene" uid="uid://du3mdsaixyqti" path="res://World/Objects/Blackdoor.tscn" id="17_vrh1m"]
-[ext_resource type="PackedScene" uid="uid://dne3kp8qxvw2m" path="res://World/Objects/Keypad.tscn" id="18_1tfbs"]
+[ext_resource type="PackedScene" uid="uid://gy4jdj3afkio" path="res://World/Objects/Keypad.tscn" id="18_1tfbs"]
 [ext_resource type="PackedScene" uid="uid://saxsy1hidu1g" path="res://Items/interactables/Note.tscn" id="19_cmh3a"]
 [ext_resource type="PackedScene" uid="uid://dyb1lcmkfiq4e" path="res://Items/interactables/struts2/struts_2_interactable.tscn" id="20_7d5iv"]
-[ext_resource type="PackedScene" uid="uid://vt5j80c3vndo" path="res://World/Objects/ElectricalBox.tscn" id="21_elbox"]
+[ext_resource type="PackedScene" uid="uid://cjrmlmetv0vhc" path="res://World/Objects/ElectricalBox.tscn" id="21_elbox"]
 [ext_resource type="PackedScene" uid="uid://bqthakx4h6ydl" path="res://Items/interactables/scrumbel/scrumbel_interactable.tscn" id="24_2jj54"]
 [ext_resource type="Texture2D" uid="uid://7v81h12e88i1" path="res://assets/models/scalda/rens.png" id="24_c17kt"]
 
@@ -160,7 +160,7 @@ transform = Transform3D(1, 0, 0, 0, 2.0387816, 0, 0, 0, 1, 25.850769, -2078.674,
 shape = SubResource("BoxShape3D_rvclf")
 
 [node name="Draaideur" parent="." unique_id=1944341719 instance=ExtResource("5_rvclf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.468445, -2.9450872, -2.2469466)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 41.468445, -2.9450872, -2.2469466)
 
 [node name="ButtonPickup" parent="." unique_id=96722833 instance=ExtResource("6_slyvb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.99386, -2.2017694, 6.2858863)
@@ -434,7 +434,7 @@ texture = ExtResource("24_c17kt")
 libraries/ = SubResource("AnimationLibrary_tumtg")
 
 [node name="BellInteraction" type="Area3D" parent="." unique_id=1178911685]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.068504, 0, 7.701845)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 38.568504, -1, 8.101845)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BellInteraction" unique_id=59357821]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0791054, -1.6988063, -0.7301941)

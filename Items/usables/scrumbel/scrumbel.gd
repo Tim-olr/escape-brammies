@@ -6,6 +6,3 @@ func do_item_thing():
 	GlobalRefs.main.ding()
 	if GlobalRefs.main.can_ding:
 		GlobalRefs.main.dinged = true
-	GlobalRefs.main.dinged = true
-	if GlobalRefs.main.can_ding:
-		GlobalRefs.main.dinged = true
