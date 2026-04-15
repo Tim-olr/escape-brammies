@@ -6,6 +6,7 @@ class_name RepairPickup
 @export var item_scene: PackedScene
 
 func can_interact():
+	GlobalPlayer.inventory.drop_item()
 	pass
 
 func interact() -> bool:

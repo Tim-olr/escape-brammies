@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://csxbsxad5e88"]
+
+[ext_resource type="Script" uid="uid://c5ru7weca4iaq" path="res://Items/usables/screwdriver.gd" id="1_aqc00"]
+[ext_resource type="Texture2D" uid="uid://uk73uyng4d51" path="res://assets/models/Screwdriver/screwdriver.png" id="2_k3snx"]
+[ext_resource type="PackedScene" uid="uid://b3uc84s6s1pm" path="res://assets/models/Screwdriver/screwdriver_shape.tscn" id="3_2r7dv"]
+
+[node name="Screwdriver" type="Node3D" unique_id=1578810768]
+script = ExtResource("1_aqc00")
+item_name = "Screwdriver"
+custom_texture = ExtResource("2_k3snx")
+model = ExtResource("3_2r7dv")
+has_sprite_no_model = true
+drop_scene_path = "res://Items/interactables/screwdriver_interactable.tscn"

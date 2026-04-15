@@ -26,7 +26,7 @@ transparency = 1
 albedo_texture = ExtResource("2_r1bkj")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_svkij"]
-size = Vector3(0.2, 2.4906006, 3.4716797)
+size = Vector3(0.2, 2.4906006, 1.7358155)
 
 [node name="DoubleDoors" type="Area3D" unique_id=1867932448]
 script = ExtResource("1_r1bkj")
@@ -71,8 +71,12 @@ transform = Transform3D(1.1, 0, 0, 0, 2.9284732, 0, 0, 0, 1.5125, 0, 1.4353168, 
 [node name="WindowRod43" parent="." unique_id=1446966033 instance=ExtResource("2_5ykhr")]
 transform = Transform3D(2.9940438e-15, -1.8025142e-07, 1.0999998, -1.567, -1.802514e-07, 0, 6.8495744e-08, -4.123672, -4.8082523e-08, 0, 2.69, -0.001613617)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=621895279]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2453003, 0)
+[node name="Interaction1" type="CollisionShape3D" parent="." unique_id=621895279]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2453003, -0.8679321)
+shape = SubResource("BoxShape3D_svkij")
+
+[node name="Interaction2" type="CollisionShape3D" parent="." unique_id=161172816]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2453003, 0.8700942)
 shape = SubResource("BoxShape3D_svkij")
 
 [editable path="blockbench_export"]
