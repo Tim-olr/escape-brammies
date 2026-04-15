@@ -15,6 +15,10 @@
 [ext_resource type="PackedScene" path="res://Items/interactables/screwdriver_interactable.tscn" id="13_74mfr"]
 [ext_resource type="Script" uid="uid://b0to2gwbsf6oc" path="res://World/Scalda/roam_positions.gd" id="10_78nbq"]
 [ext_resource type="Script" uid="uid://crs2ithxj3t0y" path="res://World/The world/navigation_region_3d.gd" id="10_jhyn3"]
+[ext_resource type="Script" uid="uid://b0to2gwbsf6oc" path="res://World/Scalda/roam_positions.gd" id="10_78nbq"]
+[ext_resource type="Script" uid="uid://crs2ithxj3t0y" path="res://World/The world/navigation_region_3d.gd" id="10_jhyn3"]
+[ext_resource type="PackedScene" uid="uid://brkbox00001" path="res://World/Objects/BreakerBox.tscn" id="11_brk"]
+[ext_resource type="PackedScene" uid="uid://bqgs0gi8as5aa" path="res://World/Objects/FluorescentLight.tscn" id="12_fluo"]
 [ext_resource type="Texture2D" uid="uid://dy75ctfhvfs5m" path="res://assets/textures/balck.jpg" id="13_74mfr"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ghcsx"]
@@ -201,6 +205,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.329091, 0.75698304, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="start_sequence_detection" unique_id=487922464]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.138977, 0, -0.21939087)
 shape = SubResource("BoxShape3D_8j3rw")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.761204, -2.7991824, 6.2858863)
+
+[node name="MotorPickup" parent="." unique_id=394935821 instance=ExtResource("7_eq6tm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.848824, -2.69551, 6.1752205)
+
+[node name="WiresPickup" parent="." unique_id=1512566681 instance=ExtResource("8_78nbq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.969776, -2.5769439, 5.7294235)
+
+[node name="BreakerBox" parent="." unique_id=2029991493 instance=ExtResource("11_brk")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 36, -2, 6.5)
+
+[node name="FluorescentLight" parent="." unique_id=1970621401 instance=ExtResource("12_fluo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.388474, -0.2683606, 8.516734)
 
 [node name="RoamPositions" type="Node3D" parent="." unique_id=946415591]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.30027103, 0)

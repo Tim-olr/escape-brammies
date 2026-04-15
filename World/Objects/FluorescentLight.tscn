@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://fluolight0001"]
+
+[ext_resource type="Script" path="res://World/Objects/FluorescentLight.gd" id="1_fluo"]
+
+[sub_resource type="StandardMaterial3D" id="FixtureMat"]
+albedo_color = Color(0.72, 0.72, 0.74, 1)
+metallic = 0.6
+roughness = 0.4
+
+[sub_resource type="BoxMesh" id="FixtureMesh"]
+size = Vector3(0.9, 0.055, 0.12)
+material = SubResource("FixtureMat")
+
+[sub_resource type="StandardMaterial3D" id="TubeOffMat"]
+albedo_color = Color(0.45, 0.45, 0.48, 1)
+roughness = 0.9
+
+[sub_resource type="BoxMesh" id="TubeOffMesh"]
+size = Vector3(0.82, 0.03, 0.075)
+material = SubResource("TubeOffMat")
+
+[sub_resource type="StandardMaterial3D" id="TubeOnMat"]
+albedo_color = Color(1.0, 1.0, 1.0, 1)
+emission_enabled = true
+emission = Color(0.88, 0.95, 1.0, 1)
+emission_energy_multiplier = 2.5
+
+[sub_resource type="BoxMesh" id="TubeOnMesh"]
+size = Vector3(0.82, 0.03, 0.075)
+material = SubResource("TubeOnMat")
+
+[node name="FluorescentLight" type="Node3D"]
+script = ExtResource("1_fluo")
+
+[node name="Fixture" type="MeshInstance3D" parent="."]
+mesh = SubResource("FixtureMesh")
+
+[node name="TubeOff" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.013, 0)
+mesh = SubResource("TubeOffMesh")
+
+[node name="TubeOn" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.013, 0)
+mesh = SubResource("TubeOnMesh")
+visible = false
+
+[node name="GlowLeft" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.28, -0.02, 0)
+visible = false
+light_color = Color(0.88, 0.95, 1.0, 1)
+light_energy = 0.3
+omni_range = 0.55
+
+[node name="GlowCenter" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.02, 0)
+visible = false
+light_color = Color(0.88, 0.95, 1.0, 1)
+light_energy = 0.3
+omni_range = 0.55
+
+[node name="GlowRight" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.28, -0.02, 0)
+visible = false
+light_color = Color(0.88, 0.95, 1.0, 1)
+light_energy = 0.3
+omni_range = 0.55
+
+[node name="AreaCenter" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.02, 0)
+visible = false
+light_color = Color(0.88, 0.95, 1.0, 1)
+light_energy = 0.5
+omni_range = 7.0
+omni_attenuation = 2.0
+
+[node name="AreaLeft" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.28, -0.02, 0)
+visible = false
+light_color = Color(0.88, 0.95, 1.0, 1)
+light_energy = 0.5
+omni_range = 7.0
+omni_attenuation = 2.0
+
+[node name="AreaRight" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.28, -0.02, 0)
+visible = false
+light_color = Color(0.88, 0.95, 1.0, 1)
+light_energy = 0.5
+omni_range = 7.0
+omni_attenuation = 2.0
