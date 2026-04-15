@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://saxsy1hidu1g"]
+
+[ext_resource type="Script" uid="uid://fnt3w8qzm6p2x" path="res://Items/interactables/Note.gd" id="1_note"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_paper"]
+size = Vector3(0.42, 0.594, 0.003)
+
+[sub_resource type="StandardMaterial3D" id="Mat_paper"]
+albedo_color = Color(0.96, 0.94, 0.88, 1)
+roughness = 0.95
+metallic = 0.0
+
+[node name="Note" type="Node3D"]
+script = ExtResource("1_note")
+
+[node name="Paper" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_paper")
+surface_material_override/0 = SubResource("Mat_paper")
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.003)
+pixel_size = 0.002
+width = 180
+autowrap_mode = 3
+font_size = 48
+outline_size = 0

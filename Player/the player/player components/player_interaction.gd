@@ -10,12 +10,7 @@ func _ready() -> void:
 	collide_with_bodies = true
 
 func _process(_delta: float) -> void:
-	var hit = get_collider()
-	if hit == null:
-		hide_interaction_visual()
-		return
-		
-	var interactable = find_interactable(hit)
+	var interactable = _find_interactable()
 	if interactable:
 		show_interactable_visual()
 		if Input.is_action_just_pressed("interact"):
@@ -23,7 +18,40 @@ func _process(_delta: float) -> void:
 				grab_animation()
 	else:
 		hide_interaction_visual()
-		
+
+const RAYCAST_IGNORE := ["BigRoundTable"]
+
+## Cast the ray, skipping nodes in RAYCAST_IGNORE so items placed on them are reachable.
+func _find_interactable() -> Node:
+	var space := get_world_3d().direct_space_state
+	var ray_end := global_position + global_transform.basis * target_position
+	var exclude: Array[RID] = []
+	for _i in 8:
+		var query := PhysicsRayQueryParameters3D.create(global_position, ray_end)
+		query.exclude = exclude
+		query.collide_with_areas = true
+		query.collide_with_bodies = true
+		var result := space.intersect_ray(query)
+		if result.is_empty():
+			return null
+		var hit: Node = result["collider"]
+		var interactable := find_interactable(hit)
+		if interactable:
+			return interactable
+		if _is_ignored(hit):
+			exclude.append(result["rid"])
+			continue
+		return null
+	return null
+
+func _is_ignored(node: Node) -> bool:
+	var n := node
+	while n != null:
+		if n.name in RAYCAST_IGNORE:
+			return true
+		n = n.get_parent()
+	return false
+
 func find_interactable(node: Node) -> Node:
 	# Check de node zelf
 	if node.has_method("can_interact"):
@@ -35,7 +63,7 @@ func find_interactable(node: Node) -> Node:
 	if parent.has_method("hello_area"):
 		return parent.area
 	return null
-	
+
 func hide_interaction_visual() -> void:
 	repair_ring.hide_ring()
 func show_interactable_visual() -> void:
