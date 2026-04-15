@@ -1,15 +1,15 @@
-[gd_scene format=3 uid="uid://dllo4ntg8kig"]
+[gd_scene format=3 uid="uid://coqnb3cjch4j8"]
 
-[ext_resource type="Script" uid="uid://cx5vkpq4gf6rn" path="res://Items/interactables/screwdriver_interactable.gd" id="1_bcrbf"]
-[ext_resource type="PackedScene" uid="uid://b7bhphlq31sh1" path="res://assets/sprite_scenes/screwdriver.tscn" id="2_wdvei"]
+[ext_resource type="Script" path="res://Items/interactables/screwdriver_interactable.gd" id="1_bcrbf"]
+[ext_resource type="PackedScene" path="res://assets/sprite_scenes/screwdriver.tscn" id="2_wdvei"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e568d"]
 
 [node name="ScrewdriverInteractable" type="Area3D" unique_id=1382613018]
 script = ExtResource("1_bcrbf")
+goes_away_on_interact = null
 
 [node name="Sprite3D" parent="." unique_id=1214368778 instance=ExtResource("2_wdvei")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=725258940]
 shape = SubResource("BoxShape3D_e568d")
