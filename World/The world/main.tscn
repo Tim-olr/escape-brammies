@@ -160,7 +160,7 @@ transform = Transform3D(1, 0, 0, 0, 2.0387816, 0, 0, 0, 1, 25.850769, -2078.674,
 shape = SubResource("BoxShape3D_rvclf")
 
 [node name="Draaideur" parent="." unique_id=1944341719 instance=ExtResource("5_rvclf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.468445, -3.2450871, -2.2469466)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 41.468445, -2.9796846, -2.2469466)
 
 [node name="ButtonPickup" parent="." unique_id=96722833 instance=ExtResource("6_slyvb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.99386, -2.2017694, 6.2858863)
