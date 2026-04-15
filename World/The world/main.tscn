@@ -31,6 +31,10 @@
 [ext_resource type="PackedScene" uid="uid://saxsy1hidu1g" path="res://Items/interactables/Note.tscn" id="19_cmh3a"]
 [ext_resource type="PackedScene" uid="uid://dyb1lcmkfiq4e" path="res://Items/interactables/struts2/struts_2_interactable.tscn" id="20_7d5iv"]
 [ext_resource type="PackedScene" uid="uid://vt5j80c3vndo" path="res://World/Objects/ElectricalBox.tscn" id="21_elbox"]
+[ext_resource type="PackedScene" path="res://World/Objects/Keypad.tscn" id="18_1tfbs"]
+[ext_resource type="PackedScene" path="res://Items/interactables/Note.tscn" id="19_cmh3a"]
+[ext_resource type="PackedScene" uid="uid://dyb1lcmkfiq4e" path="res://Items/interactables/struts2/struts_2_interactable.tscn" id="20_7d5iv"]
+[ext_resource type="PackedScene" path="res://World/Objects/ElectricalBox.tscn" id="21_elbox"]
 [ext_resource type="PackedScene" uid="uid://bqthakx4h6ydl" path="res://Items/interactables/scrumbel/scrumbel_interactable.tscn" id="24_2jj54"]
 [ext_resource type="Texture2D" uid="uid://7v81h12e88i1" path="res://assets/models/scalda/rens.png" id="24_c17kt"]
 

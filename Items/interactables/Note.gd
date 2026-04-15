@@ -39,6 +39,10 @@ func _update_label() -> void:
 
 const ORDINALS := ["First", "Second", "Third", "Fourth", "Fifth", "Sixth"]
 
+const ORDINALS := ["First", "Second", "Third", "Fourth", "Fifth", "Sixth"]
+
+@onready var label: Label3D = $Label3D
+
 var _revealed: bool = false
 
 func _ready() -> void:
