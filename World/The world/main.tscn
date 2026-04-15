@@ -10,11 +10,12 @@
 [ext_resource type="PackedScene" uid="uid://mpk1yakmd004" path="res://Items/interactables/repair_pickups/motor_pickup.tscn" id="7_eq6tm"]
 [ext_resource type="PackedScene" uid="uid://wpk1yakmd005" path="res://Items/interactables/repair_pickups/wires_pickup.tscn" id="8_78nbq"]
 [ext_resource type="PackedScene" uid="uid://bxfajs4cwyu4w" path="res://Brammy/brammy.tscn" id="9_eq6tm"]
-[ext_resource type="Script" uid="uid://b0to2gwbsf6oc" path="res://World/Scalda/roam_positions.gd" id="10_78nbq"]
-[ext_resource type="Script" uid="uid://crs2ithxj3t0y" path="res://World/The world/navigation_region_3d.gd" id="10_jhyn3"]
+[ext_resource type="Script" path="res://World/Scalda/roam_positions.gd" id="10_78nbq"]
+[ext_resource type="Script" path="res://World/The world/navigation_region_3d.gd" id="10_jhyn3"]
 [ext_resource type="PackedScene" path="res://World/Objects/BreakerBox.tscn" id="11_brk"]
 [ext_resource type="PackedScene" path="res://World/Objects/FluorescentLight.tscn" id="12_fluo"]
 [ext_resource type="Texture2D" uid="uid://dy75ctfhvfs5m" path="res://assets/textures/balck.jpg" id="13_74mfr"]
+[ext_resource type="PackedScene" uid="uid://bi61ufomqid6x" path="res://Items/interactables/hardcore_mode_interactable.tscn" id="16_x53gd"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ghcsx"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -296,6 +297,9 @@ mesh = SubResource("BoxMesh_x53gd")
 
 [node name="death_pos" type="Marker3D" parent="The death chamber" unique_id=542555318]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1267273, 0)
+
+[node name="HardcoreModeInteractable" parent="." unique_id=1111146323 instance=ExtResource("16_x53gd")]
+transform = Transform3D(0.6521884, 0, 0, 0, 0.3071557, 0, 0, 0, 1, 19.013578, 1.804839, 2.0692995)
 
 [connection signal="body_entered" from="death_area" to="death_area" method="_on_body_entered"]
 [connection signal="body_entered" from="start_sequence_detection" to="." method="_on_start_sequence_detection_body_entered"]

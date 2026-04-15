@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bi61ufomqid6x"]
+
+[ext_resource type="Script" uid="uid://5ynih5iqt7l8" path="res://Items/interactables/hardcore_mode_interactable.gd" id="1_hardcore"]
+[ext_resource type="Texture2D" uid="uid://1j0xo782toyr" path="res://icon.svg" id="2_8q6q4"]
+
+[sub_resource type="BoxShape3D" id="1_box"]
+
+[node name="HardcoreModeInteractable" type="Area3D" unique_id=2099295443]
+script = ExtResource("1_hardcore")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=942146381]
+shape = SubResource("1_box")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=2051672312]
+texture = ExtResource("2_8q6q4")
