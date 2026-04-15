@@ -9,6 +9,7 @@ class_name enemy
 @export var interaction_timer: Timer
 @export var attention_area: Area3D
 @export var started: bool = false
+@onready var sprite_3d: Sprite3D = $Sprite3D
 
 var can_open_door: bool = true
 var speed
@@ -33,7 +34,7 @@ func _ready() -> void:
 	await get_tree().process_frame
 	PlayerCast.enabled = true
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	for p in PlayerArea.get_overlapping_bodies():
 		if p.is_in_group("player"):
 			p.manager.die()
@@ -82,3 +83,10 @@ func _on_player_attention_area_body_exited(body: Node3D) -> void:
 func _on_player_attention_area_body_entered(body: Node3D) -> void:
 	if body.is_in_group("player") and has_collided:
 		can_check = true
+	if body.is_in_group("player"):
+		can_check = true
+
+func _on_timer_timeout() -> void:
+	if sprite_3d.flip_h:
+		sprite_3d.flip_h = false
+	else: sprite_3d.flip_h = true

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://baecg6f10a1r" path="res://World/Objects/big_trashcan.gd" id="1_hbk0x"]
 [ext_resource type="PackedScene" uid="uid://bml61owaclrsy" path="res://assets/models/scalda/trashcan_big.glb" id="1_tnhns"]
+[ext_resource type="Texture2D" uid="uid://bfdllm4ycjwhu" path="res://Brammy/brammy.png" id="3_i8p0h"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tnhns"]
 size = Vector3(1.8000001, 1.2, 1)
@@ -188,5 +189,9 @@ libraries/ = SubResource("AnimationLibrary_i8p0h")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1142276224]
 transform = Transform3D(0.5, 0, 0, 0, 0.49299788, -0.08338435, 0, 0.08338435, 0.49299788, 0, 0.60651094, -0.1434623)
 mesh = SubResource("CapsuleMesh_tnhns")
+[node name="MeshInstance3D" type="Sprite3D" parent="." unique_id=1575059715]
+transform = Transform3D(0.15, 0, 0, 0, 0.1478994, -0.025015313, 0, 0.025015313, 0.1478994, 0, 0.60651094, -0.1434623)
+billboard = 1
+texture = ExtResource("3_i8p0h")
 
 [editable path="StaticBody3D/blockbench_export"]

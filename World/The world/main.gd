@@ -5,6 +5,7 @@ extends Node3D
 @export var brammy: enemy
 
 @export var debug: bool = false
+@export var brammy_spawn_possies: Node3D
 
 var has_walked: bool = false
 var fov_tween: Tween
@@ -23,6 +24,12 @@ func _on_start_sequence_detection_body_entered(body: Node3D) -> void:
 		game_started = true
 		bin.ap.play("bram_pop_out")
 		brammy.started = true
+	if body.is_in_group("player") and !game_started:
+		game_started = true
+		bin.ap.play("bram_pop_out")
+		brammy.started = true
+		var rand_pos = brammy_spawn_possies.get_children().pick_random()
+		brammy.global_position = rand_pos.global_position
 		lerp_fov(32.0)
 		GlobalPlayer.promptinstance.show_prompt("BRAMMY HAS AWOKEN")
 
