@@ -37,6 +37,9 @@ func set_slot_outline(slot: InventorySlot, thickness: float) -> void:
 	var sprite = slot.slot_sprite
 	sprite.material.set_shader_parameter("outline_thickness", thickness)
 func add_item(item):
+	if item is RepairPart and has_repair_part():
+		GlobalPlayer.promptinstance.show_prompt("You can only carry one part at a time!", 2.5)
+		return false
 	var index = 1
 	for i in hotbar.get_children():
 		if !check_occupied_slot(index):
@@ -84,6 +87,13 @@ func drop_item_animation():
 	hand.play("hand_drop")
 	await hand.animation_finished
 	hand.play("hand_idle")
+func has_repair_part() -> bool:
+	for slot in [slot_1, slot_2, slot_3]:
+		if slot.has_item and slot.held_item != null:
+			if slot.held_item is RepairPart:
+				return true
+	return false
+
 func has_screwdriver() -> bool:
 	for slot in [slot_1, slot_2, slot_3]:
 		if slot.has_item and slot.held_item != null:

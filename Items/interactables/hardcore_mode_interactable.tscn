@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://ct7tcm0v78636"]
+
+[ext_resource type="Script" uid="uid://5ynih5iqt7l8" path="res://Items/interactables/hardcore_mode_interactable.gd" id="1_hardcore"]
+[ext_resource type="Texture2D" uid="uid://busjg1flw41f8" path="res://assets/textures/eclipse_ide.png" id="2_8q6q4"]
+
+[sub_resource type="BoxShape3D" id="1_box"]
+size = Vector3(0.2902832, 0.24923706, 0.1763916)
+
+[node name="HardcoreModeInteractable" type="Area3D" unique_id=2099295443]
+script = ExtResource("1_hardcore")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=942146381]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.014526367, 0.037368774, 0.0491333)
+shape = SubResource("1_box")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=2051672312]
+texture_filter = 0
+texture = ExtResource("2_8q6q4")
