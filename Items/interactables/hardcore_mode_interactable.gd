@@ -6,6 +6,7 @@ const STAMINA_REGEN_RATE: float = 10.0
 @export var speed_multiplier: float = 1.25
 @export var stamina_capacity_multiplier: float = 0.6666667
 @export var stamina_regen_penalty_ratio: float = 0.33
+@onready var sprite_3d: Sprite3D = $Sprite3D
 
 var _is_active: bool = false
 var _base_brammy_wandering_speed: float = 0.0
@@ -41,6 +42,7 @@ func interact() -> bool:
 	GlobalPlayer.stats.current_stamina = minf(GlobalPlayer.stats.current_stamina, GlobalPlayer.stats.max_stamina)
 
 	_enforce_single_item_inventory()
+	sprite_3d.texture = preload("uid://fssd6g317lpe")
 	return true
 
 func _apply_stamina_regen_penalty(delta: float) -> void:
@@ -88,6 +90,7 @@ func _drop_and_clear_slot(slot: InventorySlot) -> void:
 	slot.has_item = false
 
 func _disable_hardcore_mode() -> void:
+	sprite_3d.texture = preload("uid://busjg1flw41f8")
 	_is_active = false
 	if GlobalRefs.brammy != null:
 		GlobalRefs.brammy.wanderingSpeed = _base_brammy_wandering_speed

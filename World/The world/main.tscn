@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://brkbox00001" path="res://World/Objects/BreakerBox.tscn" id="11_brk"]
 [ext_resource type="PackedScene" uid="uid://bqgs0gi8as5aa" path="res://World/Objects/FluorescentLight.tscn" id="12_fluo"]
 [ext_resource type="Texture2D" uid="uid://dy75ctfhvfs5m" path="res://assets/textures/balck.jpg" id="13_74mfr"]
-[ext_resource type="PackedScene" uid="uid://bi61ufomqid6x" path="res://Items/interactables/hardcore_mode_interactable.tscn" id="16_x53gd"]
+[ext_resource type="PackedScene" uid="uid://ct7tcm0v78636" path="res://Items/interactables/hardcore_mode_interactable.tscn" id="16_x53gd"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ghcsx"]
 sky_top_color = Color(0.37338156, 0.4430481, 0.53593016, 1)
@@ -308,7 +308,7 @@ mesh = SubResource("BoxMesh_x53gd")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1267273, 0)
 
 [node name="HardcoreModeInteractable" parent="." unique_id=1111146323 instance=ExtResource("16_x53gd")]
-transform = Transform3D(0.6521884, 0, 0, 0, 0.3071557, 0, 0, 0, 1, 19.013578, 1.804839, 2.0692995)
+transform = Transform3D(1.6368879, 0, 0, 0, 1.2698495, 0, 0, 0, -1.3069758, 19.013578, 1.804839, 2.0692995)
 
 [connection signal="body_entered" from="death_area" to="death_area" method="_on_body_entered"]
 [connection signal="body_entered" from="start_sequence_detection" to="." method="_on_start_sequence_detection_body_entered"]
