@@ -97,6 +97,11 @@ albedo_texture = ExtResource("3_pc3rw")
 uv1_triplanar = true
 texture_filter = 0
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0puw7"]
+albedo_texture = ExtResource("3_pc3rw")
+uv1_triplanar = true
+texture_filter = 0
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lnhfr"]
 albedo_texture = ExtResource("1_hik0p")
 uv1_triplanar = true
@@ -274,21 +279,13 @@ height = 3.1000001
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.425, -0.875, 6.5249996)
 use_collision = true
 size = Vector3(12.6, 0.25, 17.5)
+material = SubResource("StandardMaterial3D_0puw7")
 
 [node name="2ndFloor3" type="CSGBox3D" parent="ScaldaLevel" unique_id=874165507]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.375, -4.125, 6.325)
 use_collision = true
 size = Vector3(12.5, 0.25, 17.9)
 material = SubResource("StandardMaterial3D_lnhfr")
-
-[node name="CSGBox3D36" type="CSGBox3D" parent="ScaldaLevel" unique_id=820286111]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.125, -2.5, 0)
-size = Vector3(0.25, 3, 4.5)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="ScaldaLevel/CSGBox3D36" unique_id=56106573]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
-operation = 2
-size = Vector3(0.3, 2.5, 3.5)
 
 [node name="CSGBox3D37" type="CSGBox3D" parent="ScaldaLevel" unique_id=1252848742]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.125, -2.5, 13)
@@ -302,10 +299,6 @@ size = Vector3(0.3, 2.5, 3.5)
 [node name="CSGBox3D38" type="CSGBox3D" parent="ScaldaLevel" unique_id=799776548]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.20581, -2.531372, 15.4)
 size = Vector3(15, 3.1281738, 0.25)
-
-[node name="CSGBox3D39" type="CSGBox3D" parent="ScaldaLevel" unique_id=1922015913]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.125, -2.5, 6.5)
-size = Vector3(0.25, 3, 8.5)
 
 [node name="CSGBox3D40" type="CSGBox3D" parent="ScaldaLevel" unique_id=2056289985]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 45.805813, -2.531372, 6.4999995)
@@ -2843,7 +2836,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1999977, 1.3613743, 12.200
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1999977, 5.8613744, 8)
 
 [node name="FluorescentLight15" parent="Environment/Lamps" unique_id=190517319 instance=ExtResource("16_kk7qi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.300001, -0.49046326, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.100002, -0.49046326, 0)
 
 [node name="FluorescentLight16" parent="Environment/Lamps" unique_id=1346884191 instance=ExtResource("16_kk7qi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.900002, -0.49046326, 0)
@@ -2853,6 +2846,30 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, -0.49046326, 0)
 
 [node name="FluorescentLight18" parent="Environment/Lamps" unique_id=1098489991 instance=ExtResource("16_kk7qi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1999977, -0.49046326, 9.685755e-08)
+
+[node name="FluorescentLight19" parent="Environment/Lamps" unique_id=325158431 instance=ExtResource("16_kk7qi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.100002, -0.49046326, 6.9999995)
+
+[node name="FluorescentLight20" parent="Environment/Lamps" unique_id=772334944 instance=ExtResource("16_kk7qi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.900002, -0.49046326, 6.9999995)
+
+[node name="FluorescentLight21" parent="Environment/Lamps" unique_id=1002589168 instance=ExtResource("16_kk7qi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, -0.49046326, 6.9999995)
+
+[node name="FluorescentLight22" parent="Environment/Lamps" unique_id=617683348 instance=ExtResource("16_kk7qi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.100002, -0.49046326, 14)
+
+[node name="FluorescentLight23" parent="Environment/Lamps" unique_id=1155329162 instance=ExtResource("16_kk7qi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.900002, -0.49046326, 14)
+
+[node name="FluorescentLight24" parent="Environment/Lamps" unique_id=1061213704 instance=ExtResource("16_kk7qi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, -0.49046326, 14)
+
+[node name="FluorescentLight25" parent="Environment/Lamps" unique_id=994774097 instance=ExtResource("16_kk7qi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.100002, -0.2805866, 0)
+
+[node name="FluorescentLight26" parent="Environment/Lamps" unique_id=1896945859 instance=ExtResource("16_kk7qi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.100002, -0.2805866, 6.9999995)
 
 [node name="Blinds3" parent="Environment" unique_id=1920821006 instance=ExtResource("6_cs5jf")]
 transform = Transform3D(-1, 0, -1.1920929e-07, 0, 1, 0, 1.1920929e-07, 0, -1, 3.0427732, 0.7, 13.120435)
@@ -3138,6 +3155,858 @@ transform = Transform3D(1.1514139, 0, 0, 0, 1.1, 0, 0, 0, 1, 14.315599, 0.298798
 [node name="WindowRod11" parent="Environment/Benedenverdieping" unique_id=979931873 instance=ExtResource("2_14lxf")]
 transform = Transform3D(-6.8495744e-08, 40.535496, 0, -1.567, -1.7718629e-06, 0, 0, 0, 1.1, 15.767654, -0.6620005, -2.25)
 
+[node name="ScaldaPanel33" parent="Environment/Benedenverdieping" unique_id=1004406097 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 20.74977, -4.751563, 11.185651)
+
+[node name="ScaldaPanel34" parent="Environment/Benedenverdieping" unique_id=1699053056 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 20.74977, -3.7515635, 11.185651)
+
+[node name="ScaldaPanel35" parent="Environment/Benedenverdieping" unique_id=1028875928 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 19.74977, -4.751563, 11.185651)
+
+[node name="ScaldaPanel36" parent="Environment/Benedenverdieping" unique_id=908274966 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 19.74977, -3.7515635, 11.185651)
+
+[node name="ScaldaPanel37" parent="Environment/Benedenverdieping" unique_id=1829037732 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 18.74977, -4.751563, 11.185651)
+
+[node name="ScaldaPanel38" parent="Environment/Benedenverdieping" unique_id=1787350303 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 18.74977, -3.7515635, 11.185651)
+
+[node name="ScaldaPanel39" parent="Environment/Benedenverdieping" unique_id=138451284 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 17.74977, -4.751563, 11.185651)
+
+[node name="ScaldaPanel40" parent="Environment/Benedenverdieping" unique_id=715656090 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 17.74977, -3.7515635, 11.185651)
+
+[node name="ScaldaPanel41" parent="Environment/Benedenverdieping" unique_id=693960699 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 16.74977, -4.751563, 11.185651)
+
+[node name="ScaldaPanel42" parent="Environment/Benedenverdieping" unique_id=782835089 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 16.74977, -3.7515635, 11.185651)
+
+[node name="ScaldaPanel43" parent="Environment/Benedenverdieping" unique_id=351258712 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 15.749769, -4.751563, 11.185651)
+
+[node name="ScaldaPanel44" parent="Environment/Benedenverdieping" unique_id=106599017 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 15.749769, -3.7515635, 11.185651)
+
+[node name="ScaldaPanel45" parent="Environment/Benedenverdieping" unique_id=107728769 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 14.749769, -4.751563, 11.185651)
+
+[node name="ScaldaPanel46" parent="Environment/Benedenverdieping" unique_id=1960584546 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 14.749769, -3.7515635, 11.185651)
+
+[node name="ScaldaPanel47" parent="Environment/Benedenverdieping" unique_id=700854985 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 13.749769, -4.751563, 11.185651)
+
+[node name="ScaldaPanel48" parent="Environment/Benedenverdieping" unique_id=1421216172 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 13.749769, -3.7515635, 11.185651)
+
+[node name="ScaldaPanel49" parent="Environment/Benedenverdieping" unique_id=233038079 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 12.749769, -4.751563, 11.185651)
+
+[node name="ScaldaPanel50" parent="Environment/Benedenverdieping" unique_id=916345733 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 12.749769, -3.7515635, 11.185651)
+
+[node name="ScaldaPanel51" parent="Environment/Benedenverdieping" unique_id=259081492 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 11.749769, -4.751563, 11.185651)
+
+[node name="ScaldaPanel52" parent="Environment/Benedenverdieping" unique_id=749731056 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 11.749769, -3.7515635, 11.185651)
+
+[node name="ScaldaPanel53" parent="Environment/Benedenverdieping" unique_id=2091425491 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 10.749769, -4.751563, 11.185651)
+
+[node name="ScaldaPanel54" parent="Environment/Benedenverdieping" unique_id=1542746806 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 10.749769, -3.7515635, 11.185651)
+
+[node name="ScaldaPanel55" parent="Environment/Benedenverdieping" unique_id=2033167206 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 9.749769, -4.751563, 11.185651)
+
+[node name="ScaldaPanel56" parent="Environment/Benedenverdieping" unique_id=1722304371 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 9.749769, -3.7515635, 11.185651)
+
+[node name="ScaldaPanel57" parent="Environment/Benedenverdieping" unique_id=1447959403 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 8.749769, -4.751563, 11.185651)
+
+[node name="ScaldaPanel58" parent="Environment/Benedenverdieping" unique_id=449991222 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 8.749769, -3.7515635, 11.185651)
+
+[node name="ScaldaPanel59" parent="Environment/Benedenverdieping" unique_id=1738058766 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 7.749769, -4.751563, 11.185651)
+
+[node name="ScaldaPanel60" parent="Environment/Benedenverdieping" unique_id=882956262 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 7.749769, -3.7515635, 11.185651)
+
+[node name="ScaldaPanel61" parent="Environment/Benedenverdieping" unique_id=1172554776 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 6.7497687, -4.751563, 11.185651)
+
+[node name="ScaldaPanel62" parent="Environment/Benedenverdieping" unique_id=1109772142 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 6.7497687, -3.7515635, 11.185651)
+
+[node name="ScaldaPanel63" parent="Environment/Benedenverdieping" unique_id=1978651251 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 5.7497687, -4.751563, 11.185651)
+
+[node name="ScaldaPanel64" parent="Environment/Benedenverdieping" unique_id=253659249 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 5.7497687, -3.7515635, 11.185651)
+
+[node name="ScaldaPanel65" parent="Environment/Benedenverdieping" unique_id=558708910 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 4.7497687, -4.751563, 11.185651)
+
+[node name="ScaldaPanel66" parent="Environment/Benedenverdieping" unique_id=72319597 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 4.7497687, -3.7515635, 11.185651)
+
+[node name="ScaldaPanel67" parent="Environment/Benedenverdieping" unique_id=1016463257 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 3.7497692, -4.751563, 11.185651)
+
+[node name="ScaldaPanel68" parent="Environment/Benedenverdieping" unique_id=1448841120 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 3.7497692, -3.7515635, 11.185651)
+
+[node name="ScaldaPanel69" parent="Environment/Benedenverdieping" unique_id=1504124092 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 3.349769, -4.751563, 9.785652)
+
+[node name="ScaldaPanel70" parent="Environment/Benedenverdieping" unique_id=1509145957 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 3.349769, -3.7515635, 9.785652)
+
+[node name="ScaldaPanel71" parent="Environment/Benedenverdieping" unique_id=779715618 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 3.349769, -4.751563, 10.785651)
+
+[node name="ScaldaPanel72" parent="Environment/Benedenverdieping" unique_id=1014788964 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 3.349769, -3.7515635, 10.785651)
+
+[node name="ScaldaPanel73" parent="Environment/Benedenverdieping" unique_id=1134779242 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 1.5145949, -4.751563, 9.785652)
+
+[node name="ScaldaPanel74" parent="Environment/Benedenverdieping" unique_id=993723223 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 1.5145949, -3.7515635, 9.785652)
+
+[node name="ScaldaPanel75" parent="Environment/Benedenverdieping" unique_id=1880934043 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 1.5145949, -4.751563, 10.785651)
+
+[node name="ScaldaPanel76" parent="Environment/Benedenverdieping" unique_id=989242387 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 1.5145949, -3.7515635, 10.785651)
+
+[node name="ScaldaPanel77" parent="Environment/Benedenverdieping" unique_id=421330133 instance=ExtResource("9_afksl")]
+transform = Transform3D(-0.99999994, 0, -8.742277e-08, 0, 0.99999994, 0, 8.742277e-08, 0, -0.99999994, 0.117186666, -4.751563, 11.174423)
+
+[node name="ScaldaPanel78" parent="Environment/Benedenverdieping" unique_id=1575713322 instance=ExtResource("9_afksl")]
+transform = Transform3D(-0.99999994, 0, -8.742277e-08, 0, 0.99999994, 0, 8.742277e-08, 0, -0.99999994, 0.117186666, -3.7515635, 11.174423)
+
+[node name="ScaldaPanel79" parent="Environment/Benedenverdieping" unique_id=1499836027 instance=ExtResource("9_afksl")]
+transform = Transform3D(-0.99999994, 0, -8.742277e-08, 0, 0.99999994, 0, 8.742277e-08, 0, -0.99999994, 1.1171858, -4.751563, 11.174423)
+
+[node name="ScaldaPanel80" parent="Environment/Benedenverdieping" unique_id=1647681580 instance=ExtResource("9_afksl")]
+transform = Transform3D(-0.99999994, 0, -8.742277e-08, 0, 0.99999994, 0, 8.742277e-08, 0, -0.99999994, 1.1171858, -3.7515635, 11.174423)
+
+[node name="ScaldaPanel81" parent="Environment/Benedenverdieping" unique_id=1182556529 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 21.114595, -4.751563, 9.785652)
+
+[node name="ScaldaPanel82" parent="Environment/Benedenverdieping" unique_id=311432821 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 21.114595, -3.7515635, 9.785652)
+
+[node name="ScaldaPanel83" parent="Environment/Benedenverdieping" unique_id=1184137805 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 21.114595, -4.751563, 10.785651)
+
+[node name="ScaldaPanel84" parent="Environment/Benedenverdieping" unique_id=601697294 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 21.114595, -3.7515635, 10.785651)
+
+[node name="ScaldaPanel85" parent="Environment/Benedenverdieping" unique_id=192317030 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 24.814596, -4.751563, 10.385653)
+
+[node name="ScaldaPanel86" parent="Environment/Benedenverdieping" unique_id=335134011 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 24.814596, -3.7515635, 10.385653)
+
+[node name="ScaldaPanel87" parent="Environment/Benedenverdieping" unique_id=631063624 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 24.814596, -4.751563, 11.385652)
+
+[node name="ScaldaPanel88" parent="Environment/Benedenverdieping" unique_id=522624286 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 24.814596, -3.7515635, 11.385652)
+
+[node name="ScaldaPanel89" parent="Environment/Benedenverdieping" unique_id=86288064 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 24.814596, -4.751563, 12.385653)
+
+[node name="ScaldaPanel90" parent="Environment/Benedenverdieping" unique_id=1540442160 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 24.814596, -3.7515635, 12.385653)
+
+[node name="ScaldaPanel91" parent="Environment/Benedenverdieping" unique_id=1522465712 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 24.814596, -4.751563, 13.385652)
+
+[node name="ScaldaPanel92" parent="Environment/Benedenverdieping" unique_id=1979731651 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 24.814596, -3.7515635, 13.385652)
+
+[node name="ScaldaPanel93" parent="Environment/Benedenverdieping" unique_id=1175336588 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 24.814596, -4.751563, 14.385653)
+
+[node name="ScaldaPanel94" parent="Environment/Benedenverdieping" unique_id=2003710160 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 24.814596, -3.7515635, 14.385653)
+
+[node name="ScaldaPanel95" parent="Environment/Benedenverdieping" unique_id=858935197 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 24.814596, -4.751563, 15.385652)
+
+[node name="ScaldaPanel96" parent="Environment/Benedenverdieping" unique_id=2075732130 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 24.814596, -3.7515635, 15.385652)
+
+[node name="ScaldaPanel97" parent="Environment/Benedenverdieping" unique_id=1694673828 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 24.814596, -2.751563, 11.785652)
+
+[node name="ScaldaPanel98" parent="Environment/Benedenverdieping" unique_id=1886186916 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 24.814596, -1.7515635, 11.785652)
+
+[node name="ScaldaPanel99" parent="Environment/Benedenverdieping" unique_id=199620127 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 24.814596, -2.751563, 12.78565)
+
+[node name="ScaldaPanel100" parent="Environment/Benedenverdieping" unique_id=327913457 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 24.814596, -1.7515635, 12.78565)
+
+[node name="ScaldaPanel101" parent="Environment/Benedenverdieping" unique_id=1118299897 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 24.814596, -2.751563, 13.785652)
+
+[node name="ScaldaPanel102" parent="Environment/Benedenverdieping" unique_id=1370963248 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 24.814596, -1.7515635, 13.785652)
+
+[node name="ScaldaPanel103" parent="Environment/Benedenverdieping" unique_id=2029088110 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 24.814596, -2.751563, 14.78565)
+
+[node name="ScaldaPanel104" parent="Environment/Benedenverdieping" unique_id=164345903 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 24.814596, -1.7515635, 14.78565)
+
+[node name="ScaldaPanel105" parent="Environment/Benedenverdieping" unique_id=1457016257 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 24.814596, -0.7515631, 11.785652)
+
+[node name="ScaldaPanel106" parent="Environment/Benedenverdieping" unique_id=531224583 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 24.814596, -0.75156355, 13.785652)
+
+[node name="ScaldaPanel107" parent="Environment/Benedenverdieping" unique_id=1386802164 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 24.814596, -0.7515631, 12.78565)
+
+[node name="ScaldaPanel108" parent="Environment/Benedenverdieping" unique_id=1504997734 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 24.814596, -0.75156355, 14.78565)
+
+[node name="ScaldaPanel393" parent="Environment/Benedenverdieping" unique_id=1253082848 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 0.7343184, -0.90042233, 15.163742)
+
+[node name="ScaldaPanel394" parent="Environment/Benedenverdieping" unique_id=1912932566 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 0.7343184, -1.9004223, 15.163742)
+
+[node name="ScaldaPanel395" parent="Environment/Benedenverdieping" unique_id=1579889141 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 0.7343184, -2.9004223, 15.163742)
+
+[node name="ScaldaPanel396" parent="Environment/Benedenverdieping" unique_id=1498036166 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 0.7343184, -3.9004223, 15.163742)
+
+[node name="ScaldaPanel397" parent="Environment/Benedenverdieping" unique_id=1094988770 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 1.7343184, -0.90042233, 15.163742)
+
+[node name="ScaldaPanel398" parent="Environment/Benedenverdieping" unique_id=126183108 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 1.7343184, -1.9004223, 15.163742)
+
+[node name="ScaldaPanel399" parent="Environment/Benedenverdieping" unique_id=541594329 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 1.7343184, -2.9004223, 15.163742)
+
+[node name="ScaldaPanel400" parent="Environment/Benedenverdieping" unique_id=1309314853 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 1.7343184, -3.9004223, 15.163742)
+
+[node name="ScaldaPanel401" parent="Environment/Benedenverdieping" unique_id=1567527959 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 2.7343183, -0.90042233, 15.163742)
+
+[node name="ScaldaPanel402" parent="Environment/Benedenverdieping" unique_id=602316829 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 2.7343183, -1.9004223, 15.163742)
+
+[node name="ScaldaPanel403" parent="Environment/Benedenverdieping" unique_id=2128919860 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 2.7343183, -2.9004223, 15.163742)
+
+[node name="ScaldaPanel404" parent="Environment/Benedenverdieping" unique_id=1095559326 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 2.7343183, -3.9004223, 15.163742)
+
+[node name="ScaldaPanel405" parent="Environment/Benedenverdieping" unique_id=1700523645 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 3.7343183, -0.90042233, 15.163742)
+
+[node name="ScaldaPanel406" parent="Environment/Benedenverdieping" unique_id=1000684412 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 3.7343183, -1.9004223, 15.163742)
+
+[node name="ScaldaPanel407" parent="Environment/Benedenverdieping" unique_id=1770098920 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 3.7343183, -2.9004223, 15.163742)
+
+[node name="ScaldaPanel408" parent="Environment/Benedenverdieping" unique_id=1282980929 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 3.7343183, -3.9004223, 15.163742)
+
+[node name="ScaldaPanel409" parent="Environment/Benedenverdieping" unique_id=1571741761 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 4.7343183, -0.90042233, 15.163742)
+
+[node name="ScaldaPanel410" parent="Environment/Benedenverdieping" unique_id=848880862 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 4.7343183, -1.9004223, 15.163742)
+
+[node name="ScaldaPanel411" parent="Environment/Benedenverdieping" unique_id=2061278098 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 4.7343183, -2.9004223, 15.163742)
+
+[node name="ScaldaPanel412" parent="Environment/Benedenverdieping" unique_id=612848649 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 4.7343183, -3.9004223, 15.163742)
+
+[node name="ScaldaPanel413" parent="Environment/Benedenverdieping" unique_id=974660662 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 5.7343183, -0.90042233, 15.163742)
+
+[node name="ScaldaPanel414" parent="Environment/Benedenverdieping" unique_id=2130444585 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 5.7343183, -1.9004223, 15.163742)
+
+[node name="ScaldaPanel415" parent="Environment/Benedenverdieping" unique_id=1197188758 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 5.7343183, -2.9004223, 15.163742)
+
+[node name="ScaldaPanel416" parent="Environment/Benedenverdieping" unique_id=1087474606 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 5.7343183, -3.9004223, 15.163742)
+
+[node name="ScaldaPanel417" parent="Environment/Benedenverdieping" unique_id=1392845498 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 6.7343183, -0.90042233, 15.163742)
+
+[node name="ScaldaPanel418" parent="Environment/Benedenverdieping" unique_id=202900884 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 6.7343183, -1.9004223, 15.163742)
+
+[node name="ScaldaPanel419" parent="Environment/Benedenverdieping" unique_id=392762854 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 6.7343183, -2.9004223, 15.163742)
+
+[node name="ScaldaPanel420" parent="Environment/Benedenverdieping" unique_id=697330523 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 6.7343183, -3.9004223, 15.163742)
+
+[node name="ScaldaPanel421" parent="Environment/Benedenverdieping" unique_id=745723589 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 7.7343183, -0.90042233, 15.163742)
+
+[node name="ScaldaPanel422" parent="Environment/Benedenverdieping" unique_id=1703948142 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 7.7343183, -1.9004223, 15.163742)
+
+[node name="ScaldaPanel423" parent="Environment/Benedenverdieping" unique_id=534202811 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 7.7343183, -2.9004223, 15.163742)
+
+[node name="ScaldaPanel424" parent="Environment/Benedenverdieping" unique_id=498164404 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 7.7343183, -3.9004223, 15.163742)
+
+[node name="ScaldaPanel425" parent="Environment/Benedenverdieping" unique_id=1160301654 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 8.734319, -0.90042233, 15.163742)
+
+[node name="ScaldaPanel426" parent="Environment/Benedenverdieping" unique_id=1148227810 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 8.734319, -1.9004223, 15.163742)
+
+[node name="ScaldaPanel427" parent="Environment/Benedenverdieping" unique_id=1576936688 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 8.734319, -2.9004223, 15.163742)
+
+[node name="ScaldaPanel428" parent="Environment/Benedenverdieping" unique_id=533706378 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 8.734319, -3.9004223, 15.163742)
+
+[node name="ScaldaPanel429" parent="Environment/Benedenverdieping" unique_id=220351271 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 9.734319, -0.90042233, 15.163742)
+
+[node name="ScaldaPanel430" parent="Environment/Benedenverdieping" unique_id=1406981311 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 9.734319, -1.9004223, 15.163742)
+
+[node name="ScaldaPanel431" parent="Environment/Benedenverdieping" unique_id=1633686809 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 9.734319, -2.9004223, 15.163742)
+
+[node name="ScaldaPanel432" parent="Environment/Benedenverdieping" unique_id=295001327 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 9.734319, -3.9004223, 15.163742)
+
+[node name="ScaldaPanel433" parent="Environment/Benedenverdieping" unique_id=664570438 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 10.734318, -0.90042233, 15.163742)
+
+[node name="ScaldaPanel434" parent="Environment/Benedenverdieping" unique_id=1507185446 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 10.734318, -1.9004223, 15.163742)
+
+[node name="ScaldaPanel435" parent="Environment/Benedenverdieping" unique_id=1092007611 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 10.734318, -2.9004223, 15.163742)
+
+[node name="ScaldaPanel436" parent="Environment/Benedenverdieping" unique_id=451507860 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 10.734318, -3.9004223, 15.163742)
+
+[node name="ScaldaPanel437" parent="Environment/Benedenverdieping" unique_id=267940857 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 11.734318, -0.90042233, 15.163742)
+
+[node name="ScaldaPanel438" parent="Environment/Benedenverdieping" unique_id=869022991 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 11.734318, -1.9004223, 15.163742)
+
+[node name="ScaldaPanel439" parent="Environment/Benedenverdieping" unique_id=1921585900 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 11.734318, -2.9004223, 15.163742)
+
+[node name="ScaldaPanel440" parent="Environment/Benedenverdieping" unique_id=357223376 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 11.734318, -3.9004223, 15.163742)
+
+[node name="ScaldaPanel441" parent="Environment/Benedenverdieping" unique_id=1094643950 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 12.734318, -0.90042233, 15.163742)
+
+[node name="ScaldaPanel442" parent="Environment/Benedenverdieping" unique_id=624281554 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 12.734318, -1.9004223, 15.163742)
+
+[node name="ScaldaPanel443" parent="Environment/Benedenverdieping" unique_id=1840752363 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 12.734318, -2.9004223, 15.163742)
+
+[node name="ScaldaPanel444" parent="Environment/Benedenverdieping" unique_id=1291975269 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 12.734318, -3.9004223, 15.163742)
+
+[node name="ScaldaPanel445" parent="Environment/Benedenverdieping" unique_id=1346418208 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 13.734318, -0.90042233, 15.163742)
+
+[node name="ScaldaPanel446" parent="Environment/Benedenverdieping" unique_id=1138463191 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 13.734318, -1.9004223, 15.163742)
+
+[node name="ScaldaPanel447" parent="Environment/Benedenverdieping" unique_id=1051994266 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 13.734318, -2.9004223, 15.163742)
+
+[node name="ScaldaPanel448" parent="Environment/Benedenverdieping" unique_id=949325137 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 13.734318, -3.9004223, 15.163742)
+
+[node name="ScaldaPanel449" parent="Environment/Benedenverdieping" unique_id=1566973089 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 14.734318, -0.90042233, 15.163742)
+
+[node name="ScaldaPanel450" parent="Environment/Benedenverdieping" unique_id=553099114 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 14.734318, -1.9004223, 15.163742)
+
+[node name="ScaldaPanel451" parent="Environment/Benedenverdieping" unique_id=1338174768 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 14.734318, -2.9004223, 15.163742)
+
+[node name="ScaldaPanel452" parent="Environment/Benedenverdieping" unique_id=716668404 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 14.734318, -3.9004223, 15.163742)
+
+[node name="ScaldaPanel453" parent="Environment/Benedenverdieping" unique_id=307979708 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 15.734318, -0.90042233, 15.163742)
+
+[node name="ScaldaPanel454" parent="Environment/Benedenverdieping" unique_id=1722305626 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 15.734318, -1.9004223, 15.163742)
+
+[node name="ScaldaPanel455" parent="Environment/Benedenverdieping" unique_id=590520080 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 15.734318, -2.9004223, 15.163742)
+
+[node name="ScaldaPanel456" parent="Environment/Benedenverdieping" unique_id=20658385 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 15.734318, -3.9004223, 15.163742)
+
+[node name="ScaldaPanel457" parent="Environment/Benedenverdieping" unique_id=947701910 instance=ExtResource("9_afksl")]
+transform = Transform3D(1.0990751, 0, 0, 0, 0.9999996, 0, 7.809401e-15, 0, 1.09, 16.775583, -0.90042233, 15.163742)
+
+[node name="ScaldaPanel458" parent="Environment/Benedenverdieping" unique_id=1728923745 instance=ExtResource("9_afksl")]
+transform = Transform3D(1.0990751, 0, 0, 0, 0.9999996, 0, 7.809401e-15, 0, 1.09, 16.775583, -1.9004223, 15.163742)
+
+[node name="ScaldaPanel459" parent="Environment/Benedenverdieping" unique_id=1846697572 instance=ExtResource("9_afksl")]
+transform = Transform3D(1.0990751, 0, 0, 0, 0.9999996, 0, 7.809401e-15, 0, 1.09, 16.775583, -2.9004223, 15.163742)
+
+[node name="ScaldaPanel460" parent="Environment/Benedenverdieping" unique_id=2100791607 instance=ExtResource("9_afksl")]
+transform = Transform3D(1.0990751, 0, 0, 0, 0.9999996, 0, 7.809401e-15, 0, 1.09, 16.775583, -3.9004223, 15.163742)
+
+[node name="ScaldaPanel461" parent="Environment/Benedenverdieping" unique_id=1591700065 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 17.834318, -0.90042233, 15.163742)
+
+[node name="ScaldaPanel462" parent="Environment/Benedenverdieping" unique_id=2141324940 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 17.834318, -1.9004223, 15.163742)
+
+[node name="ScaldaPanel463" parent="Environment/Benedenverdieping" unique_id=291479758 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 17.834318, -2.9004223, 15.163742)
+
+[node name="ScaldaPanel464" parent="Environment/Benedenverdieping" unique_id=912915881 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 17.834318, -3.9004223, 15.163742)
+
+[node name="ScaldaPanel465" parent="Environment/Benedenverdieping" unique_id=425353963 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 18.834318, -0.90042233, 15.163742)
+
+[node name="ScaldaPanel466" parent="Environment/Benedenverdieping" unique_id=1202426219 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 18.834318, -1.9004223, 15.163742)
+
+[node name="ScaldaPanel467" parent="Environment/Benedenverdieping" unique_id=1760309536 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 18.834318, -2.9004223, 15.163742)
+
+[node name="ScaldaPanel468" parent="Environment/Benedenverdieping" unique_id=719101925 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 18.834318, -3.9004223, 15.163742)
+
+[node name="ScaldaPanel469" parent="Environment/Benedenverdieping" unique_id=1546449063 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 19.834318, -0.90042233, 15.163742)
+
+[node name="ScaldaPanel470" parent="Environment/Benedenverdieping" unique_id=1036879418 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 19.834318, -1.9004223, 15.163742)
+
+[node name="ScaldaPanel471" parent="Environment/Benedenverdieping" unique_id=1962840545 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 19.834318, -2.9004223, 15.163742)
+
+[node name="ScaldaPanel472" parent="Environment/Benedenverdieping" unique_id=948148129 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 19.834318, -3.9004223, 15.163742)
+
+[node name="ScaldaPanel473" parent="Environment/Benedenverdieping" unique_id=516905138 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 20.834318, -0.90042233, 15.163742)
+
+[node name="ScaldaPanel474" parent="Environment/Benedenverdieping" unique_id=1692845533 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 20.834318, -1.9004223, 15.163742)
+
+[node name="ScaldaPanel475" parent="Environment/Benedenverdieping" unique_id=303126773 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 20.834318, -2.9004223, 15.163742)
+
+[node name="ScaldaPanel476" parent="Environment/Benedenverdieping" unique_id=2138907548 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 20.834318, -3.9004223, 15.163742)
+
+[node name="ScaldaPanel477" parent="Environment/Benedenverdieping" unique_id=2011419000 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 21.834318, -0.90042233, 15.163742)
+
+[node name="ScaldaPanel478" parent="Environment/Benedenverdieping" unique_id=426641652 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 21.834318, -1.9004223, 15.163742)
+
+[node name="ScaldaPanel479" parent="Environment/Benedenverdieping" unique_id=1889978441 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 21.834318, -2.9004223, 15.163742)
+
+[node name="ScaldaPanel480" parent="Environment/Benedenverdieping" unique_id=1312970144 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 21.834318, -3.9004223, 15.163742)
+
+[node name="ScaldaPanel481" parent="Environment/Benedenverdieping" unique_id=824921072 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 22.834318, -0.90042233, 15.163742)
+
+[node name="ScaldaPanel482" parent="Environment/Benedenverdieping" unique_id=1052164826 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 22.834318, -1.9004223, 15.163742)
+
+[node name="ScaldaPanel483" parent="Environment/Benedenverdieping" unique_id=2112201875 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 22.834318, -2.9004223, 15.163742)
+
+[node name="ScaldaPanel484" parent="Environment/Benedenverdieping" unique_id=1425718545 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 22.834318, -3.9004223, 15.163742)
+
+[node name="ScaldaPanel485" parent="Environment/Benedenverdieping" unique_id=59287344 instance=ExtResource("9_afksl")]
+transform = Transform3D(1.3499995, 0, 0, 0, 0.9999996, 0, 9.592327e-15, 0, 1.09, 24.034319, -0.90042233, 15.163742)
+
+[node name="ScaldaPanel486" parent="Environment/Benedenverdieping" unique_id=950249266 instance=ExtResource("9_afksl")]
+transform = Transform3D(1.3499995, 0, 0, 0, 0.9999996, 0, 9.592327e-15, 0, 1.09, 24.034319, -1.9004223, 15.163742)
+
+[node name="ScaldaPanel487" parent="Environment/Benedenverdieping" unique_id=269271457 instance=ExtResource("9_afksl")]
+transform = Transform3D(1.3499995, 0, 0, 0, 0.9999996, 0, 9.592327e-15, 0, 1.09, 24.034319, -2.9004223, 15.163742)
+
+[node name="ScaldaPanel488" parent="Environment/Benedenverdieping" unique_id=1305558578 instance=ExtResource("9_afksl")]
+transform = Transform3D(1.3499995, 0, 0, 0, 0.9999996, 0, 9.592327e-15, 0, 1.09, 24.034319, -3.9004223, 15.163742)
+
+[node name="ScaldaPanel489" parent="Environment/Benedenverdieping" unique_id=336809627 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 25.190231, -0.90042233, 11.363742)
+
+[node name="ScaldaPanel490" parent="Environment/Benedenverdieping" unique_id=1429162617 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 25.190231, -1.9004223, 11.363742)
+
+[node name="ScaldaPanel491" parent="Environment/Benedenverdieping" unique_id=1551948634 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 25.190231, -2.9004223, 11.363742)
+
+[node name="ScaldaPanel492" parent="Environment/Benedenverdieping" unique_id=1803894200 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 26.190231, -0.90042233, 11.363742)
+
+[node name="ScaldaPanel493" parent="Environment/Benedenverdieping" unique_id=222327516 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 26.190231, -1.9004223, 11.363742)
+
+[node name="ScaldaPanel494" parent="Environment/Benedenverdieping" unique_id=1324050970 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 26.190231, -2.9004223, 11.363742)
+
+[node name="ScaldaPanel495" parent="Environment/Benedenverdieping" unique_id=285561788 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 27.190231, -0.90042233, 11.363742)
+
+[node name="ScaldaPanel496" parent="Environment/Benedenverdieping" unique_id=776333374 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 27.190231, -1.9004223, 11.363742)
+
+[node name="ScaldaPanel497" parent="Environment/Benedenverdieping" unique_id=1151175571 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 27.190231, -2.9004223, 11.363742)
+
+[node name="ScaldaPanel498" parent="Environment/Benedenverdieping" unique_id=825012045 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 28.190231, -0.90042233, 11.363742)
+
+[node name="ScaldaPanel499" parent="Environment/Benedenverdieping" unique_id=1508578652 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 28.190231, -1.9004223, 11.363742)
+
+[node name="ScaldaPanel500" parent="Environment/Benedenverdieping" unique_id=719132409 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 28.190231, -2.9004223, 11.363742)
+
+[node name="ScaldaPanel501" parent="Environment/Benedenverdieping" unique_id=1927735142 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 29.190231, -0.90042233, 11.363742)
+
+[node name="ScaldaPanel502" parent="Environment/Benedenverdieping" unique_id=1047995848 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 29.190231, -1.9004223, 11.363742)
+
+[node name="ScaldaPanel503" parent="Environment/Benedenverdieping" unique_id=1106538657 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 29.190231, -2.9004223, 11.363742)
+
+[node name="ScaldaPanel504" parent="Environment/Benedenverdieping" unique_id=1611382515 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 30.190231, -0.90042233, 11.363742)
+
+[node name="ScaldaPanel505" parent="Environment/Benedenverdieping" unique_id=1986817918 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 30.190231, -1.9004223, 11.363742)
+
+[node name="ScaldaPanel506" parent="Environment/Benedenverdieping" unique_id=1317089683 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 30.190231, -2.9004223, 11.363742)
+
+[node name="ScaldaPanel507" parent="Environment/Benedenverdieping" unique_id=489140007 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 30.590229, -0.90042233, 11.76374)
+
+[node name="ScaldaPanel508" parent="Environment/Benedenverdieping" unique_id=1550028859 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 30.590229, -1.9004223, 11.76374)
+
+[node name="ScaldaPanel509" parent="Environment/Benedenverdieping" unique_id=306099351 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 30.590229, -2.9004223, 11.76374)
+
+[node name="ScaldaPanel510" parent="Environment/Benedenverdieping" unique_id=526959785 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 30.590229, -0.90042233, 12.76374)
+
+[node name="ScaldaPanel511" parent="Environment/Benedenverdieping" unique_id=622398658 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 30.590229, -1.9004223, 12.76374)
+
+[node name="ScaldaPanel512" parent="Environment/Benedenverdieping" unique_id=810563353 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 30.590229, -2.9004223, 12.76374)
+
+[node name="ScaldaPanel513" parent="Environment/Benedenverdieping" unique_id=1964312831 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 30.590229, -0.90042233, 13.76374)
+
+[node name="ScaldaPanel514" parent="Environment/Benedenverdieping" unique_id=1919074992 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 30.590229, -1.9004223, 13.76374)
+
+[node name="ScaldaPanel515" parent="Environment/Benedenverdieping" unique_id=428828648 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 30.590229, -2.9004223, 13.76374)
+
+[node name="ScaldaPanel516" parent="Environment/Benedenverdieping" unique_id=2101894565 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 30.590229, -0.90042233, 14.76374)
+
+[node name="ScaldaPanel517" parent="Environment/Benedenverdieping" unique_id=810927135 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 30.590229, -1.9004223, 14.76374)
+
+[node name="ScaldaPanel518" parent="Environment/Benedenverdieping" unique_id=731048886 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.371138e-08, 0, -1.09, 0, 0.9999996, 0, 0.99999964, 0, -4.7645415e-08, 30.590229, -2.9004223, 14.76374)
+
+[node name="ScaldaPanel519" parent="Environment/Benedenverdieping" unique_id=1258101374 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 31.190233, -0.90042233, 15.36374)
+
+[node name="ScaldaPanel520" parent="Environment/Benedenverdieping" unique_id=466602414 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 31.190233, -1.9004223, 15.36374)
+
+[node name="ScaldaPanel521" parent="Environment/Benedenverdieping" unique_id=286379167 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 31.190233, -2.9004223, 15.36374)
+
+[node name="ScaldaPanel522" parent="Environment/Benedenverdieping" unique_id=686019712 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 32.190235, -0.90042233, 15.36374)
+
+[node name="ScaldaPanel523" parent="Environment/Benedenverdieping" unique_id=646592213 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 32.190235, -1.9004223, 15.36374)
+
+[node name="ScaldaPanel524" parent="Environment/Benedenverdieping" unique_id=1525254900 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 32.190235, -2.9004223, 15.36374)
+
+[node name="ScaldaPanel525" parent="Environment/Benedenverdieping" unique_id=1930725989 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 33.190235, -0.90042233, 15.36374)
+
+[node name="ScaldaPanel526" parent="Environment/Benedenverdieping" unique_id=1257037660 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 33.190235, -1.9004223, 15.36374)
+
+[node name="ScaldaPanel527" parent="Environment/Benedenverdieping" unique_id=662994560 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 33.190235, -2.9004223, 15.36374)
+
+[node name="ScaldaPanel528" parent="Environment/Benedenverdieping" unique_id=1891304348 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 34.190235, -0.90042233, 15.36374)
+
+[node name="ScaldaPanel529" parent="Environment/Benedenverdieping" unique_id=1373757995 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 34.190235, -1.9004223, 15.36374)
+
+[node name="ScaldaPanel530" parent="Environment/Benedenverdieping" unique_id=396793117 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 34.190235, -2.9004223, 15.36374)
+
+[node name="ScaldaPanel531" parent="Environment/Benedenverdieping" unique_id=1030450779 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 35.19023, -0.90042233, 15.36374)
+
+[node name="ScaldaPanel532" parent="Environment/Benedenverdieping" unique_id=760039527 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 35.19023, -1.9004223, 15.36374)
+
+[node name="ScaldaPanel533" parent="Environment/Benedenverdieping" unique_id=339362485 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 35.19023, -2.9004223, 15.36374)
+
+[node name="ScaldaPanel534" parent="Environment/Benedenverdieping" unique_id=713506039 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 36.190235, -0.90042233, 15.36374)
+
+[node name="ScaldaPanel535" parent="Environment/Benedenverdieping" unique_id=582237205 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 36.190235, -1.9004223, 15.36374)
+
+[node name="ScaldaPanel536" parent="Environment/Benedenverdieping" unique_id=715867126 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 36.190235, -2.9004223, 15.36374)
+
+[node name="ScaldaPanel537" parent="Environment/Benedenverdieping" unique_id=963983994 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 37.190235, -0.90042233, 15.36374)
+
+[node name="ScaldaPanel538" parent="Environment/Benedenverdieping" unique_id=1584062773 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 37.190235, -1.9004223, 15.36374)
+
+[node name="ScaldaPanel539" parent="Environment/Benedenverdieping" unique_id=968035893 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 37.190235, -2.9004223, 15.36374)
+
+[node name="ScaldaPanel540" parent="Environment/Benedenverdieping" unique_id=494758715 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 38.190235, -0.90042233, 15.36374)
+
+[node name="ScaldaPanel541" parent="Environment/Benedenverdieping" unique_id=295855409 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 38.190235, -1.9004223, 15.36374)
+
+[node name="ScaldaPanel542" parent="Environment/Benedenverdieping" unique_id=1609019226 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 38.190235, -2.9004223, 15.36374)
+
+[node name="ScaldaPanel543" parent="Environment/Benedenverdieping" unique_id=158546032 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 39.19023, -0.90042233, 15.36374)
+
+[node name="ScaldaPanel544" parent="Environment/Benedenverdieping" unique_id=731514962 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 39.19023, -1.9004223, 15.36374)
+
+[node name="ScaldaPanel545" parent="Environment/Benedenverdieping" unique_id=495236958 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 39.19023, -2.9004223, 15.36374)
+
+[node name="ScaldaPanel546" parent="Environment/Benedenverdieping" unique_id=1930764229 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 40.190235, -0.90042233, 15.36374)
+
+[node name="ScaldaPanel547" parent="Environment/Benedenverdieping" unique_id=192420441 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 40.190235, -1.9004223, 15.36374)
+
+[node name="ScaldaPanel548" parent="Environment/Benedenverdieping" unique_id=1122323232 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 40.190235, -2.9004223, 15.36374)
+
+[node name="ScaldaPanel549" parent="Environment/Benedenverdieping" unique_id=1970674198 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 41.190235, -0.90042233, 15.36374)
+
+[node name="ScaldaPanel550" parent="Environment/Benedenverdieping" unique_id=625846448 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 41.190235, -1.9004223, 15.36374)
+
+[node name="ScaldaPanel551" parent="Environment/Benedenverdieping" unique_id=781313669 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 41.190235, -2.9004223, 15.36374)
+
+[node name="ScaldaPanel552" parent="Environment/Benedenverdieping" unique_id=1284778004 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 42.190235, -0.90042233, 15.36374)
+
+[node name="ScaldaPanel553" parent="Environment/Benedenverdieping" unique_id=618774910 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 42.190235, -1.9004223, 15.36374)
+
+[node name="ScaldaPanel554" parent="Environment/Benedenverdieping" unique_id=169387316 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 42.190235, -2.9004223, 15.36374)
+
+[node name="ScaldaPanel555" parent="Environment/Benedenverdieping" unique_id=1282463313 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 43.19023, -0.90042233, 15.36374)
+
+[node name="ScaldaPanel556" parent="Environment/Benedenverdieping" unique_id=1491055159 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 43.19023, -1.9004223, 15.36374)
+
+[node name="ScaldaPanel557" parent="Environment/Benedenverdieping" unique_id=1057227521 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 43.19023, -2.9004223, 15.36374)
+
+[node name="ScaldaPanel558" parent="Environment/Benedenverdieping" unique_id=1143022818 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 44.190235, -0.90042233, 15.36374)
+
+[node name="ScaldaPanel559" parent="Environment/Benedenverdieping" unique_id=989651450 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 44.190235, -1.9004223, 15.36374)
+
+[node name="ScaldaPanel560" parent="Environment/Benedenverdieping" unique_id=1667218919 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 44.190235, -2.9004223, 15.36374)
+
+[node name="ScaldaPanel561" parent="Environment/Benedenverdieping" unique_id=1318088305 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 45.190235, -0.90042233, 15.36374)
+
+[node name="ScaldaPanel562" parent="Environment/Benedenverdieping" unique_id=187133146 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 45.190235, -1.9004223, 15.36374)
+
+[node name="ScaldaPanel563" parent="Environment/Benedenverdieping" unique_id=304403429 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 45.190235, -2.9004223, 15.36374)
+
+[node name="ScaldaPanel564" parent="Environment/Benedenverdieping" unique_id=1826578444 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 36.190235, 0.099577725, 15.36374)
+
+[node name="ScaldaPanel565" parent="Environment/Benedenverdieping" unique_id=1787196587 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 37.190235, 0.099577725, 15.36374)
+
+[node name="ScaldaPanel566" parent="Environment/Benedenverdieping" unique_id=2031984649 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 38.190235, 0.099577725, 15.36374)
+
+[node name="ScaldaPanel567" parent="Environment/Benedenverdieping" unique_id=167502124 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 39.19023, 0.099577725, 15.36374)
+
+[node name="ScaldaPanel568" parent="Environment/Benedenverdieping" unique_id=1361563189 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 40.190235, 0.099577725, 15.36374)
+
+[node name="ScaldaPanel569" parent="Environment/Benedenverdieping" unique_id=2076912543 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 41.190235, 0.099577725, 15.36374)
+
+[node name="ScaldaPanel570" parent="Environment/Benedenverdieping" unique_id=549632562 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 42.190235, 0.099577725, 15.36374)
+
+[node name="ScaldaPanel571" parent="Environment/Benedenverdieping" unique_id=394429112 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 43.19023, 0.099577725, 15.36374)
+
+[node name="ScaldaPanel572" parent="Environment/Benedenverdieping" unique_id=2051893088 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 44.190235, 0.099577725, 15.36374)
+
+[node name="ScaldaPanel573" parent="Environment/Benedenverdieping" unique_id=2059673193 instance=ExtResource("9_afksl")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.9999996, 0, 7.1054274e-15, 0, 1.09, 45.190235, 0.099577725, 15.36374)
+
+[node name="ScaldaPanel109" parent="Environment/Benedenverdieping" unique_id=609947876 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 36.109543, -2.751563, 7.443598)
+
+[node name="ScaldaPanel110" parent="Environment/Benedenverdieping" unique_id=30634278 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 36.109543, -1.7515635, 7.443598)
+
+[node name="ScaldaPanel111" parent="Environment/Benedenverdieping" unique_id=126240129 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 36.109543, -2.751563, 8.443596)
+
+[node name="ScaldaPanel112" parent="Environment/Benedenverdieping" unique_id=1697366125 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 36.109543, -1.7515635, 8.443596)
+
+[node name="ScaldaPanel113" parent="Environment/Benedenverdieping" unique_id=909519274 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 36.109543, -2.751563, 9.443598)
+
+[node name="ScaldaPanel114" parent="Environment/Benedenverdieping" unique_id=1346222846 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 36.109543, -1.7515635, 9.443598)
+
+[node name="ScaldaPanel115" parent="Environment/Benedenverdieping" unique_id=1846996263 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 36.109543, -2.751563, 10.443596)
+
+[node name="ScaldaPanel116" parent="Environment/Benedenverdieping" unique_id=1695885410 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 36.109543, -1.7515635, 10.443596)
+
+[node name="ScaldaPanel117" parent="Environment/Benedenverdieping" unique_id=1786545812 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 36.109543, -0.7515631, 7.443598)
+
+[node name="ScaldaPanel118" parent="Environment/Benedenverdieping" unique_id=787824759 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 36.109543, -0.75156355, 9.443598)
+
+[node name="ScaldaPanel119" parent="Environment/Benedenverdieping" unique_id=171657346 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 36.109543, -0.7515631, 8.443596)
+
+[node name="ScaldaPanel120" parent="Environment/Benedenverdieping" unique_id=910275223 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 36.109543, -0.75156355, 10.443596)
+
+[node name="ScaldaPanel121" parent="Environment/Benedenverdieping" unique_id=219519174 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 36.109543, -2.751563, 3.4435978)
+
+[node name="ScaldaPanel122" parent="Environment/Benedenverdieping" unique_id=1710277029 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 36.109543, -1.7515635, 3.4435978)
+
+[node name="ScaldaPanel123" parent="Environment/Benedenverdieping" unique_id=1500880076 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 36.109543, -2.751563, 4.443596)
+
+[node name="ScaldaPanel124" parent="Environment/Benedenverdieping" unique_id=152654972 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 36.109543, -1.7515635, 4.443596)
+
+[node name="ScaldaPanel125" parent="Environment/Benedenverdieping" unique_id=849793606 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 36.109543, -2.751563, 5.443598)
+
+[node name="ScaldaPanel126" parent="Environment/Benedenverdieping" unique_id=919289441 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 36.109543, -1.7515635, 5.443598)
+
+[node name="ScaldaPanel127" parent="Environment/Benedenverdieping" unique_id=533013929 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 36.109543, -2.751563, 6.443596)
+
+[node name="ScaldaPanel128" parent="Environment/Benedenverdieping" unique_id=1117236016 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 36.109543, -1.7515635, 6.443596)
+
+[node name="ScaldaPanel129" parent="Environment/Benedenverdieping" unique_id=1381476485 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 36.109543, -0.7515631, 3.4435978)
+
+[node name="ScaldaPanel130" parent="Environment/Benedenverdieping" unique_id=218136572 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 36.109543, -0.75156355, 5.443598)
+
+[node name="ScaldaPanel131" parent="Environment/Benedenverdieping" unique_id=549636343 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 36.109543, -0.7515631, 4.443596)
+
+[node name="ScaldaPanel132" parent="Environment/Benedenverdieping" unique_id=1701718838 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 36.109543, -0.75156355, 6.443596)
+
+[node name="ScaldaPanel133" parent="Environment/Benedenverdieping" unique_id=1610748807 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 36.109543, -2.751563, 2.4435978)
+
+[node name="ScaldaPanel134" parent="Environment/Benedenverdieping" unique_id=248216120 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 36.109543, -1.7515635, 2.4435978)
+
+[node name="ScaldaPanel135" parent="Environment/Benedenverdieping" unique_id=1134334484 instance=ExtResource("9_afksl")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 36.109543, -0.7515631, 2.4435978)
+
 [node name="OfficeCHair" parent="." unique_id=624745251 instance=ExtResource("10_jpd7b")]
 transform = Transform3D(-0.1736482, 0, 0.9848077, 0, 1, 0, -0.9848077, 0, -0.1736482, 22.300001, 0, -8.900001)
 
@@ -3359,7 +4228,7 @@ locked = true
 transform = Transform3D(-1.0644799e-07, 0, 1.0000001, 0, 1.345789, 0, -2.4352462, 0, -4.3711392e-08, -0.048174858, 1.2938441, 0)
 
 [node name="Deurpost8" parent="Doors" unique_id=713163746 instance=ExtResource("21_cm112")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.931942, -3.2, 0)
+transform = Transform3D(1, 0, 0, 0, 1.0259191, 0, 0, 0, 1, 35.931942, -3.1675837, 0)
 
 [node name="Deurpost9" parent="Doors" unique_id=1867989216 instance=ExtResource("21_cm112")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.931942, -3.2, 13)
