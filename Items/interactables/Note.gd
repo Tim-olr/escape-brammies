@@ -35,6 +35,14 @@ func _update_label() -> void:
 		label.text = ""
 		return
 
+@onready var label: Label3D = $Label3D
+
+func _ready() -> void:
+	call_deferred("_update_label")
+
+const ORDINALS := ["First", "Second", "Third", "Fourth", "Fifth", "Sixth"]
+
+func _update_label() -> void:
 	if keypad == null:
 		label.text = text
 		return
