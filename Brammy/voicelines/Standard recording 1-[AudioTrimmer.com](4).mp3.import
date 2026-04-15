@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dylh71cjdjefr"
+path="res://.godot/imported/Standard recording 1-[AudioTrimmer.com](4).mp3-02d549dcd52c9e34f541019138252b17.mp3str"
+
+[deps]
+
+source_file="res://Brammy/voicelines/Standard recording 1-[AudioTrimmer.com](4).mp3"
+dest_files=["res://.godot/imported/Standard recording 1-[AudioTrimmer.com](4).mp3-02d549dcd52c9e34f541019138252b17.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

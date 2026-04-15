@@ -3,6 +3,17 @@
 [ext_resource type="Script" uid="uid://1gecpxjh1ys" path="res://Brammy/brammy.gd" id="1_wjene"]
 [ext_resource type="Script" uid="uid://cypcrbwo8pnrn" path="res://Brammy/audio_stream_player_3d.gd" id="3_aiods"]
 [ext_resource type="Texture2D" uid="uid://bfdllm4ycjwhu" path="res://Brammy/brammy.png" id="3_vovia"]
+[ext_resource type="AudioStream" uid="uid://cmqbrqoofdr3e" path="res://Brammy/voicelines/Standard recording 1-[AudioTrimmer.com](1).mp3" id="4_s14ka"]
+[ext_resource type="AudioStream" uid="uid://0jo55m23dvad" path="res://Brammy/voicelines/Standard recording 1-[AudioTrimmer.com](2).mp3" id="5_7a7jf"]
+[ext_resource type="AudioStream" uid="uid://bguib46vqh0du" path="res://Brammy/voicelines/Standard recording 1-[AudioTrimmer.com](3).mp3" id="6_q6fwi"]
+[ext_resource type="AudioStream" uid="uid://dylh71cjdjefr" path="res://Brammy/voicelines/Standard recording 1-[AudioTrimmer.com](4).mp3" id="7_i56w4"]
+[ext_resource type="AudioStream" uid="uid://w6na1fqemskb" path="res://Brammy/voicelines/Standard recording 1-[AudioTrimmer.com](5).mp3" id="8_qts2p"]
+[ext_resource type="AudioStream" uid="uid://bhkxfx2hylfp0" path="res://Brammy/voicelines/Standard recording 1-[AudioTrimmer.com](6).mp3" id="9_konga"]
+[ext_resource type="AudioStream" uid="uid://cu6jpka2p7xbb" path="res://Brammy/voicelines/Standard recording 1-[AudioTrimmer.com](7).mp3" id="10_cy761"]
+[ext_resource type="AudioStream" uid="uid://dqhrbtkrwdna6" path="res://Brammy/voicelines/Standard recording 1-[AudioTrimmer.com](8).mp3" id="11_1j1gw"]
+[ext_resource type="AudioStream" uid="uid://cny77gnc4s4d" path="res://Brammy/voicelines/Standard recording 1-[AudioTrimmer.com].mp3" id="12_yeywm"]
+[ext_resource type="AudioStream" uid="uid://jlnflj1uhme1" path="res://Brammy/voicelines/Standard recording 2-[AudioTrimmer.com](1).mp3" id="13_igpx6"]
+[ext_resource type="AudioStream" uid="uid://bifdjuds8712l" path="res://Brammy/voicelines/Standard recording 2-[AudioTrimmer.com].mp3" id="14_kd2p4"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jf6uf"]
 
@@ -76,7 +87,11 @@ texture = ExtResource("3_vovia")
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1427392352]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.705925, 0)
 script = ExtResource("3_aiods")
+audios = Array[AudioStream]([ExtResource("4_s14ka"), ExtResource("5_7a7jf"), ExtResource("6_q6fwi"), ExtResource("7_i56w4"), ExtResource("8_qts2p"), ExtResource("9_konga"), ExtResource("10_cy761"), ExtResource("11_1j1gw"), ExtResource("12_yeywm"), ExtResource("13_igpx6"), ExtResource("14_kd2p4")])
+
+[node name="Timer" type="Timer" parent="AudioStreamPlayer3D" unique_id=288734670]
 
 [connection signal="timeout" from="Timer/Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="PlayerAttentionArea" to="." method="_on_player_attention_area_body_entered"]
 [connection signal="body_exited" from="PlayerAttentionArea" to="." method="_on_player_attention_area_body_exited"]
+[connection signal="timeout" from="AudioStreamPlayer3D/Timer" to="AudioStreamPlayer3D" method="_on_timer_timeout"]
