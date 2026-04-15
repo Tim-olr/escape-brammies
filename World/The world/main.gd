@@ -70,4 +70,5 @@ func _on_bell_interaction_body_entered(body: Node3D) -> void:
 		can_ding = true
 
 func _on_bell_interaction_body_exited(_body: Node3D) -> void:
+func _on_bell_interaction_body_exited(body: Node3D) -> void:
 	can_ding = false
