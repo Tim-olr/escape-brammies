@@ -25,11 +25,13 @@
 [ext_resource type="PackedScene" uid="uid://bqthakx4h6ydl" path="res://Items/interactables/scrumbel/scrumbel_interactable.tscn" id="24_2jj54"]
 [ext_resource type="Texture2D" uid="uid://7v81h12e88i1" path="res://assets/models/scalda/rens.png" id="24_c17kt"]
 [ext_resource type="PackedScene" path="res://Items/interactables/hardcore_mode_interactable.tscn" id="16_x53gd"]
+[ext_resource type="PackedScene" uid="uid://ct7tcm0v78636" path="res://Items/interactables/hardcore_mode_interactable.tscn" id="16_x53gd"]
 [ext_resource type="PackedScene" uid="uid://du3mdsaixyqti" path="res://World/Objects/Blackdoor.tscn" id="17_vrh1m"]
 [ext_resource type="PackedScene" path="res://World/Objects/Keypad.tscn" id="18_1tfbs"]
 [ext_resource type="PackedScene" path="res://Items/interactables/Note.tscn" id="19_cmh3a"]
 [ext_resource type="PackedScene" uid="uid://dyb1lcmkfiq4e" path="res://Items/interactables/struts2/struts_2_interactable.tscn" id="20_7d5iv"]
 [ext_resource type="PackedScene" path="res://World/Objects/ElectricalBox.tscn" id="21_elbox"]
+[ext_resource type="Texture2D" uid="uid://7v81h12e88i1" path="res://assets/models/scalda/rens.png" id="24_c17kt"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ghcsx"]
 sky_top_color = Color(0.37338156, 0.4430481, 0.53593016, 1)
@@ -148,6 +150,7 @@ world_en = NodePath("WorldEnvironment")
 ap = NodePath("AnimationPlayer")
 interactables = Array[PackedScene]([ExtResource("2_j5njh"), ExtResource("20_7d5iv"), ExtResource("4_6w2ka"), ExtResource("5_qk4u2")])
 interactables = Array[PackedScene]([ExtResource("2_j5njh"), ExtResource("20_7d5iv"), ExtResource("4_6w2ka")])
+interactables = Array[PackedScene]([ExtResource("2_j5njh"), ExtResource("20_7d5iv"), ExtResource("4_6w2ka"), ExtResource("5_qk4u2")])
 
 [node name="breaker_pos" type="Marker3D" parent="." unique_id=834914983]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.688698, -2.6422873, 6.392188)
@@ -173,6 +176,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 41.4
 
 [node name="ButtonPickup" parent="." unique_id=96722833 instance=ExtResource("6_slyvb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.99386, -2.2017694, 6.2858863)
+visible = false
 
 [node name="MotorPickup" parent="." unique_id=394935821 instance=ExtResource("7_eq6tm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0203779, 1.3144246, 5.4325275)
@@ -463,6 +467,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.394428, 0.5704233, -0.6604
 
 [node name="ElectricalBox" parent="." unique_id=1677314136 instance=ExtResource("21_elbox")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.05863419, 4.768268, 5.51781)
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1022880912]
+transform = Transform3D(-4.371139e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.371139e-09, 36.739803, -3.769992, 7.1133337)
+texture = ExtResource("24_c17kt")
 
 [connection signal="body_entered" from="death_area" to="death_area" method="_on_body_entered"]
 [connection signal="body_entered" from="start_sequence_detection" to="." method="_on_start_sequence_detection_body_entered"]
