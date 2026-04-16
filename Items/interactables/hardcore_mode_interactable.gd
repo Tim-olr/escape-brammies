@@ -64,18 +64,18 @@ func _enforce_single_item_inventory() -> void:
 	if inventory == null:
 		return
 
-	_drop_and_clear_slot(inventory.slot_1)
+	_drop_and_clear_slot(inventory.slot_2)
 	_drop_and_clear_slot(inventory.slot_3)
 
-	inventory.slot_1.visible = false
+	inventory.slot_2.visible = false
 	inventory.slot_3.visible = false
-	inventory.slot_1.disabled = true
+	inventory.slot_2.disabled = true
 	inventory.slot_3.disabled = true
-	inventory.slot_1.has_item = true
+	inventory.slot_2.has_item = true
 	inventory.slot_3.has_item = true
 
-	if inventory.current_slot == inventory.slot_1 or inventory.current_slot == inventory.slot_3:
-		inventory.select_slot(inventory.slot_2)
+	if inventory.current_slot == inventory.slot_2 or inventory.current_slot == inventory.slot_3:
+		inventory.select_slot(inventory.slot_1)
 
 func _drop_and_clear_slot(slot: InventorySlot) -> void:
 	if slot == null:
@@ -102,9 +102,9 @@ func _disable_hardcore_mode() -> void:
 	if inventory == null:
 		return
 
-	inventory.slot_1.visible = true
+	inventory.slot_2.visible = true
 	inventory.slot_3.visible = true
-	inventory.slot_1.disabled = false
+	inventory.slot_2.disabled = false
 	inventory.slot_3.disabled = false
-	inventory.slot_1.has_item = inventory.slot_1.held_item != null
+	inventory.slot_2.has_item = inventory.slot_2.held_item != null
 	inventory.slot_3.has_item = inventory.slot_3.held_item != null
