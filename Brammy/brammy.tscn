@@ -93,7 +93,6 @@ audios = Array[AudioStream]([ExtResource("4_s14ka"), ExtResource("5_7a7jf"), Ext
 [node name="Timer" type="Timer" parent="AudioStreamPlayer3D" unique_id=288734670]
 
 [node name="smeur_timer" type="Timer" parent="AudioStreamPlayer3D" unique_id=1194076241]
-one_shot = true
 
 [node name="footsteps" type="AudioStreamPlayer3D" parent="." unique_id=555978782]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.095999)

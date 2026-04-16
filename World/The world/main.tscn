@@ -19,7 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://ct7tcm0v78636" path="res://Items/interactables/hardcore_mode_interactable.tscn" id="16_x53gd"]
 [ext_resource type="PackedScene" uid="uid://du3mdsaixyqti" path="res://World/Objects/Blackdoor.tscn" id="17_vrh1m"]
 [ext_resource type="PackedScene" uid="uid://gy4jdj3afkio" path="res://World/Objects/Keypad.tscn" id="18_1tfbs"]
-[ext_resource type="PackedScene" uid="uid://saxsy1hidu1g" path="res://Items/interactables/Note.tscn" id="19_cmh3a"]
+[ext_resource type="PackedScene" path="res://Items/interactables/Note.tscn" id="19_cmh3a"]
 [ext_resource type="PackedScene" uid="uid://dyb1lcmkfiq4e" path="res://Items/interactables/struts2/struts_2_interactable.tscn" id="20_7d5iv"]
 [ext_resource type="PackedScene" uid="uid://cjrmlmetv0vhc" path="res://World/Objects/ElectricalBox.tscn" id="21_elbox"]
 [ext_resource type="PackedScene" uid="uid://bqthakx4h6ydl" path="res://Items/interactables/scrumbel/scrumbel_interactable.tscn" id="24_2jj54"]
