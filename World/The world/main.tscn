@@ -128,7 +128,7 @@ _data = {
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vhc53"]
-size = Vector3(11.776489, 4.7178955, 22.128326)
+size = Vector3(17.745155, 0.938385, 9.625635)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c17kt"]
 size = Vector3(3.4, 3.9, 3.7)
@@ -437,10 +437,10 @@ texture = ExtResource("24_c17kt")
 libraries/ = SubResource("AnimationLibrary_tumtg")
 
 [node name="BellInteraction" type="Area3D" parent="." unique_id=1178911685]
-transform = Transform3D(-4.7585957e-07, 0, 13.154405, 0, 1, 0, -10.886397, 0, -5.749972e-07, 45.868504, -1, 16.701845)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 45.868504, -1, 16.701845)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BellInteraction" unique_id=59357821]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0791054, -1.6988063, -0.7301941)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.157509, -0.9648738, -4.8537064)
 shape = SubResource("BoxShape3D_vhc53")
 
 [node name="ScrumbelInteractable" parent="." unique_id=1541624235 instance=ExtResource("24_2jj54")]
