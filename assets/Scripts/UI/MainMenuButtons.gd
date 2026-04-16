@@ -1,5 +1,7 @@
 extends Node
 
+@onready var ap: AnimationPlayer = $"../../AnimationPlayer"
+
 var play;
 var exit;
 # Called when the node enters the scene tree for the first time.
@@ -9,8 +11,7 @@ func _ready() -> void:
 	exit = get_node("Exit");
 	play.pressed.connect(_on_Play_pressed);
 	exit.pressed.connect(_on_Exit_pressed);
-
-
+	ap.play("bram_peeks")
 
 func _on_Play_pressed():
 	GlobalPlayer.start_timer()

@@ -1,7 +1,151 @@
 [gd_scene format=3 uid="uid://6nw2l587dj8j"]
 
+[ext_resource type="Texture2D" uid="uid://db55eicrxbxot" path="res://assets/UI/Schermafbeelding 2026-04-15 223301.png" id="1_jdsf8"]
 [ext_resource type="Script" uid="uid://bdmpvo4squc2t" path="res://assets/Scripts/UI/MainMenuButtons.gd" id="1_pardt"]
 [ext_resource type="FontFile" uid="uid://ulbymda0vas8" path="res://assets/UI/Fonts/MedodicaRegular.otf" id="1_ylte2"]
+[ext_resource type="FontFile" uid="uid://ow7du4upvxfr" path="res://assets/UI/Fonts/Blackcraft.ttf" id="3_fgtov"]
+[ext_resource type="Texture2D" uid="uid://bfdllm4ycjwhu" path="res://Brammy/brammy.png" id="5_ptgmg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uy61s"]
+bg_color = Color(0.52227896, 0, 0.058572948, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ptgmg"]
+bg_color = Color(0.38318866, 1.3536774e-06, 0.031942263, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nt8bj"]
+bg_color = Color(0.48079574, 0, 0.05055587, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hj3wv"]
+bg_color = Color(0, 0.6117647, 0.078431375, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t8kfw"]
+bg_color = Color(1.4499388e-06, 0.3563146, 0.028351419, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wwl0h"]
+bg_color = Color(4.1392445e-06, 0.5325274, 0.06257595, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_jdsf8"]
+font = ExtResource("1_ylte2")
+font_size = 80
+outline_size = 15
+outline_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ptgmg"]
+font = ExtResource("3_fgtov")
+font_size = 100
+font_color = Color(0.786172, 3.1525642e-06, 5.7756904e-07, 1)
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_nt8bj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BrammySprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(942, 974)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BrammySprite:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BrammySprite:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_t8kfw"]
+resource_name = "bram_peeks"
+length = 8.833333
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BrammySprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.1333334, 2.59, 3.0333333),
+"transitions": PackedFloat32Array(1, 3.363586, 1, 4.7568293),
+"update": 0,
+"values": [Vector2(942, 974), Vector2(942, 700), Vector2(942, 700), Vector2(942, 974)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BrammySprite:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BrammySprite:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.15, 2.24, 2.3, 2.41, 2.51),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, false, true, false, true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wwl0h"]
+_data = {
+&"RESET": SubResource("Animation_nt8bj"),
+&"bram_peeks": SubResource("Animation_t8kfw")
+}
 
 [node name="Control" type="Control" unique_id=1428894429]
 layout_mode = 3
@@ -12,6 +156,15 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1210824156]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_jdsf8")
+
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1621283595]
 layout_mode = 1
 anchors_preset = 8
@@ -20,9 +173,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -184.5
-offset_top = -140.5
+offset_top = -44.0
 offset_right = 184.5
-offset_bottom = 140.5
+offset_bottom = 237.0
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
@@ -39,6 +192,9 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("1_ylte2")
 theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_uy61s")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ptgmg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nt8bj")
 text = "Play"
 
 [node name="Exit" type="Button" parent="HBoxContainer/VBoxContainer" unique_id=68997110]
@@ -46,4 +202,41 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("1_ylte2")
 theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_hj3wv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_t8kfw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wwl0h")
 text = "Exit"
+
+[node name="EscapeLabel" type="Label" parent="." unique_id=1928682021]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -95.0
+offset_top = 30.0
+offset_right = 95.0
+offset_bottom = 101.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 200
+text = "ESCAPE"
+label_settings = SubResource("LabelSettings_jdsf8")
+
+[node name="BRAMMYLabel" type="Label" parent="." unique_id=253048128]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -131.5
+offset_top = 100.0
+offset_right = 131.5
+offset_bottom = 210.0
+grow_horizontal = 2
+text = "BRAMMY"
+label_settings = SubResource("LabelSettings_ptgmg")
+
+[node name="BrammySprite" type="Sprite2D" parent="." unique_id=145912156]
+position = Vector2(942, 974)
+texture = ExtResource("5_ptgmg")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1254422270]
+libraries/ = SubResource("AnimationLibrary_wwl0h")
